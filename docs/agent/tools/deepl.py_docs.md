@@ -1,0 +1,184 @@
+# Documentation: agent/tools/deepl.py
+
+## File Metadata
+
+- **Path**: `agent/tools/deepl.py`
+- **Size**: 2668 bytes
+- **Type**: .py
+- **Readable**: Yes
+
+## Purpose
+
+This file is part of the RAGFlow repository at location `agent/tools/deepl.py`.
+
+## Python Module Overview
+
+### Imports and Dependencies
+
+This module imports the following dependencies:
+
+- `abc`
+- `agent.component.base`
+- `deepl`
+
+### Classes Defined
+
+This file defines 2 class(es):
+
+#### Class: `DeepLParam` (line 21)
+
+**Docstring**: Define the DeepL component parameters....
+
+**Methods**: __init__, check
+
+#### Class: `DeepL` (line 45)
+
+**Methods**: _run
+
+### Functions Defined
+
+This file defines 3 function(s):
+
+#### Function: `__init__` (line 26)
+
+**Parameters**: self
+
+#### Function: `check` (line 33)
+
+**Parameters**: self
+
+#### Function: `_run` (line 48)
+
+**Parameters**: self, history
+
+## Original Source Code
+
+```py
+#
+#  Copyright 2024 The InfiniFlow Authors. All Rights Reserved.
+#
+#  Licensed under the Apache License, Version 2.0 (the "License");
+#  you may not use this file except in compliance with the License.
+#  You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+#  Unless required by applicable law or agreed to in writing, software
+#  distributed under the License is distributed on an "AS IS" BASIS,
+#  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+#  See the License for the specific language governing permissions and
+#  limitations under the License.
+#
+from abc import ABC
+from agent.component.base import ComponentBase, ComponentParamBase
+import deepl
+
+
+class DeepLParam(ComponentParamBase):
+    """
+    Define the DeepL component parameters.
+    """
+
+    def __init__(self):
+        super().__init__()
+        self.auth_key = "xxx"
+        self.parameters = []
+        self.source_lang = 'ZH'
+        self.target_lang = 'EN-GB'
+
+    def check(self):
+        self.check_positive_integer(self.top_n, "Top N")
+        self.check_valid_value(self.source_lang, "Source language",
+                               ['AR', 'BG', 'CS', 'DA', 'DE', 'EL', 'EN', 'ES', 'ET', 'FI', 'FR', 'HU', 'ID', 'IT',
+                                'JA', 'KO', 'LT', 'LV', 'NB', 'NL', 'PL', 'PT', 'RO', 'RU', 'SK', 'SL', 'SV', 'TR',
+                                'UK', 'ZH'])
+        self.check_valid_value(self.target_lang, "Target language",
+                               ['AR', 'BG', 'CS', 'DA', 'DE', 'EL', 'EN-GB', 'EN-US', 'ES', 'ET', 'FI', 'FR', 'HU',
+                                'ID', 'IT', 'JA', 'KO', 'LT', 'LV', 'NB', 'NL', 'PL', 'PT-BR', 'PT-PT', 'RO', 'RU',
+                                'SK', 'SL', 'SV', 'TR', 'UK', 'ZH'])
+
+
+class DeepL(ComponentBase, ABC):
+    component_name = "DeepL"
+
+    def _run(self, history, **kwargs):
+        if self.check_if_canceled("DeepL processing"):
+            return
+        ans = self.get_input()
+        ans = " - ".join(ans["content"]) if "content" in ans else ""
+        if not ans:
+            return DeepL.be_output("")
+
+        if self.check_if_canceled("DeepL processing"):
+            return
+
+        try:
+            translator = deepl.Translator(self._param.auth_key)
+            result = translator.translate_text(ans, source_lang=self._param.source_lang,
+                                               target_lang=self._param.target_lang)
+
+            return DeepL.be_output(result.text)
+        except Exception as e:
+            if self.check_if_canceled("DeepL processing"):
+                return
+            DeepL.be_output("**Error**:" + str(e))
+
+```
+
+## Detailed Analysis
+
+### File Role in Repository
+
+The file `agent/tools/deepl.py` is located in the `agent/tools` directory.
+
+This file is part of the **Agent System** for workflow management.
+
+### Architecture Context
+
+Files in this location typically handle concerns related to tools.
+
+### Design Patterns
+
+[Analysis of design patterns would go here based on code structure]
+
+### Performance Considerations
+
+[Performance analysis would consider file size, complexity, algorithmic efficiency]
+
+### Security Considerations
+
+- Ensure all user inputs are validated
+- Check for SQL injection vulnerabilities
+- Verify authentication and authorization
+
+### Testing Approach
+
+To test this file:
+1. Review the corresponding test files in the test/ directory
+2. Ensure all public APIs have test coverage
+3. Test edge cases and error conditions
+4. Verify integration with related components
+
+### Related Files
+
+- [__init__.py](__init__.py_docs.md)
+- [akshare.py](akshare.py_docs.md)
+- [arxiv.py](arxiv.py_docs.md)
+- [base.py](base.py_docs.md)
+- [code_exec.py](code_exec.py_docs.md)
+- [crawler.py](crawler.py_docs.md)
+- [duckduckgo.py](duckduckgo.py_docs.md)
+- [email.py](email.py_docs.md)
+- [exesql.py](exesql.py_docs.md)
+- [github.py](github.py_docs.md)
+
+
+## Cross-References
+
+- [Folder Documentation](./doc.md)
+- [Folder Index](./index.md)
+- [Global Index](../../index.md)
+
+---
+
+*Generated by RAGFlow Comprehensive Documentation Generator*

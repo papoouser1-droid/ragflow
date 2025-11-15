@@ -1,0 +1,191 @@
+# Documentation: web/src/components/ui/textarea.tsx
+
+## File Metadata
+
+- **Path**: `web/src/components/ui/textarea.tsx`
+- **Size**: 3143 bytes
+- **Type**: .tsx
+- **Readable**: Yes
+
+## Purpose
+
+This file is part of the RAGFlow repository at location `web/src/components/ui/textarea.tsx`.
+
+## Original Source Code
+
+```tsx
+import { cn } from '@/lib/utils';
+import {
+  ChangeEventHandler,
+  ComponentProps,
+  FocusEventHandler,
+  forwardRef,
+  TextareaHTMLAttributes,
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+} from 'react';
+interface TextareaProps
+  extends Omit<TextareaHTMLAttributes<HTMLTextAreaElement>, 'autoSize'> {
+  autoSize?: {
+    minRows?: number;
+    maxRows?: number;
+  };
+}
+const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
+  ({ className, autoSize, ...props }, ref) => {
+    const textareaRef = useRef<HTMLTextAreaElement>(null);
+    const getLineHeight = (element: HTMLElement): number => {
+      const style = window.getComputedStyle(element);
+      return parseInt(style.lineHeight, 10) || 20;
+    };
+    const adjustHeight = useCallback(() => {
+      if (!textareaRef.current) return;
+      const lineHeight = getLineHeight(textareaRef.current);
+      const maxHeight = (autoSize?.maxRows || 3) * lineHeight;
+      textareaRef.current.style.height = 'auto';
+
+      requestAnimationFrame(() => {
+        if (!textareaRef.current) return;
+
+        const scrollHeight = textareaRef.current.scrollHeight;
+        textareaRef.current.style.height = `${Math.min(scrollHeight, maxHeight)}px`;
+      });
+    }, [autoSize]);
+
+    useEffect(() => {
+      if (autoSize) {
+        adjustHeight();
+      }
+    }, [textareaRef, autoSize, adjustHeight]);
+
+    useEffect(() => {
+      if (typeof ref === 'function') {
+        ref(textareaRef.current);
+      } else if (ref) {
+        ref.current = textareaRef.current;
+      }
+    }, [ref]);
+    return (
+      <textarea
+        className={cn(
+          'flex min-h-[80px] w-full bg-bg-input rounded-md border border-input px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm overflow-hidden',
+          className,
+        )}
+        rows={autoSize?.minRows ?? props.rows ?? undefined}
+        style={{
+          maxHeight: autoSize?.maxRows
+            ? `${autoSize.maxRows * 20}px`
+            : undefined,
+          overflow: autoSize ? 'auto' : undefined,
+        }}
+        ref={textareaRef}
+        {...props}
+      />
+    );
+  },
+);
+Textarea.displayName = 'Textarea';
+
+export { Textarea };
+
+type Value = string | readonly string[] | number | undefined;
+
+export const BlurTextarea = forwardRef<
+  HTMLTextAreaElement,
+  ComponentProps<'textarea'> & {
+    value: Value;
+    onChange(value: Value): void;
+  }
+>(({ value, onChange, ...props }, ref) => {
+  const [val, setVal] = useState<Value>();
+
+  const handleChange: ChangeEventHandler<HTMLTextAreaElement> = useCallback(
+    (e) => {
+      setVal(e.target.value);
+    },
+    [],
+  );
+
+  const handleBlur: FocusEventHandler<HTMLTextAreaElement> = useCallback(
+    (e) => {
+      onChange?.(e.target.value);
+    },
+    [onChange],
+  );
+
+  useEffect(() => {
+    setVal(value);
+  }, [value]);
+
+  return (
+    <Textarea
+      {...props}
+      value={val}
+      onBlur={handleBlur}
+      onChange={handleChange}
+      ref={ref}
+    ></Textarea>
+  );
+});
+
+```
+
+## Detailed Analysis
+
+### File Role in Repository
+
+The file `web/src/components/ui/textarea.tsx` is located in the `web/src/components/ui` directory.
+
+This file is part of the **Frontend/Web** layer of RAGFlow.
+
+### Architecture Context
+
+Files in this location typically handle concerns related to ui.
+
+### Design Patterns
+
+[Analysis of design patterns would go here based on code structure]
+
+### Performance Considerations
+
+[Performance analysis would consider file size, complexity, algorithmic efficiency]
+
+### Security Considerations
+
+- Watch for XSS vulnerabilities
+- Ensure proper input sanitization
+- Validate all API calls
+
+### Testing Approach
+
+To test this file:
+1. Review the corresponding test files in the test/ directory
+2. Ensure all public APIs have test coverage
+3. Test edge cases and error conditions
+4. Verify integration with related components
+
+### Related Files
+
+- [accordion.tsx](accordion.tsx_docs.md)
+- [alert-dialog.tsx](alert-dialog.tsx_docs.md)
+- [aspect-ratio.tsx](aspect-ratio.tsx_docs.md)
+- [async-tree-select.tsx](async-tree-select.tsx_docs.md)
+- [avatar.tsx](avatar.tsx_docs.md)
+- [badge.tsx](badge.tsx_docs.md)
+- [breadcrumb.tsx](breadcrumb.tsx_docs.md)
+- [button.tsx](button.tsx_docs.md)
+- [card.tsx](card.tsx_docs.md)
+- [checkbox.tsx](checkbox.tsx_docs.md)
+
+
+## Cross-References
+
+- [Folder Documentation](./doc.md)
+- [Folder Index](./index.md)
+- [Global Index](../../index.md)
+
+---
+
+*Generated by RAGFlow Comprehensive Documentation Generator*

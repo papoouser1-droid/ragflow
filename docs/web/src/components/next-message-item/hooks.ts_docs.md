@@ -1,0 +1,189 @@
+# Documentation: web/src/components/next-message-item/hooks.ts
+
+## File Metadata
+
+- **Path**: `web/src/components/next-message-item/hooks.ts`
+- **Size**: 3174 bytes
+- **Type**: .ts
+- **Readable**: Yes
+
+## Purpose
+
+This file is part of the RAGFlow repository at location `web/src/components/next-message-item/hooks.ts`.
+
+## Original Source Code
+
+```ts
+import { useDeleteMessage, useFeedback } from '@/hooks/chat-hooks';
+import { useSetModalState } from '@/hooks/common-hooks';
+import { IRemoveMessageById, useSpeechWithSse } from '@/hooks/logic-hooks';
+import { IFeedbackRequestBody } from '@/interfaces/request/chat';
+import { hexStringToUint8Array } from '@/utils/common-util';
+import { SpeechPlayer } from 'openai-speech-stream-player';
+import { useCallback, useEffect, useRef, useState } from 'react';
+
+export const useSendFeedback = (messageId: string) => {
+  const { visible, hideModal, showModal } = useSetModalState();
+  const { feedback, loading } = useFeedback();
+
+  const onFeedbackOk = useCallback(
+    async (params: IFeedbackRequestBody) => {
+      const ret = await feedback({
+        ...params,
+        messageId: messageId,
+      });
+
+      if (ret === 0) {
+        hideModal();
+      }
+    },
+    [feedback, hideModal, messageId],
+  );
+
+  return {
+    loading,
+    onFeedbackOk,
+    visible,
+    hideModal,
+    showModal,
+  };
+};
+
+export const useRemoveMessage = (
+  messageId: string,
+  removeMessageById?: IRemoveMessageById['removeMessageById'],
+) => {
+  const { deleteMessage, loading } = useDeleteMessage();
+
+  const onRemoveMessage = useCallback(async () => {
+    if (messageId) {
+      const code = await deleteMessage(messageId);
+      if (code === 0) {
+        removeMessageById?.(messageId);
+      }
+    }
+  }, [deleteMessage, messageId, removeMessageById]);
+
+  return { onRemoveMessage, loading };
+};
+
+export const useSpeech = (content: string, audioBinary?: string) => {
+  const ref = useRef<HTMLAudioElement>(null);
+  const { read } = useSpeechWithSse();
+  const player = useRef<SpeechPlayer>();
+  const [isPlaying, setIsPlaying] = useState<boolean>(false);
+
+  const initialize = useCallback(async () => {
+    player.current = new SpeechPlayer({
+      audio: ref.current!,
+      onPlaying: () => {
+        setIsPlaying(true);
+      },
+      onPause: () => {
+        setIsPlaying(false);
+      },
+      onChunkEnd: () => {},
+      mimeType: MediaSource.isTypeSupported('audio/mpeg')
+        ? 'audio/mpeg'
+        : 'audio/mp4; codecs="mp4a.40.2"', // https://stackoverflow.com/questions/64079424/cannot-replay-mp3-in-firefox-using-mediasource-even-though-it-works-in-chrome
+    });
+    await player.current.init();
+  }, []);
+
+  const pause = useCallback(() => {
+    player.current?.pause();
+  }, []);
+
+  const speech = useCallback(async () => {
+    const response = await read({ text: content });
+    if (response) {
+      player?.current?.feedWithResponse(response);
+    }
+  }, [read, content]);
+
+  const handleRead = useCallback(async () => {
+    if (isPlaying) {
+      setIsPlaying(false);
+      pause();
+    } else {
+      setIsPlaying(true);
+      speech();
+    }
+  }, [setIsPlaying, speech, isPlaying, pause]);
+
+  useEffect(() => {
+    if (audioBinary) {
+      const units = hexStringToUint8Array(audioBinary);
+      if (units) {
+        try {
+          player.current?.feed(units);
+        } catch (error) {
+          console.warn(error);
+        }
+      }
+    }
+  }, [audioBinary]);
+
+  useEffect(() => {
+    initialize();
+  }, [initialize]);
+
+  return { ref, handleRead, isPlaying };
+};
+
+```
+
+## Detailed Analysis
+
+### File Role in Repository
+
+The file `web/src/components/next-message-item/hooks.ts` is located in the `web/src/components/next-message-item` directory.
+
+This file is part of the **Frontend/Web** layer of RAGFlow.
+
+### Architecture Context
+
+Files in this location typically handle concerns related to next-message-item.
+
+### Design Patterns
+
+[Analysis of design patterns would go here based on code structure]
+
+### Performance Considerations
+
+[Performance analysis would consider file size, complexity, algorithmic efficiency]
+
+### Security Considerations
+
+- Watch for XSS vulnerabilities
+- Ensure proper input sanitization
+- Validate all API calls
+
+### Testing Approach
+
+To test this file:
+1. Review the corresponding test files in the test/ directory
+2. Ensure all public APIs have test coverage
+3. Test edge cases and error conditions
+4. Verify integration with related components
+
+### Related Files
+
+- [feedback-modal.tsx](feedback-modal.tsx_docs.md)
+- [group-button.tsx](group-button.tsx_docs.md)
+- [index.less](index.less_docs.md)
+- [index.tsx](index.tsx_docs.md)
+- [prompt-modal.tsx](prompt-modal.tsx_docs.md)
+- [reference-document-list.tsx](reference-document-list.tsx_docs.md)
+- [uploaded-message-files.tsx](uploaded-message-files.tsx_docs.md)
+
+
+## Cross-References
+
+- [Folder Documentation](./doc.md)
+- [Folder Index](./index.md)
+- [Global Index](../../index.md)
+
+---
+
+*Generated by RAGFlow Comprehensive Documentation Generator*

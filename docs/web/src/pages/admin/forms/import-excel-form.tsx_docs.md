@@ -1,0 +1,198 @@
+# Documentation: web/src/pages/admin/forms/import-excel-form.tsx
+
+## File Metadata
+
+- **Path**: `web/src/pages/admin/forms/import-excel-form.tsx`
+- **Size**: 3331 bytes
+- **Type**: .tsx
+- **Readable**: Yes
+
+## Purpose
+
+This file is part of the RAGFlow repository at location `web/src/pages/admin/forms/import-excel-form.tsx`.
+
+## Original Source Code
+
+```tsx
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from '@/components/ui/form';
+import { Input } from '@/components/ui/input';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { useCallback, useId, useMemo } from 'react';
+import { useForm } from 'react-hook-form';
+import { Trans, useTranslation } from 'react-i18next';
+import { z } from 'zod';
+
+export interface ImportExcelFormData {
+  file: File;
+  overwriteExisting: boolean;
+}
+
+interface ImportExcelFormProps {
+  id: string;
+  form: ReturnType<typeof useForm<ImportExcelFormData>>;
+  onSubmit?: (data: ImportExcelFormData) => void;
+}
+
+export const ImportExcelForm = ({
+  id,
+  form,
+  onSubmit = () => {},
+}: ImportExcelFormProps) => {
+  const { t } = useTranslation();
+
+  return (
+    <Form {...form}>
+      <form
+        id={id}
+        onSubmit={form.handleSubmit(onSubmit)}
+        className="space-y-6"
+      >
+        {/* File input field */}
+        <FormField
+          control={form.control}
+          name="file"
+          // eslint-disable-next-line @typescript-eslint/no-unused-vars
+          render={({ field: { onChange, value, ...field } }) => (
+            <FormItem>
+              <FormLabel className="text-sm font-medium">
+                {t('admin.importSelectExcelFile')}
+              </FormLabel>
+
+              <FormControl>
+                <Input
+                  type="file"
+                  accept=".xlsx"
+                  className="mt-2 px-3 h-10 bg-bg-input border-border-button file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-bg-accent file:text-text-primary hover:file:bg-bg-accent/80"
+                  onChange={(e) => {
+                    const files = e.target.files;
+                    onChange(files?.[0]);
+                  }}
+                  {...field}
+                />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+
+        <p className="text-sm text-text-secondary">
+          <Trans
+            i18nKey="admin.importFileTips"
+            components={{ code: <code /> }}
+          />
+        </p>
+      </form>
+    </Form>
+  );
+};
+
+// Export the form validation state for parent component
+function useImportExcelForm() {
+  const { t } = useTranslation();
+  const id = useId();
+
+  const schema = useMemo(() => {
+    return z.object({
+      file: z
+        .instanceof(File, { message: t('admin.importFileRequired') })
+        .refine(
+          (file) => {
+            return (
+              file.type ===
+                'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' ||
+              file.name.endsWith('.xlsx')
+            );
+          },
+          {
+            message: t('admin.invalidExcelFile'),
+          },
+        ),
+      overwriteExisting: z.boolean().optional(),
+    });
+  }, [t]);
+
+  const form = useForm<ImportExcelFormData>({
+    defaultValues: {
+      file: undefined,
+      overwriteExisting: false,
+    },
+    resolver: zodResolver(schema),
+  });
+
+  const FormComponent = useCallback(
+    (props: Partial<ImportExcelFormProps>) => (
+      <ImportExcelForm id={id} form={form} {...props} />
+    ),
+    [id, form],
+  );
+
+  return {
+    schema,
+    id,
+    form,
+    FormComponent,
+  };
+}
+
+export default useImportExcelForm;
+
+```
+
+## Detailed Analysis
+
+### File Role in Repository
+
+The file `web/src/pages/admin/forms/import-excel-form.tsx` is located in the `web/src/pages/admin/forms` directory.
+
+This file is part of the **Frontend/Web** layer of RAGFlow.
+
+### Architecture Context
+
+Files in this location typically handle concerns related to forms.
+
+### Design Patterns
+
+[Analysis of design patterns would go here based on code structure]
+
+### Performance Considerations
+
+[Performance analysis would consider file size, complexity, algorithmic efficiency]
+
+### Security Considerations
+
+- Watch for XSS vulnerabilities
+- Ensure proper input sanitization
+- Validate all API calls
+
+### Testing Approach
+
+To test this file:
+1. Review the corresponding test files in the test/ directory
+2. Ensure all public APIs have test coverage
+3. Test edge cases and error conditions
+4. Verify integration with related components
+
+### Related Files
+
+- [change-password-form.tsx](change-password-form.tsx_docs.md)
+- [email-form.tsx](email-form.tsx_docs.md)
+- [role-form.tsx](role-form.tsx_docs.md)
+- [user-form.tsx](user-form.tsx_docs.md)
+
+
+## Cross-References
+
+- [Folder Documentation](./doc.md)
+- [Folder Index](./index.md)
+- [Global Index](../../index.md)
+
+---
+
+*Generated by RAGFlow Comprehensive Documentation Generator*

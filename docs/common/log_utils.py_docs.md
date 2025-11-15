@@ -1,0 +1,180 @@
+# Documentation: common/log_utils.py
+
+## File Metadata
+
+- **Path**: `common/log_utils.py`
+- **Size**: 2851 bytes
+- **Type**: .py
+- **Readable**: Yes
+
+## Purpose
+
+This file is part of the RAGFlow repository at location `common/log_utils.py`.
+
+## Python Module Overview
+
+### Imports and Dependencies
+
+This module imports the following dependencies:
+
+- `os`
+- `os.path`
+- `logging`
+- `logging.handlers`
+- `common.file_utils`
+
+### Functions Defined
+
+This file defines 2 function(s):
+
+#### Function: `init_root_logger` (line 25)
+
+**Parameters**: logfile_basename, log_format
+
+#### Function: `log_exception` (line 75)
+
+**Parameters**: e
+
+## Original Source Code
+
+```py
+#
+#  Copyright 2025 The InfiniFlow Authors. All Rights Reserved.
+#
+#  Licensed under the Apache License, Version 2.0 (the "License");
+#  you may not use this file except in compliance with the License.
+#  You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+#  Unless required by applicable law or agreed to in writing, software
+#  distributed under the License is distributed on an "AS IS" BASIS,
+#  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+#  See the License for the specific language governing permissions and
+#  limitations under the License.
+#
+
+import os
+import os.path
+import logging
+from logging.handlers import RotatingFileHandler
+from common.file_utils import get_project_base_directory
+
+initialized_root_logger = False
+
+def init_root_logger(logfile_basename: str, log_format: str = "%(asctime)-15s %(levelname)-8s %(process)d %(message)s"):
+    global initialized_root_logger
+    if initialized_root_logger:
+        return
+    initialized_root_logger = True
+
+    logger = logging.getLogger()
+    logger.handlers.clear()
+    log_path = os.path.abspath(os.path.join(get_project_base_directory(), "logs", f"{logfile_basename}.log"))
+
+    os.makedirs(os.path.dirname(log_path), exist_ok=True)
+    formatter = logging.Formatter(log_format)
+
+    handler1 = RotatingFileHandler(log_path, maxBytes=10*1024*1024, backupCount=5)
+    handler1.setFormatter(formatter)
+    logger.addHandler(handler1)
+
+    handler2 = logging.StreamHandler()
+    handler2.setFormatter(formatter)
+    logger.addHandler(handler2)
+
+    logging.captureWarnings(True)
+
+    LOG_LEVELS = os.environ.get("LOG_LEVELS", "")
+    pkg_levels = {}
+    for pkg_name_level in LOG_LEVELS.split(","):
+        terms = pkg_name_level.split("=")
+        if len(terms)!= 2:
+            continue
+        pkg_name, pkg_level = terms[0], terms[1]
+        pkg_name = pkg_name.strip()
+        pkg_level = logging.getLevelName(pkg_level.strip().upper())
+        if not isinstance(pkg_level, int):
+            pkg_level = logging.INFO
+        pkg_levels[pkg_name] = logging.getLevelName(pkg_level)
+
+    for pkg_name in ['peewee', 'pdfminer']:
+        if pkg_name not in pkg_levels:
+            pkg_levels[pkg_name] = logging.getLevelName(logging.WARNING)
+    if 'root' not in pkg_levels:
+        pkg_levels['root'] = logging.getLevelName(logging.INFO)
+
+    for pkg_name, pkg_level in pkg_levels.items():
+        pkg_logger = logging.getLogger(pkg_name)
+        pkg_logger.setLevel(pkg_level)
+
+    msg = f"{logfile_basename} log path: {log_path}, log levels: {pkg_levels}"
+    logger.info(msg)
+
+
+def log_exception(e, *args):
+    logging.exception(e)
+    for a in args:
+        if hasattr(a, "text"):
+            logging.error(a.text)
+            raise Exception(a.text)
+        else:
+            logging.error(str(a))
+    raise e
+```
+
+## Detailed Analysis
+
+### File Role in Repository
+
+The file `common/log_utils.py` is located in the `common` directory.
+
+### Architecture Context
+
+Files in this location typically handle concerns related to common.
+
+### Design Patterns
+
+[Analysis of design patterns would go here based on code structure]
+
+### Performance Considerations
+
+[Performance analysis would consider file size, complexity, algorithmic efficiency]
+
+### Security Considerations
+
+- Ensure all user inputs are validated
+- Check for SQL injection vulnerabilities
+- Verify authentication and authorization
+
+### Testing Approach
+
+To test this file:
+1. Review the corresponding test files in the test/ directory
+2. Ensure all public APIs have test coverage
+3. Test edge cases and error conditions
+4. Verify integration with related components
+
+### Related Files
+
+- [__init__.py](__init__.py_docs.md)
+- [config_utils.py](config_utils.py_docs.md)
+- [connection_utils.py](connection_utils.py_docs.md)
+- [constants.py](constants.py_docs.md)
+- [decorator.py](decorator.py_docs.md)
+- [exceptions.py](exceptions.py_docs.md)
+- [file_utils.py](file_utils.py_docs.md)
+- [float_utils.py](float_utils.py_docs.md)
+- [misc_utils.py](misc_utils.py_docs.md)
+- [settings.py](settings.py_docs.md)
+
+
+## Cross-References
+
+- [Folder Documentation](./doc.md)
+- [Folder Index](./index.md)
+- [Global Index](../../index.md)
+
+---
+
+*Generated by RAGFlow Comprehensive Documentation Generator*

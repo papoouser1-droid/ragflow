@@ -1,0 +1,205 @@
+# Documentation: helm/templates/opensearch.yaml
+
+## File Metadata
+
+- **Path**: `helm/templates/opensearch.yaml`
+- **Size**: 4435 bytes
+- **Type**: .yaml
+- **Readable**: Yes
+
+## Purpose
+
+This file is part of the RAGFlow repository at location `helm/templates/opensearch.yaml`.
+
+## Original Source Code
+
+```yaml
+{{- if eq .Values.env.DOC_ENGINE "opensearch" -}}
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: {{ include "ragflow.fullname" . }}-opensearch-data
+  annotations:
+    "helm.sh/resource-policy": keep
+  labels:
+    {{- include "ragflow.labels" . | nindent 4 }}
+    app.kubernetes.io/component: opensearch
+spec:
+  {{- with .Values.opensearch.storage.className }}
+  storageClassName: {{ . }}
+  {{- end }}
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: {{ .Values.opensearch.storage.capacity }}
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: {{ include "ragflow.fullname" . }}-opensearch
+  labels:
+    {{- include "ragflow.labels" . | nindent 4 }}
+    app.kubernetes.io/component: opensearch
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      {{- include "ragflow.selectorLabels" . | nindent 6 }}
+      app.kubernetes.io/component: opensearch
+  {{- with .Values.opensearch.deployment.strategy }}
+  strategy:
+    {{- . | toYaml | nindent 4 }}
+  {{- end }}
+  template:
+    metadata:
+      labels:
+      {{- include "ragflow.labels" . | nindent 8 }}
+        app.kubernetes.io/component: opensearch
+      annotations:
+        checksum/config-opensearch: {{ include (print $.Template.BasePath "/opensearch-config.yaml") . | sha256sum }}
+        checksum/config-env: {{ include (print $.Template.BasePath "/env.yaml") . | sha256sum }}
+    spec:
+      {{- if or .Values.imagePullSecrets .Values.opensearch.image.pullSecrets }}
+      imagePullSecrets:
+        {{- with .Values.imagePullSecrets }}
+        {{- toYaml . | nindent 8 }}
+        {{- end }}
+        {{- with .Values.opensearch.image.pullSecrets }}
+        {{- toYaml . | nindent 8 }}
+        {{- end }}
+      {{- end }}
+      initContainers:
+      - name: fix-data-volume-permissions
+        image: {{ .Values.opensearch.initContainers.alpine.repository }}:{{ .Values.opensearch.initContainers.alpine.tag }}
+        {{- with .Values.opensearch.initContainers.alpine.pullPolicy }}
+        imagePullPolicy: {{ . }}
+        {{- end }}
+        command:
+        - sh
+        - -c
+        - "chown -R 1000:0 /usr/share/opensearch/data"
+        volumeMounts:
+          - mountPath: /usr/share/opensearch/data
+            name: opensearch-data
+      - name: sysctl
+        image: {{ .Values.opensearch.initContainers.busybox.repository }}:{{ .Values.opensearch.initContainers.busybox.tag }}
+        {{- with .Values.opensearch.initContainers.busybox.pullPolicy }}
+        imagePullPolicy: {{ . }}
+        {{- end }}
+        securityContext:
+          privileged: true
+          runAsUser: 0
+        command: ["sysctl", "-w", "vm.max_map_count=262144"]
+      containers:
+      - name: opensearch
+        image: {{ .Values.opensearch.image.repository }}:{{ .Values.opensearch.image.tag }}
+        {{- with .Values.opensearch.image.pullPolicy }}
+        imagePullPolicy: {{ . }}
+        {{- end }}
+        envFrom:
+          - secretRef:
+              name: {{ include "ragflow.fullname" . }}-env-config
+          - configMapRef:
+              name: {{ include "ragflow.fullname" . }}-opensearch-config
+        ports:
+          - containerPort: 9201
+            name: http
+        volumeMounts:
+          - mountPath: /usr/share/opensearch/data
+            name: opensearch-data
+        {{- with .Values.opensearch.deployment.resources }}
+        resources:
+          {{- . | toYaml | nindent 10 }}
+        {{- end }}
+        securityContext:
+          capabilities:
+            add:
+              - "IPC_LOCK"
+          runAsUser: 1000
+          allowPrivilegeEscalation: false
+        livenessProbe:
+          exec:
+            command:
+              - sh
+              - -c
+              - curl -u admin:$OPENSEARCH_PASSWORD localhost:9201
+          initialDelaySeconds: 30
+          periodSeconds: 10
+          failureThreshold: 6
+      volumes:
+        - name: opensearch-data
+          persistentVolumeClaim:
+            claimName: {{ include "ragflow.fullname" . }}-opensearch-data
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "ragflow.fullname" . }}-opensearch
+  labels:
+    {{- include "ragflow.labels" . | nindent 4 }}
+    app.kubernetes.io/component: opensearch
+spec:
+  selector:
+    {{- include "ragflow.selectorLabels" . | nindent 4 }}
+    app.kubernetes.io/component: opensearch
+  ports:
+    - protocol: TCP
+      port: 9201
+      targetPort: http
+  type: {{ .Values.opensearch.service.type }}
+{{- end -}}
+
+```
+
+## Detailed Analysis
+
+### File Role in Repository
+
+The file `helm/templates/opensearch.yaml` is located in the `helm/templates` directory.
+
+### Architecture Context
+
+Files in this location typically handle concerns related to templates.
+
+### Design Patterns
+
+[Analysis of design patterns would go here based on code structure]
+
+### Performance Considerations
+
+[Performance analysis would consider file size, complexity, algorithmic efficiency]
+
+### Security Considerations
+
+### Testing Approach
+
+To test this file:
+1. Review the corresponding test files in the test/ directory
+2. Ensure all public APIs have test coverage
+3. Test edge cases and error conditions
+4. Verify integration with related components
+
+### Related Files
+
+- [_helpers.tpl](_helpers.tpl_docs.md)
+- [elasticsearch-config.yaml](elasticsearch-config.yaml_docs.md)
+- [elasticsearch.yaml](elasticsearch.yaml_docs.md)
+- [env.yaml](env.yaml_docs.md)
+- [infinity.yaml](infinity.yaml_docs.md)
+- [ingress.yaml](ingress.yaml_docs.md)
+- [minio.yaml](minio.yaml_docs.md)
+- [mysql-config.yaml](mysql-config.yaml_docs.md)
+- [mysql.yaml](mysql.yaml_docs.md)
+- [opensearch-config.yaml](opensearch-config.yaml_docs.md)
+
+
+## Cross-References
+
+- [Folder Documentation](./doc.md)
+- [Folder Index](./index.md)
+- [Global Index](../../index.md)
+
+---
+
+*Generated by RAGFlow Comprehensive Documentation Generator*

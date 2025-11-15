@@ -1,0 +1,226 @@
+# Documentation: web/src/pages/dataflow-result/interface.ts
+
+## File Metadata
+
+- **Path**: `web/src/pages/dataflow-result/interface.ts`
+- **Size**: 3348 bytes
+- **Type**: .ts
+- **Readable**: Yes
+
+## Purpose
+
+This file is part of the RAGFlow repository at location `web/src/pages/dataflow-result/interface.ts`.
+
+## Original Source Code
+
+```ts
+import { PipelineResultSearchParams } from './constant';
+
+export interface ComponentParams {
+  debug_inputs: Record<string, any>;
+  delay_after_error: number;
+  description: string;
+  exception_default_value: any;
+  exception_goto: any;
+  exception_method: any;
+  inputs: Record<string, any>;
+  field_name: string;
+  max_retries: number;
+  message_history_window_size: number;
+  outputs: {
+    _created_time: Record<string, any>;
+    _elapsed_time: Record<string, any>;
+    name: Record<string, any>;
+    output_format: { type: string; value: string };
+    json: { type: string; value: string };
+  };
+  persist_logs: boolean;
+  timeout: number;
+}
+
+interface ComponentObject {
+  component_name: string;
+  params: ComponentParams;
+}
+export interface IDslComponent {
+  downstream: Array<string>;
+  obj: ComponentObject;
+  upstream: Array<string>;
+}
+
+interface NodeData {
+  label: string;
+  name: string;
+  form?: {
+    outputs?: Record<
+      string,
+      {
+        type: string;
+        value: string | Array<Record<string, any>> | number;
+      }
+    >;
+    setups?: Array<Record<string, any>>;
+    chunk_token_size?: number;
+    delimiters?: Array<{
+      value: string;
+    }>;
+    overlapped_percent?: number;
+  };
+}
+
+interface EdgeData {
+  isHovered: boolean;
+}
+
+interface Position {
+  x: number;
+  y: number;
+}
+
+interface Measured {
+  height: number;
+  width: number;
+}
+
+interface Node {
+  data: NodeData;
+  dragging: boolean;
+  id: string;
+  measured: Measured;
+  position: Position;
+  selected: boolean;
+  sourcePosition: string;
+  targetPosition: string;
+  type: string;
+}
+
+interface Edge {
+  data: EdgeData;
+  id: string;
+  source: string;
+  sourceHandle: string;
+  target: string;
+  targetHandle: string;
+}
+interface GraphData {
+  edges: Edge[];
+  nodes: Node[];
+}
+
+export interface IPipelineFileLogDetail {
+  avatar: string;
+  create_date: string;
+  create_time: number;
+  document_id: string;
+  document_name: string;
+  document_suffix: string;
+  document_type: string;
+  dsl: {
+    components: {
+      [key: string]: IDslComponent;
+    };
+    graph: GraphData;
+    task_id: string;
+    path: Array<string>;
+  };
+  id: string;
+  kb_id: string;
+  operation_status: string;
+  parser_id: string;
+  pipeline_id: string;
+  pipeline_title: string;
+  process_begin_at: string;
+  process_duration: number;
+  progress: number;
+  progress_msg: string;
+  source_from: string;
+  status: string;
+  task_type: string;
+  tenant_id: string;
+  update_date: string;
+  update_time: number;
+}
+
+export interface IChunk {
+  available_int?: number; // Whether to enable, 0: not enabled, 1: enabled
+  chunk_id?: string;
+  content_with_weight?: string;
+  doc_id?: string;
+  doc_name?: string;
+  image_id?: string;
+  important_kwd?: string[];
+  question_kwd?: string[]; // keywords
+  tag_kwd?: string[];
+  positions: number[][];
+  tag_feas?: Record<string, number>;
+  text: string;
+}
+
+export interface NavigateToDataflowResultProps {
+  id: string;
+  [PipelineResultSearchParams.KnowledgeId]?: string;
+  [PipelineResultSearchParams.DocumentId]: string;
+  [PipelineResultSearchParams.AgentId]?: string;
+  [PipelineResultSearchParams.AgentTitle]?: string;
+  [PipelineResultSearchParams.IsReadOnly]?: string;
+  [PipelineResultSearchParams.Type]: string;
+  [PipelineResultSearchParams.CreatedBy]?: string;
+  [PipelineResultSearchParams.DocumentExtension]?: string;
+}
+
+```
+
+## Detailed Analysis
+
+### File Role in Repository
+
+The file `web/src/pages/dataflow-result/interface.ts` is located in the `web/src/pages/dataflow-result` directory.
+
+This file is part of the **Frontend/Web** layer of RAGFlow.
+
+### Architecture Context
+
+Files in this location typically handle concerns related to dataflow-result.
+
+### Design Patterns
+
+[Analysis of design patterns would go here based on code structure]
+
+### Performance Considerations
+
+[Performance analysis would consider file size, complexity, algorithmic efficiency]
+
+### Security Considerations
+
+- Watch for XSS vulnerabilities
+- Ensure proper input sanitization
+- Validate all API calls
+
+### Testing Approach
+
+To test this file:
+1. Review the corresponding test files in the test/ directory
+2. Ensure all public APIs have test coverage
+3. Test edge cases and error conditions
+4. Verify integration with related components
+
+### Related Files
+
+- [chunker.tsx](chunker.tsx_docs.md)
+- [constant.ts](constant.ts_docs.md)
+- [hooks.ts](hooks.ts_docs.md)
+- [index.less](index.less_docs.md)
+- [index.tsx](index.tsx_docs.md)
+- [parser.tsx](parser.tsx_docs.md)
+- [utils.ts](utils.ts_docs.md)
+
+
+## Cross-References
+
+- [Folder Documentation](./doc.md)
+- [Folder Index](./index.md)
+- [Global Index](../../index.md)
+
+---
+
+*Generated by RAGFlow Comprehensive Documentation Generator*

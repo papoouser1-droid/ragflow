@@ -1,0 +1,182 @@
+# Documentation: web/src/pages/agent/canvas/node/dropdown/next-step-dropdown.tsx
+
+## File Metadata
+
+- **Path**: `web/src/pages/agent/canvas/node/dropdown/next-step-dropdown.tsx`
+- **Size**: 3325 bytes
+- **Type**: .tsx
+- **Readable**: Yes
+
+## Purpose
+
+This file is part of the RAGFlow repository at location `web/src/pages/agent/canvas/node/dropdown/next-step-dropdown.tsx`.
+
+## Original Source Code
+
+```tsx
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuLabel,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
+import { IModalProps } from '@/interfaces/common';
+import { useIsPipeline } from '@/pages/agent/hooks/use-is-pipeline';
+import { t } from 'i18next';
+import { PropsWithChildren, memo, useEffect, useRef } from 'react';
+import {
+  AccordionOperators,
+  PipelineAccordionOperators,
+} from './accordion-operators';
+import { HideModalContext, OnNodeCreatedContext } from './operator-item-list';
+
+export function InnerNextStepDropdown({
+  children,
+  hideModal,
+  position,
+  onNodeCreated,
+  nodeId,
+}: PropsWithChildren &
+  IModalProps<any> & {
+    position?: { x: number; y: number };
+    onNodeCreated?: (newNodeId: string) => void;
+    nodeId?: string;
+  }) {
+  const dropdownRef = useRef<HTMLDivElement>(null);
+  const isPipeline = useIsPipeline();
+
+  useEffect(() => {
+    if (position && hideModal) {
+      const handleKeyDown = (event: KeyboardEvent) => {
+        if (event.key === 'Escape') {
+          hideModal();
+        }
+      };
+
+      document.addEventListener('keydown', handleKeyDown);
+
+      return () => {
+        document.removeEventListener('keydown', handleKeyDown);
+      };
+    }
+  }, [position, hideModal]);
+
+  if (position) {
+    return (
+      <div
+        ref={dropdownRef}
+        style={{
+          position: 'fixed',
+          left: position.x,
+          top: position.y,
+          zIndex: 1000,
+        }}
+        onClick={(e) => e.stopPropagation()}
+      >
+        <div className="w-[300px] font-semibold bg-bg-base border border-border rounded-md shadow-lg">
+          <div className="px-3 py-2 border-b border-border">
+            <div className="text-sm font-medium">{t('flow.nextStep')}</div>
+          </div>
+          <HideModalContext.Provider value={hideModal}>
+            <OnNodeCreatedContext.Provider value={onNodeCreated}>
+              {isPipeline ? (
+                <PipelineAccordionOperators
+                  isCustomDropdown={true}
+                  mousePosition={position}
+                  nodeId={nodeId}
+                ></PipelineAccordionOperators>
+              ) : (
+                <AccordionOperators
+                  isCustomDropdown={true}
+                  mousePosition={position}
+                ></AccordionOperators>
+              )}
+            </OnNodeCreatedContext.Provider>
+          </HideModalContext.Provider>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <DropdownMenu
+      open={true}
+      onOpenChange={(open) => {
+        if (!open && hideModal) {
+          hideModal();
+        }
+      }}
+    >
+      <DropdownMenuTrigger asChild>{children}</DropdownMenuTrigger>
+      <DropdownMenuContent
+        onClick={(e) => e.stopPropagation()}
+        className="w-[300px] font-semibold"
+      >
+        <DropdownMenuLabel className="text-xs text-text-primary">
+          {t('flow.nextStep')}
+        </DropdownMenuLabel>
+        <HideModalContext.Provider value={hideModal}>
+          {isPipeline ? (
+            <PipelineAccordionOperators></PipelineAccordionOperators>
+          ) : (
+            <AccordionOperators></AccordionOperators>
+          )}
+        </HideModalContext.Provider>
+      </DropdownMenuContent>
+    </DropdownMenu>
+  );
+}
+
+export const NextStepDropdown = memo(InnerNextStepDropdown);
+
+```
+
+## Detailed Analysis
+
+### File Role in Repository
+
+The file `web/src/pages/agent/canvas/node/dropdown/next-step-dropdown.tsx` is located in the `web/src/pages/agent/canvas/node/dropdown` directory.
+
+This file is part of the **Frontend/Web** layer of RAGFlow.
+
+### Architecture Context
+
+Files in this location typically handle concerns related to dropdown.
+
+### Design Patterns
+
+[Analysis of design patterns would go here based on code structure]
+
+### Performance Considerations
+
+[Performance analysis would consider file size, complexity, algorithmic efficiency]
+
+### Security Considerations
+
+- Watch for XSS vulnerabilities
+- Ensure proper input sanitization
+- Validate all API calls
+
+### Testing Approach
+
+To test this file:
+1. Review the corresponding test files in the test/ directory
+2. Ensure all public APIs have test coverage
+3. Test edge cases and error conditions
+4. Verify integration with related components
+
+### Related Files
+
+- [accordion-operators.tsx](accordion-operators.tsx_docs.md)
+- [operator-item-list.tsx](operator-item-list.tsx_docs.md)
+
+
+## Cross-References
+
+- [Folder Documentation](./doc.md)
+- [Folder Index](./index.md)
+- [Global Index](../../index.md)
+
+---
+
+*Generated by RAGFlow Comprehensive Documentation Generator*

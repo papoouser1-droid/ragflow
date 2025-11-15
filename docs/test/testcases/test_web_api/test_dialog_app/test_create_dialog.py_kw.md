@@ -1,0 +1,114 @@
+# Keyword Map: test/testcases/test_web_api/test_dialog_app/test_create_dialog.py
+
+## File Path and Links
+
+- **Original File**: `test/testcases/test_web_api/test_dialog_app/test_create_dialog.py`
+- **Documentation**: [test_create_dialog.py_docs.md](./test_create_dialog.py_docs.md)
+
+## Keywords Extracted
+
+This file contains 69 extracted keywords and identifiers:
+
+
+### Class Definition
+
+- **TestAuthorization**: Referenced in this file (see [_docs.md](./test_create_dialog.py_docs.md))
+- **TestCapability**: Referenced in this file (see [_docs.md](./test_create_dialog.py_docs.md))
+- **TestDialogCreate**: Referenced in this file (see [_docs.md](./test_create_dialog.py_docs.md))
+
+### Filename Component
+
+- **create**: Referenced in this file (see [_docs.md](./test_create_dialog.py_docs.md))
+- **dialog**: Referenced in this file (see [_docs.md](./test_create_dialog.py_docs.md))
+- **test**: Referenced in this file (see [_docs.md](./test_create_dialog.py_docs.md))
+
+### Function Definition
+
+- **test_auth_invalid**: Referenced in this file (see [_docs.md](./test_create_dialog.py_docs.md))
+- **test_create_dialog_100**: Referenced in this file (see [_docs.md](./test_create_dialog.py_docs.md))
+- **test_create_dialog_concurrent**: Referenced in this file (see [_docs.md](./test_create_dialog.py_docs.md))
+- **test_create_with_all_parameters**: Referenced in this file (see [_docs.md](./test_create_dialog.py_docs.md))
+- **test_create_with_kb_ids**: Referenced in this file (see [_docs.md](./test_create_dialog.py_docs.md))
+- **test_name**: Referenced in this file (see [_docs.md](./test_create_dialog.py_docs.md))
+- **test_name_duplicated**: Referenced in this file (see [_docs.md](./test_create_dialog.py_docs.md))
+- **test_name_invalid**: Referenced in this file (see [_docs.md](./test_create_dialog.py_docs.md))
+- **test_optional_parameters**: Referenced in this file (see [_docs.md](./test_create_dialog.py_docs.md))
+- **test_prompt_config_parameter_not_used**: Referenced in this file (see [_docs.md](./test_create_dialog.py_docs.md))
+- **test_prompt_config_required**: Referenced in this file (see [_docs.md](./test_create_dialog.py_docs.md))
+- **test_prompt_config_with_knowledge_no_kb**: Referenced in this file (see [_docs.md](./test_create_dialog.py_docs.md))
+
+### Identifier
+
+- **ANY**: Referenced in this file (see [_docs.md](./test_create_dialog.py_docs.md))
+- **All**: Referenced in this file (see [_docs.md](./test_create_dialog.py_docs.md))
+- **Apache**: Referenced in this file (see [_docs.md](./test_create_dialog.py_docs.md))
+- **Authors**: Referenced in this file (see [_docs.md](./test_create_dialog.py_docs.md))
+- **BASIS**: Referenced in this file (see [_docs.md](./test_create_dialog.py_docs.md))
+- **CHAT_ASSISTANT_NAME_LIMIT**: Referenced in this file (see [_docs.md](./test_create_dialog.py_docs.md))
+- **CONDITIONS**: Referenced in this file (see [_docs.md](./test_create_dialog.py_docs.md))
+- **Copyright**: Referenced in this file (see [_docs.md](./test_create_dialog.py_docs.md))
+- **Failed**: Referenced in this file (see [_docs.md](./test_create_dialog.py_docs.md))
+- **INVALID_API_TOKEN**: Referenced in this file (see [_docs.md](./test_create_dialog.py_docs.md))
+- **InfiniFlow**: Referenced in this file (see [_docs.md](./test_create_dialog.py_docs.md))
+- **KIND**: Referenced in this file (see [_docs.md](./test_create_dialog.py_docs.md))
+- **LICENSE**: Referenced in this file (see [_docs.md](./test_create_dialog.py_docs.md))
+- **License**: Referenced in this file (see [_docs.md](./test_create_dialog.py_docs.md))
+- **Licensed**: Referenced in this file (see [_docs.md](./test_create_dialog.py_docs.md))
+- **None**: Referenced in this file (see [_docs.md](./test_create_dialog.py_docs.md))
+- **RAGFlowWebApiAuth**: Referenced in this file (see [_docs.md](./test_create_dialog.py_docs.md))
+- **Reserved**: Referenced in this file (see [_docs.md](./test_create_dialog.py_docs.md))
+- **Rights**: Referenced in this file (see [_docs.md](./test_create_dialog.py_docs.md))
+- **See**: Referenced in this file (see [_docs.md](./test_create_dialog.py_docs.md))
+- **TestAuthorization**: Referenced in this file (see [_docs.md](./test_create_dialog.py_docs.md))
+- **TestCapability**: Referenced in this file (see [_docs.md](./test_create_dialog.py_docs.md))
+- **TestDialogCreate**: Referenced in this file (see [_docs.md](./test_create_dialog.py_docs.md))
+- **The**: Referenced in this file (see [_docs.md](./test_create_dialog.py_docs.md))
+- **ThreadPoolExecutor**: Referenced in this file (see [_docs.md](./test_create_dialog.py_docs.md))
+- **Unauthorized**: Referenced in this file (see [_docs.md](./test_create_dialog.py_docs.md))
+- **Unless**: Referenced in this file (see [_docs.md](./test_create_dialog.py_docs.md))
+- **Version**: Referenced in this file (see [_docs.md](./test_create_dialog.py_docs.md))
+- **WARRANTIES**: Referenced in this file (see [_docs.md](./test_create_dialog.py_docs.md))
+- **WITHOUT**: Referenced in this file (see [_docs.md](./test_create_dialog.py_docs.md))
+- **WebApiAuth**: Referenced in this file (see [_docs.md](./test_create_dialog.py_docs.md))
+- **You**: Referenced in this file (see [_docs.md](./test_create_dialog.py_docs.md))
+
+### Imported Module
+
+- **common**: Referenced in this file (see [_docs.md](./test_create_dialog.py_docs.md))
+- **concurrent.futures**: Referenced in this file (see [_docs.md](./test_create_dialog.py_docs.md))
+- **configs**: Referenced in this file (see [_docs.md](./test_create_dialog.py_docs.md))
+- **hypothesis**: Referenced in this file (see [_docs.md](./test_create_dialog.py_docs.md))
+- **libs.auth**: Referenced in this file (see [_docs.md](./test_create_dialog.py_docs.md))
+- **pytest**: Referenced in this file (see [_docs.md](./test_create_dialog.py_docs.md))
+- **utils.hypothesis_utils**: Referenced in this file (see [_docs.md](./test_create_dialog.py_docs.md))
+
+### Method In Testauthorization
+
+- **test_auth_invalid**: Referenced in this file (see [_docs.md](./test_create_dialog.py_docs.md))
+
+### Method In Testcapability
+
+- **test_create_dialog_100**: Referenced in this file (see [_docs.md](./test_create_dialog.py_docs.md))
+- **test_create_dialog_concurrent**: Referenced in this file (see [_docs.md](./test_create_dialog.py_docs.md))
+
+### Method In Testdialogcreate
+
+- **test_create_with_all_parameters**: Referenced in this file (see [_docs.md](./test_create_dialog.py_docs.md))
+- **test_create_with_kb_ids**: Referenced in this file (see [_docs.md](./test_create_dialog.py_docs.md))
+- **test_name**: Referenced in this file (see [_docs.md](./test_create_dialog.py_docs.md))
+- **test_name_duplicated**: Referenced in this file (see [_docs.md](./test_create_dialog.py_docs.md))
+- **test_name_invalid**: Referenced in this file (see [_docs.md](./test_create_dialog.py_docs.md))
+- **test_optional_parameters**: Referenced in this file (see [_docs.md](./test_create_dialog.py_docs.md))
+- **test_prompt_config_parameter_not_used**: Referenced in this file (see [_docs.md](./test_create_dialog.py_docs.md))
+- **test_prompt_config_required**: Referenced in this file (see [_docs.md](./test_create_dialog.py_docs.md))
+- **test_prompt_config_with_knowledge_no_kb**: Referenced in this file (see [_docs.md](./test_create_dialog.py_docs.md))
+
+
+## Keyword → Section Map
+
+All keywords in this file can be found in the comprehensive documentation:
+- [Full Documentation](./test_create_dialog.py_docs.md)
+
+---
+
+*Generated by RAGFlow Comprehensive Documentation Generator*

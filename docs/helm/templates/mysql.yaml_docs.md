@@ -1,0 +1,180 @@
+# Documentation: helm/templates/mysql.yaml
+
+## File Metadata
+
+- **Path**: `helm/templates/mysql.yaml`
+- **Size**: 3361 bytes
+- **Type**: .yaml
+- **Readable**: Yes
+
+## Purpose
+
+This file is part of the RAGFlow repository at location `helm/templates/mysql.yaml`.
+
+## Original Source Code
+
+```yaml
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: {{ include "ragflow.fullname" . }}-mysql
+  annotations:
+    "helm.sh/resource-policy": keep
+  labels:
+    {{- include "ragflow.labels" . | nindent 4 }}
+    app.kubernetes.io/component: mysql
+spec:
+  {{- with .Values.mysql.storage.className }}
+  storageClassName: {{ . }}
+  {{- end }}
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: {{ .Values.mysql.storage.capacity }}
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: {{ include "ragflow.fullname" . }}-mysql
+  labels:
+    {{- include "ragflow.labels" . | nindent 4 }}
+    app.kubernetes.io/component: mysql
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      {{- include "ragflow.selectorLabels" . | nindent 6 }}
+      app.kubernetes.io/component: mysql
+  {{- with .Values.mysql.deployment.strategy }}
+  strategy:
+    {{- . | toYaml | nindent 4 }}
+  {{- end }}
+  template:
+    metadata:
+      labels:
+        {{- include "ragflow.labels" . | nindent 8 }}
+        app.kubernetes.io/component: mysql
+      annotations:
+        checksum/config-mysql: {{ include (print $.Template.BasePath "/mysql-config.yaml") . | sha256sum }}
+        checksum/config-env: {{ include (print $.Template.BasePath "/env.yaml") . | sha256sum }}
+    spec:
+      {{- if or .Values.imagePullSecrets .Values.mysql.image.pullSecrets }}
+      imagePullSecrets:
+        {{- with .Values.imagePullSecrets }}
+        {{- toYaml . | nindent 8 }}
+        {{- end }}
+        {{- with .Values.mysql.image.pullSecrets }}
+        {{- toYaml . | nindent 8 }}
+        {{- end }}
+      {{- end }}
+      containers:
+      - name: mysql
+        image: {{ .Values.mysql.image.repository }}:{{ .Values.mysql.image.tag }}
+        {{- with .Values.mysql.image.pullPolicy }}
+        imagePullPolicy: {{ . }}
+        {{- end }}
+        envFrom:
+          - secretRef:
+              name: {{ include "ragflow.fullname" . }}-env-config
+        args:
+          - --max_connections=1000
+          - --character-set-server=utf8mb4
+          - --collation-server=utf8mb4_general_ci
+          - --default-authentication-plugin=mysql_native_password
+          - --tls_version=TLSv1.2,TLSv1.3
+          - --init-file=/data/application/init.sql
+          - --disable-log-bin
+        ports:
+          - containerPort: 3306
+            name: mysql
+        {{- with .Values.mysql.deployment.resources }}
+        resources:
+          {{- . | toYaml | nindent 10 }}
+        {{- end }}
+        volumeMounts:
+          - mountPath: /var/lib/mysql
+            name: mysql-data
+          - mountPath: /data/application/init.sql
+            subPath: init.sql
+            readOnly: true
+            name: init-script-volume
+      volumes:
+        - name: mysql-data
+          persistentVolumeClaim:
+            claimName: {{ include "ragflow.fullname" . }}-mysql
+        - name: init-script-volume
+          configMap:
+            name: mysql-init-script
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "ragflow.fullname" . }}-mysql
+  labels:
+    {{- include "ragflow.labels" . | nindent 4 }}
+    app.kubernetes.io/component: mysql
+spec:
+  selector:
+    {{- include "ragflow.selectorLabels" . | nindent 4 }}
+    app.kubernetes.io/component: mysql
+  ports:
+    - protocol: TCP
+      port: 3306
+      targetPort: mysql
+  type: {{ .Values.mysql.service.type }}
+
+```
+
+## Detailed Analysis
+
+### File Role in Repository
+
+The file `helm/templates/mysql.yaml` is located in the `helm/templates` directory.
+
+### Architecture Context
+
+Files in this location typically handle concerns related to templates.
+
+### Design Patterns
+
+[Analysis of design patterns would go here based on code structure]
+
+### Performance Considerations
+
+[Performance analysis would consider file size, complexity, algorithmic efficiency]
+
+### Security Considerations
+
+### Testing Approach
+
+To test this file:
+1. Review the corresponding test files in the test/ directory
+2. Ensure all public APIs have test coverage
+3. Test edge cases and error conditions
+4. Verify integration with related components
+
+### Related Files
+
+- [_helpers.tpl](_helpers.tpl_docs.md)
+- [elasticsearch-config.yaml](elasticsearch-config.yaml_docs.md)
+- [elasticsearch.yaml](elasticsearch.yaml_docs.md)
+- [env.yaml](env.yaml_docs.md)
+- [infinity.yaml](infinity.yaml_docs.md)
+- [ingress.yaml](ingress.yaml_docs.md)
+- [minio.yaml](minio.yaml_docs.md)
+- [mysql-config.yaml](mysql-config.yaml_docs.md)
+- [opensearch-config.yaml](opensearch-config.yaml_docs.md)
+- [opensearch.yaml](opensearch.yaml_docs.md)
+
+
+## Cross-References
+
+- [Folder Documentation](./doc.md)
+- [Folder Index](./index.md)
+- [Global Index](../../index.md)
+
+---
+
+*Generated by RAGFlow Comprehensive Documentation Generator*

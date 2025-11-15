@@ -1,0 +1,79 @@
+# Keyword Map: web/src/assets/inter/Inter-SemiBold.woff2
+
+## File Path and Links
+
+- **Original File**: `web/src/assets/inter/Inter-SemiBold.woff2`
+- **Documentation**: [Inter-SemiBold.woff2_docs.md](./Inter-SemiBold.woff2_docs.md)
+
+## Keywords Extracted
+
+This file contains 52 extracted keywords and identifiers:
+
+
+### Filename Component
+
+- **inter**: Referenced in this file (see [_docs.md](./Inter-SemiBold.woff2_docs.md))
+- **semibold**: Referenced in this file (see [_docs.md](./Inter-SemiBold.woff2_docs.md))
+
+### Identifier
+
+- **AA0**: Referenced in this file (see [_docs.md](./Inter-SemiBold.woff2_docs.md))
+- **D0B**: Referenced in this file (see [_docs.md](./Inter-SemiBold.woff2_docs.md))
+- **D91**: Referenced in this file (see [_docs.md](./Inter-SemiBold.woff2_docs.md))
+- **DBk**: Referenced in this file (see [_docs.md](./Inter-SemiBold.woff2_docs.md))
+- **DZU**: Referenced in this file (see [_docs.md](./Inter-SemiBold.woff2_docs.md))
+- **E8r**: Referenced in this file (see [_docs.md](./Inter-SemiBold.woff2_docs.md))
+- **EQDQ**: Referenced in this file (see [_docs.md](./Inter-SemiBold.woff2_docs.md))
+- **ERjT**: Referenced in this file (see [_docs.md](./Inter-SemiBold.woff2_docs.md))
+- **FEzS**: Referenced in this file (see [_docs.md](./Inter-SemiBold.woff2_docs.md))
+- **Fm9**: Referenced in this file (see [_docs.md](./Inter-SemiBold.woff2_docs.md))
+- **HDLBJFNC**: Referenced in this file (see [_docs.md](./Inter-SemiBold.woff2_docs.md))
+- **IJA**: Referenced in this file (see [_docs.md](./Inter-SemiBold.woff2_docs.md))
+- **ILe**: Referenced in this file (see [_docs.md](./Inter-SemiBold.woff2_docs.md))
+- **Io4GcK**: Referenced in this file (see [_docs.md](./Inter-SemiBold.woff2_docs.md))
+- **JHv**: Referenced in this file (see [_docs.md](./Inter-SemiBold.woff2_docs.md))
+- **JjBi**: Referenced in this file (see [_docs.md](./Inter-SemiBold.woff2_docs.md))
+- **JjY**: Referenced in this file (see [_docs.md](./Inter-SemiBold.woff2_docs.md))
+- **KWW**: Referenced in this file (see [_docs.md](./Inter-SemiBold.woff2_docs.md))
+- **KdZG**: Referenced in this file (see [_docs.md](./Inter-SemiBold.woff2_docs.md))
+- **Kin**: Referenced in this file (see [_docs.md](./Inter-SemiBold.woff2_docs.md))
+- **L13**: Referenced in this file (see [_docs.md](./Inter-SemiBold.woff2_docs.md))
+- **LVa**: Referenced in this file (see [_docs.md](./Inter-SemiBold.woff2_docs.md))
+- **M8U**: Referenced in this file (see [_docs.md](./Inter-SemiBold.woff2_docs.md))
+- **MZB**: Referenced in this file (see [_docs.md](./Inter-SemiBold.woff2_docs.md))
+- **Q7P**: Referenced in this file (see [_docs.md](./Inter-SemiBold.woff2_docs.md))
+- **QPK**: Referenced in this file (see [_docs.md](./Inter-SemiBold.woff2_docs.md))
+- **QVIC3**: Referenced in this file (see [_docs.md](./Inter-SemiBold.woff2_docs.md))
+- **QVP**: Referenced in this file (see [_docs.md](./Inter-SemiBold.woff2_docs.md))
+- **QaO**: Referenced in this file (see [_docs.md](./Inter-SemiBold.woff2_docs.md))
+- **R2r**: Referenced in this file (see [_docs.md](./Inter-SemiBold.woff2_docs.md))
+- **RaM**: Referenced in this file (see [_docs.md](./Inter-SemiBold.woff2_docs.md))
+- **Rxl**: Referenced in this file (see [_docs.md](./Inter-SemiBold.woff2_docs.md))
+- **S3t**: Referenced in this file (see [_docs.md](./Inter-SemiBold.woff2_docs.md))
+- **SEAI**: Referenced in this file (see [_docs.md](./Inter-SemiBold.woff2_docs.md))
+- **Sjd**: Referenced in this file (see [_docs.md](./Inter-SemiBold.woff2_docs.md))
+- **Tgj**: Referenced in this file (see [_docs.md](./Inter-SemiBold.woff2_docs.md))
+- **U_bnZs2**: Referenced in this file (see [_docs.md](./Inter-SemiBold.woff2_docs.md))
+- **V6v**: Referenced in this file (see [_docs.md](./Inter-SemiBold.woff2_docs.md))
+- **VETEU**: Referenced in this file (see [_docs.md](./Inter-SemiBold.woff2_docs.md))
+- **VSCP**: Referenced in this file (see [_docs.md](./Inter-SemiBold.woff2_docs.md))
+- **WOl**: Referenced in this file (see [_docs.md](./Inter-SemiBold.woff2_docs.md))
+- **XYC4**: Referenced in this file (see [_docs.md](./Inter-SemiBold.woff2_docs.md))
+- **XkM**: Referenced in this file (see [_docs.md](./Inter-SemiBold.woff2_docs.md))
+- **Y5H**: Referenced in this file (see [_docs.md](./Inter-SemiBold.woff2_docs.md))
+- **YFR**: Referenced in this file (see [_docs.md](./Inter-SemiBold.woff2_docs.md))
+- **Y_m**: Referenced in this file (see [_docs.md](./Inter-SemiBold.woff2_docs.md))
+- **YlRe**: Referenced in this file (see [_docs.md](./Inter-SemiBold.woff2_docs.md))
+- **ZKm**: Referenced in this file (see [_docs.md](./Inter-SemiBold.woff2_docs.md))
+- **ZMO**: Referenced in this file (see [_docs.md](./Inter-SemiBold.woff2_docs.md))
+- **ZRb0**: Referenced in this file (see [_docs.md](./Inter-SemiBold.woff2_docs.md))
+
+
+## Keyword → Section Map
+
+All keywords in this file can be found in the comprehensive documentation:
+- [Full Documentation](./Inter-SemiBold.woff2_docs.md)
+
+---
+
+*Generated by RAGFlow Comprehensive Documentation Generator*

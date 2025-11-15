@@ -1,0 +1,184 @@
+# Documentation: web/src/pages/agent/hooks/use-send-shared-message.ts
+
+## File Metadata
+
+- **Path**: `web/src/pages/agent/hooks/use-send-shared-message.ts`
+- **Size**: 2901 bytes
+- **Type**: .ts
+- **Readable**: Yes
+
+## Purpose
+
+This file is part of the RAGFlow repository at location `web/src/pages/agent/hooks/use-send-shared-message.ts`.
+
+## Original Source Code
+
+```ts
+import { SharedFrom } from '@/constants/chat';
+import { useSetModalState } from '@/hooks/common-hooks';
+import { useFetchExternalAgentInputs } from '@/hooks/use-agent-request';
+import { IEventList } from '@/hooks/use-send-message';
+import {
+  buildRequestBody,
+  useSendAgentMessage,
+} from '@/pages/agent/chat/use-send-agent-message';
+import { isEmpty } from 'lodash';
+import trim from 'lodash/trim';
+import { useCallback, useEffect, useRef, useState } from 'react';
+import { useSearchParams } from 'umi';
+import { AgentDialogueMode } from '../constant';
+
+export const useSendButtonDisabled = (value: string) => {
+  return trim(value) === '';
+};
+
+export const useGetSharedChatSearchParams = () => {
+  const [searchParams] = useSearchParams();
+  const data_prefix = 'data_';
+  const data = Object.fromEntries(
+    searchParams
+      .entries()
+      .filter(([key]) => key.startsWith(data_prefix))
+      .map(([key, value]) => [key.replace(data_prefix, ''), value]),
+  );
+  return {
+    from: searchParams.get('from') as SharedFrom,
+    sharedId: searchParams.get('shared_id'),
+    locale: searchParams.get('locale'),
+    data: data,
+    visibleAvatar: searchParams.get('visible_avatar')
+      ? searchParams.get('visible_avatar') !== '1'
+      : true,
+  };
+};
+
+export const useSendNextSharedMessage = (
+  addEventList: (data: IEventList, messageId: string) => void,
+) => {
+  const { from, sharedId: conversationId } = useGetSharedChatSearchParams();
+  const url = `/api/v1/${from === SharedFrom.Agent ? 'agentbots' : 'chatbots'}/${conversationId}/completions`;
+  const { data: inputsData } = useFetchExternalAgentInputs();
+
+  const [params, setParams] = useState<any[]>([]);
+  const sendedTaskMessage = useRef<boolean>(false);
+
+  const isTaskMode = inputsData.mode === AgentDialogueMode.Task;
+
+  const {
+    visible: parameterDialogVisible,
+    hideModal: hideParameterDialog,
+    showModal: showParameterDialog,
+  } = useSetModalState();
+
+  const ret = useSendAgentMessage({
+    url,
+    addEventList,
+    beginParams: params,
+    isShared: true,
+    isTaskMode,
+  });
+
+  const ok = useCallback(
+    (params: any[]) => {
+      if (isTaskMode) {
+        const msgBody = buildRequestBody('');
+
+        ret.sendMessage({
+          message: msgBody,
+          beginInputs: params,
+        });
+      } else {
+        setParams(params);
+      }
+
+      hideParameterDialog();
+    },
+    [hideParameterDialog, isTaskMode, ret],
+  );
+
+  const runTask = useCallback(() => {
+    if (
+      isTaskMode &&
+      isEmpty(inputsData?.inputs) &&
+      !sendedTaskMessage.current
+    ) {
+      ok([]);
+      sendedTaskMessage.current = true;
+    }
+  }, [inputsData?.inputs, isTaskMode, ok]);
+
+  useEffect(() => {
+    runTask();
+  }, [runTask]);
+
+  return {
+    ...ret,
+    hasError: false,
+    parameterDialogVisible,
+    inputsData,
+    isTaskMode,
+    hideParameterDialog,
+    showParameterDialog,
+    ok,
+  };
+};
+
+```
+
+## Detailed Analysis
+
+### File Role in Repository
+
+The file `web/src/pages/agent/hooks/use-send-shared-message.ts` is located in the `web/src/pages/agent/hooks` directory.
+
+This file is part of the **Frontend/Web** layer of RAGFlow.
+
+### Architecture Context
+
+Files in this location typically handle concerns related to hooks.
+
+### Design Patterns
+
+[Analysis of design patterns would go here based on code structure]
+
+### Performance Considerations
+
+[Performance analysis would consider file size, complexity, algorithmic efficiency]
+
+### Security Considerations
+
+- Watch for XSS vulnerabilities
+- Ensure proper input sanitization
+- Validate all API calls
+
+### Testing Approach
+
+To test this file:
+1. Review the corresponding test files in the test/ directory
+2. Ensure all public APIs have test coverage
+3. Test edge cases and error conditions
+4. Verify integration with related components
+
+### Related Files
+
+- [use-add-node.ts](use-add-node.ts_docs.md)
+- [use-agent-tool-initial-values.ts](use-agent-tool-initial-values.ts_docs.md)
+- [use-before-delete.tsx](use-before-delete.tsx_docs.md)
+- [use-build-dsl.ts](use-build-dsl.ts_docs.md)
+- [use-build-options.tsx](use-build-options.tsx_docs.md)
+- [use-build-structured-output.ts](use-build-structured-output.ts_docs.md)
+- [use-cache-chat-log.ts](use-cache-chat-log.ts_docs.md)
+- [use-calculate-sheet-right.ts](use-calculate-sheet-right.ts_docs.md)
+- [use-cancel-dataflow.ts](use-cancel-dataflow.ts_docs.md)
+- [use-change-node-name.ts](use-change-node-name.ts_docs.md)
+
+
+## Cross-References
+
+- [Folder Documentation](./doc.md)
+- [Folder Index](./index.md)
+- [Global Index](../../index.md)
+
+---
+
+*Generated by RAGFlow Comprehensive Documentation Generator*

@@ -1,0 +1,169 @@
+# Documentation: web/src/components/jsonjoy-builder/components/schema-editor/type-dropdown.tsx
+
+## File Metadata
+
+- **Path**: `web/src/components/jsonjoy-builder/components/schema-editor/type-dropdown.tsx`
+- **Size**: 2772 bytes
+- **Type**: .tsx
+- **Readable**: Yes
+
+## Purpose
+
+This file is part of the RAGFlow repository at location `web/src/components/jsonjoy-builder/components/schema-editor/type-dropdown.tsx`.
+
+## Original Source Code
+
+```tsx
+import { Check, ChevronDown } from 'lucide-react';
+import { useEffect, useRef, useState } from 'react';
+import { useTranslation } from '../../hooks/use-translation';
+import { cn, getTypeColor, getTypeLabel } from '../../lib/utils';
+import type { SchemaType } from '../../types/json-schema';
+
+export interface TypeDropdownProps {
+  value: SchemaType;
+  onChange: (value: SchemaType) => void;
+  className?: string;
+}
+
+const typeOptions: SchemaType[] = [
+  'string',
+  'number',
+  'boolean',
+  'object',
+  'array',
+  'null',
+];
+
+export const TypeDropdown: React.FC<TypeDropdownProps> = ({
+  value,
+  onChange,
+  className,
+}) => {
+  const t = useTranslation();
+  const [isOpen, setIsOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
+  return (
+    <div className="relative" ref={dropdownRef}>
+      <button
+        type="button"
+        className={cn(
+          'text-xs px-3.5 py-1.5 rounded-md font-medium w-[92px] text-center flex items-center justify-between',
+          getTypeColor(value),
+          'hover:shadow-xs hover:ring-1 hover:ring-ring/30 active:scale-95 transition-all',
+          className,
+        )}
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        <span>{getTypeLabel(t, value)}</span>
+        <ChevronDown size={14} className="ml-1" />
+      </button>
+
+      {isOpen && (
+        <div className="absolute z-50 mt-1 w-[140px] rounded-md border bg-popover shadow-lg animate-in fade-in-50 zoom-in-95">
+          <div className="py-1">
+            {typeOptions.map((type) => (
+              <button
+                key={type}
+                type="button"
+                className={cn(
+                  'w-full text-left px-3 py-1.5 text-xs flex items-center justify-between',
+                  'hover:bg-muted/50 transition-colors',
+                  value === type && 'font-medium',
+                )}
+                onClick={() => {
+                  onChange(type);
+                  setIsOpen(false);
+                }}
+              >
+                <span className={cn('px-2 py-0.5 rounded', getTypeColor(type))}>
+                  {getTypeLabel(t, type)}
+                </span>
+                {value === type && <Check size={14} />}
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default TypeDropdown;
+
+```
+
+## Detailed Analysis
+
+### File Role in Repository
+
+The file `web/src/components/jsonjoy-builder/components/schema-editor/type-dropdown.tsx` is located in the `web/src/components/jsonjoy-builder/components/schema-editor` directory.
+
+This file is part of the **Frontend/Web** layer of RAGFlow.
+
+### Architecture Context
+
+Files in this location typically handle concerns related to schema-editor.
+
+### Design Patterns
+
+[Analysis of design patterns would go here based on code structure]
+
+### Performance Considerations
+
+[Performance analysis would consider file size, complexity, algorithmic efficiency]
+
+### Security Considerations
+
+- Watch for XSS vulnerabilities
+- Ensure proper input sanitization
+- Validate all API calls
+
+### Testing Approach
+
+To test this file:
+1. Review the corresponding test files in the test/ directory
+2. Ensure all public APIs have test coverage
+3. Test edge cases and error conditions
+4. Verify integration with related components
+
+### Related Files
+
+- [add-field-button.tsx](add-field-button.tsx_docs.md)
+- [json-schema-editor.tsx](json-schema-editor.tsx_docs.md)
+- [json-schema-visualizer.tsx](json-schema-visualizer.tsx_docs.md)
+- [schema-field-list.tsx](schema-field-list.tsx_docs.md)
+- [schema-field.tsx](schema-field.tsx_docs.md)
+- [schema-property-editor.tsx](schema-property-editor.tsx_docs.md)
+- [schema-type-selector.tsx](schema-type-selector.tsx_docs.md)
+- [schema-visual-editor.tsx](schema-visual-editor.tsx_docs.md)
+- [type-editor.tsx](type-editor.tsx_docs.md)
+
+
+## Cross-References
+
+- [Folder Documentation](./doc.md)
+- [Folder Index](./index.md)
+- [Global Index](../../index.md)
+
+---
+
+*Generated by RAGFlow Comprehensive Documentation Generator*

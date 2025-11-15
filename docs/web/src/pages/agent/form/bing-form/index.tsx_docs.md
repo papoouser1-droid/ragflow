@@ -1,0 +1,197 @@
+# Documentation: web/src/pages/agent/form/bing-form/index.tsx
+
+## File Metadata
+
+- **Path**: `web/src/pages/agent/form/bing-form/index.tsx`
+- **Size**: 3573 bytes
+- **Type**: .tsx
+- **Readable**: Yes
+
+## Purpose
+
+This file is part of the RAGFlow repository at location `web/src/pages/agent/form/bing-form/index.tsx`.
+
+## Original Source Code
+
+```tsx
+import { SelectWithSearch } from '@/components/originui/select-with-search';
+import { TopNFormField } from '@/components/top-n-item';
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from '@/components/ui/form';
+import { Input } from '@/components/ui/input';
+import { useTranslate } from '@/hooks/common-hooks';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { memo, useMemo } from 'react';
+import { useForm, useFormContext } from 'react-hook-form';
+import { z } from 'zod';
+import { initialBingValues } from '../../constant';
+import { useFormValues } from '../../hooks/use-form-values';
+import { useWatchFormChange } from '../../hooks/use-watch-form-change';
+import { INextOperatorForm } from '../../interface';
+import { BingCountryOptions, BingLanguageOptions } from '../../options';
+import { FormWrapper } from '../components/form-wrapper';
+import { QueryVariable } from '../components/query-variable';
+
+export const BingFormSchema = {
+  channel: z.string(),
+  api_key: z.string(),
+  country: z.string(),
+  language: z.string(),
+  top_n: z.number(),
+};
+
+export const FormSchema = z.object({
+  query: z.string().optional(),
+  ...BingFormSchema,
+});
+
+export function BingFormWidgets() {
+  const form = useFormContext();
+  const { t } = useTranslate('flow');
+
+  const options = useMemo(() => {
+    return ['Webpages', 'News'].map((x) => ({ label: x, value: x }));
+  }, []);
+
+  return (
+    <>
+      <TopNFormField></TopNFormField>
+      <FormField
+        control={form.control}
+        name="channel"
+        render={({ field }) => (
+          <FormItem>
+            <FormLabel>{t('channel')}</FormLabel>
+            <FormControl>
+              <SelectWithSearch {...field} options={options}></SelectWithSearch>
+            </FormControl>
+            <FormMessage />
+          </FormItem>
+        )}
+      />
+      <FormField
+        control={form.control}
+        name="api_key"
+        render={({ field }) => (
+          <FormItem>
+            <FormLabel>{t('apiKey')}</FormLabel>
+            <FormControl>
+              <Input {...field}></Input>
+            </FormControl>
+            <FormMessage />
+          </FormItem>
+        )}
+      />
+      <FormField
+        control={form.control}
+        name="country"
+        render={({ field }) => (
+          <FormItem>
+            <FormLabel>{t('country')}</FormLabel>
+            <FormControl>
+              <SelectWithSearch
+                {...field}
+                options={BingCountryOptions}
+              ></SelectWithSearch>
+            </FormControl>
+            <FormMessage />
+          </FormItem>
+        )}
+      />
+      <FormField
+        control={form.control}
+        name="language"
+        render={({ field }) => (
+          <FormItem>
+            <FormLabel>{t('language')}</FormLabel>
+            <FormControl>
+              <SelectWithSearch
+                {...field}
+                options={BingLanguageOptions}
+              ></SelectWithSearch>
+            </FormControl>
+            <FormMessage />
+          </FormItem>
+        )}
+      />
+    </>
+  );
+}
+
+function BingForm({ node }: INextOperatorForm) {
+  const defaultValues = useFormValues(initialBingValues, node);
+
+  const form = useForm<z.infer<typeof FormSchema>>({
+    resolver: zodResolver(FormSchema),
+    defaultValues,
+  });
+
+  useWatchFormChange(node?.id, form);
+
+  return (
+    <Form {...form}>
+      <FormWrapper>
+        <QueryVariable></QueryVariable>
+        <BingFormWidgets></BingFormWidgets>
+      </FormWrapper>
+    </Form>
+  );
+}
+
+export default memo(BingForm);
+
+```
+
+## Detailed Analysis
+
+### File Role in Repository
+
+The file `web/src/pages/agent/form/bing-form/index.tsx` is located in the `web/src/pages/agent/form/bing-form` directory.
+
+This file is part of the **Frontend/Web** layer of RAGFlow.
+
+### Architecture Context
+
+Files in this location typically handle concerns related to bing-form.
+
+### Design Patterns
+
+[Analysis of design patterns would go here based on code structure]
+
+### Performance Considerations
+
+[Performance analysis would consider file size, complexity, algorithmic efficiency]
+
+### Security Considerations
+
+- Watch for XSS vulnerabilities
+- Ensure proper input sanitization
+- Validate all API calls
+
+### Testing Approach
+
+To test this file:
+1. Review the corresponding test files in the test/ directory
+2. Ensure all public APIs have test coverage
+3. Test edge cases and error conditions
+4. Verify integration with related components
+
+### Related Files
+
+
+
+## Cross-References
+
+- [Folder Documentation](./doc.md)
+- [Folder Index](./index.md)
+- [Global Index](../../index.md)
+
+---
+
+*Generated by RAGFlow Comprehensive Documentation Generator*

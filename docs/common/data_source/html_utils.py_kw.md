@@ -1,0 +1,87 @@
+# Keyword Map: common/data_source/html_utils.py
+
+## File Path and Links
+
+- **Original File**: `common/data_source/html_utils.py`
+- **Documentation**: [html_utils.py_docs.md](./html_utils.py_docs.md)
+
+## Keywords Extracted
+
+This file contains 51 extracted keywords and identifiers:
+
+
+### Class Definition
+
+- **ParsedHTML**: Referenced in this file (see [_docs.md](./html_utils.py_docs.md))
+
+### Filename Component
+
+- **html**: Referenced in this file (see [_docs.md](./html_utils.py_docs.md))
+- **utils**: Referenced in this file (see [_docs.md](./html_utils.py_docs.md))
+
+### Function Definition
+
+- **format_document_soup**: Referenced in this file (see [_docs.md](./html_utils.py_docs.md))
+- **format_element_text**: Referenced in this file (see [_docs.md](./html_utils.py_docs.md))
+- **parse_html_page_basic**: Referenced in this file (see [_docs.md](./html_utils.py_docs.md))
+- **parse_html_with_trafilatura**: Referenced in this file (see [_docs.md](./html_utils.py_docs.md))
+- **strip_excessive_newlines_and_spaces**: Referenced in this file (see [_docs.md](./html_utils.py_docs.md))
+- **strip_newlines**: Referenced in this file (see [_docs.md](./html_utils.py_docs.md))
+- **web_html_cleanup**: Referenced in this file (see [_docs.md](./html_utils.py_docs.md))
+
+### Identifier
+
+- **BeautifulSoup**: Referenced in this file (see [_docs.md](./html_utils.py_docs.md))
+- **BytesIO**: Referenced in this file (see [_docs.md](./html_utils.py_docs.md))
+- **Can**: Referenced in this file (see [_docs.md](./html_utils.py_docs.md))
+- **Comment**: Referenced in this file (see [_docs.md](./html_utils.py_docs.md))
+- **DEFAULT**: Referenced in this file (see [_docs.md](./html_utils.py_docs.md))
+- **Doctype**: Referenced in this file (see [_docs.md](./html_utils.py_docs.md))
+- **Don**: Referenced in this file (see [_docs.md](./html_utils.py_docs.md))
+- **False**: Referenced in this file (see [_docs.md](./html_utils.py_docs.md))
+- **Format**: Referenced in this file (see [_docs.md](./html_utils.py_docs.md))
+- **HTML**: Referenced in this file (see [_docs.md](./html_utils.py_docs.md))
+- **HTML_BASED_CONNECTOR_TRANSFORM_LINKS_STRATEGY**: Referenced in this file (see [_docs.md](./html_utils.py_docs.md))
+- **HtmlBasedConnectorTransformLinksStrategy**: Referenced in this file (see [_docs.md](./html_utils.py_docs.md))
+- **List**: Referenced in this file (see [_docs.md](./html_utils.py_docs.md))
+- **MINTLIFY_UNWANTED**: Referenced in this file (see [_docs.md](./html_utils.py_docs.md))
+- **NavigableString**: Referenced in this file (see [_docs.md](./html_utils.py_docs.md))
+- **Newlines**: Referenced in this file (see [_docs.md](./html_utils.py_docs.md))
+- **None**: Referenced in this file (see [_docs.md](./html_utils.py_docs.md))
+- **PARSE_WITH_TRAFILATURA**: Referenced in this file (see [_docs.md](./html_utils.py_docs.md))
+- **Parse**: Referenced in this file (see [_docs.md](./html_utils.py_docs.md))
+- **ParsedHTML**: Referenced in this file (see [_docs.md](./html_utils.py_docs.md))
+- **Repeated**: Referenced in this file (see [_docs.md](./html_utils.py_docs.md))
+- **STRIP**: Referenced in this file (see [_docs.md](./html_utils.py_docs.md))
+- **Some**: Referenced in this file (see [_docs.md](./html_utils.py_docs.md))
+- **Table**: Referenced in this file (see [_docs.md](./html_utils.py_docs.md))
+- **Tables**: Referenced in this file (see [_docs.md](./html_utils.py_docs.md))
+- **Tag**: Referenced in this file (see [_docs.md](./html_utils.py_docs.md))
+- **The**: Referenced in this file (see [_docs.md](./html_utils.py_docs.md))
+- **This**: Referenced in this file (see [_docs.md](./html_utils.py_docs.md))
+- **True**: Referenced in this file (see [_docs.md](./html_utils.py_docs.md))
+- **WEB_CONNECTOR_IGNORED_CLASSES**: Referenced in this file (see [_docs.md](./html_utils.py_docs.md))
+- **WEB_CONNECTOR_IGNORED_ELEMENTS**: Referenced in this file (see [_docs.md](./html_utils.py_docs.md))
+
+### Imported Module
+
+- **bs4**: Referenced in this file (see [_docs.md](./html_utils.py_docs.md))
+- **common.data_source.config**: Referenced in this file (see [_docs.md](./html_utils.py_docs.md))
+- **copy**: Referenced in this file (see [_docs.md](./html_utils.py_docs.md))
+- **dataclasses**: Referenced in this file (see [_docs.md](./html_utils.py_docs.md))
+- **io**: Referenced in this file (see [_docs.md](./html_utils.py_docs.md))
+- **logging**: Referenced in this file (see [_docs.md](./html_utils.py_docs.md))
+- **re**: Referenced in this file (see [_docs.md](./html_utils.py_docs.md))
+- **trafilatura**: Referenced in this file (see [_docs.md](./html_utils.py_docs.md))
+- **trafilatura.settings**: Referenced in this file (see [_docs.md](./html_utils.py_docs.md))
+- **typing**: Referenced in this file (see [_docs.md](./html_utils.py_docs.md))
+
+
+## Keyword → Section Map
+
+All keywords in this file can be found in the comprehensive documentation:
+- [Full Documentation](./html_utils.py_docs.md)
+
+---
+
+*Generated by RAGFlow Comprehensive Documentation Generator*

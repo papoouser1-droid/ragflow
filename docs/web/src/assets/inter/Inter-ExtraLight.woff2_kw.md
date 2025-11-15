@@ -1,0 +1,78 @@
+# Keyword Map: web/src/assets/inter/Inter-ExtraLight.woff2
+
+## File Path and Links
+
+- **Original File**: `web/src/assets/inter/Inter-ExtraLight.woff2`
+- **Documentation**: [Inter-ExtraLight.woff2_docs.md](./Inter-ExtraLight.woff2_docs.md)
+
+## Keywords Extracted
+
+This file contains 51 extracted keywords and identifiers:
+
+
+### Filename Component
+
+- **extralight**: Referenced in this file (see [_docs.md](./Inter-ExtraLight.woff2_docs.md))
+- **inter**: Referenced in this file (see [_docs.md](./Inter-ExtraLight.woff2_docs.md))
+
+### Identifier
+
+- **AEag**: Referenced in this file (see [_docs.md](./Inter-ExtraLight.woff2_docs.md))
+- **AcB**: Referenced in this file (see [_docs.md](./Inter-ExtraLight.woff2_docs.md))
+- **B9R**: Referenced in this file (see [_docs.md](./Inter-ExtraLight.woff2_docs.md))
+- **Bcf**: Referenced in this file (see [_docs.md](./Inter-ExtraLight.woff2_docs.md))
+- **CD1k**: Referenced in this file (see [_docs.md](./Inter-ExtraLight.woff2_docs.md))
+- **DOQ**: Referenced in this file (see [_docs.md](./Inter-ExtraLight.woff2_docs.md))
+- **EBK**: Referenced in this file (see [_docs.md](./Inter-ExtraLight.woff2_docs.md))
+- **F08**: Referenced in this file (see [_docs.md](./Inter-ExtraLight.woff2_docs.md))
+- **Hc1**: Referenced in this file (see [_docs.md](./Inter-ExtraLight.woff2_docs.md))
+- **HcI**: Referenced in this file (see [_docs.md](./Inter-ExtraLight.woff2_docs.md))
+- **Her**: Referenced in this file (see [_docs.md](./Inter-ExtraLight.woff2_docs.md))
+- **Hgz**: Referenced in this file (see [_docs.md](./Inter-ExtraLight.woff2_docs.md))
+- **I9N**: Referenced in this file (see [_docs.md](./Inter-ExtraLight.woff2_docs.md))
+- **JFY**: Referenced in this file (see [_docs.md](./Inter-ExtraLight.woff2_docs.md))
+- **JSeYw**: Referenced in this file (see [_docs.md](./Inter-ExtraLight.woff2_docs.md))
+- **Klj**: Referenced in this file (see [_docs.md](./Inter-ExtraLight.woff2_docs.md))
+- **L0B**: Referenced in this file (see [_docs.md](./Inter-ExtraLight.woff2_docs.md))
+- **LSY**: Referenced in this file (see [_docs.md](./Inter-ExtraLight.woff2_docs.md))
+- **LqH**: Referenced in this file (see [_docs.md](./Inter-ExtraLight.woff2_docs.md))
+- **M4I**: Referenced in this file (see [_docs.md](./Inter-ExtraLight.woff2_docs.md))
+- **NPH**: Referenced in this file (see [_docs.md](./Inter-ExtraLight.woff2_docs.md))
+- **Ow8**: Referenced in this file (see [_docs.md](./Inter-ExtraLight.woff2_docs.md))
+- **Oy6**: Referenced in this file (see [_docs.md](./Inter-ExtraLight.woff2_docs.md))
+- **PUf**: Referenced in this file (see [_docs.md](./Inter-ExtraLight.woff2_docs.md))
+- **Pit**: Referenced in this file (see [_docs.md](./Inter-ExtraLight.woff2_docs.md))
+- **Q3v**: Referenced in this file (see [_docs.md](./Inter-ExtraLight.woff2_docs.md))
+- **Q5T**: Referenced in this file (see [_docs.md](./Inter-ExtraLight.woff2_docs.md))
+- **QBJ**: Referenced in this file (see [_docs.md](./Inter-ExtraLight.woff2_docs.md))
+- **QcXj**: Referenced in this file (see [_docs.md](./Inter-ExtraLight.woff2_docs.md))
+- **SKB**: Referenced in this file (see [_docs.md](./Inter-ExtraLight.woff2_docs.md))
+- **ShCQ1**: Referenced in this file (see [_docs.md](./Inter-ExtraLight.woff2_docs.md))
+- **TYh**: Referenced in this file (see [_docs.md](./Inter-ExtraLight.woff2_docs.md))
+- **U40**: Referenced in this file (see [_docs.md](./Inter-ExtraLight.woff2_docs.md))
+- **UVWk**: Referenced in this file (see [_docs.md](./Inter-ExtraLight.woff2_docs.md))
+- **V0Kv**: Referenced in this file (see [_docs.md](./Inter-ExtraLight.woff2_docs.md))
+- **V6v**: Referenced in this file (see [_docs.md](./Inter-ExtraLight.woff2_docs.md))
+- **VTB**: Referenced in this file (see [_docs.md](./Inter-ExtraLight.woff2_docs.md))
+- **V_v**: Referenced in this file (see [_docs.md](./Inter-ExtraLight.woff2_docs.md))
+- **WFv**: Referenced in this file (see [_docs.md](./Inter-ExtraLight.woff2_docs.md))
+- **XFFP**: Referenced in this file (see [_docs.md](./Inter-ExtraLight.woff2_docs.md))
+- **Xmv**: Referenced in this file (see [_docs.md](./Inter-ExtraLight.woff2_docs.md))
+- **XuBz**: Referenced in this file (see [_docs.md](./Inter-ExtraLight.woff2_docs.md))
+- **Y95**: Referenced in this file (see [_docs.md](./Inter-ExtraLight.woff2_docs.md))
+- **ZWh**: Referenced in this file (see [_docs.md](./Inter-ExtraLight.woff2_docs.md))
+- **ZlaR**: Referenced in this file (see [_docs.md](./Inter-ExtraLight.woff2_docs.md))
+- **Zme**: Referenced in this file (see [_docs.md](./Inter-ExtraLight.woff2_docs.md))
+- **ZoZ**: Referenced in this file (see [_docs.md](./Inter-ExtraLight.woff2_docs.md))
+- **Zr1**: Referenced in this file (see [_docs.md](./Inter-ExtraLight.woff2_docs.md))
+- **Zs1t**: Referenced in this file (see [_docs.md](./Inter-ExtraLight.woff2_docs.md))
+
+
+## Keyword → Section Map
+
+All keywords in this file can be found in the comprehensive documentation:
+- [Full Documentation](./Inter-ExtraLight.woff2_docs.md)
+
+---
+
+*Generated by RAGFlow Comprehensive Documentation Generator*

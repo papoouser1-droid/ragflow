@@ -1,0 +1,81 @@
+# Keyword Map: web/src/hooks/llm-hooks.tsx
+
+## File Path and Links
+
+- **Original File**: `web/src/hooks/llm-hooks.tsx`
+- **Documentation**: [llm-hooks.tsx_docs.md](./llm-hooks.tsx_docs.md)
+
+## Keywords Extracted
+
+This file contains 56 extracted keywords and identifiers:
+
+
+### Filename Component
+
+- **hooks**: Referenced in this file (see [_docs.md](./llm-hooks.tsx_docs.md))
+- **llm**: Referenced in this file (see [_docs.md](./llm-hooks.tsx_docs.md))
+
+### Function/Variable
+
+- **allOptions**: Referenced in this file (see [_docs.md](./llm-hooks.tsx_docs.md))
+- **buildLlmOptionsWithIcon**: Referenced in this file (see [_docs.md](./llm-hooks.tsx_docs.md))
+- **currentList**: Referenced in this file (see [_docs.md](./llm-hooks.tsx_docs.md))
+- **embeddingModelOptions**: Referenced in this file (see [_docs.md](./llm-hooks.tsx_docs.md))
+- **groupImage2TextOptions**: Referenced in this file (see [_docs.md](./llm-hooks.tsx_docs.md))
+- **groupOptionsByModelType**: Referenced in this file (see [_docs.md](./llm-hooks.tsx_docs.md))
+- **item**: Referenced in this file (see [_docs.md](./llm-hooks.tsx_docs.md))
+- **llmInfo**: Referenced in this file (see [_docs.md](./llm-hooks.tsx_docs.md))
+- **modelTag**: Referenced in this file (see [_docs.md](./llm-hooks.tsx_docs.md))
+- **modelType**: Referenced in this file (see [_docs.md](./llm-hooks.tsx_docs.md))
+- **nextFactoryList**: Referenced in this file (see [_docs.md](./llm-hooks.tsx_docs.md))
+- **nextMyLlmList**: Referenced in this file (see [_docs.md](./llm-hooks.tsx_docs.md))
+- **options**: Referenced in this file (see [_docs.md](./llm-hooks.tsx_docs.md))
+- **queryClient**: Referenced in this file (see [_docs.md](./llm-hooks.tsx_docs.md))
+- **reqParam**: Referenced in this file (see [_docs.md](./llm-hooks.tsx_docs.md))
+- **useAddLlm**: Referenced in this file (see [_docs.md](./llm-hooks.tsx_docs.md))
+- **useComposeLlmOptionsByModelTypes**: Referenced in this file (see [_docs.md](./llm-hooks.tsx_docs.md))
+- **useDeleteFactory**: Referenced in this file (see [_docs.md](./llm-hooks.tsx_docs.md))
+- **useDeleteLlm**: Referenced in this file (see [_docs.md](./llm-hooks.tsx_docs.md))
+- **useEnableLlm**: Referenced in this file (see [_docs.md](./llm-hooks.tsx_docs.md))
+- **useFetchLlmFactoryList**: Referenced in this file (see [_docs.md](./llm-hooks.tsx_docs.md))
+- **useFetchLlmList**: Referenced in this file (see [_docs.md](./llm-hooks.tsx_docs.md))
+- **useFetchMyLlmList**: Referenced in this file (see [_docs.md](./llm-hooks.tsx_docs.md))
+- **useFetchMyLlmListDetailed**: Referenced in this file (see [_docs.md](./llm-hooks.tsx_docs.md))
+- **useSaveApiKey**: Referenced in this file (see [_docs.md](./llm-hooks.tsx_docs.md))
+- **useSaveTenantInfo**: Referenced in this file (see [_docs.md](./llm-hooks.tsx_docs.md))
+- **useSelectLlmList**: Referenced in this file (see [_docs.md](./llm-hooks.tsx_docs.md))
+- **useSelectLlmOptions**: Referenced in this file (see [_docs.md](./llm-hooks.tsx_docs.md))
+- **useSelectLlmOptionsByModelType**: Referenced in this file (see [_docs.md](./llm-hooks.tsx_docs.md))
+
+### Identifier
+
+- **Chat**: Referenced in this file (see [_docs.md](./llm-hooks.tsx_docs.md))
+- **DefaultOptionType**: Referenced in this file (see [_docs.md](./llm-hooks.tsx_docs.md))
+- **Embedding**: Referenced in this file (see [_docs.md](./llm-hooks.tsx_docs.md))
+- **IAddLlmRequestBody**: Referenced in this file (see [_docs.md](./llm-hooks.tsx_docs.md))
+- **IDeleteLlmRequestBody**: Referenced in this file (see [_docs.md](./llm-hooks.tsx_docs.md))
+- **IFactory**: Referenced in this file (see [_docs.md](./llm-hooks.tsx_docs.md))
+- **IMyLlmValue**: Referenced in this file (see [_docs.md](./llm-hooks.tsx_docs.md))
+- **IThirdAiModelCollection**: Referenced in this file (see [_docs.md](./llm-hooks.tsx_docs.md))
+- **IThirdOAIModel**: Referenced in this file (see [_docs.md](./llm-hooks.tsx_docs.md))
+- **IThirdOAIModelCollection**: Referenced in this file (see [_docs.md](./llm-hooks.tsx_docs.md))
+- **Image2text**: Referenced in this file (see [_docs.md](./llm-hooks.tsx_docs.md))
+- **JSX**: Referenced in this file (see [_docs.md](./llm-hooks.tsx_docs.md))
+- **LlmIcon**: Referenced in this file (see [_docs.md](./llm-hooks.tsx_docs.md))
+- **LlmModelType**: Referenced in this file (see [_docs.md](./llm-hooks.tsx_docs.md))
+- **Merge**: Referenced in this file (see [_docs.md](./llm-hooks.tsx_docs.md))
+- **Object**: Referenced in this file (see [_docs.md](./llm-hooks.tsx_docs.md))
+- **Rerank**: Referenced in this file (see [_docs.md](./llm-hooks.tsx_docs.md))
+- **ResponseGetType**: Referenced in this file (see [_docs.md](./llm-hooks.tsx_docs.md))
+- **Speech2text**: Referenced in this file (see [_docs.md](./llm-hooks.tsx_docs.md))
+- **TTS**: Referenced in this file (see [_docs.md](./llm-hooks.tsx_docs.md))
+
+
+## Keyword → Section Map
+
+All keywords in this file can be found in the comprehensive documentation:
+- [Full Documentation](./llm-hooks.tsx_docs.md)
+
+---
+
+*Generated by RAGFlow Comprehensive Documentation Generator*

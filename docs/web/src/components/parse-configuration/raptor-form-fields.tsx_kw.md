@@ -1,0 +1,76 @@
+# Keyword Map: web/src/components/parse-configuration/raptor-form-fields.tsx
+
+## File Path and Links
+
+- **Original File**: `web/src/components/parse-configuration/raptor-form-fields.tsx`
+- **Documentation**: [raptor-form-fields.tsx_docs.md](./raptor-form-fields.tsx_docs.md)
+
+## Keywords Extracted
+
+This file contains 46 extracted keywords and identifiers:
+
+
+### Filename Component
+
+- **fields**: Referenced in this file (see [_docs.md](./raptor-form-fields.tsx_docs.md))
+- **form**: Referenced in this file (see [_docs.md](./raptor-form-fields.tsx_docs.md))
+- **raptor**: Referenced in this file (see [_docs.md](./raptor-form-fields.tsx_docs.md))
+
+### Function/Variable
+
+- **MaxCluster**: Referenced in this file (see [_docs.md](./raptor-form-fields.tsx_docs.md))
+- **MaxTokenField**: Referenced in this file (see [_docs.md](./raptor-form-fields.tsx_docs.md))
+- **Prompt**: Referenced in this file (see [_docs.md](./raptor-form-fields.tsx_docs.md))
+- **RandomSeedField**: Referenced in this file (see [_docs.md](./raptor-form-fields.tsx_docs.md))
+- **RaptorFormFields**: Referenced in this file (see [_docs.md](./raptor-form-fields.tsx_docs.md))
+- **ThresholdField**: Referenced in this file (see [_docs.md](./raptor-form-fields.tsx_docs.md))
+- **UseRaptorField**: Referenced in this file (see [_docs.md](./raptor-form-fields.tsx_docs.md))
+- **excludedParseMethods**: Referenced in this file (see [_docs.md](./raptor-form-fields.tsx_docs.md))
+- **excludedTagParseMethods**: Referenced in this file (see [_docs.md](./raptor-form-fields.tsx_docs.md))
+- **form**: Referenced in this file (see [_docs.md](./raptor-form-fields.tsx_docs.md))
+- **handleGenerate**: Referenced in this file (see [_docs.md](./raptor-form-fields.tsx_docs.md))
+- **showRaptorParseConfiguration**: Referenced in this file (see [_docs.md](./raptor-form-fields.tsx_docs.md))
+- **showTagItems**: Referenced in this file (see [_docs.md](./raptor-form-fields.tsx_docs.md))
+- **useRaptor**: Referenced in this file (see [_docs.md](./raptor-form-fields.tsx_docs.md))
+
+### Identifier
+
+- **DocumentParserType**: Referenced in this file (see [_docs.md](./raptor-form-fields.tsx_docs.md))
+- **ExpandedInput**: Referenced in this file (see [_docs.md](./raptor-form-fields.tsx_docs.md))
+- **FormControl**: Referenced in this file (see [_docs.md](./raptor-form-fields.tsx_docs.md))
+- **FormField**: Referenced in this file (see [_docs.md](./raptor-form-fields.tsx_docs.md))
+- **FormItem**: Referenced in this file (see [_docs.md](./raptor-form-fields.tsx_docs.md))
+- **FormLabel**: Referenced in this file (see [_docs.md](./raptor-form-fields.tsx_docs.md))
+- **FormLayout**: Referenced in this file (see [_docs.md](./raptor-form-fields.tsx_docs.md))
+- **FormMessage**: Referenced in this file (see [_docs.md](./raptor-form-fields.tsx_docs.md))
+- **GenerateLogButton**: Referenced in this file (see [_docs.md](./raptor-form-fields.tsx_docs.md))
+- **GenerateType**: Referenced in this file (see [_docs.md](./raptor-form-fields.tsx_docs.md))
+- **IGenerateLogButtonProps**: Referenced in this file (see [_docs.md](./raptor-form-fields.tsx_docs.md))
+- **KnowledgeGraph**: Referenced in this file (see [_docs.md](./raptor-form-fields.tsx_docs.md))
+- **MaxCluster**: Referenced in this file (see [_docs.md](./raptor-form-fields.tsx_docs.md))
+- **MaxTokenField**: Referenced in this file (see [_docs.md](./raptor-form-fields.tsx_docs.md))
+- **One**: Referenced in this file (see [_docs.md](./raptor-form-fields.tsx_docs.md))
+- **Picture**: Referenced in this file (see [_docs.md](./raptor-form-fields.tsx_docs.md))
+- **Prompt**: Referenced in this file (see [_docs.md](./raptor-form-fields.tsx_docs.md))
+- **Radio**: Referenced in this file (see [_docs.md](./raptor-form-fields.tsx_docs.md))
+- **RandomSeedField**: Referenced in this file (see [_docs.md](./raptor-form-fields.tsx_docs.md))
+- **RaptorFormFields**: Referenced in this file (see [_docs.md](./raptor-form-fields.tsx_docs.md))
+- **Resume**: Referenced in this file (see [_docs.md](./raptor-form-fields.tsx_docs.md))
+- **Shuffle**: Referenced in this file (see [_docs.md](./raptor-form-fields.tsx_docs.md))
+- **SliderInputFormField**: Referenced in this file (see [_docs.md](./raptor-form-fields.tsx_docs.md))
+- **Table**: Referenced in this file (see [_docs.md](./raptor-form-fields.tsx_docs.md))
+- **Tag**: Referenced in this file (see [_docs.md](./raptor-form-fields.tsx_docs.md))
+- **Textarea**: Referenced in this file (see [_docs.md](./raptor-form-fields.tsx_docs.md))
+- **The**: Referenced in this file (see [_docs.md](./raptor-form-fields.tsx_docs.md))
+- **ThresholdField**: Referenced in this file (see [_docs.md](./raptor-form-fields.tsx_docs.md))
+- **UseRaptorField**: Referenced in this file (see [_docs.md](./raptor-form-fields.tsx_docs.md))
+
+
+## Keyword → Section Map
+
+All keywords in this file can be found in the comprehensive documentation:
+- [Full Documentation](./raptor-form-fields.tsx_docs.md)
+
+---
+
+*Generated by RAGFlow Comprehensive Documentation Generator*

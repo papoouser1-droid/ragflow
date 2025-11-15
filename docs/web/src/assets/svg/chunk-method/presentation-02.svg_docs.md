@@ -1,0 +1,131 @@
+# Documentation: web/src/assets/svg/chunk-method/presentation-02.svg
+
+## File Metadata
+
+- **Path**: `web/src/assets/svg/chunk-method/presentation-02.svg`
+- **Size**: 899601 bytes
+- **Type**: .svg
+- **Readable**: Yes
+
+## Purpose
+
+This file is part of the RAGFlow repository at location `web/src/assets/svg/chunk-method/presentation-02.svg`.
+
+## Original Source Code
+
+```svg
+<svg width="246" height="184" viewBox="0 0 246 184" fill="none" xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g clip-path="url(#clip0_1338_52819)">
+        <rect width="245.094" height="184" transform="translate(0.90625)" fill="#D1DCD8" />
+        <mask id="mask0_1338_52819" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="31" y="0" width="185"
+            height="184">
+            <rect width="184" height="184" transform="translate(31.9062)" fill="url(#paint0_radial_1338_52819)" />
+        </mask>
+        <g mask="url(#mask0_1338_52819)">
+            <g clip-path="url(#clip1_1338_52819)">
+                <g clip-path="url(#clip2_1338_52819)">
+                    <line x1="31.9701" x2="31.9701" y2="184" stroke="white" stroke-width="0.127778" />
+                    <line x1="42.1923" x2="42.1923" y2="184" stroke="white" stroke-width="0.127778" />
+                    <line x1="52.4145" x2="52.4145" y2="184" stroke="white" stroke-width="0.127778" />
+                    <line x1="62.6369" x2="62.6369" y2="184" stroke="white" stroke-width="0.127778" />
+                    <line x1="72.8591" x2="72.8591" y2="184" stroke="white" stroke-width="0.127778" />
+                    <line x1="83.0812" x2="83.0812" y2="184" stroke="white" stroke-width="0.127778" />
+                    <line x1="93.3034" x2="93.3034" y2="184" stroke="white" stroke-width="0.127778" />
+                    <line x1="103.526" x2="103.526" y2="184" stroke="white" stroke-width="0.127778" />
+                    <line x1="113.748" x2="113.748" y2="184" stroke="white" stroke-width="0.127778" />
+                    <line x1="123.97" x2="123.97" y2="184" stroke="white" stroke-width="0.127778" />
+                    <line x1="134.192" x2="134.192" y2="184" stroke="white" stroke-width="0.127778" />
+                    <line x1="144.414" x2="144.414" y2="184" stroke="white" stroke-width="0.127778" />
+                    <line x1="154.637" x2="154.637" y2="184" stroke="white" stroke-width="0.127778" />
+                    <line x1="164.859" x2="164.859" y2="184" stroke="white" stroke-width="0.127778" />
+                    <line x1="175.081" x2="175.081" y2="184" stroke="white" stroke-width="0.127778" />
+                    <line x1="185.303" x2="185.303" y2="184" stroke="white" stroke-width="0.127778" />
+                    <line x1="195.526" x2="195.526" y2="184" stroke="white" stroke-width="0.127778" />
+                    <line x1="205.748" x2="205.748" y2="184" stroke="white" stroke-width="0.127778" />
+                </g>
+                <g clip-path="url(#clip3_1338_52819)">
+                    <line x1="1.2395" y1="10.1583" x2="246.573" y2="10.1583" stroke="white" stroke-width="0.127778" />
+                    <line x1="1.2395" y1="20.3804" x2="246.573" y2="20.3804" stroke="white" stroke-width="0.127778" />
+                    <line x1="1.2395" y1="30.6029" x2="246.573" y2="30.6029" stroke="white" stroke-width="0.127778" />
+                    <line x1="1.2395" y1="40.825" x2="246.573" y2="40.825" stroke="white" stroke-width="0.127778" />
+                    <line x1="1.2395" y1="51.0472" x2="246.573" y2="51.0472" stroke="white" stroke-width="0.127778" />
+                    <line x1="1.2395" y1="61.2694" x2="246.573" y2="61.2694" stroke="white" stroke-width="0.127778" />
+                    <line x1="1.2395" y1="71.4918" x2="246.573" y2="71.4918" stroke="white" stroke-width="0.127778" />
+                    <line x1="1.2395" y1="81.7139" x2="246.573" y2="81.7139" stroke="white" stroke-width="0.127778" />
+                    <line x1="1.2395" y1="91.9361" x2="246.573" y2="91.9361" stroke="white" stroke-width="0.127778" />
+                    <line x1="1.2395" y1="102.158" x2="246.573" y2="102.158" stroke="white" stroke-width="0.127778" />
+                    <line x1="1.2395" y1="112.38" x2="246.573" y2="112.38" stroke="white" stroke-width="0.127778" />
+                    <line x1="1.2395" y1="122.603" x2="246.573" y2="122.603" stroke="white" stroke-width="0.127778" />
+                    <line x1="1.2395" y1="132.825" x2="246.573" y2="132.825" stroke="white" stroke-width="0.127778" />
+                    <line x1="1.2395" y1="143.047" x2="246.573" y2="143.047" stroke="white" stroke-width="0.127778" />
+                    <line x1="1.2395" y1="153.269" x2="246.573" y2="153.269" stroke="white" stroke-width="0.127778" />
+                    <line x1="1.2395" y1="163.492" x2="246.573" y2="163.492" stroke="white" stroke-width="0.127778" />
+                    <line x1="1.2395" y1="173.714" x2="246.573" y2="173.714" stroke="white" stroke-width="0.127778" />
+                </g>
+            </g>
+        </g>
+        <rect x="18.1562" y="43.125" width="210.932" height="97.5115" rx="2" fill="url(#pattern0)" />
+        <path
+            d="M18.5149 20.219V16.5826H19.8786C20.1579 16.5826 20.3923 16.6347 20.5817 16.7389C20.7723 16.843 20.9161 16.9863 21.0131 17.1686C21.1114 17.3497 21.1605 17.5556 21.1605 17.7865C21.1605 18.0197 21.1114 18.2268 21.0131 18.4079C20.9149 18.589 20.7699 18.7317 20.5781 18.8358C20.3864 18.9388 20.1502 18.9903 19.8697 18.9903H18.9659V18.4488H19.7809C19.9442 18.4488 20.078 18.4203 20.1822 18.3635C20.2863 18.3067 20.3633 18.2286 20.413 18.1292C20.4639 18.0297 20.4893 17.9155 20.4893 17.7865C20.4893 17.6574 20.4639 17.5438 20.413 17.4456C20.3633 17.3473 20.2857 17.271 20.1804 17.2165C20.0762 17.1609 19.9419 17.1331 19.7773 17.1331H19.1737V20.219H18.5149ZM21.7043 20.219V17.4917H22.3275V17.9463H22.3559C22.4056 17.7888 22.4909 17.6675 22.6116 17.5823C22.7335 17.4959 22.8726 17.4527 23.0289 17.4527C23.0644 17.4527 23.104 17.4544 23.1478 17.458C23.1928 17.4604 23.2301 17.4645 23.2597 17.4704V18.0617C23.2325 18.0522 23.1892 18.0439 23.1301 18.0368C23.0721 18.0285 23.0158 18.0244 22.9614 18.0244C22.8442 18.0244 22.7388 18.0498 22.6453 18.1007C22.553 18.1505 22.4802 18.2197 22.4269 18.3085C22.3737 18.3973 22.347 18.4997 22.347 18.6157V20.219H21.7043ZM24.7818 20.2723C24.5083 20.2723 24.2722 20.2154 24.0733 20.1018C23.8757 19.987 23.7235 19.8248 23.617 19.6153C23.5105 19.4046 23.4572 19.1566 23.4572 18.8713C23.4572 18.5908 23.5105 18.3446 23.617 18.1327C23.7247 17.9196 23.8751 17.7539 24.068 17.6355C24.2609 17.516 24.4876 17.4562 24.748 17.4562C24.9161 17.4562 25.0748 17.4834 25.2239 17.5379C25.3742 17.5912 25.5068 17.674 25.6216 17.7865C25.7376 17.8989 25.8288 18.0421 25.8951 18.2162C25.9614 18.389 25.9945 18.5949 25.9945 18.8341V19.0311H23.7591V18.5979H25.3784C25.3772 18.4748 25.3506 18.3653 25.2985 18.2694C25.2464 18.1724 25.1736 18.096 25.0801 18.0404C24.9877 17.9847 24.88 17.9569 24.7569 17.9569C24.6255 17.9569 24.5101 17.9889 24.4107 18.0528C24.3113 18.1155 24.2337 18.1984 24.1781 18.3014C24.1236 18.4032 24.0958 18.515 24.0946 18.637V19.0152C24.0946 19.1738 24.1236 19.3099 24.1816 19.4235C24.2396 19.536 24.3207 19.6224 24.4249 19.6828C24.5291 19.742 24.651 19.7716 24.7907 19.7716C24.8842 19.7716 24.9688 19.7585 25.0446 19.7325C25.1203 19.7053 25.186 19.6656 25.2417 19.6135C25.2973 19.5614 25.3393 19.4969 25.3677 19.42L25.9679 19.4875C25.93 19.6461 25.8578 19.7846 25.7512 19.9029C25.6459 20.0201 25.5109 20.1113 25.3464 20.1764C25.1819 20.2403 24.9937 20.2723 24.7818 20.2723ZM28.6938 18.2126L28.1079 18.2765C28.0913 18.2173 28.0623 18.1617 28.0209 18.1096C27.9806 18.0575 27.9262 18.0155 27.8575 17.9836C27.7889 17.9516 27.7048 17.9356 27.6054 17.9356C27.4716 17.9356 27.3592 17.9646 27.268 18.0226C27.1781 18.0806 27.1337 18.1558 27.1349 18.2481C27.1337 18.3274 27.1627 18.3919 27.2219 18.4417C27.2822 18.4914 27.3817 18.5322 27.5202 18.5642L27.9854 18.6636C28.2434 18.7192 28.4352 18.8074 28.5606 18.9282C28.6873 19.0489 28.7512 19.2069 28.7524 19.4022C28.7512 19.5739 28.7009 19.7254 28.6015 19.8568C28.5032 19.987 28.3665 20.0888 28.1913 20.1622C28.0161 20.2356 27.8149 20.2723 27.5876 20.2723C27.2538 20.2723 26.9851 20.2024 26.7815 20.0627C26.5779 19.9219 26.4566 19.726 26.4175 19.475L27.0443 19.4147C27.0727 19.5378 27.1331 19.6307 27.2254 19.6934C27.3177 19.7562 27.4379 19.7875 27.5858 19.7875C27.7385 19.7875 27.8611 19.7562 27.9534 19.6934C28.0469 19.6307 28.0937 19.5532 28.0937 19.4608C28.0937 19.3827 28.0635 19.3182 28.0031 19.2673C27.9439 19.2164 27.8516 19.1773 27.7261 19.1501L27.2609 19.0524C26.9993 18.998 26.8058 18.9063 26.6803 18.7772C26.5548 18.647 26.4927 18.4825 26.4939 18.2836C26.4927 18.1155 26.5383 17.9699 26.6306 17.8468C26.7241 17.7225 26.8537 17.6267 27.0194 17.5592C27.1863 17.4905 27.3787 17.4562 27.5965 17.4562C27.9161 17.4562 28.1676 17.5243 28.3511 17.6604C28.5358 17.7965 28.65 17.9806 28.6938 18.2126ZM30.4898 20.2723C30.2164 20.2723 29.9802 20.2154 29.7813 20.1018C29.5837 19.987 29.4316 19.8248 29.325 19.6153C29.2185 19.4046 29.1652 19.1566 29.1652 18.8713C29.1652 18.5908 29.2185 18.3446 29.325 18.1327C29.4327 17.9196 29.5831 17.7539 29.776 17.6355C29.969 17.516 30.1956 17.4562 30.4561 17.4562C30.6241 17.4562 30.7828 17.4834 30.9319 17.5379C31.0822 17.5912 31.2148 17.674 31.3296 17.7865C31.4456 17.8989 31.5368 18.0421 31.6031 18.2162C31.6694 18.389 31.7025 18.5949 31.7025 18.8341V19.0311H29.4671V18.5979H31.0864C31.0852 18.4748 31.0586 18.3653 31.0065 18.2694C30.9544 18.1724 30.8816 18.096 30.7881 18.0404C30.6958 17.9847 30.588 17.9569 30.4649 17.9569C30.3335 17.9569 30.2181 17.9889 30.1187 18.0528C30.0193 18.1155 29.9417 18.1984 29.8861 18.3014C29.8316 18.4032 29.8038 18.515 29.8026 18.637V19.0152C29.8026 19.1738 29.8316 19.3099 29.8896 19.4235C29.9477 19.536 30.0287 19.6224 30.1329 19.6828C30.2371 19.742 30.359 19.7716 30.4987 19.7716C30.5922 19.7716 30.6768 19.7585 30.7526 19.7325C30.8283 19.7053 30.894 19.6656 30.9497 19.6135C31.0053 19.5614 31.0473 19.4969 31.0757 19.42L31.6759 19.4875C31.638 19.6461 31.5658 19.7846 31.4593 19.9029C31.3539 20.0201 31.219 20.1113 31.0544 20.1764C30.8899 20.2403 30.7017 20.2723 30.4898 20.2723ZM32.889 18.621V20.219H32.2463V17.4917H32.8606V17.9551H32.8926C32.9553 17.8024 33.0553 17.6811 33.1926 17.5912C33.3311 17.5012 33.5022 17.4562 33.7058 1
+
+... [Content truncated - file is 899601 bytes] ...
+
+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" />
+    </defs>
+</svg>
+```
+
+## Detailed Analysis
+
+### File Role in Repository
+
+The file `web/src/assets/svg/chunk-method/presentation-02.svg` is located in the `web/src/assets/svg/chunk-method` directory.
+
+This file is part of the **Frontend/Web** layer of RAGFlow.
+
+### Architecture Context
+
+Files in this location typically handle concerns related to chunk-method.
+
+### Design Patterns
+
+[Analysis of design patterns would go here based on code structure]
+
+### Performance Considerations
+
+[Performance analysis would consider file size, complexity, algorithmic efficiency]
+
+### Security Considerations
+
+### Testing Approach
+
+To test this file:
+1. Review the corresponding test files in the test/ directory
+2. Ensure all public APIs have test coverage
+3. Test edge cases and error conditions
+4. Verify integration with related components
+
+### Related Files
+
+- [book-01.svg](book-01.svg_docs.md)
+- [book-02.svg](book-02.svg_docs.md)
+- [book-03.svg](book-03.svg_docs.md)
+- [book-04.svg](book-04.svg_docs.md)
+- [chunk-empty.svg](chunk-empty.svg_docs.md)
+- [knowledge-graph-01.svg](knowledge-graph-01.svg_docs.md)
+- [knowledge-graph-02.svg](knowledge-graph-02.svg_docs.md)
+- [law-01.svg](law-01.svg_docs.md)
+- [law-02.svg](law-02.svg_docs.md)
+- [manual-01.svg](manual-01.svg_docs.md)
+
+
+## Cross-References
+
+- [Folder Documentation](./doc.md)
+- [Folder Index](./index.md)
+- [Global Index](../../index.md)
+
+---
+
+*Generated by RAGFlow Comprehensive Documentation Generator*

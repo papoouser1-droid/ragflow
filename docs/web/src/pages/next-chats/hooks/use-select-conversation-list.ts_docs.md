@@ -1,0 +1,172 @@
+# Documentation: web/src/pages/next-chats/hooks/use-select-conversation-list.ts
+
+## File Metadata
+
+- **Path**: `web/src/pages/next-chats/hooks/use-select-conversation-list.ts`
+- **Size**: 2869 bytes
+- **Type**: .ts
+- **Readable**: Yes
+
+## Purpose
+
+This file is part of the RAGFlow repository at location `web/src/pages/next-chats/hooks/use-select-conversation-list.ts`.
+
+## Original Source Code
+
+```ts
+import { ChatSearchParams, MessageType } from '@/constants/chat';
+import { useTranslate } from '@/hooks/common-hooks';
+import {
+  useFetchConversationList,
+  useFetchDialogList,
+} from '@/hooks/use-chat-request';
+import { IConversation } from '@/interfaces/database/chat';
+import { getConversationId } from '@/utils/chat';
+import { useCallback, useEffect, useMemo, useState } from 'react';
+import { useParams, useSearchParams } from 'umi';
+
+export const useFindPrologueFromDialogList = () => {
+  const { id: dialogId } = useParams();
+  const { data } = useFetchDialogList();
+
+  const prologue = useMemo(() => {
+    return data.dialogs.find((x) => x.id === dialogId)?.prompt_config.prologue;
+  }, [dialogId, data]);
+
+  return prologue;
+};
+
+export const useSetNewConversationRouteParams = () => {
+  const [currentQueryParameters, setSearchParams] = useSearchParams();
+  const newQueryParameters: URLSearchParams = useMemo(
+    () => new URLSearchParams(currentQueryParameters.toString()),
+    [currentQueryParameters],
+  );
+
+  const setNewConversationRouteParams = useCallback(
+    (conversationId: string, isNew: string) => {
+      newQueryParameters.set(ChatSearchParams.ConversationId, conversationId);
+      newQueryParameters.set(ChatSearchParams.isNew, isNew);
+      setSearchParams(newQueryParameters);
+    },
+    [newQueryParameters, setSearchParams],
+  );
+
+  return { setNewConversationRouteParams };
+};
+
+export const useSelectDerivedConversationList = () => {
+  const { t } = useTranslate('chat');
+
+  const [list, setList] = useState<Array<IConversation>>([]);
+  const {
+    data: conversationList,
+    loading,
+    handleInputChange,
+    searchString,
+  } = useFetchConversationList();
+  const { id: dialogId } = useParams();
+  const { setNewConversationRouteParams } = useSetNewConversationRouteParams();
+  const prologue = useFindPrologueFromDialogList();
+
+  const addTemporaryConversation = useCallback(() => {
+    const conversationId = getConversationId();
+    setList((pre) => {
+      if (dialogId) {
+        setNewConversationRouteParams(conversationId, 'true');
+        const nextList = [
+          {
+            id: conversationId,
+            name: t('newConversation'),
+            dialog_id: dialogId,
+            is_new: true,
+            message: [
+              {
+                content: prologue,
+                role: MessageType.Assistant,
+              },
+            ],
+          } as any,
+          ...conversationList,
+        ];
+        return nextList;
+      }
+
+      return pre;
+    });
+  }, [conversationList, dialogId, prologue, t, setNewConversationRouteParams]);
+
+  // When you first enter the page, select the top conversation card
+
+  useEffect(() => {
+    setList([...conversationList]);
+  }, [conversationList]);
+
+  return {
+    list,
+    addTemporaryConversation,
+    loading,
+    handleInputChange,
+    searchString,
+  };
+};
+
+```
+
+## Detailed Analysis
+
+### File Role in Repository
+
+The file `web/src/pages/next-chats/hooks/use-select-conversation-list.ts` is located in the `web/src/pages/next-chats/hooks` directory.
+
+This file is part of the **Frontend/Web** layer of RAGFlow.
+
+### Architecture Context
+
+Files in this location typically handle concerns related to hooks.
+
+### Design Patterns
+
+[Analysis of design patterns would go here based on code structure]
+
+### Performance Considerations
+
+[Performance analysis would consider file size, complexity, algorithmic efficiency]
+
+### Security Considerations
+
+- Watch for XSS vulnerabilities
+- Ensure proper input sanitization
+- Validate all API calls
+
+### Testing Approach
+
+To test this file:
+1. Review the corresponding test files in the test/ directory
+2. Ensure all public APIs have test coverage
+3. Test edge cases and error conditions
+4. Verify integration with related components
+
+### Related Files
+
+- [use-build-form-refs.ts](use-build-form-refs.ts_docs.md)
+- [use-button-disabled.tsx](use-button-disabled.tsx_docs.md)
+- [use-click-card.ts](use-click-card.ts_docs.md)
+- [use-create-conversation.ts](use-create-conversation.ts_docs.md)
+- [use-rename-chat.ts](use-rename-chat.ts_docs.md)
+- [use-send-chat-message.ts](use-send-chat-message.ts_docs.md)
+- [use-send-multiple-message.ts](use-send-multiple-message.ts_docs.md)
+- [use-send-shared-message.ts](use-send-shared-message.ts_docs.md)
+- [use-set-chat-route.ts](use-set-chat-route.ts_docs.md)
+- [use-set-conversation.ts](use-set-conversation.ts_docs.md)
+
+
+## Cross-References
+
+- [Folder Documentation](./doc.md)
+- [Folder Index](./index.md)
+- [Global Index](../../index.md)
+
+---
+
+*Generated by RAGFlow Comprehensive Documentation Generator*

@@ -1,0 +1,196 @@
+# Documentation: web/src/pages/agent/hooks/use-change-node-name.ts
+
+## File Metadata
+
+- **Path**: `web/src/pages/agent/hooks/use-change-node-name.ts`
+- **Size**: 2984 bytes
+- **Type**: .ts
+- **Readable**: Yes
+
+## Purpose
+
+This file is part of the RAGFlow repository at location `web/src/pages/agent/hooks/use-change-node-name.ts`.
+
+## Original Source Code
+
+```ts
+import message from '@/components/ui/message';
+import { trim } from 'lodash';
+import {
+  ChangeEvent,
+  Dispatch,
+  SetStateAction,
+  useCallback,
+  useEffect,
+  useMemo,
+  useState,
+} from 'react';
+import { Operator } from '../constant';
+import useGraphStore from '../store';
+import { getAgentNodeTools } from '../utils';
+
+export function useHandleTooNodeNameChange({
+  id,
+  name,
+  setName,
+}: {
+  id?: string;
+  name?: string;
+  setName: Dispatch<SetStateAction<string>>;
+}) {
+  const { clickedToolId, findUpstreamNodeById, updateNodeForm } = useGraphStore(
+    (state) => state,
+  );
+  const agentNode = findUpstreamNodeById(id);
+  const tools = getAgentNodeTools(agentNode);
+
+  const previousName = useMemo(() => {
+    const tool = tools.find((x) => x.component_name === clickedToolId);
+    return tool?.name || tool?.component_name;
+  }, [clickedToolId, tools]);
+
+  const handleToolNameBlur = useCallback(() => {
+    const trimmedName = trim(name);
+    const existsSameName = tools.some((x) => x.name === trimmedName);
+    if (trimmedName === '' || existsSameName) {
+      if (existsSameName && previousName !== name) {
+        message.error('The name cannot be repeated');
+      }
+      setName(previousName || '');
+      return;
+    }
+
+    if (agentNode?.id) {
+      const nextTools = tools.map((x) => {
+        if (x.component_name === clickedToolId) {
+          return {
+            ...x,
+            name,
+          };
+        }
+        return x;
+      });
+      updateNodeForm(agentNode?.id, nextTools, ['tools']);
+    }
+  }, [
+    agentNode?.id,
+    clickedToolId,
+    name,
+    previousName,
+    setName,
+    tools,
+    updateNodeForm,
+  ]);
+
+  return { handleToolNameBlur, previousToolName: previousName };
+}
+
+export const useHandleNodeNameChange = ({
+  id,
+  data,
+}: {
+  id?: string;
+  data: any;
+}) => {
+  const [name, setName] = useState<string>('');
+  const { updateNodeName, nodes, getOperatorTypeFromId } = useGraphStore(
+    (state) => state,
+  );
+  const previousName = data?.name;
+  const isToolNode = getOperatorTypeFromId(id) === Operator.Tool;
+
+  const { handleToolNameBlur, previousToolName } = useHandleTooNodeNameChange({
+    id,
+    name,
+    setName,
+  });
+
+  const handleNameBlur = useCallback(() => {
+    const existsSameName = nodes.some((x) => x.data.name === name);
+    if (trim(name) === '' || existsSameName) {
+      if (existsSameName && previousName !== name) {
+        message.error('The name cannot be repeated');
+      }
+      setName(previousName);
+      return;
+    }
+
+    if (id) {
+      updateNodeName(id, name);
+    }
+  }, [name, id, updateNodeName, previousName, nodes]);
+
+  const handleNameChange = useCallback((e: ChangeEvent<any>) => {
+    setName(e.target.value);
+  }, []);
+
+  useEffect(() => {
+    setName(isToolNode ? previousToolName : previousName);
+  }, [isToolNode, previousName, previousToolName]);
+
+  return {
+    name,
+    handleNameBlur: isToolNode ? handleToolNameBlur : handleNameBlur,
+    handleNameChange,
+  };
+};
+
+```
+
+## Detailed Analysis
+
+### File Role in Repository
+
+The file `web/src/pages/agent/hooks/use-change-node-name.ts` is located in the `web/src/pages/agent/hooks` directory.
+
+This file is part of the **Frontend/Web** layer of RAGFlow.
+
+### Architecture Context
+
+Files in this location typically handle concerns related to hooks.
+
+### Design Patterns
+
+[Analysis of design patterns would go here based on code structure]
+
+### Performance Considerations
+
+[Performance analysis would consider file size, complexity, algorithmic efficiency]
+
+### Security Considerations
+
+- Watch for XSS vulnerabilities
+- Ensure proper input sanitization
+- Validate all API calls
+
+### Testing Approach
+
+To test this file:
+1. Review the corresponding test files in the test/ directory
+2. Ensure all public APIs have test coverage
+3. Test edge cases and error conditions
+4. Verify integration with related components
+
+### Related Files
+
+- [use-add-node.ts](use-add-node.ts_docs.md)
+- [use-agent-tool-initial-values.ts](use-agent-tool-initial-values.ts_docs.md)
+- [use-before-delete.tsx](use-before-delete.tsx_docs.md)
+- [use-build-dsl.ts](use-build-dsl.ts_docs.md)
+- [use-build-options.tsx](use-build-options.tsx_docs.md)
+- [use-build-structured-output.ts](use-build-structured-output.ts_docs.md)
+- [use-cache-chat-log.ts](use-cache-chat-log.ts_docs.md)
+- [use-calculate-sheet-right.ts](use-calculate-sheet-right.ts_docs.md)
+- [use-cancel-dataflow.ts](use-cancel-dataflow.ts_docs.md)
+- [use-chat-logic.ts](use-chat-logic.ts_docs.md)
+
+
+## Cross-References
+
+- [Folder Documentation](./doc.md)
+- [Folder Index](./index.md)
+- [Global Index](../../index.md)
+
+---
+
+*Generated by RAGFlow Comprehensive Documentation Generator*

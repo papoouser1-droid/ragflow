@@ -1,0 +1,77 @@
+# Keyword Map: web/src/assets/inter/InterDisplay-Thin.woff2
+
+## File Path and Links
+
+- **Original File**: `web/src/assets/inter/InterDisplay-Thin.woff2`
+- **Documentation**: [InterDisplay-Thin.woff2_docs.md](./InterDisplay-Thin.woff2_docs.md)
+
+## Keywords Extracted
+
+This file contains 50 extracted keywords and identifiers:
+
+
+### Filename Component
+
+- **interdisplay**: Referenced in this file (see [_docs.md](./InterDisplay-Thin.woff2_docs.md))
+- **thin**: Referenced in this file (see [_docs.md](./InterDisplay-Thin.woff2_docs.md))
+
+### Identifier
+
+- **A7TIa**: Referenced in this file (see [_docs.md](./InterDisplay-Thin.woff2_docs.md))
+- **AlBq**: Referenced in this file (see [_docs.md](./InterDisplay-Thin.woff2_docs.md))
+- **B1JP**: Referenced in this file (see [_docs.md](./InterDisplay-Thin.woff2_docs.md))
+- **B5jP**: Referenced in this file (see [_docs.md](./InterDisplay-Thin.woff2_docs.md))
+- **BE1**: Referenced in this file (see [_docs.md](./InterDisplay-Thin.woff2_docs.md))
+- **Dc9**: Referenced in this file (see [_docs.md](./InterDisplay-Thin.woff2_docs.md))
+- **EK6**: Referenced in this file (see [_docs.md](./InterDisplay-Thin.woff2_docs.md))
+- **Ekem**: Referenced in this file (see [_docs.md](./InterDisplay-Thin.woff2_docs.md))
+- **GD3**: Referenced in this file (see [_docs.md](./InterDisplay-Thin.woff2_docs.md))
+- **Gc4**: Referenced in this file (see [_docs.md](./InterDisplay-Thin.woff2_docs.md))
+- **HJF3**: Referenced in this file (see [_docs.md](./InterDisplay-Thin.woff2_docs.md))
+- **HVH**: Referenced in this file (see [_docs.md](./InterDisplay-Thin.woff2_docs.md))
+- **Ham**: Referenced in this file (see [_docs.md](./InterDisplay-Thin.woff2_docs.md))
+- **Her**: Referenced in this file (see [_docs.md](./InterDisplay-Thin.woff2_docs.md))
+- **IBR**: Referenced in this file (see [_docs.md](./InterDisplay-Thin.woff2_docs.md))
+- **J2G9**: Referenced in this file (see [_docs.md](./InterDisplay-Thin.woff2_docs.md))
+- **JLsj**: Referenced in this file (see [_docs.md](./InterDisplay-Thin.woff2_docs.md))
+- **JTe**: Referenced in this file (see [_docs.md](./InterDisplay-Thin.woff2_docs.md))
+- **Jih**: Referenced in this file (see [_docs.md](./InterDisplay-Thin.woff2_docs.md))
+- **Jtz**: Referenced in this file (see [_docs.md](./InterDisplay-Thin.woff2_docs.md))
+- **KT5**: Referenced in this file (see [_docs.md](./InterDisplay-Thin.woff2_docs.md))
+- **KjVo**: Referenced in this file (see [_docs.md](./InterDisplay-Thin.woff2_docs.md))
+- **L2V**: Referenced in this file (see [_docs.md](./InterDisplay-Thin.woff2_docs.md))
+- **LqAQ**: Referenced in this file (see [_docs.md](./InterDisplay-Thin.woff2_docs.md))
+- **LsE**: Referenced in this file (see [_docs.md](./InterDisplay-Thin.woff2_docs.md))
+- **MHG**: Referenced in this file (see [_docs.md](./InterDisplay-Thin.woff2_docs.md))
+- **MZQ**: Referenced in this file (see [_docs.md](./InterDisplay-Thin.woff2_docs.md))
+- **Mdw**: Referenced in this file (see [_docs.md](./InterDisplay-Thin.woff2_docs.md))
+- **Mf7w**: Referenced in this file (see [_docs.md](./InterDisplay-Thin.woff2_docs.md))
+- **Mmv**: Referenced in this file (see [_docs.md](./InterDisplay-Thin.woff2_docs.md))
+- **OCNQ**: Referenced in this file (see [_docs.md](./InterDisplay-Thin.woff2_docs.md))
+- **Q9eN**: Referenced in this file (see [_docs.md](./InterDisplay-Thin.woff2_docs.md))
+- **Qem**: Referenced in this file (see [_docs.md](./InterDisplay-Thin.woff2_docs.md))
+- **Qv37**: Referenced in this file (see [_docs.md](./InterDisplay-Thin.woff2_docs.md))
+- **Ric**: Referenced in this file (see [_docs.md](./InterDisplay-Thin.woff2_docs.md))
+- **SJo**: Referenced in this file (see [_docs.md](./InterDisplay-Thin.woff2_docs.md))
+- **SRw**: Referenced in this file (see [_docs.md](./InterDisplay-Thin.woff2_docs.md))
+- **Sg0**: Referenced in this file (see [_docs.md](./InterDisplay-Thin.woff2_docs.md))
+- **TaO**: Referenced in this file (see [_docs.md](./InterDisplay-Thin.woff2_docs.md))
+- **TlY**: Referenced in this file (see [_docs.md](./InterDisplay-Thin.woff2_docs.md))
+- **TzW**: Referenced in this file (see [_docs.md](./InterDisplay-Thin.woff2_docs.md))
+- **Uac5**: Referenced in this file (see [_docs.md](./InterDisplay-Thin.woff2_docs.md))
+- **VRh**: Referenced in this file (see [_docs.md](./InterDisplay-Thin.woff2_docs.md))
+- **Vnz**: Referenced in this file (see [_docs.md](./InterDisplay-Thin.woff2_docs.md))
+- **XHb**: Referenced in this file (see [_docs.md](./InterDisplay-Thin.woff2_docs.md))
+- **XRr**: Referenced in this file (see [_docs.md](./InterDisplay-Thin.woff2_docs.md))
+- **YVQ**: Referenced in this file (see [_docs.md](./InterDisplay-Thin.woff2_docs.md))
+- **Zs8**: Referenced in this file (see [_docs.md](./InterDisplay-Thin.woff2_docs.md))
+
+
+## Keyword → Section Map
+
+All keywords in this file can be found in the comprehensive documentation:
+- [Full Documentation](./InterDisplay-Thin.woff2_docs.md)
+
+---
+
+*Generated by RAGFlow Comprehensive Documentation Generator*

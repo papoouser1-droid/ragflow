@@ -1,0 +1,78 @@
+# Keyword Map: web/src/assets/inter/Inter-BoldItalic.woff2
+
+## File Path and Links
+
+- **Original File**: `web/src/assets/inter/Inter-BoldItalic.woff2`
+- **Documentation**: [Inter-BoldItalic.woff2_docs.md](./Inter-BoldItalic.woff2_docs.md)
+
+## Keywords Extracted
+
+This file contains 51 extracted keywords and identifiers:
+
+
+### Filename Component
+
+- **bolditalic**: Referenced in this file (see [_docs.md](./Inter-BoldItalic.woff2_docs.md))
+- **inter**: Referenced in this file (see [_docs.md](./Inter-BoldItalic.woff2_docs.md))
+
+### Identifier
+
+- **AUK**: Referenced in this file (see [_docs.md](./Inter-BoldItalic.woff2_docs.md))
+- **BDlqn**: Referenced in this file (see [_docs.md](./Inter-BoldItalic.woff2_docs.md))
+- **C9GC**: Referenced in this file (see [_docs.md](./Inter-BoldItalic.woff2_docs.md))
+- **Cwf**: Referenced in this file (see [_docs.md](./Inter-BoldItalic.woff2_docs.md))
+- **DiR**: Referenced in this file (see [_docs.md](./Inter-BoldItalic.woff2_docs.md))
+- **E3N**: Referenced in this file (see [_docs.md](./Inter-BoldItalic.woff2_docs.md))
+- **EfoM**: Referenced in this file (see [_docs.md](./Inter-BoldItalic.woff2_docs.md))
+- **Ekc**: Referenced in this file (see [_docs.md](./Inter-BoldItalic.woff2_docs.md))
+- **F4N**: Referenced in this file (see [_docs.md](./Inter-BoldItalic.woff2_docs.md))
+- **G4g**: Referenced in this file (see [_docs.md](./Inter-BoldItalic.woff2_docs.md))
+- **Gc9**: Referenced in this file (see [_docs.md](./Inter-BoldItalic.woff2_docs.md))
+- **GpKzFd**: Referenced in this file (see [_docs.md](./Inter-BoldItalic.woff2_docs.md))
+- **HDLB**: Referenced in this file (see [_docs.md](./Inter-BoldItalic.woff2_docs.md))
+- **Hhm**: Referenced in this file (see [_docs.md](./Inter-BoldItalic.woff2_docs.md))
+- **I8f**: Referenced in this file (see [_docs.md](./Inter-BoldItalic.woff2_docs.md))
+- **J1C**: Referenced in this file (see [_docs.md](./Inter-BoldItalic.woff2_docs.md))
+- **Jby**: Referenced in this file (see [_docs.md](./Inter-BoldItalic.woff2_docs.md))
+- **KJZ**: Referenced in this file (see [_docs.md](./Inter-BoldItalic.woff2_docs.md))
+- **KaZ**: Referenced in this file (see [_docs.md](./Inter-BoldItalic.woff2_docs.md))
+- **M4La**: Referenced in this file (see [_docs.md](./Inter-BoldItalic.woff2_docs.md))
+- **MrP**: Referenced in this file (see [_docs.md](./Inter-BoldItalic.woff2_docs.md))
+- **Mu6**: Referenced in this file (see [_docs.md](./Inter-BoldItalic.woff2_docs.md))
+- **NFZmC**: Referenced in this file (see [_docs.md](./Inter-BoldItalic.woff2_docs.md))
+- **PAs**: Referenced in this file (see [_docs.md](./Inter-BoldItalic.woff2_docs.md))
+- **PJp**: Referenced in this file (see [_docs.md](./Inter-BoldItalic.woff2_docs.md))
+- **PKn**: Referenced in this file (see [_docs.md](./Inter-BoldItalic.woff2_docs.md))
+- **PSr**: Referenced in this file (see [_docs.md](./Inter-BoldItalic.woff2_docs.md))
+- **PmP**: Referenced in this file (see [_docs.md](./Inter-BoldItalic.woff2_docs.md))
+- **Q55**: Referenced in this file (see [_docs.md](./Inter-BoldItalic.woff2_docs.md))
+- **QRJw**: Referenced in this file (see [_docs.md](./Inter-BoldItalic.woff2_docs.md))
+- **R2r**: Referenced in this file (see [_docs.md](./Inter-BoldItalic.woff2_docs.md))
+- **R4_**: Referenced in this file (see [_docs.md](./Inter-BoldItalic.woff2_docs.md))
+- **RKgsT_p**: Referenced in this file (see [_docs.md](./Inter-BoldItalic.woff2_docs.md))
+- **RS4**: Referenced in this file (see [_docs.md](./Inter-BoldItalic.woff2_docs.md))
+- **Ric**: Referenced in this file (see [_docs.md](./Inter-BoldItalic.woff2_docs.md))
+- **Rp7**: Referenced in this file (see [_docs.md](./Inter-BoldItalic.woff2_docs.md))
+- **S0XX**: Referenced in this file (see [_docs.md](./Inter-BoldItalic.woff2_docs.md))
+- **T4t**: Referenced in this file (see [_docs.md](./Inter-BoldItalic.woff2_docs.md))
+- **TOLh**: Referenced in this file (see [_docs.md](./Inter-BoldItalic.woff2_docs.md))
+- **Twy**: Referenced in this file (see [_docs.md](./Inter-BoldItalic.woff2_docs.md))
+- **U4f**: Referenced in this file (see [_docs.md](./Inter-BoldItalic.woff2_docs.md))
+- **Ux4**: Referenced in this file (see [_docs.md](./Inter-BoldItalic.woff2_docs.md))
+- **V4c**: Referenced in this file (see [_docs.md](./Inter-BoldItalic.woff2_docs.md))
+- **V5T**: Referenced in this file (see [_docs.md](./Inter-BoldItalic.woff2_docs.md))
+- **Ve5**: Referenced in this file (see [_docs.md](./Inter-BoldItalic.woff2_docs.md))
+- **W2P_**: Referenced in this file (see [_docs.md](./Inter-BoldItalic.woff2_docs.md))
+- **W7w**: Referenced in this file (see [_docs.md](./Inter-BoldItalic.woff2_docs.md))
+- **YQo**: Referenced in this file (see [_docs.md](./Inter-BoldItalic.woff2_docs.md))
+- **ZeV**: Referenced in this file (see [_docs.md](./Inter-BoldItalic.woff2_docs.md))
+
+
+## Keyword → Section Map
+
+All keywords in this file can be found in the comprehensive documentation:
+- [Full Documentation](./Inter-BoldItalic.woff2_docs.md)
+
+---
+
+*Generated by RAGFlow Comprehensive Documentation Generator*

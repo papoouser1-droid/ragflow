@@ -1,0 +1,78 @@
+# Keyword Map: web/src/assets/inter/Inter-ThinItalic.woff2
+
+## File Path and Links
+
+- **Original File**: `web/src/assets/inter/Inter-ThinItalic.woff2`
+- **Documentation**: [Inter-ThinItalic.woff2_docs.md](./Inter-ThinItalic.woff2_docs.md)
+
+## Keywords Extracted
+
+This file contains 51 extracted keywords and identifiers:
+
+
+### Filename Component
+
+- **inter**: Referenced in this file (see [_docs.md](./Inter-ThinItalic.woff2_docs.md))
+- **thinitalic**: Referenced in this file (see [_docs.md](./Inter-ThinItalic.woff2_docs.md))
+
+### Identifier
+
+- **AkZA**: Referenced in this file (see [_docs.md](./Inter-ThinItalic.woff2_docs.md))
+- **Axl6**: Referenced in this file (see [_docs.md](./Inter-ThinItalic.woff2_docs.md))
+- **BnD**: Referenced in this file (see [_docs.md](./Inter-ThinItalic.woff2_docs.md))
+- **Cg9j**: Referenced in this file (see [_docs.md](./Inter-ThinItalic.woff2_docs.md))
+- **DLE**: Referenced in this file (see [_docs.md](./Inter-ThinItalic.woff2_docs.md))
+- **DSwb7**: Referenced in this file (see [_docs.md](./Inter-ThinItalic.woff2_docs.md))
+- **DTD**: Referenced in this file (see [_docs.md](./Inter-ThinItalic.woff2_docs.md))
+- **ETCHWe**: Referenced in this file (see [_docs.md](./Inter-ThinItalic.woff2_docs.md))
+- **ElA**: Referenced in this file (see [_docs.md](./Inter-ThinItalic.woff2_docs.md))
+- **EwM**: Referenced in this file (see [_docs.md](./Inter-ThinItalic.woff2_docs.md))
+- **Fg0Yl**: Referenced in this file (see [_docs.md](./Inter-ThinItalic.woff2_docs.md))
+- **HDLBJFNAI**: Referenced in this file (see [_docs.md](./Inter-ThinItalic.woff2_docs.md))
+- **HIZMX**: Referenced in this file (see [_docs.md](./Inter-ThinItalic.woff2_docs.md))
+- **HOz1**: Referenced in this file (see [_docs.md](./Inter-ThinItalic.woff2_docs.md))
+- **Her**: Referenced in this file (see [_docs.md](./Inter-ThinItalic.woff2_docs.md))
+- **ITJ**: Referenced in this file (see [_docs.md](./Inter-ThinItalic.woff2_docs.md))
+- **J8g**: Referenced in this file (see [_docs.md](./Inter-ThinItalic.woff2_docs.md))
+- **JWge**: Referenced in this file (see [_docs.md](./Inter-ThinItalic.woff2_docs.md))
+- **JhF**: Referenced in this file (see [_docs.md](./Inter-ThinItalic.woff2_docs.md))
+- **Jju1**: Referenced in this file (see [_docs.md](./Inter-ThinItalic.woff2_docs.md))
+- **Kzq**: Referenced in this file (see [_docs.md](./Inter-ThinItalic.woff2_docs.md))
+- **L0P9**: Referenced in this file (see [_docs.md](./Inter-ThinItalic.woff2_docs.md))
+- **L7_**: Referenced in this file (see [_docs.md](./Inter-ThinItalic.woff2_docs.md))
+- **LFv**: Referenced in this file (see [_docs.md](./Inter-ThinItalic.woff2_docs.md))
+- **LaV**: Referenced in this file (see [_docs.md](./Inter-ThinItalic.woff2_docs.md))
+- **Lgs**: Referenced in this file (see [_docs.md](./Inter-ThinItalic.woff2_docs.md))
+- **LyZ**: Referenced in this file (see [_docs.md](./Inter-ThinItalic.woff2_docs.md))
+- **M1H**: Referenced in this file (see [_docs.md](./Inter-ThinItalic.woff2_docs.md))
+- **No0**: Referenced in this file (see [_docs.md](./Inter-ThinItalic.woff2_docs.md))
+- **POX**: Referenced in this file (see [_docs.md](./Inter-ThinItalic.woff2_docs.md))
+- **PXiG**: Referenced in this file (see [_docs.md](./Inter-ThinItalic.woff2_docs.md))
+- **Peb**: Referenced in this file (see [_docs.md](./Inter-ThinItalic.woff2_docs.md))
+- **PwCY**: Referenced in this file (see [_docs.md](./Inter-ThinItalic.woff2_docs.md))
+- **QfX**: Referenced in this file (see [_docs.md](./Inter-ThinItalic.woff2_docs.md))
+- **RYe**: Referenced in this file (see [_docs.md](./Inter-ThinItalic.woff2_docs.md))
+- **SPB**: Referenced in this file (see [_docs.md](./Inter-ThinItalic.woff2_docs.md))
+- **SPR**: Referenced in this file (see [_docs.md](./Inter-ThinItalic.woff2_docs.md))
+- **Sj1**: Referenced in this file (see [_docs.md](./Inter-ThinItalic.woff2_docs.md))
+- **TQlD**: Referenced in this file (see [_docs.md](./Inter-ThinItalic.woff2_docs.md))
+- **Uk6**: Referenced in this file (see [_docs.md](./Inter-ThinItalic.woff2_docs.md))
+- **UlF**: Referenced in this file (see [_docs.md](./Inter-ThinItalic.woff2_docs.md))
+- **VdF**: Referenced in this file (see [_docs.md](./Inter-ThinItalic.woff2_docs.md))
+- **Von**: Referenced in this file (see [_docs.md](./Inter-ThinItalic.woff2_docs.md))
+- **WL6**: Referenced in this file (see [_docs.md](./Inter-ThinItalic.woff2_docs.md))
+- **Wq3**: Referenced in this file (see [_docs.md](./Inter-ThinItalic.woff2_docs.md))
+- **XFA**: Referenced in this file (see [_docs.md](./Inter-ThinItalic.woff2_docs.md))
+- **XOK**: Referenced in this file (see [_docs.md](./Inter-ThinItalic.woff2_docs.md))
+- **YZY**: Referenced in this file (see [_docs.md](./Inter-ThinItalic.woff2_docs.md))
+- **ZE2**: Referenced in this file (see [_docs.md](./Inter-ThinItalic.woff2_docs.md))
+
+
+## Keyword → Section Map
+
+All keywords in this file can be found in the comprehensive documentation:
+- [Full Documentation](./Inter-ThinItalic.woff2_docs.md)
+
+---
+
+*Generated by RAGFlow Comprehensive Documentation Generator*

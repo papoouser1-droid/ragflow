@@ -1,0 +1,310 @@
+# Subtree Keyword Index: agent
+
+## Scope
+
+This keyword index covers all 78 files under `agent` (including all subdirectories).
+
+## Keywords A–Z
+
+
+### __init__
+
+- [agent/__init__.py](TBD)
+- [agent/component/__init__.py](TBD)
+- [agent/tools/__init__.py](TBD)
+- [agentic_reasoning/__init__.py](TBD)
+
+### advanced_ingestion_pipeline
+
+- [agent/templates/advanced_ingestion_pipeline.json](TBD)
+
+### agent_with_tools
+
+- [agent/component/agent_with_tools.py](TBD)
+
+### akshare
+
+- [agent/tools/akshare.py](TBD)
+
+### arxiv
+
+- [agent/tools/arxiv.py](TBD)
+
+### base
+
+- [agent/component/base.py](TBD)
+- [agent/tools/base.py](TBD)
+
+### begin
+
+- [agent/component/begin.py](TBD)
+
+### canvas
+
+- [agent/canvas.py](TBD)
+
+### categorize
+
+- [agent/component/categorize.py](TBD)
+
+### categorize_and_agent_with_tavily
+
+- [agent/test/dsl_examples/categorize_and_agent_with_tavily.json](TBD)
+
+### choose_your_knowledge_base_agent
+
+- [agent/templates/choose_your_knowledge_base_agent.json](TBD)
+
+### choose_your_knowledge_base_workflow
+
+- [agent/templates/choose_your_knowledge_base_workflow.json](TBD)
+
+### chunk_summary
+
+- [agent/templates/chunk_summary.json](TBD)
+
+### client
+
+- [agent/test/client.py](TBD)
+
+### code_exec
+
+- [agent/tools/code_exec.py](TBD)
+
+### crawler
+
+- [agent/tools/crawler.py](TBD)
+
+### customer_review_analysis
+
+- [agent/templates/customer_review_analysis.json](TBD)
+
+### customer_service
+
+- [agent/templates/customer_service.json](TBD)
+
+### customer_support
+
+- [agent/templates/customer_support.json](TBD)
+
+### cv_analysis_and_candidate_evaluation
+
+- [agent/templates/cv_analysis_and_candidate_evaluation.json](TBD)
+
+### data_operations
+
+- [agent/component/data_operations.py](TBD)
+
+### deep_research
+
+- [agent/templates/deep_research.json](TBD)
+- [agentic_reasoning/deep_research.py](TBD)
+
+### deep_search_r
+
+- [agent/templates/deep_search_r.json](TBD)
+
+### deepl
+
+- [agent/tools/deepl.py](TBD)
+
+### duckduckgo
+
+- [agent/tools/duckduckgo.py](TBD)
+
+### ecommerce_customer_service_workflow
+
+- [agent/templates/ecommerce_customer_service_workflow.json](TBD)
+
+### email
+
+- [agent/tools/email.py](TBD)
+
+### exesql
+
+- [agent/test/dsl_examples/exesql.json](TBD)
+- [agent/tools/exesql.py](TBD)
+
+### fillup
+
+- [agent/component/fillup.py](TBD)
+
+### generate_SEO_blog
+
+- [agent/templates/generate_SEO_blog.json](TBD)
+
+### github
+
+- [agent/tools/github.py](TBD)
+
+### google
+
+- [agent/tools/google.py](TBD)
+
+### googlescholar
+
+- [agent/tools/googlescholar.py](TBD)
+
+### headhunter_zh
+
+- [agent/test/dsl_examples/headhunter_zh.json](TBD)
+
+### image_lingo
+
+- [agent/templates/image_lingo.json](TBD)
+
+### invoke
+
+- [agent/component/invoke.py](TBD)
+
+### iteration
+
+- [agent/component/iteration.py](TBD)
+- [agent/test/dsl_examples/iteration.json](TBD)
+
+### iterationitem
+
+- [agent/component/iterationitem.py](TBD)
+
+### jin10
+
+- [agent/tools/jin10.py](TBD)
+
+### knowledge_base_report
+
+- [agent/templates/knowledge_base_report.json](TBD)
+
+### knowledge_base_report_r
+
+- [agent/templates/knowledge_base_report_r.json](TBD)
+
+### list_operations
+
+- [agent/component/list_operations.py](TBD)
+
+### llm
+
+- [agent/component/llm.py](TBD)
+
+### market_generate_seo_blog
+
+- [agent/templates/market_generate_seo_blog.json](TBD)
+
+### message
+
+- [agent/component/message.py](TBD)
+
+### prompts
+
+- [agentic_reasoning/prompts.py](TBD)
+
+### pubmed
+
+- [agent/tools/pubmed.py](TBD)
+
+### qweather
+
+- [agent/tools/qweather.py](TBD)
+
+### retrieval
+
+- [agent/tools/retrieval.py](TBD)
+
+### retrieval_and_generate
+
+- [agent/test/dsl_examples/retrieval_and_generate.json](TBD)
+
+### retrieval_categorize_and_generate
+
+- [agent/test/dsl_examples/retrieval_categorize_and_generate.json](TBD)
+
+### searxng
+
+- [agent/tools/searxng.py](TBD)
+
+### seo_blog
+
+- [agent/templates/seo_blog.json](TBD)
+
+### settings
+
+- [agent/settings.py](TBD)
+
+### sql_assistant
+
+- [agent/templates/sql_assistant.json](TBD)
+
+### stock_research_report
+
+- [agent/templates/stock_research_report.json](TBD)
+
+### string_transform
+
+- [agent/component/string_transform.py](TBD)
+
+### switch
+
+- [agent/component/switch.py](TBD)
+
+### tavily
+
+- [agent/tools/tavily.py](TBD)
+
+### tavily_and_generate
+
+- [agent/test/dsl_examples/tavily_and_generate.json](TBD)
+
+### technical_docs_qa
+
+- [agent/templates/technical_docs_qa.json](TBD)
+
+### title_chunker
+
+- [agent/templates/title_chunker.json](TBD)
+
+### trip_planner
+
+- [agent/templates/trip_planner.json](TBD)
+
+### tushare
+
+- [agent/tools/tushare.py](TBD)
+
+### user_interaction
+
+- [agent/templates/user_interaction.json](TBD)
+
+### varaiable_aggregator
+
+- [agent/component/varaiable_aggregator.py](TBD)
+
+### web_search_assistant
+
+- [agent/templates/web_search_assistant.json](TBD)
+
+### webhook
+
+- [agent/component/webhook.py](TBD)
+
+### wencai
+
+- [agent/tools/wencai.py](TBD)
+
+### wikipedia
+
+- [agent/tools/wikipedia.py](TBD)
+
+### yahoofinance
+
+- [agent/tools/yahoofinance.py](TBD)
+
+
+## Folder-Level Navigation
+
+- [Folder Index](./index.md)
+- [Folder Documentation](./doc.md)
+- [Global Keywords](../../keywords.md)
+
+---
+
+*Generated by RAGFlow Comprehensive Documentation Generator*

@@ -1,0 +1,90 @@
+# Keyword Map: sdk/python/test/test_http_api/conftest.py
+
+## File Path and Links
+
+- **Original File**: `sdk/python/test/test_http_api/conftest.py`
+- **Documentation**: [conftest.py_docs.md](./conftest.py_docs.md)
+
+## Keywords Extracted
+
+This file contains 62 extracted keywords and identifiers:
+
+
+### Filename Component
+
+- **conftest**: Referenced in this file (see [_docs.md](./conftest.py_docs.md))
+
+### Function Definition
+
+- **add_chat_assistants**: Referenced in this file (see [_docs.md](./conftest.py_docs.md))
+- **add_chunks**: Referenced in this file (see [_docs.md](./conftest.py_docs.md))
+- **add_dataset**: Referenced in this file (see [_docs.md](./conftest.py_docs.md))
+- **add_dataset_func**: Referenced in this file (see [_docs.md](./conftest.py_docs.md))
+- **add_document**: Referenced in this file (see [_docs.md](./conftest.py_docs.md))
+- **cleanup**: Referenced in this file (see [_docs.md](./conftest.py_docs.md))
+- **clear_chat_assistants**: Referenced in this file (see [_docs.md](./conftest.py_docs.md))
+- **clear_datasets**: Referenced in this file (see [_docs.md](./conftest.py_docs.md))
+- **clear_session_with_chat_assistants**: Referenced in this file (see [_docs.md](./conftest.py_docs.md))
+- **condition**: Referenced in this file (see [_docs.md](./conftest.py_docs.md))
+- **generate_test_files**: Referenced in this file (see [_docs.md](./conftest.py_docs.md))
+- **get_http_api_auth**: Referenced in this file (see [_docs.md](./conftest.py_docs.md))
+- **pytest_addoption**: Referenced in this file (see [_docs.md](./conftest.py_docs.md))
+- **pytest_configure**: Referenced in this file (see [_docs.md](./conftest.py_docs.md))
+- **ragflow_tmp_dir**: Referenced in this file (see [_docs.md](./conftest.py_docs.md))
+
+### Identifier
+
+- **ANY**: Referenced in this file (see [_docs.md](./conftest.py_docs.md))
+- **Active**: Referenced in this file (see [_docs.md](./conftest.py_docs.md))
+- **All**: Referenced in this file (see [_docs.md](./conftest.py_docs.md))
+- **Apache**: Referenced in this file (see [_docs.md](./conftest.py_docs.md))
+- **Authors**: Referenced in this file (see [_docs.md](./conftest.py_docs.md))
+- **BASIS**: Referenced in this file (see [_docs.md](./conftest.py_docs.md))
+- **CONDITIONS**: Referenced in this file (see [_docs.md](./conftest.py_docs.md))
+- **CONFIG**: Referenced in this file (see [_docs.md](./conftest.py_docs.md))
+- **Config**: Referenced in this file (see [_docs.md](./conftest.py_docs.md))
+- **Copyright**: Referenced in this file (see [_docs.md](./conftest.py_docs.md))
+- **DONE**: Referenced in this file (see [_docs.md](./conftest.py_docs.md))
+- **Document**: Referenced in this file (see [_docs.md](./conftest.py_docs.md))
+- **False**: Referenced in this file (see [_docs.md](./conftest.py_docs.md))
+- **HOST_ADDRESS**: Referenced in this file (see [_docs.md](./conftest.py_docs.md))
+- **InfiniFlow**: Referenced in this file (see [_docs.md](./conftest.py_docs.md))
+- **KIND**: Referenced in this file (see [_docs.md](./conftest.py_docs.md))
+- **LICENSE**: Referenced in this file (see [_docs.md](./conftest.py_docs.md))
+- **License**: Referenced in this file (see [_docs.md](./conftest.py_docs.md))
+- **Licensed**: Referenced in this file (see [_docs.md](./conftest.py_docs.md))
+- **MARKER_EXPRESSIONS**: Referenced in this file (see [_docs.md](./conftest.py_docs.md))
+- **None**: Referenced in this file (see [_docs.md](./conftest.py_docs.md))
+- **Parser**: Referenced in this file (see [_docs.md](./conftest.py_docs.md))
+- **RAGFlowHttpApiAuth**: Referenced in this file (see [_docs.md](./conftest.py_docs.md))
+- **Reserved**: Referenced in this file (see [_docs.md](./conftest.py_docs.md))
+- **Rights**: Referenced in this file (see [_docs.md](./conftest.py_docs.md))
+- **See**: Referenced in this file (see [_docs.md](./conftest.py_docs.md))
+- **Test**: Referenced in this file (see [_docs.md](./conftest.py_docs.md))
+- **The**: Referenced in this file (see [_docs.md](./conftest.py_docs.md))
+- **True**: Referenced in this file (see [_docs.md](./conftest.py_docs.md))
+- **Unless**: Referenced in this file (see [_docs.md](./conftest.py_docs.md))
+- **Version**: Referenced in this file (see [_docs.md](./conftest.py_docs.md))
+- **WARRANTIES**: Referenced in this file (see [_docs.md](./conftest.py_docs.md))
+- **WITHOUT**: Referenced in this file (see [_docs.md](./conftest.py_docs.md))
+- **You**: Referenced in this file (see [_docs.md](./conftest.py_docs.md))
+
+### Imported Module
+
+- **common**: Referenced in this file (see [_docs.md](./conftest.py_docs.md))
+- **libs.auth**: Referenced in this file (see [_docs.md](./conftest.py_docs.md))
+- **libs.utils**: Referenced in this file (see [_docs.md](./conftest.py_docs.md))
+- **libs.utils.file_utils**: Referenced in this file (see [_docs.md](./conftest.py_docs.md))
+- **os**: Referenced in this file (see [_docs.md](./conftest.py_docs.md))
+- **pytest**: Referenced in this file (see [_docs.md](./conftest.py_docs.md))
+- **time**: Referenced in this file (see [_docs.md](./conftest.py_docs.md))
+
+
+## Keyword → Section Map
+
+All keywords in this file can be found in the comprehensive documentation:
+- [Full Documentation](./conftest.py_docs.md)
+
+---
+
+*Generated by RAGFlow Comprehensive Documentation Generator*

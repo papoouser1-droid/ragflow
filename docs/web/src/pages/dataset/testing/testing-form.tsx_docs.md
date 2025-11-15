@@ -1,0 +1,190 @@
+# Documentation: web/src/pages/dataset/testing/testing-form.tsx
+
+## File Metadata
+
+- **Path**: `web/src/pages/dataset/testing/testing-form.tsx`
+- **Size**: 3425 bytes
+- **Type**: .tsx
+- **Readable**: Yes
+
+## Purpose
+
+This file is part of the RAGFlow repository at location `web/src/pages/dataset/testing/testing-form.tsx`.
+
+## Original Source Code
+
+```tsx
+'use client';
+
+import { zodResolver } from '@hookform/resolvers/zod';
+import { useForm, useWatch } from 'react-hook-form';
+import { z } from 'zod';
+
+import { CrossLanguageFormField } from '@/components/cross-language-form-field';
+import { FormContainer } from '@/components/form-container';
+import {
+  initialTopKValue,
+  RerankFormFields,
+  topKSchema,
+} from '@/components/rerank';
+import {
+  initialSimilarityThresholdValue,
+  initialVectorSimilarityWeightValue,
+  SimilaritySliderFormField,
+  similarityThresholdSchema,
+  vectorSimilarityWeightSchema,
+} from '@/components/similarity-slider';
+import { ButtonLoading } from '@/components/ui/button';
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormMessage,
+} from '@/components/ui/form';
+import { Textarea } from '@/components/ui/textarea';
+import { UseKnowledgeGraphFormField } from '@/components/use-knowledge-graph-item';
+import { useTestRetrieval } from '@/hooks/use-knowledge-request';
+import { trim } from 'lodash';
+import { Send } from 'lucide-react';
+import { useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
+
+type TestingFormProps = Pick<
+  ReturnType<typeof useTestRetrieval>,
+  'loading' | 'refetch' | 'setValues'
+>;
+
+export default function TestingForm({
+  loading,
+  refetch,
+  setValues,
+}: TestingFormProps) {
+  const { t } = useTranslation();
+
+  const formSchema = z.object({
+    question: z.string().min(1, {
+      message: t('knowledgeDetails.testTextPlaceholder'),
+    }),
+    ...similarityThresholdSchema,
+    ...vectorSimilarityWeightSchema,
+    ...topKSchema,
+    use_kg: z.boolean().optional(),
+  });
+
+  const form = useForm<z.infer<typeof formSchema>>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      ...initialSimilarityThresholdValue,
+      ...initialVectorSimilarityWeightValue,
+      ...initialTopKValue,
+      use_kg: false,
+    },
+  });
+
+  const question = form.watch('question');
+
+  const values = useWatch({ control: form.control });
+
+  useEffect(() => {
+    setValues(values as Required<z.infer<typeof formSchema>>);
+  }, [setValues, values]);
+
+  function onSubmit() {
+    refetch();
+  }
+
+  return (
+    <Form {...form}>
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+        <FormContainer className="p-10">
+          <SimilaritySliderFormField
+            isTooltipShown={true}
+          ></SimilaritySliderFormField>
+          <RerankFormFields></RerankFormFields>
+          <UseKnowledgeGraphFormField name="use_kg"></UseKnowledgeGraphFormField>
+          <CrossLanguageFormField
+            name={'cross_languages'}
+          ></CrossLanguageFormField>
+        </FormContainer>
+        <FormField
+          control={form.control}
+          name="question"
+          render={({ field }) => (
+            <FormItem>
+              {/* <FormLabel>{t('knowledgeDetails.testText')}</FormLabel> */}
+              <FormControl>
+                <Textarea {...field}></Textarea>
+              </FormControl>
+
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <div className="flex justify-end">
+          <ButtonLoading
+            type="submit"
+            disabled={!!!trim(question)}
+            loading={loading}
+          >
+            {/* {!loading && <CirclePlay />} */}
+            {t('knowledgeDetails.testingLabel')}
+            <Send />
+          </ButtonLoading>
+        </div>
+      </form>
+    </Form>
+  );
+}
+
+```
+
+## Detailed Analysis
+
+### File Role in Repository
+
+The file `web/src/pages/dataset/testing/testing-form.tsx` is located in the `web/src/pages/dataset/testing` directory.
+
+This file is part of the **Frontend/Web** layer of RAGFlow.
+
+### Architecture Context
+
+Files in this location typically handle concerns related to testing.
+
+### Design Patterns
+
+[Analysis of design patterns would go here based on code structure]
+
+### Performance Considerations
+
+[Performance analysis would consider file size, complexity, algorithmic efficiency]
+
+### Security Considerations
+
+- Watch for XSS vulnerabilities
+- Ensure proper input sanitization
+- Validate all API calls
+
+### Testing Approach
+
+To test this file:
+1. Review the corresponding test files in the test/ directory
+2. Ensure all public APIs have test coverage
+3. Test edge cases and error conditions
+4. Verify integration with related components
+
+### Related Files
+
+- [index.tsx](index.tsx_docs.md)
+- [testing-result.tsx](testing-result.tsx_docs.md)
+
+
+## Cross-References
+
+- [Folder Documentation](./doc.md)
+- [Folder Index](./index.md)
+- [Global Index](../../index.md)
+
+---
+
+*Generated by RAGFlow Comprehensive Documentation Generator*

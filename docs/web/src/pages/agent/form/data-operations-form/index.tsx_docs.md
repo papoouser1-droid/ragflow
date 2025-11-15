@@ -1,0 +1,207 @@
+# Documentation: web/src/pages/agent/form/data-operations-form/index.tsx
+
+## File Metadata
+
+- **Path**: `web/src/pages/agent/form/data-operations-form/index.tsx`
+- **Size**: 4430 bytes
+- **Type**: .tsx
+- **Readable**: Yes
+
+## Purpose
+
+This file is part of the RAGFlow repository at location `web/src/pages/agent/form/data-operations-form/index.tsx`.
+
+## Original Source Code
+
+```tsx
+import { SelectWithSearch } from '@/components/originui/select-with-search';
+import { RAGFlowFormItem } from '@/components/ragflow-form';
+import { Form } from '@/components/ui/form';
+import { Separator } from '@/components/ui/separator';
+import { buildOptions } from '@/utils/form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { memo } from 'react';
+import { useForm, useWatch } from 'react-hook-form';
+import { useTranslation } from 'react-i18next';
+import { z } from 'zod';
+import {
+  JsonSchemaDataType,
+  Operations,
+  initialDataOperationsValues,
+} from '../../constant';
+import { useFormValues } from '../../hooks/use-form-values';
+import { useWatchFormChange } from '../../hooks/use-watch-form-change';
+import { INextOperatorForm } from '../../interface';
+import { buildOutputList } from '../../utils/build-output-list';
+import { FormWrapper } from '../components/form-wrapper';
+import { Output, OutputSchema } from '../components/output';
+import { QueryVariableList } from '../components/query-variable-list';
+import { FilterValues } from './filter-values';
+import { SelectKeys } from './select-keys';
+import { Updates } from './updates';
+
+export const RetrievalPartialSchema = {
+  query: z.array(z.object({ input: z.string().optional() })),
+  operations: z.string(),
+  select_keys: z.array(z.object({ name: z.string().optional() })).optional(),
+  remove_keys: z.array(z.object({ name: z.string().optional() })).optional(),
+  updates: z
+    .array(
+      z.object({ key: z.string().optional(), value: z.string().optional() }),
+    )
+    .optional(),
+  rename_keys: z
+    .array(
+      z.object({
+        old_key: z.string().optional(),
+        new_key: z.string().optional(),
+      }),
+    )
+    .optional(),
+  filter_values: z
+    .array(
+      z.object({
+        key: z.string().optional(),
+        value: z.string().optional(),
+        operator: z.string().optional(),
+      }),
+    )
+    .optional(),
+  ...OutputSchema,
+};
+
+export const FormSchema = z.object(RetrievalPartialSchema);
+
+export type DataOperationsFormSchemaType = z.infer<typeof FormSchema>;
+
+const outputList = buildOutputList(initialDataOperationsValues.outputs);
+
+function DataOperationsForm({ node }: INextOperatorForm) {
+  const { t } = useTranslation();
+
+  const defaultValues = useFormValues(initialDataOperationsValues, node);
+
+  const form = useForm<DataOperationsFormSchemaType>({
+    defaultValues: defaultValues,
+    mode: 'onChange',
+    resolver: zodResolver(FormSchema),
+    shouldUnregister: true,
+  });
+
+  const operations = useWatch({ control: form.control, name: 'operations' });
+
+  const OperationsOptions = buildOptions(
+    Operations,
+    t,
+    `flow.operationsOptions`,
+    true,
+  );
+
+  useWatchFormChange(node?.id, form, true);
+
+  return (
+    <Form {...form}>
+      <FormWrapper>
+        <QueryVariableList
+          tooltip={t('flow.queryTip')}
+          label={t('flow.query')}
+          types={[JsonSchemaDataType.Object]}
+        ></QueryVariableList>
+        <Separator />
+        <RAGFlowFormItem name="operations" label={t('flow.operations')}>
+          <SelectWithSearch options={OperationsOptions} allowClear />
+        </RAGFlowFormItem>
+        {operations === Operations.SelectKeys && (
+          <SelectKeys
+            name="select_keys"
+            label={t('flow.operationsOptions.selectKeys')}
+          ></SelectKeys>
+        )}
+        {operations === Operations.RemoveKeys && (
+          <SelectKeys
+            name="remove_keys"
+            label={t('flow.operationsOptions.removeKeys')}
+          ></SelectKeys>
+        )}
+        {operations === Operations.AppendOrUpdate && (
+          <Updates
+            name="updates"
+            label={t('flow.operationsOptions.appendOrUpdate')}
+            keyField="key"
+            valueField="value"
+          ></Updates>
+        )}
+        {operations === Operations.RenameKeys && (
+          <Updates
+            name="rename_keys"
+            label={t('flow.operationsOptions.renameKeys')}
+            keyField="old_key"
+            valueField="new_key"
+          ></Updates>
+        )}
+        {operations === Operations.FilterValues && (
+          <FilterValues
+            name="filter_values"
+            label={t('flow.operationsOptions.filterValues')}
+          ></FilterValues>
+        )}
+        <Output list={outputList} isFormRequired></Output>
+      </FormWrapper>
+    </Form>
+  );
+}
+
+export default memo(DataOperationsForm);
+
+```
+
+## Detailed Analysis
+
+### File Role in Repository
+
+The file `web/src/pages/agent/form/data-operations-form/index.tsx` is located in the `web/src/pages/agent/form/data-operations-form` directory.
+
+This file is part of the **Frontend/Web** layer of RAGFlow.
+
+### Architecture Context
+
+Files in this location typically handle concerns related to data-operations-form.
+
+### Design Patterns
+
+[Analysis of design patterns would go here based on code structure]
+
+### Performance Considerations
+
+[Performance analysis would consider file size, complexity, algorithmic efficiency]
+
+### Security Considerations
+
+- Watch for XSS vulnerabilities
+- Ensure proper input sanitization
+- Validate all API calls
+
+### Testing Approach
+
+To test this file:
+1. Review the corresponding test files in the test/ directory
+2. Ensure all public APIs have test coverage
+3. Test edge cases and error conditions
+4. Verify integration with related components
+
+### Related Files
+
+- [filter-values.tsx](filter-values.tsx_docs.md)
+- [select-keys.tsx](select-keys.tsx_docs.md)
+- [updates.tsx](updates.tsx_docs.md)
+
+
+## Cross-References
+
+- [Folder Documentation](./doc.md)
+- [Folder Index](./index.md)
+- [Global Index](../../index.md)
+
+---
+
+*Generated by RAGFlow Comprehensive Documentation Generator*

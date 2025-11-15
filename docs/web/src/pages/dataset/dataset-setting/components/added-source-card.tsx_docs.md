@@ -1,0 +1,168 @@
+# Documentation: web/src/pages/dataset/dataset-setting/components/added-source-card.tsx
+
+## File Metadata
+
+- **Path**: `web/src/pages/dataset/dataset-setting/components/added-source-card.tsx`
+- **Size**: 3093 bytes
+- **Type**: .tsx
+- **Readable**: Yes
+
+## Purpose
+
+This file is part of the RAGFlow repository at location `web/src/pages/dataset/dataset-setting/components/added-source-card.tsx`.
+
+## Original Source Code
+
+```tsx
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { cn } from '@/lib/utils';
+import {
+  IDataSorceInfo,
+  IDataSourceBase,
+} from '@/pages/user-setting/data-source/interface';
+import { Check } from 'lucide-react';
+import { useMemo } from 'react';
+
+export type IAddedSourceCardProps = IDataSorceInfo & {
+  filterString: string;
+  list: IDataSourceBase[];
+  selectedList: IDataSourceBase[];
+  setSelectedList: (list: IDataSourceBase[]) => void;
+};
+export const AddedSourceCard = (props: IAddedSourceCardProps) => {
+  const {
+    list: originList,
+    name,
+    icon,
+    filterString,
+    selectedList,
+    setSelectedList,
+  } = props;
+
+  const list = useMemo(() => {
+    return originList.map((item) => {
+      const checked = selectedList?.some((i) => i.id === item.id) || false;
+      return {
+        ...item,
+        checked: checked,
+      };
+    });
+  }, [originList, selectedList]);
+
+  const filterList = useMemo(
+    () => list.filter((item) => item.name.indexOf(filterString) > -1),
+    [filterString, list],
+  );
+
+  // const { navigateToDataSourceDetail } = useNavigatePage();
+  // const toDetail = (id: string) => {
+  //   navigateToDataSourceDetail(id);
+  // };
+
+  const onCheck = (item: IDataSourceBase & { checked: boolean }) => {
+    if (item.checked) {
+      setSelectedList(selectedList.filter((i) => i.id !== item.id));
+    } else {
+      setSelectedList([...(selectedList || []), item]);
+    }
+  };
+  return (
+    <>
+      {filterList.length > 0 && (
+        <Card className="bg-transparent border border-border-button px-5 pt-[10px] pb-5 rounded-md">
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 p-0 pb-3">
+            {/* <Users className="mr-2 h-5 w-5 text-[#1677ff]" /> */}
+            <CardTitle className="text-base flex gap-1 font-normal">
+              {icon}
+              {name}
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="p-2 flex flex-col gap-2">
+            {filterList.map((item) => (
+              <div
+                key={item.id}
+                className={cn(
+                  'flex flex-row items-center justify-between rounded-md bg-bg-card px-2 py-1 cursor-pointer',
+                  // { hidden: item.name.indexOf(filterString) <= -1 },
+                )}
+                onClick={() => {
+                  console.log('item--->', item);
+                  // toDetail(item.id);
+                  onCheck(item);
+                }}
+              >
+                <div className="text-sm text-text-secondary ">{item.name}</div>
+                <div className="text-sm text-text-secondary  flex gap-2">
+                  {item.checked && (
+                    <Check
+                      className="cursor-pointer"
+                      size={14}
+                      // onClick={() => {
+                      //   toDetail(item.id);
+                      // }}
+                    />
+                  )}
+                </div>
+              </div>
+            ))}
+          </CardContent>
+        </Card>
+      )}
+    </>
+  );
+};
+
+```
+
+## Detailed Analysis
+
+### File Role in Repository
+
+The file `web/src/pages/dataset/dataset-setting/components/added-source-card.tsx` is located in the `web/src/pages/dataset/dataset-setting/components` directory.
+
+This file is part of the **Frontend/Web** layer of RAGFlow.
+
+### Architecture Context
+
+Files in this location typically handle concerns related to components.
+
+### Design Patterns
+
+[Analysis of design patterns would go here based on code structure]
+
+### Performance Considerations
+
+[Performance analysis would consider file size, complexity, algorithmic efficiency]
+
+### Security Considerations
+
+- Watch for XSS vulnerabilities
+- Ensure proper input sanitization
+- Validate all API calls
+
+### Testing Approach
+
+To test this file:
+1. Review the corresponding test files in the test/ directory
+2. Ensure all public APIs have test coverage
+3. Test edge cases and error conditions
+4. Verify integration with related components
+
+### Related Files
+
+- [link-data-pipeline.tsx](link-data-pipeline.tsx_docs.md)
+- [link-data-pipline-modal.tsx](link-data-pipline-modal.tsx_docs.md)
+- [link-data-source-modal.tsx](link-data-source-modal.tsx_docs.md)
+- [link-data-source.tsx](link-data-source.tsx_docs.md)
+- [tag-item.tsx](tag-item.tsx_docs.md)
+
+
+## Cross-References
+
+- [Folder Documentation](./doc.md)
+- [Folder Index](./index.md)
+- [Global Index](../../index.md)
+
+---
+
+*Generated by RAGFlow Comprehensive Documentation Generator*
