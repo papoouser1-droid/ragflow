@@ -1,0 +1,162 @@
+# Keyword Map: web/src/pages/user-setting/setting-model/components/modal-card.tsx
+
+## File Path and Links
+
+- **Original File**: [web/src/pages/user-setting/setting-model/components/modal-card.tsx](../../../../../../../web/src/pages/user-setting/setting-model/components/modal-card.tsx)
+- **Documentation**: [modal-card.tsx_docs.md](./modal-card.tsx_docs.md)
+- **Repository Root**: [../../../../../../../](../../../../../../../)
+
+## Keywords (42 total)
+
+
+### .
+
+- **../../utils**: Found in modal-card.tsx
+  - [View in documentation](./modal-card.tsx_docs.md)
+- **../hooks**: Found in modal-card.tsx
+  - [View in documentation](./modal-card.tsx_docs.md)
+
+### @
+
+- **@/components/svg-icon**: Found in modal-card.tsx
+  - [View in documentation](./modal-card.tsx_docs.md)
+- **@/components/ui/button**: Found in modal-card.tsx
+  - [View in documentation](./modal-card.tsx_docs.md)
+- **@/components/ui/switch**: Found in modal-card.tsx
+  - [View in documentation](./modal-card.tsx_docs.md)
+- **@/hooks/common-hooks**: Found in modal-card.tsx
+  - [View in documentation](./modal-card.tsx_docs.md)
+- **@/hooks/llm-hooks**: Found in modal-card.tsx
+  - [View in documentation](./modal-card.tsx_docs.md)
+- **@/utils/llm-util**: Found in modal-card.tsx
+  - [View in documentation](./modal-card.tsx_docs.md)
+- **@ant-design/icons**: Found in modal-card.tsx
+  - [View in documentation](./modal-card.tsx_docs.md)
+
+### A
+
+- **API**: Found in modal-card.tsx
+  - [View in documentation](./modal-card.tsx_docs.md)
+
+### B
+
+- **Button**: Found in modal-card.tsx
+  - [View in documentation](./modal-card.tsx_docs.md)
+
+### C
+
+- **ChevronsDown**: Found in modal-card.tsx
+  - [View in documentation](./modal-card.tsx_docs.md)
+- **ChevronsUp**: Found in modal-card.tsx
+  - [View in documentation](./modal-card.tsx_docs.md)
+- **Content**: Found in modal-card.tsx
+  - [View in documentation](./modal-card.tsx_docs.md)
+
+### E
+
+- **EMBEDDING**: Found in modal-card.tsx
+  - [View in documentation](./modal-card.tsx_docs.md)
+- **EditOutlined**: Found in modal-card.tsx
+  - [View in documentation](./modal-card.tsx_docs.md)
+
+### H
+
+- **Header**: Found in modal-card.tsx
+  - [View in documentation](./modal-card.tsx_docs.md)
+
+### I
+
+- **IMAGE2TEXT**: Found in modal-card.tsx
+  - [View in documentation](./modal-card.tsx_docs.md)
+- **IModelCardProps**: Found in modal-card.tsx
+  - [View in documentation](./modal-card.tsx_docs.md)
+
+### K
+
+- **Key**: Found in modal-card.tsx
+  - [View in documentation](./modal-card.tsx_docs.md)
+
+### L
+
+- **LLM**: Found in modal-card.tsx
+  - [View in documentation](./modal-card.tsx_docs.md)
+- **LlmIcon**: Found in modal-card.tsx
+  - [View in documentation](./modal-card.tsx_docs.md)
+- **LlmItem**: Found in modal-card.tsx
+  - [View in documentation](./modal-card.tsx_docs.md)
+
+### M
+
+- **MODERATION**: Found in modal-card.tsx
+  - [View in documentation](./modal-card.tsx_docs.md)
+- **ModelProviderCard**: Found in modal-card.tsx
+  - [View in documentation](./modal-card.tsx_docs.md)
+
+### R
+
+- **RANK**: Found in modal-card.tsx
+  - [View in documentation](./modal-card.tsx_docs.md)
+- **Record**: Found in modal-card.tsx
+  - [View in documentation](./modal-card.tsx_docs.md)
+
+### S
+
+- **SPEECH2TEXT**: Found in modal-card.tsx
+  - [View in documentation](./modal-card.tsx_docs.md)
+- **SettingOutlined**: Found in modal-card.tsx
+  - [View in documentation](./modal-card.tsx_docs.md)
+- **Switch**: Found in modal-card.tsx
+  - [View in documentation](./modal-card.tsx_docs.md)
+
+### T
+
+- **TEXT**: Found in modal-card.tsx
+  - [View in documentation](./modal-card.tsx_docs.md)
+- **TTS**: Found in modal-card.tsx
+  - [View in documentation](./modal-card.tsx_docs.md)
+- **TagType**: Found in modal-card.tsx
+  - [View in documentation](./modal-card.tsx_docs.md)
+- **Trash2**: Found in modal-card.tsx
+  - [View in documentation](./modal-card.tsx_docs.md)
+- **TypeScript**: Found in modal-card.tsx
+  - [View in documentation](./modal-card.tsx_docs.md)
+
+### A
+
+- **ant**: Found in modal-card.tsx
+  - [View in documentation](./modal-card.tsx_docs.md)
+
+### H
+
+- **handleApiKeyClick**: Found in modal-card.tsx
+  - [View in documentation](./modal-card.tsx_docs.md)
+- **handleShowMoreClick**: Found in modal-card.tsx
+  - [View in documentation](./modal-card.tsx_docs.md)
+
+### L
+
+- **lucide-react**: Found in modal-card.tsx
+  - [View in documentation](./modal-card.tsx_docs.md)
+
+### O
+
+- **orderMap**: Found in modal-card.tsx
+  - [View in documentation](./modal-card.tsx_docs.md)
+
+### R
+
+- **react**: Found in modal-card.tsx
+  - [View in documentation](./modal-card.tsx_docs.md)
+
+### S
+
+- **sortTags**: Found in modal-card.tsx
+  - [View in documentation](./modal-card.tsx_docs.md)
+
+## Keyword Summary
+
+This file contains 42 unique keywords extracted from the source code,
+including identifiers, function names, class names, and technical terms.
+
+---
+*Generated by RAGFlow Repository Documentation Generator*

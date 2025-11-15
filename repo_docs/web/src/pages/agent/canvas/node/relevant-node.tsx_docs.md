@@ -1,0 +1,177 @@
+# File Documentation: web/src/pages/agent/canvas/node/relevant-node.tsx
+
+## File Metadata
+
+- **Path**: `web/src/pages/agent/canvas/node/relevant-node.tsx`
+- **Extension**: `.tsx`
+- **Lines**: 74
+- **Characters**: 2,120
+- **Size**: 2,120 bytes
+- **Purpose**: JavaScript/TypeScript - Frontend or backend JavaScript code
+
+## Original Source
+
+```tsx
+import { Handle, NodeProps, Position } from '@xyflow/react';
+import { Flex } from 'antd';
+import classNames from 'classnames';
+import { RightHandleStyle } from './handle-icon';
+
+import { useTheme } from '@/components/theme-provider';
+import { IRelevantNode } from '@/interfaces/database/flow';
+import { get } from 'lodash';
+import { memo } from 'react';
+import { useReplaceIdWithName } from '../../hooks';
+import styles from './index.less';
+import NodeHeader from './node-header';
+
+function InnerRelevantNode({ id, data, selected }: NodeProps<IRelevantNode>) {
+  const yes = get(data, 'form.yes');
+  const no = get(data, 'form.no');
+  const replaceIdWithName = useReplaceIdWithName();
+  const { theme } = useTheme();
+  return (
+    <section
+      className={classNames(
+        styles.logicNode,
+        theme === 'dark' ? styles.dark : '',
+        {
+          [styles.selectedNode]: selected,
+        },
+      )}
+    >
+      <Handle
+        type="target"
+        position={Position.Left}
+        isConnectable
+        className={styles.handle}
+        id={'a'}
+      ></Handle>
+      <Handle
+        type="source"
+        position={Position.Right}
+        isConnectable
+        className={styles.handle}
+        id={'yes'}
+        style={{ ...RightHandleStyle, top: 57 + 20 }}
+      ></Handle>
+      <Handle
+        type="source"
+        position={Position.Right}
+        isConnectable
+        className={styles.handle}
+        id={'no'}
+        style={{ ...RightHandleStyle, top: 115 + 20 }}
+      ></Handle>
+      <NodeHeader
+        id={id}
+        name={data.name}
+        label={data.label}
+        className={styles.nodeHeader}
+      ></NodeHeader>
+
+      <Flex vertical gap={10}>
+        <Flex vertical>
+          <div className={styles.relevantLabel}>Yes</div>
+          <div className={styles.nodeText}>{replaceIdWithName(yes)}</div>
+        </Flex>
+        <Flex vertical>
+          <div className={styles.relevantLabel}>No</div>
+          <div className={styles.nodeText}>{replaceIdWithName(no)}</div>
+        </Flex>
+      </Flex>
+    </section>
+  );
+}
+
+export const RelevantNode = memo(InnerRelevantNode);
+
+```
+
+## High-Level Overview
+
+This file is part of the RAGFlow repository located at `web/src/pages/agent/canvas/node/relevant-node.tsx`.
+
+Based on the file structure and naming, it appears to be a javascript/typescript - frontend or backend javascript code.
+
+The file contains approximately 74 lines of code and defines various components
+that contribute to the overall functionality of the RAGFlow system.
+
+## Detailed Walkthrough
+
+### Exports (1)
+
+- `RelevantNode`: Exported entity
+
+### Functions (1)
+
+- `InnerRelevantNode()`: Function definition
+
+### Imports (11)
+
+- `import { Handle, NodeProps, Position } from '@xyflow/react';`
+- `import { Flex } from 'antd';`
+- `import classNames from 'classnames';`
+- `import { RightHandleStyle } from './handle-icon';`
+- `import { useTheme } from '@/components/theme-provider';`
+- `import { IRelevantNode } from '@/interfaces/database/flow';`
+- `import { get } from 'lodash';`
+- `import { memo } from 'react';`
+- `import { useReplaceIdWithName } from '../../hooks';`
+- `import styles from './index.less';`
+
+## Code Structure Analysis
+
+- Total lines: 74
+- Blank lines: 5 (6.8%)
+- Comment lines: ~0 (0.0%)
+- Code lines: ~69
+
+
+## Dependencies and Imports
+
+- `@xyflow/react`
+- `antd`
+- `classnames`
+- `./handle-icon`
+- `@/components/theme-provider`
+- `@/interfaces/database/flow`
+- `lodash`
+- `react`
+- `../../hooks`
+- `./index.less`
+- `./node-header`
+
+## Design & Architecture
+
+This file is located in the `web` directory, specifically within `web/src/pages/agent/canvas/node`.
+
+This appears to be a UI component or frontend module.
+
+## Performance & Complexity
+
+- No specific performance concerns identified through static analysis
+
+## Security & Safety Considerations
+
+- No immediate security concerns identified through static analysis
+
+## Testing & Usage Notes
+
+To work with this file:
+1. Understand its dependencies (see Dependencies section)
+2. Review the code structure and main components
+3. Check for existing tests in the test directories
+4. Consider edge cases and error handling
+
+## Related Files
+
+- Other files in `web/src/pages/agent/canvas/node/` directory
+- Potential test file: `test_relevant-node.tsx`
+
+## Keywords
+
+../../hooks, ./handle-icon, ./index.less, ./node-header, @/components/theme-provider, @/interfaces/database/flow, @xyflow/react, Flex, Handle, IRelevantNode, InnerRelevantNode, Left, NodeHeader, NodeProps, Position, RelevantNode, Right, RightHandleStyle, TypeScript, Yes, antd, classnames, lodash, no, react, replaceIdWithName, xyflow, yes
+
+---
+*Generated by RAGFlow Repository Documentation Generator*

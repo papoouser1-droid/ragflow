@@ -1,0 +1,179 @@
+# File Documentation: web/src/components/metadata-filter/index.tsx
+
+## File Metadata
+
+- **Path**: `web/src/components/metadata-filter/index.tsx`
+- **Extension**: `.tsx`
+- **Lines**: 81
+- **Characters**: 1,978
+- **Size**: 1,978 bytes
+- **Purpose**: JavaScript/TypeScript - Frontend or backend JavaScript code
+
+## Original Source
+
+```tsx
+import { DatasetMetadata } from '@/constants/chat';
+import { useTranslate } from '@/hooks/common-hooks';
+import { useFormContext, useWatch } from 'react-hook-form';
+import { z } from 'zod';
+import { SelectWithSearch } from '../originui/select-with-search';
+import { RAGFlowFormItem } from '../ragflow-form';
+import { MetadataFilterConditions } from './metadata-filter-conditions';
+
+type MetadataFilterProps = {
+  prefix?: string;
+  canReference?: boolean;
+};
+
+export const MetadataFilterSchema = {
+  meta_data_filter: z
+    .object({
+      method: z.string().optional(),
+      manual: z
+        .array(
+          z.object({
+            key: z.string(),
+            op: z.string(),
+            value: z.string(),
+          }),
+        )
+        .optional(),
+    })
+    .optional(),
+};
+
+export function MetadataFilter({
+  prefix = '',
+  canReference,
+}: MetadataFilterProps) {
+  const { t } = useTranslate('chat');
+  const form = useFormContext();
+
+  const methodName = prefix + 'meta_data_filter.method';
+
+  const kbIds: string[] = useWatch({
+    control: form.control,
+    name: prefix + 'kb_ids',
+  });
+  const metadata = useWatch({
+    control: form.control,
+    name: methodName,
+  });
+  const hasKnowledge = Array.isArray(kbIds) && kbIds.length > 0;
+
+  const MetadataOptions = Object.values(DatasetMetadata).map((x) => {
+    return {
+      value: x,
+      label: t(`meta.${x}`),
+    };
+  });
+
+  return (
+    <>
+      {hasKnowledge && (
+        <RAGFlowFormItem
+          label={t('metadata')}
+          name={methodName}
+          tooltip={t('metadataTip')}
+        >
+          <SelectWithSearch
+            options={MetadataOptions}
+            triggerClassName="!bg-bg-input"
+          />
+        </RAGFlowFormItem>
+      )}
+      {hasKnowledge && metadata === DatasetMetadata.Manual && (
+        <MetadataFilterConditions
+          kbIds={kbIds}
+          prefix={prefix}
+          canReference={canReference}
+        ></MetadataFilterConditions>
+      )}
+    </>
+  );
+}
+
+```
+
+## High-Level Overview
+
+This file is part of the RAGFlow repository located at `web/src/components/metadata-filter/index.tsx`.
+
+Based on the file structure and naming, it appears to be a javascript/typescript - frontend or backend javascript code.
+
+The file contains approximately 81 lines of code and defines various components
+that contribute to the overall functionality of the RAGFlow system.
+
+## Detailed Walkthrough
+
+### Exports (2)
+
+- `MetadataFilterSchema`: Exported entity
+- `MetadataFilter`: Exported entity
+
+### Functions (2)
+
+- `MetadataFilter()`: Function definition
+- `MetadataOptions()`: Function definition
+
+### Imports (7)
+
+- `import { DatasetMetadata } from '@/constants/chat';`
+- `import { useTranslate } from '@/hooks/common-hooks';`
+- `import { useFormContext, useWatch } from 'react-hook-form';`
+- `import { z } from 'zod';`
+- `import { SelectWithSearch } from '../originui/select-with-search';`
+- `import { RAGFlowFormItem } from '../ragflow-form';`
+- `import { MetadataFilterConditions } from './metadata-filter-conditions';`
+
+## Code Structure Analysis
+
+- Total lines: 81
+- Blank lines: 8 (9.9%)
+- Comment lines: ~0 (0.0%)
+- Code lines: ~73
+
+
+## Dependencies and Imports
+
+- `@/constants/chat`
+- `@/hooks/common-hooks`
+- `react-hook-form`
+- `zod`
+- `../originui/select-with-search`
+- `../ragflow-form`
+- `./metadata-filter-conditions`
+
+## Design & Architecture
+
+This file is located in the `web` directory, specifically within `web/src/components/metadata-filter`.
+
+This appears to be a UI component or frontend module.
+
+## Performance & Complexity
+
+- No specific performance concerns identified through static analysis
+
+## Security & Safety Considerations
+
+- **User Input**: Validate and sanitize all user input
+
+## Testing & Usage Notes
+
+To work with this file:
+1. Understand its dependencies (see Dependencies section)
+2. Review the code structure and main components
+3. Check for existing tests in the test directories
+4. Consider edge cases and error handling
+
+## Related Files
+
+- Other files in `web/src/components/metadata-filter/` directory
+- Potential test file: `test_index.tsx`
+
+## Keywords
+
+../originui/select-with-search, ../ragflow-form, ./metadata-filter-conditions, @/constants/chat, @/hooks/common-hooks, Array, DatasetMetadata, Manual, MetadataFilter, MetadataFilterConditions, MetadataFilterProps, MetadataFilterSchema, MetadataOptions, Object, RAGFlowFormItem, SelectWithSearch, TypeScript, form, hasKnowledge, kbIds, metadata, methodName, react-hook-form, zod
+
+---
+*Generated by RAGFlow Repository Documentation Generator*

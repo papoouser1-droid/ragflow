@@ -1,0 +1,154 @@
+# File Documentation: agent/test/dsl_examples/categorize_and_agent_with_tavily.json
+
+## File Metadata
+
+- **Path**: `agent/test/dsl_examples/categorize_and_agent_with_tavily.json`
+- **Extension**: `.json`
+- **Lines**: 85
+- **Characters**: 2,981
+- **Size**: 2,981 bytes
+- **Purpose**: Testing - Contains unit tests, integration tests, or test utilities
+
+## Original Source
+
+```json
+{
+  "components": {
+            "begin": {
+                "obj":{
+                    "component_name": "Begin",
+                    "params": {
+                      "prologue": "Hi there!"
+                    }
+                },
+                "downstream": ["categorize:0"],
+                "upstream": []
+            },
+            "categorize:0": {
+                "obj": {
+                    "component_name": "Categorize",
+                    "params": {
+                      "llm_id": "deepseek-chat",
+                      "category_description": {
+                        "product_related": {
+                          "description": "The question is about the product usage, appearance and how it works.",
+                          "to": ["agent:0"]
+                        },
+                        "others": {
+                          "description": "The question is not about the product usage, appearance and how it works.",
+                          "to": ["message:0"]
+                        }
+                      }
+                    }
+                },
+                "downstream": [],
+                "upstream": ["begin"]
+            },
+            "message:0": {
+                "obj":{
+                    "component_name": "Message",
+                    "params": {
+                      "content": [
+                        "Sorry, I don't know. I'm an AI bot."
+                      ]
+                    }
+                },
+                "downstream": [],
+                "upstream": ["categorize:0"]
+            },
+            "agent:0": {
+                "obj": {
+                    "component_name": "Agent",
+                    "params": {
+                      "llm_id": "deepseek-chat",
+                      "sys_prompt": "You are a smart researcher. You could generate proper queries to search. According to the search results, you could deside next query if the result is not enough.",
+                      "temperature": 0.2,
+                      "llm_enabled_tools": [
+                        {
+                            "component_name": "TavilySearch",
+                            "params": {
+                              "api_key": "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"
+                            }
+                        }
+                      ]
+                    }
+                },
+                "downstream": ["message:1"],
+                "upstream": ["categorize:0"]
+            },
+            "message:1": {
+                "obj": {
+                    "component_name": "Message",
+                    "params": {
+                      "content": ["{agent:0@content}"]
+                    }
+                },
+                "downstream": [],
+                "upstream": ["agent:0"]
+            }
+  },
+  "history": [],
+  "path": [],
+  "retrival": {"chunks": [], "doc_aggs": []},
+  "globals": {
+    "sys.query": "",
+    "sys.user_id": "",
+    "sys.conversation_turns": 0,
+    "sys.files": []
+  }
+}
+```
+
+## High-Level Overview
+
+This file is part of the RAGFlow repository located at `agent/test/dsl_examples/categorize_and_agent_with_tavily.json`.
+
+Based on the file structure and naming, it appears to be a testing - contains unit tests, integration tests, or test utilities.
+
+The file contains approximately 85 lines of code and defines various components
+that contribute to the overall functionality of the RAGFlow system.
+
+## Detailed Walkthrough
+
+This is a configuration or data file. See the 'Original Source' section for full content.
+
+## Code Structure Analysis
+
+- Total lines: 85
+- Blank lines: 0 (0.0%)
+- Comment lines: ~0 (0.0%)
+- Code lines: ~85
+
+
+## Dependencies and Imports
+
+No explicit dependencies detected or not applicable for this file type.
+
+## Design & Architecture
+
+This file is located in the `agent` directory, specifically within `agent/test/dsl_examples`.
+
+This is a test file, contributing to the quality assurance and validation of the codebase.
+
+## Performance & Complexity
+
+- Contains database queries - ensure proper indexing and query optimization
+
+## Security & Safety Considerations
+
+- No immediate security concerns identified through static analysis
+
+## Testing & Usage Notes
+
+This is a test file. Run it using the project's test framework (pytest, jest, etc.).
+
+## Related Files
+
+- Other files in `agent/test/dsl_examples/` directory
+
+## Keywords
+
+According, Agent, Begin, Categorize, Message, Sorry, TavilySearch, The, You, content
+
+---
+*Generated by RAGFlow Repository Documentation Generator*

@@ -1,0 +1,163 @@
+# File Documentation: intergrations/firecrawl/firecrawl_config.py
+
+## File Metadata
+
+- **Path**: `intergrations/firecrawl/firecrawl_config.py`
+- **Extension**: `.py`
+- **Lines**: 80
+- **Characters**: 2,879
+- **Size**: 2,879 bytes
+- **Purpose**: Python Module - Contains classes, functions, or business logic
+
+## Original Source
+
+```python
+"""
+Configuration management for Firecrawl integration with RAGFlow.
+"""
+
+import os
+from typing import Dict, Any
+from dataclasses import dataclass
+import json
+
+
+@dataclass
+class FirecrawlConfig:
+    """Configuration class for Firecrawl integration."""
+    
+    api_key: str
+    api_url: str = "https://api.firecrawl.dev"
+    max_retries: int = 3
+    timeout: int = 30
+    rate_limit_delay: float = 1.0
+    max_concurrent_requests: int = 5
+    
+    def __post_init__(self):
+        """Validate configuration after initialization."""
+        if not self.api_key:
+            raise ValueError("Firecrawl API key is required")
+        
+        if not self.api_key.startswith("fc-"):
+            raise ValueError("Invalid Firecrawl API key format. Must start with 'fc-'")
+        
+        if self.max_retries < 1 or self.max_retries > 10:
+            raise ValueError("Max retries must be between 1 and 10")
+        
+        if self.timeout < 5 or self.timeout > 300:
+            raise ValueError("Timeout must be between 5 and 300 seconds")
+        
+        if self.rate_limit_delay < 0.1 or self.rate_limit_delay > 10.0:
+            raise ValueError("Rate limit delay must be between 0.1 and 10.0 seconds")
+    
+    @classmethod
+    def from_env(cls) -> "FirecrawlConfig":
+        """Create configuration from environment variables."""
+        api_key = os.getenv("FIRECRAWL_API_KEY")
+        if not api_key:
+            raise ValueError("FIRECRAWL_API_KEY environment variable not set")
+        
+        return cls(
+            api_key=api_key,
+            api_url=os.getenv("FIRECRAWL_API_URL", "https://api.firecrawl.dev"),
+            max_retries=int(os.getenv("FIRECRAWL_MAX_RETRIES", "3")),
+            timeout=int(os.getenv("FIRECRAWL_TIMEOUT", "30")),
+            rate_limit_delay=float(os.getenv("FIRECRAWL_RATE_LIMIT_DELAY", "1.0")),
+            max_concurrent_requests=int(os.getenv("FIRECRAWL_MAX_CONCURRENT", "5"))
+        )
+    
+    @classmethod
+    def from_dict(cls, config_dict: Dict[str, Any]) -> "FirecrawlConfig":
+        """Create configuration from dictionary."""
+        return cls(**config_dict)
+    
+    def to_dict(self) -> Dict[str, Any]:
+        """Convert configuration to dictionary."""
+        return {
+            "api_key": self.api_key,
+            "api_url": self.api_url,
+            "max_retries": self.max_retries,
+            "timeout": self.timeout,
+            "rate_limit_delay": self.rate_limit_delay,
+            "max_concurrent_requests": self.max_concurrent_requests
+        }
+    
+    def to_json(self) -> str:
+        """Convert configuration to JSON string."""
+        return json.dumps(self.to_dict(), indent=2)
+    
+    @classmethod
+    def from_json(cls, json_str: str) -> "FirecrawlConfig":
+        """Create configuration from JSON string."""
+        config_dict = json.loads(json_str)
+        return cls.from_dict(config_dict)
+
+```
+
+## High-Level Overview
+
+"""
+"""
+
+## Detailed Walkthrough
+
+### Classes (1)
+
+- `FirecrawlConfig`: Class definition
+
+### Imports (4)
+
+- `import os`
+- `from typing import Dict, Any`
+- `from dataclasses import dataclass`
+- `import json`
+
+## Code Structure Analysis
+
+- Total lines: 80
+- Blank lines: 16 (20.0%)
+- Comment lines: ~9 (11.2%)
+- Code lines: ~55
+
+
+## Dependencies and Imports
+
+- `import os`
+- `from typing import Dict, Any`
+- `from dataclasses import dataclass`
+- `import json`
+
+## Design & Architecture
+
+This file is located in the `intergrations` directory, specifically within `intergrations/firecrawl`.
+
+This file contributes to the overall functionality of the RAGFlow system.
+
+## Performance & Complexity
+
+- Contains 2 loop(s) - consider algorithmic complexity
+
+## Security & Safety Considerations
+
+- **User Input**: Validate and sanitize all user input
+
+## Testing & Usage Notes
+
+To work with this file:
+1. Understand its dependencies (see Dependencies section)
+2. Review the code structure and main components
+3. Check for existing tests in the test directories
+4. Consider edge cases and error handling
+
+## Related Files
+
+- Other files in `intergrations/firecrawl/` directory
+- Imports from `dataclasses`
+- Potential test file: `test_firecrawl_config.py`
+
+## Keywords
+
+API, Any, Configuration, Convert, Create, Dict, FIRECRAWL_API_KEY, FIRECRAWL_API_URL, FIRECRAWL_MAX_CONCURRENT, FIRECRAWL_MAX_RETRIES, FIRECRAWL_RATE_LIMIT_DELAY, FIRECRAWL_TIMEOUT, Firecrawl, FirecrawlConfig, Invalid, JSON, Max, Must, Python, RAGFlow, Rate, Timeout, Validate, ValueError, __post_init__, classmethod, dataclass, for, from_dict, from_env, from_json, to_dict, to_json
+
+---
+*Generated by RAGFlow Repository Documentation Generator*

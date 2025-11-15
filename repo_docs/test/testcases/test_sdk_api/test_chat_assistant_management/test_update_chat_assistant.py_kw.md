@@ -1,0 +1,180 @@
+# Keyword Map: test/testcases/test_sdk_api/test_chat_assistant_management/test_update_chat_assistant.py
+
+## File Path and Links
+
+- **Original File**: [test/testcases/test_sdk_api/test_chat_assistant_management/test_update_chat_assistant.py](../../../../../test/testcases/test_sdk_api/test_chat_assistant_management/test_update_chat_assistant.py)
+- **Documentation**: [test_update_chat_assistant.py_docs.md](./test_update_chat_assistant.py_docs.md)
+- **Repository Root**: [../../../../../](../../../../../)
+
+## Keywords (48 total)
+
+
+### A
+
+- **ANY**: Found in test_update_chat_assistant.py
+  - [View in documentation](./test_update_chat_assistant.py_docs.md)
+- **All**: Found in test_update_chat_assistant.py
+  - [View in documentation](./test_update_chat_assistant.py_docs.md)
+- **Answers**: Found in test_update_chat_assistant.py
+  - [View in documentation](./test_update_chat_assistant.py_docs.md)
+- **Apache**: Found in test_update_chat_assistant.py
+  - [View in documentation](./test_update_chat_assistant.py_docs.md)
+- **AttributeError**: Found in test_update_chat_assistant.py
+  - [View in documentation](./test_update_chat_assistant.py_docs.md)
+- **Authors**: Found in test_update_chat_assistant.py
+  - [View in documentation](./test_update_chat_assistant.py_docs.md)
+
+### B
+
+- **BASIS**: Found in test_update_chat_assistant.py
+  - [View in documentation](./test_update_chat_assistant.py_docs.md)
+
+### C
+
+- **CHAT_ASSISTANT_NAME_LIMIT**: Found in test_update_chat_assistant.py
+  - [View in documentation](./test_update_chat_assistant.py_docs.md)
+- **CONDITIONS**: Found in test_update_chat_assistant.py
+  - [View in documentation](./test_update_chat_assistant.py_docs.md)
+- **Chat**: Found in test_update_chat_assistant.py
+  - [View in documentation](./test_update_chat_assistant.py_docs.md)
+- **Copyright**: Found in test_update_chat_assistant.py
+  - [View in documentation](./test_update_chat_assistant.py_docs.md)
+
+### D
+
+- **Duplicated**: Found in test_update_chat_assistant.py
+  - [View in documentation](./test_update_chat_assistant.py_docs.md)
+
+### E
+
+- **Exception**: Found in test_update_chat_assistant.py
+  - [View in documentation](./test_update_chat_assistant.py_docs.md)
+
+### F
+
+- **False**: Found in test_update_chat_assistant.py
+  - [View in documentation](./test_update_chat_assistant.py_docs.md)
+
+### H
+
+- **Hello**: Found in test_update_chat_assistant.py
+  - [View in documentation](./test_update_chat_assistant.py_docs.md)
+- **Here**: Found in test_update_chat_assistant.py
+  - [View in documentation](./test_update_chat_assistant.py_docs.md)
+
+### I
+
+- **InfiniFlow**: Found in test_update_chat_assistant.py
+  - [View in documentation](./test_update_chat_assistant.py_docs.md)
+
+### K
+
+- **KIND**: Found in test_update_chat_assistant.py
+  - [View in documentation](./test_update_chat_assistant.py_docs.md)
+
+### L
+
+- **LICENSE**: Found in test_update_chat_assistant.py
+  - [View in documentation](./test_update_chat_assistant.py_docs.md)
+- **LLM**: Found in test_update_chat_assistant.py
+  - [View in documentation](./test_update_chat_assistant.py_docs.md)
+- **License**: Found in test_update_chat_assistant.py
+  - [View in documentation](./test_update_chat_assistant.py_docs.md)
+- **Licensed**: Found in test_update_chat_assistant.py
+  - [View in documentation](./test_update_chat_assistant.py_docs.md)
+
+### N
+
+- **None**: Found in test_update_chat_assistant.py
+  - [View in documentation](./test_update_chat_assistant.py_docs.md)
+
+### P
+
+- **Please**: Found in test_update_chat_assistant.py
+  - [View in documentation](./test_update_chat_assistant.py_docs.md)
+- **Python**: Found in test_update_chat_assistant.py
+  - [View in documentation](./test_update_chat_assistant.py_docs.md)
+
+### R
+
+- **Reserved**: Found in test_update_chat_assistant.py
+  - [View in documentation](./test_update_chat_assistant.py_docs.md)
+- **Rights**: Found in test_update_chat_assistant.py
+  - [View in documentation](./test_update_chat_assistant.py_docs.md)
+
+### S
+
+- **See**: Found in test_update_chat_assistant.py
+  - [View in documentation](./test_update_chat_assistant.py_docs.md)
+- **Sorry**: Found in test_update_chat_assistant.py
+  - [View in documentation](./test_update_chat_assistant.py_docs.md)
+
+### T
+
+- **TEST_CHAT_ASSISTANT_1**: Found in test_update_chat_assistant.py
+  - [View in documentation](./test_update_chat_assistant.py_docs.md)
+- **TestChatAssistantUpdate**: Found in test_update_chat_assistant.py
+  - [View in documentation](./test_update_chat_assistant.py_docs.md)
+- **The**: Found in test_update_chat_assistant.py
+  - [View in documentation](./test_update_chat_assistant.py_docs.md)
+- **True**: Found in test_update_chat_assistant.py
+  - [View in documentation](./test_update_chat_assistant.py_docs.md)
+
+### U
+
+- **Unless**: Found in test_update_chat_assistant.py
+  - [View in documentation](./test_update_chat_assistant.py_docs.md)
+
+### V
+
+- **ValueError**: Found in test_update_chat_assistant.py
+  - [View in documentation](./test_update_chat_assistant.py_docs.md)
+- **Version**: Found in test_update_chat_assistant.py
+  - [View in documentation](./test_update_chat_assistant.py_docs.md)
+
+### W
+
+- **WARRANTIES**: Found in test_update_chat_assistant.py
+  - [View in documentation](./test_update_chat_assistant.py_docs.md)
+- **WITHOUT**: Found in test_update_chat_assistant.py
+  - [View in documentation](./test_update_chat_assistant.py_docs.md)
+- **What**: Found in test_update_chat_assistant.py
+  - [View in documentation](./test_update_chat_assistant.py_docs.md)
+- **When**: Found in test_update_chat_assistant.py
+  - [View in documentation](./test_update_chat_assistant.py_docs.md)
+- **World**: Found in test_update_chat_assistant.py
+  - [View in documentation](./test_update_chat_assistant.py_docs.md)
+
+### Y
+
+- **You**: Found in test_update_chat_assistant.py
+  - [View in documentation](./test_update_chat_assistant.py_docs.md)
+
+### Z
+
+- **ZHIPU**: Found in test_update_chat_assistant.py
+  - [View in documentation](./test_update_chat_assistant.py_docs.md)
+
+### P
+
+- **pytest**: Found in test_update_chat_assistant.py
+  - [View in documentation](./test_update_chat_assistant.py_docs.md)
+
+### T
+
+- **test_avatar**: Found in test_update_chat_assistant.py
+  - [View in documentation](./test_update_chat_assistant.py_docs.md)
+- **test_llm**: Found in test_update_chat_assistant.py
+  - [View in documentation](./test_update_chat_assistant.py_docs.md)
+- **test_name**: Found in test_update_chat_assistant.py
+  - [View in documentation](./test_update_chat_assistant.py_docs.md)
+- **test_prompt**: Found in test_update_chat_assistant.py
+  - [View in documentation](./test_update_chat_assistant.py_docs.md)
+
+## Keyword Summary
+
+This file contains 48 unique keywords extracted from the source code,
+including identifiers, function names, class names, and technical terms.
+
+---
+*Generated by RAGFlow Repository Documentation Generator*

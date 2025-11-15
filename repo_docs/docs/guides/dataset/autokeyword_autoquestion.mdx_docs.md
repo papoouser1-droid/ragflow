@@ -1,0 +1,142 @@
+# File Documentation: docs/guides/dataset/autokeyword_autoquestion.mdx
+
+## File Metadata
+
+- **Path**: `docs/guides/dataset/autokeyword_autoquestion.mdx`
+- **Extension**: `.mdx`
+- **Lines**: 73
+- **Characters**: 4,854
+- **Size**: 4,888 bytes
+- **Purpose**: General file in the repository
+
+## Original Source
+
+```
+---
+sidebar_position: 3
+slug: /autokeyword_autoquestion
+---
+
+# Auto-keyword Auto-question
+import APITable from '@site/src/components/APITable';
+
+Use a chat model to generate keywords or questions from each chunk in the dataset.
+
+---
+
+When selecting a chunking method, you can also enable auto-keyword or auto-question generation to increase retrieval rates. This feature uses a chat model to produce a specified number of keywords and questions from each created chunk, generating an "additional layer of information" from the original content.
+
+:::caution WARNING
+Enabling this feature increases document indexing time and uses extra tokens, as all created chunks will be sent to the chat model for keyword or question generation.
+:::
+
+## What is Auto-keyword?
+
+Auto-keyword refers to the auto-keyword generation feature of RAGFlow. It uses a chat model to generate a set of keywords or synonyms from each chunk to correct errors and enhance retrieval accuracy. This feature is implemented as a slider under **Page rank** on the **Configuration** page of your dataset.
+
+**Values**:  
+
+- 0: (Default) Disabled.  
+- Between 3 and 5 (inclusive): Recommended if you have chunks of approximately 1,000 characters. 
+- 30 (maximum) 
+
+:::tip NOTE
+- If your chunk size increases, you can increase the value accordingly. Please note, as the value increases, the marginal benefit decreases. 
+- An Auto-keyword value must be an integer. If you set it to a non-integer, say 1.7, it will be rounded down to the nearest integer, which in this case is 1.
+:::
+
+## What is Auto-question?
+
+Auto-question is a feature of RAGFlow that automatically generates questions from chunks of data using a chat model. These questions (e.g. who, what, and why) also help correct errors and improve the matching of user queries. The feature usually works with FAQ retrieval scenarios involving product manuals or policy documents. And you can find this feature as a slider under **Page rank** on the **Configuration** page of your dataset.
+
+**Values**:
+
+- 0: (Default) Disabled.  
+- 1 or 2: Recommended if you have chunks of approximately 1,000 characters.  
+- 10 (maximum)
+
+:::tip NOTE
+- If your chunk size increases, you can increase the value accordingly. Please note, as the value increases, the marginal benefit decreases. 
+- An Auto-question value must be an integer. If you set it to a non-integer, say 1.7, it will be rounded down to the nearest integer, which in this case is 1.
+:::
+
+## Tips from the community
+
+The Auto-keyword or Auto-question values relate closely to the chunking size in your dataset. However, if you are new to this feature and unsure which value(s) to start with, the following are some value settings we gathered from our community. While they may not be accurate, they provide a starting point at the very least.
+
+```mdx-code-block
+<APITable>
+```
+
+| Use cases or typical scenarios                                      | Document volume/length          | Auto_keyword (0–30)        | Auto_question (0–10)       |
+|---------------------------------------------------------------------|---------------------------------|----------------------------|----------------------------|
+| Internal process guidance for employee handbook                     | Small, under 10 pages           | 0                          | 0                          |
+| Customer service FAQs                                               | Medium, 10–100 pages            | 3–7                        | 1–3                        |
+| Technical white papers: Development standards, protocol details     | Large, over 100 pages           | 2–4                        | 1–2                        |
+| Contracts / Regulations / Legal clause retrieval                    | Large, over 50 pages            | 2–5                        | 0–1                        |
+| Multi-repository layered new documents + old archive                | Many                            | Adjust as appropriate      |Adjust as appropriate       |
+| Social media comment pool: multilingual & mixed spelling            | Very large volume of short text | 8–12                       | 0                          |
+| Operational logs for troubleshooting                                | Very large volume of short text | 3–6                        | 0                          |
+| Marketing asset library: multilingual product descriptions          | Medium                          | 6–10                       | 1–2                        |
+| Training courses / eBooks                                           | Large                           | 2–5                        | 1–2                        |
+| Maintenance manual: equipment diagrams + steps                      | Medium                          | 3–7                        | 1–2                        |
+
+```mdx-code-block
+</APITable>
+```
+
+```
+
+## High-Level Overview
+
+# Auto-keyword Auto-question
+
+## Detailed Walkthrough
+
+This file's structure is not automatically analyzed. See the 'Original Source' section for content.
+
+## Code Structure Analysis
+
+- Total lines: 73
+- Blank lines: 21 (28.8%)
+- Comment lines: ~6 (8.2%)
+- Code lines: ~46
+
+
+## Dependencies and Imports
+
+No explicit dependencies detected or not applicable for this file type.
+
+## Design & Architecture
+
+This file is located in the `docs` directory, specifically within `docs/guides/dataset`.
+
+This file contributes to the overall functionality of the RAGFlow system.
+
+## Performance & Complexity
+
+- Contains 3 loop(s) - consider algorithmic complexity
+
+## Security & Safety Considerations
+
+- No immediate security concerns identified through static analysis
+
+## Testing & Usage Notes
+
+To work with this file:
+1. Understand its dependencies (see Dependencies section)
+2. Review the code structure and main components
+3. Check for existing tests in the test directories
+4. Consider edge cases and error handling
+
+## Related Files
+
+- Other files in `docs/guides/dataset/` directory
+- Potential test file: `test_autokeyword_autoquestion.mdx`
+
+## Keywords
+
+@site/src/components/APITable, APITable, Adjust, And, Auto, Auto_keyword, Auto_question, Between, Configuration, Contracts, Customer, Default, Development, Disabled, Document, Enabling, FAQ, FAQs, However, Internal, Large, Legal, Maintenance, Many, Marketing, Medium, Multi, NOTE, Operational, Page, Please, RAGFlow, Recommended, Regulations, Small, Social, Technical, The, These, This, Tips, Training, Use, Values, Very, WARNING, What, When, While, site
+
+---
+*Generated by RAGFlow Repository Documentation Generator*

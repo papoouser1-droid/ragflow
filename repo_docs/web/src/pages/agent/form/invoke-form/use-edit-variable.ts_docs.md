@@ -1,0 +1,170 @@
+# File Documentation: web/src/pages/agent/form/invoke-form/use-edit-variable.ts
+
+## File Metadata
+
+- **Path**: `web/src/pages/agent/form/invoke-form/use-edit-variable.ts`
+- **Extension**: `.ts`
+- **Lines**: 71
+- **Characters**: 1,989
+- **Size**: 1,989 bytes
+- **Purpose**: JavaScript/TypeScript - Frontend or backend JavaScript code
+
+## Original Source
+
+```typescript
+import { useSetModalState } from '@/hooks/common-hooks';
+import { useSetSelectedRecord } from '@/hooks/logic-hooks';
+import { useCallback, useMemo, useState } from 'react';
+import { UseFormReturn, useWatch } from 'react-hook-form';
+import { INextOperatorForm } from '../../interface';
+import { FormSchemaType, VariableFormSchemaType } from './schema';
+
+export const useEditVariableRecord = ({
+  form,
+}: INextOperatorForm & { form: UseFormReturn<FormSchemaType> }) => {
+  const { setRecord, currentRecord } =
+    useSetSelectedRecord<VariableFormSchemaType>();
+
+  const { visible, hideModal, showModal } = useSetModalState();
+  const [index, setIndex] = useState(-1);
+  const variables = useWatch({
+    control: form.control,
+    name: 'variables',
+  });
+
+  const otherThanCurrentQuery = useMemo(() => {
+    return variables.filter((item, idx) => idx !== index);
+  }, [index, variables]);
+
+  const handleEditRecord = useCallback(
+    (record: VariableFormSchemaType) => {
+      const variables = form?.getValues('variables') || [];
+
+      const nextVaribales =
+        index > -1
+          ? variables.toSpliced(index, 1, record)
+          : [...variables, record];
+
+      form.setValue('variables', nextVaribales);
+
+      hideModal();
+    },
+    [form, hideModal, index],
+  );
+
+  const handleShowModal = useCallback(
+    (idx?: number, record?: VariableFormSchemaType) => {
+      setIndex(idx ?? -1);
+      setRecord(record ?? ({} as VariableFormSchemaType));
+      showModal();
+    },
+    [setRecord, showModal],
+  );
+
+  const handleDeleteRecord = useCallback(
+    (idx: number) => {
+      const variables = form?.getValues('variables') || [];
+      const nextVariables = variables.filter((item, index) => index !== idx);
+
+      form.setValue('variables', nextVariables);
+    },
+    [form],
+  );
+
+  return {
+    ok: handleEditRecord,
+    currentRecord,
+    setRecord,
+    visible,
+    hideModal,
+    showModal: handleShowModal,
+    otherThanCurrentQuery,
+    handleDeleteRecord,
+  };
+};
+
+```
+
+## High-Level Overview
+
+This file is part of the RAGFlow repository located at `web/src/pages/agent/form/invoke-form/use-edit-variable.ts`.
+
+Based on the file structure and naming, it appears to be a javascript/typescript - frontend or backend javascript code.
+
+The file contains approximately 71 lines of code and defines various components
+that contribute to the overall functionality of the RAGFlow system.
+
+## Detailed Walkthrough
+
+### Exports (1)
+
+- `useEditVariableRecord`: Exported entity
+
+### Functions (6)
+
+- `useEditVariableRecord()`: Function definition
+- `otherThanCurrentQuery()`: Function definition
+- `handleEditRecord()`: Function definition
+- `handleShowModal()`: Function definition
+- `handleDeleteRecord()`: Function definition
+- `nextVariables()`: Function definition
+
+### Imports (6)
+
+- `import { useSetModalState } from '@/hooks/common-hooks';`
+- `import { useSetSelectedRecord } from '@/hooks/logic-hooks';`
+- `import { useCallback, useMemo, useState } from 'react';`
+- `import { UseFormReturn, useWatch } from 'react-hook-form';`
+- `import { INextOperatorForm } from '../../interface';`
+- `import { FormSchemaType, VariableFormSchemaType } from './schema';`
+
+## Code Structure Analysis
+
+- Total lines: 71
+- Blank lines: 12 (16.9%)
+- Comment lines: ~0 (0.0%)
+- Code lines: ~59
+
+
+## Dependencies and Imports
+
+- `@/hooks/common-hooks`
+- `@/hooks/logic-hooks`
+- `react`
+- `react-hook-form`
+- `../../interface`
+- `./schema`
+
+## Design & Architecture
+
+This file is located in the `web` directory, specifically within `web/src/pages/agent/form/invoke-form`.
+
+This appears to be a UI component or frontend module.
+
+## Performance & Complexity
+
+- Contains database queries - ensure proper indexing and query optimization
+
+## Security & Safety Considerations
+
+- No immediate security concerns identified through static analysis
+
+## Testing & Usage Notes
+
+To work with this file:
+1. Understand its dependencies (see Dependencies section)
+2. Review the code structure and main components
+3. Check for existing tests in the test directories
+4. Consider edge cases and error handling
+
+## Related Files
+
+- Other files in `web/src/pages/agent/form/invoke-form/` directory
+- Potential test file: `test_use-edit-variable.ts`
+
+## Keywords
+
+../../interface, ./schema, @/hooks/common-hooks, @/hooks/logic-hooks, FormSchemaType, INextOperatorForm, TypeScript, UseFormReturn, VariableFormSchemaType, handleDeleteRecord, handleEditRecord, handleShowModal, nextVariables, nextVaribales, otherThanCurrentQuery, react, react-hook-form, useEditVariableRecord, variables
+
+---
+*Generated by RAGFlow Repository Documentation Generator*

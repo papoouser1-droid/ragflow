@@ -1,0 +1,171 @@
+# Keyword Map: intergrations/firecrawl/integration.py
+
+## File Path and Links
+
+- **Original File**: [intergrations/firecrawl/integration.py](../../../intergrations/firecrawl/integration.py)
+- **Documentation**: [integration.py_docs.md](./integration.py_docs.md)
+- **Repository Root**: [../../../](../../../)
+
+## Keywords (45 total)
+
+
+### A
+
+- **API**: Found in integration.py
+  - [View in documentation](./integration.py_docs.md)
+- **Any**: Found in integration.py
+  - [View in documentation](./integration.py_docs.md)
+
+### C
+
+- **Configuration**: Found in integration.py
+  - [View in documentation](./integration.py_docs.md)
+- **Connection**: Found in integration.py
+  - [View in documentation](./integration.py_docs.md)
+- **Create**: Found in integration.py
+  - [View in documentation](./integration.py_docs.md)
+
+### D
+
+- **Dict**: Found in integration.py
+  - [View in documentation](./integration.py_docs.md)
+
+### E
+
+- **Entry**: Found in integration.py
+  - [View in documentation](./integration.py_docs.md)
+- **Exception**: Found in integration.py
+  - [View in documentation](./integration.py_docs.md)
+- **Export**: Found in integration.py
+  - [View in documentation](./integration.py_docs.md)
+
+### F
+
+- **False**: Found in integration.py
+  - [View in documentation](./integration.py_docs.md)
+- **Firecrawl**: Found in integration.py
+  - [View in documentation](./integration.py_docs.md)
+- **FirecrawlRAGFlowPlugin**: Found in integration.py
+  - [View in documentation](./integration.py_docs.md)
+- **FirecrawlUIBuilder**: Found in integration.py
+  - [View in documentation](./integration.py_docs.md)
+
+### G
+
+- **Get**: Found in integration.py
+  - [View in documentation](./integration.py_docs.md)
+
+### I
+
+- **Import**: Found in integration.py
+  - [View in documentation](./integration.py_docs.md)
+- **Initialize**: Found in integration.py
+  - [View in documentation](./integration.py_docs.md)
+- **Initialized**: Found in integration.py
+  - [View in documentation](./integration.py_docs.md)
+- **Integration**: Found in integration.py
+  - [View in documentation](./integration.py_docs.md)
+
+### M
+
+- **Main**: Found in integration.py
+  - [View in documentation](./integration.py_docs.md)
+
+### P
+
+- **Point**: Found in integration.py
+  - [View in documentation](./integration.py_docs.md)
+- **Python**: Found in integration.py
+  - [View in documentation](./integration.py_docs.md)
+
+### R
+
+- **RAGFlow**: Found in integration.py
+  - [View in documentation](./integration.py_docs.md)
+- **RAGFlowFirecrawlIntegration**: Found in integration.py
+  - [View in documentation](./integration.py_docs.md)
+- **Run**: Found in integration.py
+  - [View in documentation](./integration.py_docs.md)
+
+### S
+
+- **Scraper**: Found in integration.py
+  - [View in documentation](./integration.py_docs.md)
+- **Set**: Found in integration.py
+  - [View in documentation](./integration.py_docs.md)
+
+### T
+
+- **Team**: Found in integration.py
+  - [View in documentation](./integration.py_docs.md)
+- **Test**: Found in integration.py
+  - [View in documentation](./integration.py_docs.md)
+- **This**: Found in integration.py
+  - [View in documentation](./integration.py_docs.md)
+
+### V
+
+- **Validate**: Found in integration.py
+  - [View in documentation](./integration.py_docs.md)
+
+### W
+
+- **Web**: Found in integration.py
+  - [View in documentation](./integration.py_docs.md)
+
+### _
+
+- **__init__**: Found in integration.py
+  - [View in documentation](./integration.py_docs.md)
+
+### C
+
+- **create_integration**: Found in integration.py
+  - [View in documentation](./integration.py_docs.md)
+
+### F
+
+- **for**: Found in integration.py
+  - [View in documentation](./integration.py_docs.md)
+
+### G
+
+- **get_config_schema**: Found in integration.py
+  - [View in documentation](./integration.py_docs.md)
+- **get_help_text**: Found in integration.py
+  - [View in documentation](./integration.py_docs.md)
+- **get_integration**: Found in integration.py
+  - [View in documentation](./integration.py_docs.md)
+- **get_plugin**: Found in integration.py
+  - [View in documentation](./integration.py_docs.md)
+- **get_plugin_info**: Found in integration.py
+  - [View in documentation](./integration.py_docs.md)
+- **get_ui_schema**: Found in integration.py
+  - [View in documentation](./integration.py_docs.md)
+- **get_validation_rules**: Found in integration.py
+  - [View in documentation](./integration.py_docs.md)
+
+### P
+
+- **provides**: Found in integration.py
+  - [View in documentation](./integration.py_docs.md)
+
+### T
+
+- **test_connection**: Found in integration.py
+  - [View in documentation](./integration.py_docs.md)
+- **that**: Found in integration.py
+  - [View in documentation](./integration.py_docs.md)
+
+### V
+
+- **validate_config**: Found in integration.py
+  - [View in documentation](./integration.py_docs.md)
+
+## Keyword Summary
+
+This file contains 45 unique keywords extracted from the source code,
+including identifiers, function names, class names, and technical terms.
+
+---
+*Generated by RAGFlow Repository Documentation Generator*

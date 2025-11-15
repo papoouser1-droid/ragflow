@@ -1,0 +1,166 @@
+# Keyword Map: deepdoc/vision/t_recognizer.py
+
+## File Path and Links
+
+- **Original File**: [deepdoc/vision/t_recognizer.py](../../../deepdoc/vision/t_recognizer.py)
+- **Documentation**: [t_recognizer.py_docs.md](./t_recognizer.py_docs.md)
+- **Repository Root**: [../../../](../../../)
+
+## Keywords (44 total)
+
+
+### A
+
+- **ANY**: Found in t_recognizer.py
+  - [View in documentation](./t_recognizer.py_docs.md)
+- **All**: Found in t_recognizer.py
+  - [View in documentation](./t_recognizer.py_docs.md)
+- **Apache**: Found in t_recognizer.py
+  - [View in documentation](./t_recognizer.py_docs.md)
+- **ArgumentParser**: Found in t_recognizer.py
+  - [View in documentation](./t_recognizer.py_docs.md)
+- **Authors**: Found in t_recognizer.py
+  - [View in documentation](./t_recognizer.py_docs.md)
+
+### B
+
+- **BASIS**: Found in t_recognizer.py
+  - [View in documentation](./t_recognizer.py_docs.md)
+
+### C
+
+- **CONDITIONS**: Found in t_recognizer.py
+  - [View in documentation](./t_recognizer.py_docs.md)
+- **C_left**: Found in t_recognizer.py
+  - [View in documentation](./t_recognizer.py_docs.md)
+- **C_right**: Found in t_recognizer.py
+  - [View in documentation](./t_recognizer.py_docs.md)
+- **Copyright**: Found in t_recognizer.py
+  - [View in documentation](./t_recognizer.py_docs.md)
+
+### D
+
+- **Default**: Found in t_recognizer.py
+  - [View in documentation](./t_recognizer.py_docs.md)
+- **Directory**: Found in t_recognizer.py
+  - [View in documentation](./t_recognizer.py_docs.md)
+
+### H
+
+- **H_bott**: Found in t_recognizer.py
+  - [View in documentation](./t_recognizer.py_docs.md)
+- **H_left**: Found in t_recognizer.py
+  - [View in documentation](./t_recognizer.py_docs.md)
+- **H_right**: Found in t_recognizer.py
+  - [View in documentation](./t_recognizer.py_docs.md)
+- **H_top**: Found in t_recognizer.py
+  - [View in documentation](./t_recognizer.py_docs.md)
+
+### I
+
+- **InfiniFlow**: Found in t_recognizer.py
+  - [View in documentation](./t_recognizer.py_docs.md)
+
+### K
+
+- **KIND**: Found in t_recognizer.py
+  - [View in documentation](./t_recognizer.py_docs.md)
+
+### L
+
+- **LICENSE**: Found in t_recognizer.py
+  - [View in documentation](./t_recognizer.py_docs.md)
+- **LayoutRecognizer**: Found in t_recognizer.py
+  - [View in documentation](./t_recognizer.py_docs.md)
+- **License**: Found in t_recognizer.py
+  - [View in documentation](./t_recognizer.py_docs.md)
+- **Licensed**: Found in t_recognizer.py
+  - [View in documentation](./t_recognizer.py_docs.md)
+
+### N
+
+- **None**: Found in t_recognizer.py
+  - [View in documentation](./t_recognizer.py_docs.md)
+
+### O
+
+- **OCR**: Found in t_recognizer.py
+  - [View in documentation](./t_recognizer.py_docs.md)
+
+### P
+
+- **PDF**: Found in t_recognizer.py
+  - [View in documentation](./t_recognizer.py_docs.md)
+- **PDFs**: Found in t_recognizer.py
+  - [View in documentation](./t_recognizer.py_docs.md)
+- **Python**: Found in t_recognizer.py
+  - [View in documentation](./t_recognizer.py_docs.md)
+
+### R
+
+- **R_bott**: Found in t_recognizer.py
+  - [View in documentation](./t_recognizer.py_docs.md)
+- **R_top**: Found in t_recognizer.py
+  - [View in documentation](./t_recognizer.py_docs.md)
+- **Reserved**: Found in t_recognizer.py
+  - [View in documentation](./t_recognizer.py_docs.md)
+- **Rights**: Found in t_recognizer.py
+  - [View in documentation](./t_recognizer.py_docs.md)
+
+### S
+
+- **See**: Found in t_recognizer.py
+  - [View in documentation](./t_recognizer.py_docs.md)
+
+### T
+
+- **TableStructureRecognizer**: Found in t_recognizer.py
+  - [View in documentation](./t_recognizer.py_docs.md)
+- **Task**: Found in t_recognizer.py
+  - [View in documentation](./t_recognizer.py_docs.md)
+- **The**: Found in t_recognizer.py
+  - [View in documentation](./t_recognizer.py_docs.md)
+- **True**: Found in t_recognizer.py
+  - [View in documentation](./t_recognizer.py_docs.md)
+
+### U
+
+- **Unless**: Found in t_recognizer.py
+  - [View in documentation](./t_recognizer.py_docs.md)
+
+### V
+
+- **Version**: Found in t_recognizer.py
+  - [View in documentation](./t_recognizer.py_docs.md)
+
+### W
+
+- **WARRANTIES**: Found in t_recognizer.py
+  - [View in documentation](./t_recognizer.py_docs.md)
+- **WITHOUT**: Found in t_recognizer.py
+  - [View in documentation](./t_recognizer.py_docs.md)
+
+### Y
+
+- **You**: Found in t_recognizer.py
+  - [View in documentation](./t_recognizer.py_docs.md)
+
+### G
+
+- **gather**: Found in t_recognizer.py
+  - [View in documentation](./t_recognizer.py_docs.md)
+- **get_table_html**: Found in t_recognizer.py
+  - [View in documentation](./t_recognizer.py_docs.md)
+
+### M
+
+- **main**: Found in t_recognizer.py
+  - [View in documentation](./t_recognizer.py_docs.md)
+
+## Keyword Summary
+
+This file contains 44 unique keywords extracted from the source code,
+including identifiers, function names, class names, and technical terms.
+
+---
+*Generated by RAGFlow Repository Documentation Generator*

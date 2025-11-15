@@ -1,0 +1,173 @@
+# File Documentation: web/src/pages/agent/run-sheet/index.tsx
+
+## File Metadata
+
+- **Path**: `web/src/pages/agent/run-sheet/index.tsx`
+- **Extension**: `.tsx`
+- **Lines**: 70
+- **Characters**: 1,991
+- **Size**: 1,991 bytes
+- **Purpose**: JavaScript/TypeScript - Frontend or backend JavaScript code
+
+## Original Source
+
+```tsx
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+} from '@/components/ui/sheet';
+import { IModalProps } from '@/interfaces/common';
+import { cn } from '@/lib/utils';
+import { useCallback } from 'react';
+import { useTranslation } from 'react-i18next';
+import { BeginId } from '../constant';
+import DebugContent from '../debug-content';
+import { useGetBeginNodeDataInputs } from '../hooks/use-get-begin-query';
+import { useSaveGraphBeforeOpeningDebugDrawer } from '../hooks/use-save-graph';
+import { BeginQuery } from '../interface';
+import useGraphStore from '../store';
+import { buildBeginQueryWithObject } from '../utils';
+
+const RunSheet = ({
+  hideModal,
+  showModal: showChatModal,
+}: IModalProps<any>) => {
+  const { t } = useTranslation();
+  const { updateNodeForm, getNode } = useGraphStore((state) => state);
+
+  const inputs = useGetBeginNodeDataInputs();
+
+  const { handleRun, loading } = useSaveGraphBeforeOpeningDebugDrawer(
+    showChatModal!,
+  );
+
+  const handleRunAgent = useCallback(
+    (nextValues: BeginQuery[]) => {
+      const beginNode = getNode(BeginId);
+      const inputs: Record<string, BeginQuery> = beginNode?.data.form.inputs;
+
+      const nextInputs = buildBeginQueryWithObject(inputs, nextValues);
+
+      const currentNodes = updateNodeForm(BeginId, nextInputs, ['inputs']);
+      handleRun(currentNodes);
+      hideModal?.();
+    },
+    [getNode, handleRun, hideModal, updateNodeForm],
+  );
+
+  const onOk = useCallback(
+    async (nextValues: any[]) => {
+      handleRunAgent(nextValues);
+    },
+    [handleRunAgent],
+  );
+
+  return (
+    <Sheet onOpenChange={hideModal} open modal={false}>
+      <SheetContent className={cn('top-20 p-2')}>
+        <SheetHeader>
+          <SheetTitle>{t('flow.testRun')}</SheetTitle>
+          <DebugContent
+            ok={onOk}
+            parameters={inputs}
+            loading={loading}
+          ></DebugContent>
+        </SheetHeader>
+      </SheetContent>
+    </Sheet>
+  );
+};
+
+export default RunSheet;
+
+```
+
+## High-Level Overview
+
+This file is part of the RAGFlow repository located at `web/src/pages/agent/run-sheet/index.tsx`.
+
+Based on the file structure and naming, it appears to be a javascript/typescript - frontend or backend javascript code.
+
+The file contains approximately 70 lines of code and defines various components
+that contribute to the overall functionality of the RAGFlow system.
+
+## Detailed Walkthrough
+
+
+### Functions (3)
+
+- `RunSheet()`: Function definition
+- `handleRunAgent()`: Function definition
+- `onOk()`: Function definition
+
+### Imports (12)
+
+- `import {`
+- `import { IModalProps } from '@/interfaces/common';`
+- `import { cn } from '@/lib/utils';`
+- `import { useCallback } from 'react';`
+- `import { useTranslation } from 'react-i18next';`
+- `import { BeginId } from '../constant';`
+- `import DebugContent from '../debug-content';`
+- `import { useGetBeginNodeDataInputs } from '../hooks/use-get-begin-query';`
+- `import { useSaveGraphBeforeOpeningDebugDrawer } from '../hooks/use-save-graph';`
+- `import { BeginQuery } from '../interface';`
+
+## Code Structure Analysis
+
+- Total lines: 70
+- Blank lines: 10 (14.3%)
+- Comment lines: ~0 (0.0%)
+- Code lines: ~60
+
+
+## Dependencies and Imports
+
+- `@/interfaces/common`
+- `@/lib/utils`
+- `react`
+- `react-i18next`
+- `../constant`
+- `../debug-content`
+- `../hooks/use-get-begin-query`
+- `../hooks/use-save-graph`
+- `../interface`
+- `../store`
+- `../utils`
+
+## Design & Architecture
+
+This file is located in the `web` directory, specifically within `web/src/pages/agent/run-sheet`.
+
+This appears to be a UI component or frontend module.
+
+## Performance & Complexity
+
+- Contains database queries - ensure proper indexing and query optimization
+- Uses asynchronous patterns for better performance
+
+## Security & Safety Considerations
+
+- **User Input**: Validate and sanitize all user input
+
+## Testing & Usage Notes
+
+To work with this file:
+1. Understand its dependencies (see Dependencies section)
+2. Review the code structure and main components
+3. Check for existing tests in the test directories
+4. Consider edge cases and error handling
+
+## Related Files
+
+- Other files in `web/src/pages/agent/run-sheet/` directory
+- Potential test file: `test_index.tsx`
+
+## Keywords
+
+../constant, ../debug-content, ../hooks/use-get-begin-query, ../hooks/use-save-graph, ../interface, ../store, ../utils, @/interfaces/common, @/lib/utils, BeginId, BeginQuery, DebugContent, IModalProps, Record, RunSheet, Sheet, SheetContent, SheetHeader, SheetTitle, TypeScript, beginNode, currentNodes, handleRunAgent, inputs, nextInputs, onOk, react, react-i18next
+
+---
+*Generated by RAGFlow Repository Documentation Generator*

@@ -1,0 +1,181 @@
+# File Documentation: web/src/pages/dataset/dataset-setting/saving-button.tsx
+
+## File Metadata
+
+- **Path**: `web/src/pages/dataset/dataset-setting/saving-button.tsx`
+- **Extension**: `.tsx`
+- **Lines**: 84
+- **Characters**: 2,281
+- **Size**: 2,281 bytes
+- **Purpose**: JavaScript/TypeScript - Frontend or backend JavaScript code
+
+## Original Source
+
+```tsx
+import { ButtonLoading } from '@/components/ui/button';
+import { useUpdateKnowledge } from '@/hooks/use-knowledge-request';
+import { useMemo } from 'react';
+import { useFormContext } from 'react-hook-form';
+import { useTranslation } from 'react-i18next';
+import { useParams } from 'umi';
+
+export function GeneralSavingButton() {
+  const form = useFormContext();
+  const { saveKnowledgeConfiguration, loading: submitLoading } =
+    useUpdateKnowledge();
+  const { id: kb_id } = useParams();
+  const { t } = useTranslation();
+
+  const defaultValues = useMemo(
+    () => form.formState.defaultValues ?? {},
+    [form.formState.defaultValues],
+  );
+  const parser_id = defaultValues['parser_id'];
+
+  return (
+    <ButtonLoading
+      type="button"
+      loading={submitLoading}
+      onClick={() => {
+        (async () => {
+          let isValidate = await form.trigger('name');
+          const { name, description, permission, avatar } = form.getValues();
+
+          if (isValidate) {
+            saveKnowledgeConfiguration({
+              kb_id,
+              parser_id,
+              name,
+              description,
+              avatar,
+              permission,
+            });
+          }
+        })();
+      }}
+    >
+      {t('knowledgeConfiguration.save')}
+    </ButtonLoading>
+  );
+}
+
+export function SavingButton() {
+  const { saveKnowledgeConfiguration, loading: submitLoading } =
+    useUpdateKnowledge();
+  const form = useFormContext();
+  const { id: kb_id } = useParams();
+  const { t } = useTranslation();
+
+  return (
+    <ButtonLoading
+      loading={submitLoading}
+      onClick={() => {
+        (async () => {
+          try {
+            let beValid = await form.formControl.trigger();
+            if (beValid) {
+              form.handleSubmit(async (values) => {
+                console.log('saveKnowledgeConfiguration: ', values);
+                delete values['parseType'];
+                // delete values['avatar'];
+                await saveKnowledgeConfiguration({
+                  kb_id,
+                  ...values,
+                });
+              })();
+            }
+          } catch (e) {
+            console.log(e);
+          } finally {
+          }
+        })();
+      }}
+    >
+      {t('knowledgeConfiguration.save')}
+    </ButtonLoading>
+  );
+}
+
+```
+
+## High-Level Overview
+
+This file is part of the RAGFlow repository located at `web/src/pages/dataset/dataset-setting/saving-button.tsx`.
+
+Based on the file structure and naming, it appears to be a javascript/typescript - frontend or backend javascript code.
+
+The file contains approximately 84 lines of code and defines various components
+that contribute to the overall functionality of the RAGFlow system.
+
+## Detailed Walkthrough
+
+### Exports (2)
+
+- `GeneralSavingButton`: Exported entity
+- `SavingButton`: Exported entity
+
+### Functions (3)
+
+- `GeneralSavingButton()`: Function definition
+- `defaultValues()`: Function definition
+- `SavingButton()`: Function definition
+
+### Imports (6)
+
+- `import { ButtonLoading } from '@/components/ui/button';`
+- `import { useUpdateKnowledge } from '@/hooks/use-knowledge-request';`
+- `import { useMemo } from 'react';`
+- `import { useFormContext } from 'react-hook-form';`
+- `import { useTranslation } from 'react-i18next';`
+- `import { useParams } from 'umi';`
+
+## Code Structure Analysis
+
+- Total lines: 84
+- Blank lines: 7 (8.3%)
+- Comment lines: ~1 (1.2%)
+- Code lines: ~76
+
+
+## Dependencies and Imports
+
+- `@/components/ui/button`
+- `@/hooks/use-knowledge-request`
+- `react`
+- `react-hook-form`
+- `react-i18next`
+- `umi`
+
+## Design & Architecture
+
+This file is located in the `web` directory, specifically within `web/src/pages/dataset/dataset-setting`.
+
+This appears to be a UI component or frontend module.
+
+## Performance & Complexity
+
+- Uses asynchronous patterns for better performance
+
+## Security & Safety Considerations
+
+- **User Input**: Validate and sanitize all user input
+
+## Testing & Usage Notes
+
+To work with this file:
+1. Understand its dependencies (see Dependencies section)
+2. Review the code structure and main components
+3. Check for existing tests in the test directories
+4. Consider edge cases and error handling
+
+## Related Files
+
+- Other files in `web/src/pages/dataset/dataset-setting/` directory
+- Potential test file: `test_saving-button.tsx`
+
+## Keywords
+
+@/components/ui/button, @/hooks/use-knowledge-request, ButtonLoading, GeneralSavingButton, SavingButton, TypeScript, beValid, defaultValues, form, isValidate, parser_id, react, react-hook-form, react-i18next, umi
+
+---
+*Generated by RAGFlow Repository Documentation Generator*

@@ -1,0 +1,165 @@
+# File Documentation: web/src/pages/agent/canvas/node/begin-node.tsx
+
+## File Metadata
+
+- **Path**: `web/src/pages/agent/canvas/node/begin-node.tsx`
+- **Extension**: `.tsx`
+- **Lines**: 65
+- **Characters**: 2,219
+- **Size**: 2,219 bytes
+- **Purpose**: JavaScript/TypeScript - Frontend or backend JavaScript code
+
+## Original Source
+
+```tsx
+import { IBeginNode } from '@/interfaces/database/flow';
+import { cn } from '@/lib/utils';
+import { NodeProps, Position } from '@xyflow/react';
+import get from 'lodash/get';
+import { memo } from 'react';
+import { useTranslation } from 'react-i18next';
+import {
+  BeginQueryType,
+  BeginQueryTypeIconMap,
+  NodeHandleId,
+  Operator,
+} from '../../constant';
+import { BeginQuery } from '../../interface';
+import OperatorIcon from '../../operator-icon';
+import { LabelCard } from './card';
+import { CommonHandle } from './handle';
+import { RightHandleStyle } from './handle-icon';
+import styles from './index.less';
+import { NodeWrapper } from './node-wrapper';
+
+// TODO: do not allow other nodes to connect to this node
+function InnerBeginNode({ data, id, selected }: NodeProps<IBeginNode>) {
+  const { t } = useTranslation();
+  const inputs: Record<string, BeginQuery> = get(data, 'form.inputs', {});
+
+  return (
+    <NodeWrapper selected={selected}>
+      <CommonHandle
+        type="source"
+        position={Position.Right}
+        isConnectable
+        style={RightHandleStyle}
+        nodeId={id}
+        id={NodeHandleId.Start}
+      ></CommonHandle>
+
+      <section className="flex items-center  gap-2">
+        <OperatorIcon name={data.label as Operator}></OperatorIcon>
+        <div className="truncate text-center font-semibold text-sm">
+          {t(`flow.begin`)}
+        </div>
+      </section>
+      <section className={cn(styles.generateParameters, 'flex gap-2 flex-col')}>
+        {Object.entries(inputs).map(([key, val], idx) => {
+          const Icon = BeginQueryTypeIconMap[val.type as BeginQueryType];
+          return (
+            <LabelCard key={idx} className={cn('flex gap-1.5 items-center')}>
+              <Icon className="size-3.5" />
+              <label htmlFor="" className="text-accent-primary text-sm italic">
+                {key}
+              </label>
+              <LabelCard className="py-0.5 truncate flex-1">
+                {val.name}
+              </LabelCard>
+              <span className="flex-1">{val.optional ? 'Yes' : 'No'}</span>
+            </LabelCard>
+          );
+        })}
+      </section>
+    </NodeWrapper>
+  );
+}
+
+export const BeginNode = memo(InnerBeginNode);
+
+```
+
+## High-Level Overview
+
+// TODO: do not allow other nodes to connect to this node
+
+## Detailed Walkthrough
+
+### Exports (1)
+
+- `BeginNode`: Exported entity
+
+### Functions (1)
+
+- `InnerBeginNode()`: Function definition
+
+### Imports (14)
+
+- `import { IBeginNode } from '@/interfaces/database/flow';`
+- `import { cn } from '@/lib/utils';`
+- `import { NodeProps, Position } from '@xyflow/react';`
+- `import get from 'lodash/get';`
+- `import { memo } from 'react';`
+- `import { useTranslation } from 'react-i18next';`
+- `import {`
+- `import { BeginQuery } from '../../interface';`
+- `import OperatorIcon from '../../operator-icon';`
+- `import { LabelCard } from './card';`
+
+## Code Structure Analysis
+
+- Total lines: 65
+- Blank lines: 5 (7.7%)
+- Comment lines: ~1 (1.5%)
+- Code lines: ~59
+
+
+## Dependencies and Imports
+
+- `@/interfaces/database/flow`
+- `@/lib/utils`
+- `@xyflow/react`
+- `lodash/get`
+- `react`
+- `react-i18next`
+- `../../interface`
+- `../../operator-icon`
+- `./card`
+- `./handle`
+- `./handle-icon`
+- `./index.less`
+- `./node-wrapper`
+
+## Design & Architecture
+
+This file is located in the `web` directory, specifically within `web/src/pages/agent/canvas/node`.
+
+This appears to be a UI component or frontend module.
+
+## Performance & Complexity
+
+- Contains database queries - ensure proper indexing and query optimization
+
+## Security & Safety Considerations
+
+- **User Input**: Validate and sanitize all user input
+
+## Testing & Usage Notes
+
+To work with this file:
+1. Understand its dependencies (see Dependencies section)
+2. Review the code structure and main components
+3. Check for existing tests in the test directories
+4. Consider edge cases and error handling
+
+## Related Files
+
+- Other files in `web/src/pages/agent/canvas/node/` directory
+- Potential test file: `test_begin-node.tsx`
+
+## Keywords
+
+../../interface, ../../operator-icon, ./card, ./handle, ./handle-icon, ./index.less, ./node-wrapper, @/interfaces/database/flow, @/lib/utils, @xyflow/react, BeginNode, BeginQuery, BeginQueryType, BeginQueryTypeIconMap, CommonHandle, IBeginNode, Icon, InnerBeginNode, LabelCard, NodeHandleId, NodeProps, NodeWrapper, Object, Operator, OperatorIcon, Position, Record, Right, RightHandleStyle, Start, TODO, TypeScript, Yes, as, inputs, lodash/get, react, react-i18next, xyflow
+
+---
+*Generated by RAGFlow Repository Documentation Generator*

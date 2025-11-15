@@ -1,0 +1,173 @@
+# File Documentation: web/src/components/api-service/chat-api-key-modal/index.tsx
+
+## File Metadata
+
+- **Path**: `web/src/components/api-service/chat-api-key-modal/index.tsx`
+- **Extension**: `.tsx`
+- **Lines**: 76
+- **Characters**: 2,006
+- **Size**: 2,006 bytes
+- **Purpose**: JavaScript/TypeScript - Frontend or backend JavaScript code
+
+## Original Source
+
+```tsx
+import CopyToClipboard from '@/components/copy-to-clipboard';
+import { useTranslate } from '@/hooks/common-hooks';
+import { IModalProps } from '@/interfaces/common';
+import { IToken } from '@/interfaces/database/chat';
+import { formatDate } from '@/utils/date';
+import { DeleteOutlined } from '@ant-design/icons';
+import type { TableProps } from 'antd';
+import { Button, Modal, Space, Table } from 'antd';
+import { useOperateApiKey } from '../hooks';
+
+const ChatApiKeyModal = ({
+  dialogId,
+  hideModal,
+  idKey,
+}: IModalProps<any> & { dialogId?: string; idKey: string }) => {
+  const { createToken, removeToken, tokenList, listLoading, creatingLoading } =
+    useOperateApiKey(idKey, dialogId);
+  const { t } = useTranslate('chat');
+
+  const columns: TableProps<IToken>['columns'] = [
+    {
+      title: 'Token',
+      dataIndex: 'token',
+      key: 'token',
+      render: (text) => <a>{text}</a>,
+    },
+    {
+      title: t('created'),
+      dataIndex: 'create_date',
+      key: 'create_date',
+      render: (text) => formatDate(text),
+    },
+    {
+      title: t('action'),
+      key: 'action',
+      render: (_, record) => (
+        <Space size="middle">
+          <CopyToClipboard text={record.token}></CopyToClipboard>
+          <DeleteOutlined onClick={() => removeToken(record.token)} />
+        </Space>
+      ),
+    },
+  ];
+
+  return (
+    <>
+      <Modal
+        title={t('apiKey')}
+        open
+        onCancel={hideModal}
+        cancelButtonProps={{ style: { display: 'none' } }}
+        style={{ top: 300 }}
+        onOk={hideModal}
+        width={'50vw'}
+      >
+        <Table
+          columns={columns}
+          dataSource={tokenList}
+          rowKey={'token'}
+          loading={listLoading}
+          pagination={false}
+        />
+        <Button
+          onClick={createToken}
+          loading={creatingLoading}
+          disabled={tokenList?.length > 0}
+        >
+          {t('createNewKey')}
+        </Button>
+      </Modal>
+    </>
+  );
+};
+
+export default ChatApiKeyModal;
+
+```
+
+## High-Level Overview
+
+This file is part of the RAGFlow repository located at `web/src/components/api-service/chat-api-key-modal/index.tsx`.
+
+Based on the file structure and naming, it appears to be a javascript/typescript - frontend or backend javascript code.
+
+The file contains approximately 76 lines of code and defines various components
+that contribute to the overall functionality of the RAGFlow system.
+
+## Detailed Walkthrough
+
+
+### Functions (1)
+
+- `ChatApiKeyModal()`: Function definition
+
+### Imports (9)
+
+- `import CopyToClipboard from '@/components/copy-to-clipboard';`
+- `import { useTranslate } from '@/hooks/common-hooks';`
+- `import { IModalProps } from '@/interfaces/common';`
+- `import { IToken } from '@/interfaces/database/chat';`
+- `import { formatDate } from '@/utils/date';`
+- `import { DeleteOutlined } from '@ant-design/icons';`
+- `import type { TableProps } from 'antd';`
+- `import { Button, Modal, Space, Table } from 'antd';`
+- `import { useOperateApiKey } from '../hooks';`
+
+## Code Structure Analysis
+
+- Total lines: 76
+- Blank lines: 5 (6.6%)
+- Comment lines: ~0 (0.0%)
+- Code lines: ~71
+
+
+## Dependencies and Imports
+
+- `@/components/copy-to-clipboard`
+- `@/hooks/common-hooks`
+- `@/interfaces/common`
+- `@/interfaces/database/chat`
+- `@/utils/date`
+- `@ant-design/icons`
+- `antd`
+- `antd`
+- `../hooks`
+
+## Design & Architecture
+
+This file is located in the `web` directory, specifically within `web/src/components/api-service/chat-api-key-modal`.
+
+As part of the API layer, this file likely handles HTTP requests, business logic, or data access.
+
+## Performance & Complexity
+
+- No specific performance concerns identified through static analysis
+
+## Security & Safety Considerations
+
+- No immediate security concerns identified through static analysis
+
+## Testing & Usage Notes
+
+To work with this file:
+1. Understand its dependencies (see Dependencies section)
+2. Review the code structure and main components
+3. Check for existing tests in the test directories
+4. Consider edge cases and error handling
+
+## Related Files
+
+- Other files in `web/src/components/api-service/chat-api-key-modal/` directory
+- Potential test file: `test_index.tsx`
+
+## Keywords
+
+../hooks, @/components/copy-to-clipboard, @/hooks/common-hooks, @/interfaces/common, @/interfaces/database/chat, @/utils/date, @ant-design/icons, Button, ChatApiKeyModal, CopyToClipboard, DeleteOutlined, IModalProps, IToken, Modal, Space, Table, TableProps, Token, TypeScript, ant, antd, columns
+
+---
+*Generated by RAGFlow Repository Documentation Generator*

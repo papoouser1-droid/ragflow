@@ -1,0 +1,174 @@
+# Keyword Map: deepdoc/README.md
+
+## File Path and Links
+
+- **Original File**: [deepdoc/README.md](../../deepdoc/README.md)
+- **Documentation**: [README.md_docs.md](./README.md_docs.md)
+- **Repository Root**: [../../](../../)
+
+## Keywords (54 total)
+
+
+### A
+
+- **Along**: Found in README.md
+  - [View in documentation](./README.md_docs.md)
+- **And**: Found in README.md
+  - [View in documentation](./README.md_docs.md)
+
+### C
+
+- **Column**: Found in README.md
+  - [View in documentation](./README.md_docs.md)
+
+### D
+
+- **DOCX**: Found in README.md
+  - [View in documentation](./README.md_docs.md)
+- **Data**: Found in README.md
+  - [View in documentation](./README.md_docs.md)
+- **Deep**: Found in README.md
+  - [View in documentation](./README.md_docs.md)
+- **Default**: Found in README.md
+  - [View in documentation](./README.md_docs.md)
+- **Directory**: Found in README.md
+  - [View in documentation](./README.md_docs.md)
+- **Doc**: Found in README.md
+  - [View in documentation](./README.md_docs.md)
+- **Documentation**: Found in README.md
+  - [View in documentation](./README.md_docs.md)
+- **Documents**: Found in README.md
+  - [View in documentation](./README.md_docs.md)
+
+### E
+
+- **EXCEL**: Found in README.md
+  - [View in documentation](./README.md_docs.md)
+- **English**: Found in README.md
+  - [View in documentation](./README.md_docs.md)
+- **Equation**: Found in README.md
+  - [View in documentation](./README.md_docs.md)
+
+### F
+
+- **Figure**: Found in README.md
+  - [View in documentation](./README.md_docs.md)
+- **Figures**: Found in README.md
+  - [View in documentation](./README.md_docs.md)
+- **Footer**: Found in README.md
+  - [View in documentation](./README.md_docs.md)
+- **Four**: Found in README.md
+  - [View in documentation](./README.md_docs.md)
+
+### H
+
+- **HF_ENDPOINT**: Found in README.md
+  - [View in documentation](./README.md_docs.md)
+- **Have**: Found in README.md
+  - [View in documentation](./README.md_docs.md)
+- **Header**: Found in README.md
+  - [View in documentation](./README.md_docs.md)
+- **HuggingFace**: Found in README.md
+  - [View in documentation](./README.md_docs.md)
+
+### I
+
+- **INPUTS**: Found in README.md
+  - [View in documentation](./README.md_docs.md)
+- **Introduction**: Found in README.md
+  - [View in documentation](./README.md_docs.md)
+
+### L
+
+- **LLM**: Found in README.md
+  - [View in documentation](./README.md_docs.md)
+- **Layout**: Found in README.md
+  - [View in documentation](./README.md_docs.md)
+
+### O
+
+- **OCR**: Found in README.md
+  - [View in documentation](./README.md_docs.md)
+- **OUTPUT_DIR**: Found in README.md
+  - [View in documentation](./README.md_docs.md)
+- **Only**: Found in README.md
+  - [View in documentation](./README.md_docs.md)
+- **Our**: Found in README.md
+  - [View in documentation](./README.md_docs.md)
+
+### P
+
+- **PDF**: Found in README.md
+  - [View in documentation](./README.md_docs.md)
+- **PDFs**: Found in README.md
+  - [View in documentation](./README.md_docs.md)
+- **PPT**: Found in README.md
+  - [View in documentation](./README.md_docs.md)
+- **Parser**: Found in README.md
+  - [View in documentation](./README.md_docs.md)
+- **Projected**: Found in README.md
+  - [View in documentation](./README.md_docs.md)
+
+### R
+
+- **README_zh**: Found in README.md
+  - [View in documentation](./README.md_docs.md)
+- **Recognition**: Found in README.md
+  - [View in documentation](./README.md_docs.md)
+- **Reference**: Found in README.md
+  - [View in documentation](./README.md_docs.md)
+- **Row**: Found in README.md
+  - [View in documentation](./README.md_docs.md)
+
+### S
+
+- **Since**: Found in README.md
+  - [View in documentation](./README.md_docs.md)
+- **Spanning**: Found in README.md
+  - [View in documentation](./README.md_docs.md)
+- **Structure**: Found in README.md
+  - [View in documentation](./README.md_docs.md)
+
+### T
+
+- **THRESHOLD**: Found in README.md
+  - [View in documentation](./README.md_docs.md)
+- **TSR**: Found in README.md
+  - [View in documentation](./README.md_docs.md)
+- **Table**: Found in README.md
+  - [View in documentation](./README.md_docs.md)
+- **Tables**: Found in README.md
+  - [View in documentation](./README.md_docs.md)
+- **Task**: Found in README.md
+  - [View in documentation](./README.md_docs.md)
+- **Text**: Found in README.md
+  - [View in documentation](./README.md_docs.md)
+- **The**: Found in README.md
+  - [View in documentation](./README.md_docs.md)
+- **There**: Found in README.md
+  - [View in documentation](./README.md_docs.md)
+- **Title**: Found in README.md
+  - [View in documentation](./README.md_docs.md)
+
+### V
+
+- **Vision**: Found in README.md
+  - [View in documentation](./README.md_docs.md)
+
+### W
+
+- **With**: Found in README.md
+  - [View in documentation](./README.md_docs.md)
+
+### Y
+
+- **You**: Found in README.md
+  - [View in documentation](./README.md_docs.md)
+
+## Keyword Summary
+
+This file contains 54 unique keywords extracted from the source code,
+including identifiers, function names, class names, and technical terms.
+
+---
+*Generated by RAGFlow Repository Documentation Generator*

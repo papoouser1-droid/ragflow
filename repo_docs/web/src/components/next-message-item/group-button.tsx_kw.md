@@ -1,0 +1,160 @@
+# Keyword Map: web/src/components/next-message-item/group-button.tsx
+
+## File Path and Links
+
+- **Original File**: [web/src/components/next-message-item/group-button.tsx](../../../../../web/src/components/next-message-item/group-button.tsx)
+- **Documentation**: [group-button.tsx_docs.md](./group-button.tsx_docs.md)
+- **Repository Root**: [../../../../../](../../../../../)
+
+## Keywords (41 total)
+
+
+### .
+
+- **../ui/toggle-group**: Found in group-button.tsx
+  - [View in documentation](./group-button.tsx_docs.md)
+- **./feedback-modal**: Found in group-button.tsx
+  - [View in documentation](./group-button.tsx_docs.md)
+- **./hooks**: Found in group-button.tsx
+  - [View in documentation](./group-button.tsx_docs.md)
+- **./prompt-modal**: Found in group-button.tsx
+  - [View in documentation](./group-button.tsx_docs.md)
+
+### @
+
+- **@/assets/icon/next-icon**: Found in group-button.tsx
+  - [View in documentation](./group-button.tsx_docs.md)
+- **@/components/copy-to-clipboard**: Found in group-button.tsx
+  - [View in documentation](./group-button.tsx_docs.md)
+- **@/hooks/common-hooks**: Found in group-button.tsx
+  - [View in documentation](./group-button.tsx_docs.md)
+- **@/hooks/logic-hooks**: Found in group-button.tsx
+  - [View in documentation](./group-button.tsx_docs.md)
+- **@/pages/agent/context**: Found in group-button.tsx
+  - [View in documentation](./group-button.tsx_docs.md)
+
+### A
+
+- **AgentChatContext**: Found in group-button.tsx
+  - [View in documentation](./group-button.tsx_docs.md)
+- **AssistantGroupButton**: Found in group-button.tsx
+  - [View in documentation](./group-button.tsx_docs.md)
+
+### B
+
+- **Button**: Found in group-button.tsx
+  - [View in documentation](./group-button.tsx_docs.md)
+
+### C
+
+- **CopyToClipboard**: Found in group-button.tsx
+  - [View in documentation](./group-button.tsx_docs.md)
+
+### D
+
+- **DeleteOutlined**: Found in group-button.tsx
+  - [View in documentation](./group-button.tsx_docs.md)
+- **DislikeOutlined**: Found in group-button.tsx
+  - [View in documentation](./group-button.tsx_docs.md)
+
+### F
+
+- **FeedbackModal**: Found in group-button.tsx
+  - [View in documentation](./group-button.tsx_docs.md)
+
+### G
+
+- **Group**: Found in group-button.tsx
+  - [View in documentation](./group-button.tsx_docs.md)
+
+### I
+
+- **IProps**: Found in group-button.tsx
+  - [View in documentation](./group-button.tsx_docs.md)
+- **IRemoveMessageById**: Found in group-button.tsx
+  - [View in documentation](./group-button.tsx_docs.md)
+
+### L
+
+- **LikeOutlined**: Found in group-button.tsx
+  - [View in documentation](./group-button.tsx_docs.md)
+
+### N
+
+- **NotebookText**: Found in group-button.tsx
+  - [View in documentation](./group-button.tsx_docs.md)
+
+### P
+
+- **Partial**: Found in group-button.tsx
+  - [View in documentation](./group-button.tsx_docs.md)
+- **PauseCircleOutlined**: Found in group-button.tsx
+  - [View in documentation](./group-button.tsx_docs.md)
+- **PromptIcon**: Found in group-button.tsx
+  - [View in documentation](./group-button.tsx_docs.md)
+- **PromptModal**: Found in group-button.tsx
+  - [View in documentation](./group-button.tsx_docs.md)
+
+### R
+
+- **Radio**: Found in group-button.tsx
+  - [View in documentation](./group-button.tsx_docs.md)
+
+### S
+
+- **SoundOutlined**: Found in group-button.tsx
+  - [View in documentation](./group-button.tsx_docs.md)
+- **SyncOutlined**: Found in group-button.tsx
+  - [View in documentation](./group-button.tsx_docs.md)
+
+### T
+
+- **ToggleGroup**: Found in group-button.tsx
+  - [View in documentation](./group-button.tsx_docs.md)
+- **ToggleGroupItem**: Found in group-button.tsx
+  - [View in documentation](./group-button.tsx_docs.md)
+- **Tooltip**: Found in group-button.tsx
+  - [View in documentation](./group-button.tsx_docs.md)
+- **TypeScript**: Found in group-button.tsx
+  - [View in documentation](./group-button.tsx_docs.md)
+
+### U
+
+- **UserGroupButton**: Found in group-button.tsx
+  - [View in documentation](./group-button.tsx_docs.md)
+- **UserGroupButtonProps**: Found in group-button.tsx
+  - [View in documentation](./group-button.tsx_docs.md)
+
+### A
+
+- **ant**: Found in group-button.tsx
+  - [View in documentation](./group-button.tsx_docs.md)
+- **antd**: Found in group-button.tsx
+  - [View in documentation](./group-button.tsx_docs.md)
+
+### H
+
+- **handleLike**: Found in group-button.tsx
+  - [View in documentation](./group-button.tsx_docs.md)
+- **handleShowLogSheet**: Found in group-button.tsx
+  - [View in documentation](./group-button.tsx_docs.md)
+
+### L
+
+- **lucide-react**: Found in group-button.tsx
+  - [View in documentation](./group-button.tsx_docs.md)
+
+### R
+
+- **react**: Found in group-button.tsx
+  - [View in documentation](./group-button.tsx_docs.md)
+- **react-i18next**: Found in group-button.tsx
+  - [View in documentation](./group-button.tsx_docs.md)
+
+## Keyword Summary
+
+This file contains 41 unique keywords extracted from the source code,
+including identifiers, function names, class names, and technical terms.
+
+---
+*Generated by RAGFlow Repository Documentation Generator*

@@ -1,0 +1,163 @@
+# File Documentation: web/src/pages/agent/form/data-operations-form/updates.tsx
+
+## File Metadata
+
+- **Path**: `web/src/pages/agent/form/data-operations-form/updates.tsx`
+- **Extension**: `.tsx`
+- **Lines**: 63
+- **Characters**: 1,919
+- **Size**: 1,919 bytes
+- **Purpose**: JavaScript/TypeScript - Frontend or backend JavaScript code
+
+## Original Source
+
+```tsx
+import { KeyInput } from '@/components/key-input';
+import { RAGFlowFormItem } from '@/components/ragflow-form';
+import { Button } from '@/components/ui/button';
+import { Separator } from '@/components/ui/separator';
+import { X } from 'lucide-react';
+import { ReactNode } from 'react';
+import { useFieldArray, useFormContext } from 'react-hook-form';
+import { DynamicFormHeader } from '../components/dynamic-fom-header';
+import { PromptEditor } from '../components/prompt-editor';
+
+type SelectKeysProps = {
+  name: string;
+  label: ReactNode;
+  tooltip?: string;
+  keyField: string;
+  valueField: string;
+};
+export function Updates({
+  name,
+  label,
+  tooltip,
+  keyField,
+  valueField,
+}: SelectKeysProps) {
+  const form = useFormContext();
+
+  const { fields, remove, append } = useFieldArray({
+    name: name,
+    control: form.control,
+  });
+
+  return (
+    <section className="space-y-2">
+      <DynamicFormHeader
+        label={label}
+        tooltip={tooltip}
+        onClick={() => append({ [keyField]: '', [valueField]: '' })}
+      ></DynamicFormHeader>
+      <div className="space-y-5">
+        {fields.map((field, index) => {
+          const keyFieldAlias = `${name}.${index}.${keyField}`;
+          const valueFieldAlias = `${name}.${index}.${valueField}`;
+
+          return (
+            <div key={field.id} className="flex items-center gap-2">
+              <RAGFlowFormItem name={keyFieldAlias} className="flex-1">
+                <KeyInput></KeyInput>
+              </RAGFlowFormItem>
+              <Separator className="w-2" />
+              <RAGFlowFormItem name={valueFieldAlias} className="flex-1">
+                <PromptEditor showToolbar={false} multiLine={false} />
+              </RAGFlowFormItem>
+              <Button variant={'ghost'} onClick={() => remove(index)}>
+                <X />
+              </Button>
+            </div>
+          );
+        })}
+      </div>
+    </section>
+  );
+}
+
+```
+
+## High-Level Overview
+
+This file is part of the RAGFlow repository located at `web/src/pages/agent/form/data-operations-form/updates.tsx`.
+
+Based on the file structure and naming, it appears to be a javascript/typescript - frontend or backend javascript code.
+
+The file contains approximately 63 lines of code and defines various components
+that contribute to the overall functionality of the RAGFlow system.
+
+## Detailed Walkthrough
+
+### Exports (1)
+
+- `Updates`: Exported entity
+
+### Functions (1)
+
+- `Updates()`: Function definition
+
+### Imports (9)
+
+- `import { KeyInput } from '@/components/key-input';`
+- `import { RAGFlowFormItem } from '@/components/ragflow-form';`
+- `import { Button } from '@/components/ui/button';`
+- `import { Separator } from '@/components/ui/separator';`
+- `import { X } from 'lucide-react';`
+- `import { ReactNode } from 'react';`
+- `import { useFieldArray, useFormContext } from 'react-hook-form';`
+- `import { DynamicFormHeader } from '../components/dynamic-fom-header';`
+- `import { PromptEditor } from '../components/prompt-editor';`
+
+## Code Structure Analysis
+
+- Total lines: 63
+- Blank lines: 5 (7.9%)
+- Comment lines: ~0 (0.0%)
+- Code lines: ~58
+
+
+## Dependencies and Imports
+
+- `@/components/key-input`
+- `@/components/ragflow-form`
+- `@/components/ui/button`
+- `@/components/ui/separator`
+- `lucide-react`
+- `react`
+- `react-hook-form`
+- `../components/dynamic-fom-header`
+- `../components/prompt-editor`
+
+## Design & Architecture
+
+This file is located in the `web` directory, specifically within `web/src/pages/agent/form/data-operations-form`.
+
+This appears to be a UI component or frontend module.
+
+## Performance & Complexity
+
+- No specific performance concerns identified through static analysis
+
+## Security & Safety Considerations
+
+- **User Input**: Validate and sanitize all user input
+
+## Testing & Usage Notes
+
+To work with this file:
+1. Understand its dependencies (see Dependencies section)
+2. Review the code structure and main components
+3. Check for existing tests in the test directories
+4. Consider edge cases and error handling
+
+## Related Files
+
+- Other files in `web/src/pages/agent/form/data-operations-form/` directory
+- Potential test file: `test_updates.tsx`
+
+## Keywords
+
+../components/dynamic-fom-header, ../components/prompt-editor, @/components/key-input, @/components/ragflow-form, @/components/ui/button, @/components/ui/separator, Button, DynamicFormHeader, KeyInput, PromptEditor, RAGFlowFormItem, ReactNode, SelectKeysProps, Separator, TypeScript, Updates, form, keyFieldAlias, lucide-react, react, react-hook-form, valueFieldAlias
+
+---
+*Generated by RAGFlow Repository Documentation Generator*

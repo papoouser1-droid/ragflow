@@ -1,0 +1,145 @@
+# Keyword Map: web/src/pages/dataset/dataset/dataset-action-cell.tsx
+
+## File Path and Links
+
+- **Original File**: [web/src/pages/dataset/dataset/dataset-action-cell.tsx](../../../../../../web/src/pages/dataset/dataset/dataset-action-cell.tsx)
+- **Documentation**: [dataset-action-cell.tsx_docs.md](./dataset-action-cell.tsx_docs.md)
+- **Repository Root**: [../../../../../../](../../../../../../)
+
+## Keywords (35 total)
+
+
+### .
+
+- **./use-rename-document**: Found in dataset-action-cell.tsx
+  - [View in documentation](./dataset-action-cell.tsx_docs.md)
+- **./utils**: Found in dataset-action-cell.tsx
+  - [View in documentation](./dataset-action-cell.tsx_docs.md)
+
+### @
+
+- **@/components/confirm-delete-dialog**: Found in dataset-action-cell.tsx
+  - [View in documentation](./dataset-action-cell.tsx_docs.md)
+- **@/components/ui/button**: Found in dataset-action-cell.tsx
+  - [View in documentation](./dataset-action-cell.tsx_docs.md)
+- **@/constants/knowledge**: Found in dataset-action-cell.tsx
+  - [View in documentation](./dataset-action-cell.tsx_docs.md)
+- **@/hooks/use-document-request**: Found in dataset-action-cell.tsx
+  - [View in documentation](./dataset-action-cell.tsx_docs.md)
+- **@/interfaces/database/document**: Found in dataset-action-cell.tsx
+  - [View in documentation](./dataset-action-cell.tsx_docs.md)
+- **@/utils/common-util**: Found in dataset-action-cell.tsx
+  - [View in documentation](./dataset-action-cell.tsx_docs.md)
+- **@/utils/date**: Found in dataset-action-cell.tsx
+  - [View in documentation](./dataset-action-cell.tsx_docs.md)
+- **@/utils/file-util**: Found in dataset-action-cell.tsx
+  - [View in documentation](./dataset-action-cell.tsx_docs.md)
+
+### B
+
+- **Button**: Found in dataset-action-cell.tsx
+  - [View in documentation](./dataset-action-cell.tsx_docs.md)
+
+### C
+
+- **ConfirmDeleteDialog**: Found in dataset-action-cell.tsx
+  - [View in documentation](./dataset-action-cell.tsx_docs.md)
+
+### D
+
+- **DatasetActionCell**: Found in dataset-action-cell.tsx
+  - [View in documentation](./dataset-action-cell.tsx_docs.md)
+- **DocumentType**: Found in dataset-action-cell.tsx
+  - [View in documentation](./dataset-action-cell.tsx_docs.md)
+- **Download**: Found in dataset-action-cell.tsx
+  - [View in documentation](./dataset-action-cell.tsx_docs.md)
+
+### E
+
+- **Eye**: Found in dataset-action-cell.tsx
+  - [View in documentation](./dataset-action-cell.tsx_docs.md)
+
+### F
+
+- **Fields**: Found in dataset-action-cell.tsx
+  - [View in documentation](./dataset-action-cell.tsx_docs.md)
+- **FunctionMap**: Found in dataset-action-cell.tsx
+  - [View in documentation](./dataset-action-cell.tsx_docs.md)
+
+### H
+
+- **HoverCard**: Found in dataset-action-cell.tsx
+  - [View in documentation](./dataset-action-cell.tsx_docs.md)
+- **HoverCardContent**: Found in dataset-action-cell.tsx
+  - [View in documentation](./dataset-action-cell.tsx_docs.md)
+- **HoverCardTrigger**: Found in dataset-action-cell.tsx
+  - [View in documentation](./dataset-action-cell.tsx_docs.md)
+
+### I
+
+- **IDocumentInfo**: Found in dataset-action-cell.tsx
+  - [View in documentation](./dataset-action-cell.tsx_docs.md)
+
+### O
+
+- **Object**: Found in dataset-action-cell.tsx
+  - [View in documentation](./dataset-action-cell.tsx_docs.md)
+
+### P
+
+- **PenLine**: Found in dataset-action-cell.tsx
+  - [View in documentation](./dataset-action-cell.tsx_docs.md)
+
+### T
+
+- **Trash2**: Found in dataset-action-cell.tsx
+  - [View in documentation](./dataset-action-cell.tsx_docs.md)
+- **TypeScript**: Found in dataset-action-cell.tsx
+  - [View in documentation](./dataset-action-cell.tsx_docs.md)
+
+### U
+
+- **UseRenameDocumentShowType**: Found in dataset-action-cell.tsx
+  - [View in documentation](./dataset-action-cell.tsx_docs.md)
+
+### V
+
+- **Virtual**: Found in dataset-action-cell.tsx
+  - [View in documentation](./dataset-action-cell.tsx_docs.md)
+
+### H
+
+- **handleRemove**: Found in dataset-action-cell.tsx
+  - [View in documentation](./dataset-action-cell.tsx_docs.md)
+- **handleRename**: Found in dataset-action-cell.tsx
+  - [View in documentation](./dataset-action-cell.tsx_docs.md)
+
+### I
+
+- **isRunning**: Found in dataset-action-cell.tsx
+  - [View in documentation](./dataset-action-cell.tsx_docs.md)
+- **isVirtualDocument**: Found in dataset-action-cell.tsx
+  - [View in documentation](./dataset-action-cell.tsx_docs.md)
+
+### L
+
+- **lucide-react**: Found in dataset-action-cell.tsx
+  - [View in documentation](./dataset-action-cell.tsx_docs.md)
+
+### O
+
+- **onDownloadDocument**: Found in dataset-action-cell.tsx
+  - [View in documentation](./dataset-action-cell.tsx_docs.md)
+
+### R
+
+- **react**: Found in dataset-action-cell.tsx
+  - [View in documentation](./dataset-action-cell.tsx_docs.md)
+
+## Keyword Summary
+
+This file contains 35 unique keywords extracted from the source code,
+including identifiers, function names, class names, and technical terms.
+
+---
+*Generated by RAGFlow Repository Documentation Generator*

@@ -1,0 +1,173 @@
+# File Documentation: web/src/pages/profile-setting/mcp/import-mcp-dialog/import-mcp-form.tsx
+
+## File Metadata
+
+- **Path**: `web/src/pages/profile-setting/mcp/import-mcp-dialog/import-mcp-form.tsx`
+- **Extension**: `.tsx`
+- **Lines**: 73
+- **Characters**: 1,848
+- **Size**: 1,848 bytes
+- **Purpose**: JavaScript/TypeScript - Frontend or backend JavaScript code
+
+## Original Source
+
+```tsx
+'use client';
+
+import { zodResolver } from '@hookform/resolvers/zod';
+import { useForm } from 'react-hook-form';
+import { z } from 'zod';
+
+import { FileUploader } from '@/components/file-uploader';
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from '@/components/ui/form';
+import { FileMimeType, Platform } from '@/constants/common';
+import { IModalProps } from '@/interfaces/common';
+import { TagRenameId } from '@/pages/add-knowledge/constant';
+import { useTranslation } from 'react-i18next';
+
+export function ImportMcpForm({ hideModal, onOk }: IModalProps<any>) {
+  const { t } = useTranslation();
+  const FormSchema = z.object({
+    platform: z
+      .string()
+      .min(1, {
+        message: t('common.namePlaceholder'),
+      })
+      .trim(),
+    fileList: z.array(z.instanceof(File)),
+  });
+
+  const form = useForm<z.infer<typeof FormSchema>>({
+    resolver: zodResolver(FormSchema),
+    defaultValues: { platform: Platform.RAGFlow },
+  });
+
+  async function onSubmit(data: z.infer<typeof FormSchema>) {
+    const ret = await onOk?.(data);
+    if (ret) {
+      hideModal?.();
+    }
+  }
+
+  return (
+    <Form {...form}>
+      <form
+        onSubmit={form.handleSubmit(onSubmit)}
+        className="space-y-6"
+        id={TagRenameId}
+      >
+        <FormField
+          control={form.control}
+          name="fileList"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>{t('common.name')}</FormLabel>
+              <FormControl>
+                <FileUploader
+                  value={field.value}
+                  onValueChange={field.onChange}
+                  accept={{ '*.json': [FileMimeType.Json] }}
+                />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+      </form>
+    </Form>
+  );
+}
+
+```
+
+## High-Level Overview
+
+This file is part of the RAGFlow repository located at `web/src/pages/profile-setting/mcp/import-mcp-dialog/import-mcp-form.tsx`.
+
+Based on the file structure and naming, it appears to be a javascript/typescript - frontend or backend javascript code.
+
+The file contains approximately 73 lines of code and defines various components
+that contribute to the overall functionality of the RAGFlow system.
+
+## Detailed Walkthrough
+
+### Exports (1)
+
+- `ImportMcpForm`: Exported entity
+
+### Functions (2)
+
+- `ImportMcpForm()`: Function definition
+- `onSubmit()`: Function definition
+
+### Imports (9)
+
+- `import { zodResolver } from '@hookform/resolvers/zod';`
+- `import { useForm } from 'react-hook-form';`
+- `import { z } from 'zod';`
+- `import { FileUploader } from '@/components/file-uploader';`
+- `import {`
+- `import { FileMimeType, Platform } from '@/constants/common';`
+- `import { IModalProps } from '@/interfaces/common';`
+- `import { TagRenameId } from '@/pages/add-knowledge/constant';`
+- `import { useTranslation } from 'react-i18next';`
+
+## Code Structure Analysis
+
+- Total lines: 73
+- Blank lines: 7 (9.6%)
+- Comment lines: ~0 (0.0%)
+- Code lines: ~66
+
+
+## Dependencies and Imports
+
+- `@hookform/resolvers/zod`
+- `react-hook-form`
+- `zod`
+- `@/components/file-uploader`
+- `@/constants/common`
+- `@/interfaces/common`
+- `@/pages/add-knowledge/constant`
+- `react-i18next`
+
+## Design & Architecture
+
+This file is located in the `web` directory, specifically within `web/src/pages/profile-setting/mcp/import-mcp-dialog`.
+
+This appears to be a UI component or frontend module.
+
+## Performance & Complexity
+
+- Uses asynchronous patterns for better performance
+
+## Security & Safety Considerations
+
+- No immediate security concerns identified through static analysis
+
+## Testing & Usage Notes
+
+To work with this file:
+1. Understand its dependencies (see Dependencies section)
+2. Review the code structure and main components
+3. Check for existing tests in the test directories
+4. Consider edge cases and error handling
+
+## Related Files
+
+- Other files in `web/src/pages/profile-setting/mcp/import-mcp-dialog/` directory
+- Potential test file: `test_import-mcp-form.tsx`
+
+## Keywords
+
+@/components/file-uploader, @/constants/common, @/interfaces/common, @/pages/add-knowledge/constant, @hookform/resolvers/zod, File, FileMimeType, FileUploader, Form, FormControl, FormField, FormItem, FormLabel, FormMessage, FormSchema, IModalProps, ImportMcpForm, Json, Platform, RAGFlow, TagRenameId, TypeScript, form, hookform, onSubmit, react-hook-form, react-i18next, ret, zod
+
+---
+*Generated by RAGFlow Repository Documentation Generator*

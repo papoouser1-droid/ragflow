@@ -1,0 +1,170 @@
+# File Documentation: web/src/utils/document-util.ts
+
+## File Metadata
+
+- **Path**: `web/src/utils/document-util.ts`
+- **Extension**: `.ts`
+- **Lines**: 64
+- **Characters**: 1,838
+- **Size**: 1,838 bytes
+- **Purpose**: JavaScript/TypeScript - Frontend or backend JavaScript code
+
+## Original Source
+
+```typescript
+import { Images, SupportedPreviewDocumentTypes } from '@/constants/common';
+import { IReferenceChunk } from '@/interfaces/database/chat';
+import { IChunk } from '@/interfaces/database/knowledge';
+import { UploadFile } from 'antd';
+import { get } from 'lodash';
+import { v4 as uuid } from 'uuid';
+
+export const buildChunkHighlights = (
+  selectedChunk: IChunk | IReferenceChunk,
+  size: { width: number; height: number },
+) => {
+  return Array.isArray(selectedChunk?.positions) &&
+    selectedChunk.positions.every((x) => Array.isArray(x))
+    ? selectedChunk?.positions?.map((x) => {
+        const boundingRect = {
+          width: size.width,
+          height: size.height,
+          x1: x[1],
+          x2: x[2],
+          y1: x[3],
+          y2: x[4],
+        };
+        return {
+          id: uuid(),
+          comment: {
+            text: '',
+            emoji: '',
+          },
+          content: {
+            text:
+              get(selectedChunk, 'content_with_weight') ||
+              get(selectedChunk, 'content', ''),
+          },
+          position: {
+            boundingRect: boundingRect,
+            rects: [boundingRect],
+            pageNumber: x[0],
+          },
+        };
+      })
+    : [];
+};
+
+export const isFileUploadDone = (file: UploadFile) => file.status === 'done';
+
+export const getExtension = (name: string) =>
+  name?.slice(name.lastIndexOf('.') + 1).toLowerCase() ?? '';
+
+export const isPdf = (name: string) => {
+  return getExtension(name) === 'pdf';
+};
+
+export const getUnSupportedFilesCount = (message: string) => {
+  return message.split('\n').length;
+};
+
+export const isSupportedPreviewDocumentType = (fileExtension: string) => {
+  return SupportedPreviewDocumentTypes.includes(fileExtension);
+};
+
+export const isImage = (image: string) => {
+  return [...Images, 'svg'].some((x) => x === image);
+};
+
+```
+
+## High-Level Overview
+
+This file is part of the RAGFlow repository located at `web/src/utils/document-util.ts`.
+
+Based on the file structure and naming, it appears to be a javascript/typescript - frontend or backend javascript code.
+
+The file contains approximately 64 lines of code and defines various components
+that contribute to the overall functionality of the RAGFlow system.
+
+## Detailed Walkthrough
+
+### Exports (7)
+
+- `buildChunkHighlights`: Exported entity
+- `isFileUploadDone`: Exported entity
+- `getExtension`: Exported entity
+- `isPdf`: Exported entity
+- `getUnSupportedFilesCount`: Exported entity
+- `isSupportedPreviewDocumentType`: Exported entity
+- `isImage`: Exported entity
+
+### Functions (7)
+
+- `buildChunkHighlights()`: Function definition
+- `isFileUploadDone()`: Function definition
+- `getExtension()`: Function definition
+- `isPdf()`: Function definition
+- `getUnSupportedFilesCount()`: Function definition
+- `isSupportedPreviewDocumentType()`: Function definition
+- `isImage()`: Function definition
+
+### Imports (6)
+
+- `import { Images, SupportedPreviewDocumentTypes } from '@/constants/common';`
+- `import { IReferenceChunk } from '@/interfaces/database/chat';`
+- `import { IChunk } from '@/interfaces/database/knowledge';`
+- `import { UploadFile } from 'antd';`
+- `import { get } from 'lodash';`
+- `import { v4 as uuid } from 'uuid';`
+
+## Code Structure Analysis
+
+- Total lines: 64
+- Blank lines: 8 (12.5%)
+- Comment lines: ~0 (0.0%)
+- Code lines: ~56
+
+
+## Dependencies and Imports
+
+- `@/constants/common`
+- `@/interfaces/database/chat`
+- `@/interfaces/database/knowledge`
+- `antd`
+- `lodash`
+- `uuid`
+
+## Design & Architecture
+
+This file is located in the `web` directory, specifically within `web/src/utils`.
+
+This appears to be a UI component or frontend module.
+
+## Performance & Complexity
+
+- No specific performance concerns identified through static analysis
+
+## Security & Safety Considerations
+
+- No immediate security concerns identified through static analysis
+
+## Testing & Usage Notes
+
+To work with this file:
+1. Understand its dependencies (see Dependencies section)
+2. Review the code structure and main components
+3. Check for existing tests in the test directories
+4. Consider edge cases and error handling
+
+## Related Files
+
+- Other files in `web/src/utils/` directory
+- Potential test file: `test_document-util.ts`
+
+## Keywords
+
+@/constants/common, @/interfaces/database/chat, @/interfaces/database/knowledge, Array, IChunk, IReferenceChunk, Images, SupportedPreviewDocumentTypes, TypeScript, UploadFile, antd, boundingRect, buildChunkHighlights, getExtension, getUnSupportedFilesCount, isFileUploadDone, isImage, isPdf, isSupportedPreviewDocumentType, lodash, uuid
+
+---
+*Generated by RAGFlow Repository Documentation Generator*

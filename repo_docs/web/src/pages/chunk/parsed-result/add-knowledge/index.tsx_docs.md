@@ -1,0 +1,173 @@
+# File Documentation: web/src/pages/chunk/parsed-result/add-knowledge/index.tsx
+
+## File Metadata
+
+- **Path**: `web/src/pages/chunk/parsed-result/add-knowledge/index.tsx`
+- **Extension**: `.tsx`
+- **Lines**: 75
+- **Characters**: 2,037
+- **Size**: 2,037 bytes
+- **Purpose**: JavaScript/TypeScript - Frontend or backend JavaScript code
+
+## Original Source
+
+```tsx
+import { useKnowledgeBaseId } from '@/hooks/knowledge-hooks';
+import {
+  useNavigateWithFromState,
+  useSecondPathName,
+  useThirdPathName,
+} from '@/hooks/route-hook';
+import { Breadcrumb } from 'antd';
+import { ItemType } from 'antd/es/breadcrumb/Breadcrumb';
+import { useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
+import { Link, Outlet } from 'umi';
+import Siderbar from './components/knowledge-sidebar';
+import { KnowledgeDatasetRouteKey, KnowledgeRouteKey } from './constant';
+import styles from './index.less';
+
+const KnowledgeAdding = () => {
+  const knowledgeBaseId = useKnowledgeBaseId();
+
+  const { t } = useTranslation();
+  const activeKey: KnowledgeRouteKey =
+    (useSecondPathName() as KnowledgeRouteKey) || KnowledgeRouteKey.Dataset;
+
+  const datasetActiveKey: KnowledgeDatasetRouteKey =
+    useThirdPathName() as KnowledgeDatasetRouteKey;
+
+  const gotoList = useNavigateWithFromState();
+
+  const breadcrumbItems: ItemType[] = useMemo(() => {
+    const items: ItemType[] = [
+      {
+        title: (
+          <a onClick={() => gotoList('/knowledge')}>
+            {t('header.knowledgeBase')}
+          </a>
+        ),
+      },
+      {
+        title: datasetActiveKey ? (
+          <Link
+            to={`/knowledge/${KnowledgeRouteKey.Dataset}?id=${knowledgeBaseId}`}
+          >
+            {t(`knowledgeDetails.${activeKey}`)}
+          </Link>
+        ) : (
+          t(`knowledgeDetails.${activeKey}`)
+        ),
+      },
+    ];
+
+    if (datasetActiveKey) {
+      items.push({
+        title: t(`knowledgeDetails.${datasetActiveKey}`),
+      });
+    }
+
+    return items;
+  }, [activeKey, datasetActiveKey, gotoList, knowledgeBaseId, t]);
+
+  return (
+    <>
+      <div className={styles.container}>
+        <Siderbar></Siderbar>
+        <div className={styles.contentWrapper}>
+          <Breadcrumb items={breadcrumbItems} />
+          <div className={styles.content}>
+            <Outlet></Outlet>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default KnowledgeAdding;
+
+```
+
+## High-Level Overview
+
+This file is part of the RAGFlow repository located at `web/src/pages/chunk/parsed-result/add-knowledge/index.tsx`.
+
+Based on the file structure and naming, it appears to be a javascript/typescript - frontend or backend javascript code.
+
+The file contains approximately 75 lines of code and defines various components
+that contribute to the overall functionality of the RAGFlow system.
+
+## Detailed Walkthrough
+
+
+### Functions (1)
+
+- `KnowledgeAdding()`: Function definition
+
+### Imports (10)
+
+- `import { useKnowledgeBaseId } from '@/hooks/knowledge-hooks';`
+- `import {`
+- `import { Breadcrumb } from 'antd';`
+- `import { ItemType } from 'antd/es/breadcrumb/Breadcrumb';`
+- `import { useMemo } from 'react';`
+- `import { useTranslation } from 'react-i18next';`
+- `import { Link, Outlet } from 'umi';`
+- `import Siderbar from './components/knowledge-sidebar';`
+- `import { KnowledgeDatasetRouteKey, KnowledgeRouteKey } from './constant';`
+- `import styles from './index.less';`
+
+## Code Structure Analysis
+
+- Total lines: 75
+- Blank lines: 10 (13.3%)
+- Comment lines: ~0 (0.0%)
+- Code lines: ~65
+
+
+## Dependencies and Imports
+
+- `@/hooks/knowledge-hooks`
+- `antd`
+- `antd/es/breadcrumb/Breadcrumb`
+- `react`
+- `react-i18next`
+- `umi`
+- `./components/knowledge-sidebar`
+- `./constant`
+- `./index.less`
+
+## Design & Architecture
+
+This file is located in the `web` directory, specifically within `web/src/pages/chunk/parsed-result/add-knowledge`.
+
+This appears to be a UI component or frontend module.
+
+## Performance & Complexity
+
+- No specific performance concerns identified through static analysis
+
+## Security & Safety Considerations
+
+- **File Operations**: Validate file paths to prevent directory traversal
+
+## Testing & Usage Notes
+
+To work with this file:
+1. Understand its dependencies (see Dependencies section)
+2. Review the code structure and main components
+3. Check for existing tests in the test directories
+4. Consider edge cases and error handling
+
+## Related Files
+
+- Other files in `web/src/pages/chunk/parsed-result/add-knowledge/` directory
+- Potential test file: `test_index.tsx`
+
+## Keywords
+
+./components/knowledge-sidebar, ./constant, ./index.less, @/hooks/knowledge-hooks, Breadcrumb, Dataset, ItemType, KnowledgeAdding, KnowledgeDatasetRouteKey, KnowledgeRouteKey, Link, Outlet, Siderbar, TypeScript, activeKey, antd, antd/es/breadcrumb/Breadcrumb, breadcrumbItems, datasetActiveKey, gotoList, items, knowledgeBaseId, react, react-i18next, umi
+
+---
+*Generated by RAGFlow Repository Documentation Generator*

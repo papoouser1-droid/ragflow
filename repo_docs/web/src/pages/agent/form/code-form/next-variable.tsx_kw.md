@@ -1,0 +1,150 @@
+# Keyword Map: web/src/pages/agent/form/code-form/next-variable.tsx
+
+## File Path and Links
+
+- **Original File**: [web/src/pages/agent/form/code-form/next-variable.tsx](../../../../../../../web/src/pages/agent/form/code-form/next-variable.tsx)
+- **Documentation**: [next-variable.tsx_docs.md](./next-variable.tsx_docs.md)
+- **Repository Root**: [../../../../../../../](../../../../../../../)
+
+## Keywords (39 total)
+
+
+### .
+
+- **../../hooks/use-get-begin-query**: Found in next-variable.tsx
+  - [View in documentation](./next-variable.tsx_docs.md)
+
+### @
+
+- **@/components/form-container**: Found in next-variable.tsx
+  - [View in documentation](./next-variable.tsx_docs.md)
+- **@/components/originui/select-with-search**: Found in next-variable.tsx
+  - [View in documentation](./next-variable.tsx_docs.md)
+- **@/components/ui/button**: Found in next-variable.tsx
+  - [View in documentation](./next-variable.tsx_docs.md)
+- **@/components/ui/input**: Found in next-variable.tsx
+  - [View in documentation](./next-variable.tsx_docs.md)
+- **@/components/ui/select**: Found in next-variable.tsx
+  - [View in documentation](./next-variable.tsx_docs.md)
+- **@/components/ui/separator**: Found in next-variable.tsx
+  - [View in documentation](./next-variable.tsx_docs.md)
+- **@/interfaces/database/flow**: Found in next-variable.tsx
+  - [View in documentation](./next-variable.tsx_docs.md)
+
+### A
+
+- **Array**: Found in next-variable.tsx
+  - [View in documentation](./next-variable.tsx_docs.md)
+
+### B
+
+- **BlockButton**: Found in next-variable.tsx
+  - [View in documentation](./next-variable.tsx_docs.md)
+- **BlurInput**: Found in next-variable.tsx
+  - [View in documentation](./next-variable.tsx_docs.md)
+- **Boolean**: Found in next-variable.tsx
+  - [View in documentation](./next-variable.tsx_docs.md)
+- **Button**: Found in next-variable.tsx
+  - [View in documentation](./next-variable.tsx_docs.md)
+
+### D
+
+- **DynamicInputVariable**: Found in next-variable.tsx
+  - [View in documentation](./next-variable.tsx_docs.md)
+- **DynamicVariableForm**: Found in next-variable.tsx
+  - [View in documentation](./next-variable.tsx_docs.md)
+
+### F
+
+- **FormContainer**: Found in next-variable.tsx
+  - [View in documentation](./next-variable.tsx_docs.md)
+- **FormControl**: Found in next-variable.tsx
+  - [View in documentation](./next-variable.tsx_docs.md)
+- **FormField**: Found in next-variable.tsx
+  - [View in documentation](./next-variable.tsx_docs.md)
+- **FormItem**: Found in next-variable.tsx
+  - [View in documentation](./next-variable.tsx_docs.md)
+- **FormMessage**: Found in next-variable.tsx
+  - [View in documentation](./next-variable.tsx_docs.md)
+
+### I
+
+- **IProps**: Found in next-variable.tsx
+  - [View in documentation](./next-variable.tsx_docs.md)
+
+### N
+
+- **Number**: Found in next-variable.tsx
+  - [View in documentation](./next-variable.tsx_docs.md)
+
+### O
+
+- **Object**: Found in next-variable.tsx
+  - [View in documentation](./next-variable.tsx_docs.md)
+
+### R
+
+- **RAGFlowNodeType**: Found in next-variable.tsx
+  - [View in documentation](./next-variable.tsx_docs.md)
+- **RAGFlowSelect**: Found in next-variable.tsx
+  - [View in documentation](./next-variable.tsx_docs.md)
+- **ReactNode**: Found in next-variable.tsx
+  - [View in documentation](./next-variable.tsx_docs.md)
+
+### S
+
+- **SelectWithSearch**: Found in next-variable.tsx
+  - [View in documentation](./next-variable.tsx_docs.md)
+- **Separator**: Found in next-variable.tsx
+  - [View in documentation](./next-variable.tsx_docs.md)
+- **String**: Found in next-variable.tsx
+  - [View in documentation](./next-variable.tsx_docs.md)
+
+### T
+
+- **TypeOptions**: Found in next-variable.tsx
+  - [View in documentation](./next-variable.tsx_docs.md)
+- **TypeScript**: Found in next-variable.tsx
+  - [View in documentation](./next-variable.tsx_docs.md)
+
+### V
+
+- **VariableTitle**: Found in next-variable.tsx
+  - [View in documentation](./next-variable.tsx_docs.md)
+
+### F
+
+- **form**: Found in next-variable.tsx
+  - [View in documentation](./next-variable.tsx_docs.md)
+
+### L
+
+- **lucide-react**: Found in next-variable.tsx
+  - [View in documentation](./next-variable.tsx_docs.md)
+
+### N
+
+- **nextOptions**: Found in next-variable.tsx
+  - [View in documentation](./next-variable.tsx_docs.md)
+
+### R
+
+- **react**: Found in next-variable.tsx
+  - [View in documentation](./next-variable.tsx_docs.md)
+- **react-hook-form**: Found in next-variable.tsx
+  - [View in documentation](./next-variable.tsx_docs.md)
+- **react-i18next**: Found in next-variable.tsx
+  - [View in documentation](./next-variable.tsx_docs.md)
+
+### T
+
+- **typeField**: Found in next-variable.tsx
+  - [View in documentation](./next-variable.tsx_docs.md)
+
+## Keyword Summary
+
+This file contains 39 unique keywords extracted from the source code,
+including identifiers, function names, class names, and technical terms.
+
+---
+*Generated by RAGFlow Repository Documentation Generator*

@@ -1,0 +1,160 @@
+# File Documentation: web/src/pages/next-search/document-preview-modal/index.tsx
+
+## File Metadata
+
+- **Path**: `web/src/pages/next-search/document-preview-modal/index.tsx`
+- **Extension**: `.tsx`
+- **Lines**: 68
+- **Characters**: 2,110
+- **Size**: 2,110 bytes
+- **Purpose**: JavaScript/TypeScript - Frontend or backend JavaScript code
+
+## Original Source
+
+```tsx
+import { FileIcon } from '@/components/icon-font';
+import { Modal } from '@/components/ui/modal/modal';
+import {
+  useGetChunkHighlights,
+  useGetDocumentUrl,
+} from '@/hooks/document-hooks';
+import { IModalProps } from '@/interfaces/common';
+import { IReferenceChunk } from '@/interfaces/database/chat';
+import { IChunk } from '@/interfaces/database/knowledge';
+import DocumentPreview from '@/pages/chunk/parsed-result/add-knowledge/components/knowledge-chunk/components/document-preview';
+import { useEffect, useState } from 'react';
+
+interface IProps extends IModalProps<any> {
+  documentId: string;
+  chunk: IChunk &
+    IReferenceChunk & { docnm_kwd: string; document_name: string };
+}
+function getFileExtensionRegex(filename: string): string {
+  const match = filename.match(/\.([^.]+)$/);
+  return match ? match[1].toLowerCase() : '';
+}
+const PdfDrawer = ({
+  visible = false,
+  hideModal,
+  documentId,
+  chunk,
+}: IProps) => {
+  const getDocumentUrl = useGetDocumentUrl(documentId);
+  const { highlights, setWidthAndHeight } = useGetChunkHighlights(chunk);
+  // const ref = useRef<(highlight: IHighlight) => void>(() => {});
+  // const [loaded, setLoaded] = useState(false);
+  const url = getDocumentUrl();
+
+  const [fileType, setFileType] = useState('');
+
+  useEffect(() => {
+    if (chunk.docnm_kwd || chunk.document_name) {
+      const type = getFileExtensionRegex(
+        chunk.docnm_kwd || chunk.document_name,
+      );
+      setFileType(type);
+    }
+  }, [chunk.docnm_kwd, chunk.document_name]);
+  return (
+    <Modal
+      title={
+        <div className="flex items-center gap-2">
+          <FileIcon name={chunk.docnm_kwd || chunk.document_name}></FileIcon>
+          {chunk.docnm_kwd || chunk.document_name}
+        </div>
+      }
+      onCancel={hideModal}
+      open={visible}
+      showfooter={false}
+    >
+      <DocumentPreview
+        className={'!h-[calc(100dvh-300px)] overflow-auto'}
+        fileType={fileType}
+        highlights={highlights}
+        setWidthAndHeight={setWidthAndHeight}
+        url={url}
+      ></DocumentPreview>
+    </Modal>
+  );
+};
+
+export default PdfDrawer;
+
+```
+
+## High-Level Overview
+
+  // const ref = useRef<(highlight: IHighlight) => void>(() => {});
+  // const [loaded, setLoaded] = useState(false);
+
+## Detailed Walkthrough
+
+
+### Functions (3)
+
+- `getFileExtensionRegex()`: Function definition
+- `PdfDrawer()`: Function definition
+- `ref()`: Function definition
+
+### Imports (8)
+
+- `import { FileIcon } from '@/components/icon-font';`
+- `import { Modal } from '@/components/ui/modal/modal';`
+- `import {`
+- `import { IModalProps } from '@/interfaces/common';`
+- `import { IReferenceChunk } from '@/interfaces/database/chat';`
+- `import { IChunk } from '@/interfaces/database/knowledge';`
+- `import DocumentPreview from '@/pages/chunk/parsed-result/add-knowledge/components/knowledge-chunk/components/document-preview';`
+- `import { useEffect, useState } from 'react';`
+
+## Code Structure Analysis
+
+- Total lines: 68
+- Blank lines: 5 (7.4%)
+- Comment lines: ~2 (2.9%)
+- Code lines: ~61
+
+
+## Dependencies and Imports
+
+- `@/components/icon-font`
+- `@/components/ui/modal/modal`
+- `@/interfaces/common`
+- `@/interfaces/database/chat`
+- `@/interfaces/database/knowledge`
+- `@/pages/chunk/parsed-result/add-knowledge/components/knowledge-chunk/components/document-preview`
+- `react`
+
+## Design & Architecture
+
+This file is located in the `web` directory, specifically within `web/src/pages/next-search/document-preview-modal`.
+
+This appears to be a UI component or frontend module.
+
+## Performance & Complexity
+
+- No specific performance concerns identified through static analysis
+
+## Security & Safety Considerations
+
+- No immediate security concerns identified through static analysis
+
+## Testing & Usage Notes
+
+To work with this file:
+1. Understand its dependencies (see Dependencies section)
+2. Review the code structure and main components
+3. Check for existing tests in the test directories
+4. Consider edge cases and error handling
+
+## Related Files
+
+- Other files in `web/src/pages/next-search/document-preview-modal/` directory
+- Potential test file: `test_index.tsx`
+
+## Keywords
+
+@/components/icon-font, @/components/ui/modal/modal, @/interfaces/common, @/interfaces/database/chat, @/interfaces/database/knowledge, @/pages/chunk/parsed-result/add-knowledge/components/knowledge-chunk/components/document-preview, DocumentPreview, FileIcon, IChunk, IHighlight, IModalProps, IProps, IReferenceChunk, Modal, PdfDrawer, TypeScript, getDocumentUrl, getFileExtensionRegex, match, react, ref, type, url
+
+---
+*Generated by RAGFlow Repository Documentation Generator*

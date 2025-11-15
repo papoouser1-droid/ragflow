@@ -1,0 +1,152 @@
+# Keyword Map: web/src/components/list-filter-bar/filter-popover.tsx
+
+## File Path and Links
+
+- **Original File**: [web/src/components/list-filter-bar/filter-popover.tsx](../../../../../web/src/components/list-filter-bar/filter-popover.tsx)
+- **Documentation**: [filter-popover.tsx_docs.md](./filter-popover.tsx_docs.md)
+- **Repository Root**: [../../../../../](../../../../../)
+
+## Keywords (40 total)
+
+
+### .
+
+- **./interface**: Found in filter-popover.tsx
+  - [View in documentation](./filter-popover.tsx_docs.md)
+
+### @
+
+- **@/components/ui/button**: Found in filter-popover.tsx
+  - [View in documentation](./filter-popover.tsx_docs.md)
+- **@/components/ui/checkbox**: Found in filter-popover.tsx
+  - [View in documentation](./filter-popover.tsx_docs.md)
+- **@hookform/resolvers/zod**: Found in filter-popover.tsx
+  - [View in documentation](./filter-popover.tsx_docs.md)
+
+### A
+
+- **Array**: Found in filter-popover.tsx
+  - [View in documentation](./filter-popover.tsx_docs.md)
+
+### B
+
+- **Button**: Found in filter-popover.tsx
+  - [View in documentation](./filter-popover.tsx_docs.md)
+
+### C
+
+- **Checkbox**: Found in filter-popover.tsx
+  - [View in documentation](./filter-popover.tsx_docs.md)
+- **CheckboxFormMultiple**: Found in filter-popover.tsx
+  - [View in documentation](./filter-popover.tsx_docs.md)
+- **CheckboxFormMultipleProps**: Found in filter-popover.tsx
+  - [View in documentation](./filter-popover.tsx_docs.md)
+
+### F
+
+- **FilterChange**: Found in filter-popover.tsx
+  - [View in documentation](./filter-popover.tsx_docs.md)
+- **FilterCollection**: Found in filter-popover.tsx
+  - [View in documentation](./filter-popover.tsx_docs.md)
+- **FilterPopover**: Found in filter-popover.tsx
+  - [View in documentation](./filter-popover.tsx_docs.md)
+- **FilterValue**: Found in filter-popover.tsx
+  - [View in documentation](./filter-popover.tsx_docs.md)
+- **Form**: Found in filter-popover.tsx
+  - [View in documentation](./filter-popover.tsx_docs.md)
+- **FormControl**: Found in filter-popover.tsx
+  - [View in documentation](./filter-popover.tsx_docs.md)
+- **FormField**: Found in filter-popover.tsx
+  - [View in documentation](./filter-popover.tsx_docs.md)
+- **FormItem**: Found in filter-popover.tsx
+  - [View in documentation](./filter-popover.tsx_docs.md)
+- **FormLabel**: Found in filter-popover.tsx
+  - [View in documentation](./filter-popover.tsx_docs.md)
+- **FormMessage**: Found in filter-popover.tsx
+  - [View in documentation](./filter-popover.tsx_docs.md)
+- **FormSchema**: Found in filter-popover.tsx
+  - [View in documentation](./filter-popover.tsx_docs.md)
+
+### O
+
+- **Omit**: Found in filter-popover.tsx
+  - [View in documentation](./filter-popover.tsx_docs.md)
+
+### P
+
+- **Popover**: Found in filter-popover.tsx
+  - [View in documentation](./filter-popover.tsx_docs.md)
+- **PopoverContent**: Found in filter-popover.tsx
+  - [View in documentation](./filter-popover.tsx_docs.md)
+- **PopoverTrigger**: Found in filter-popover.tsx
+  - [View in documentation](./filter-popover.tsx_docs.md)
+- **PropsWithChildren**: Found in filter-popover.tsx
+  - [View in documentation](./filter-popover.tsx_docs.md)
+
+### R
+
+- **Record**: Found in filter-popover.tsx
+  - [View in documentation](./filter-popover.tsx_docs.md)
+
+### T
+
+- **TypeScript**: Found in filter-popover.tsx
+  - [View in documentation](./filter-popover.tsx_docs.md)
+
+### Y
+
+- **You**: Found in filter-popover.tsx
+  - [View in documentation](./filter-popover.tsx_docs.md)
+
+### Z
+
+- **ZodArray**: Found in filter-popover.tsx
+  - [View in documentation](./filter-popover.tsx_docs.md)
+- **ZodString**: Found in filter-popover.tsx
+  - [View in documentation](./filter-popover.tsx_docs.md)
+
+### F
+
+- **fieldsDict**: Found in filter-popover.tsx
+  - [View in documentation](./filter-popover.tsx_docs.md)
+- **form**: Found in filter-popover.tsx
+  - [View in documentation](./filter-popover.tsx_docs.md)
+
+### H
+
+- **hookform**: Found in filter-popover.tsx
+  - [View in documentation](./filter-popover.tsx_docs.md)
+
+### I
+
+- **i18next**: Found in filter-popover.tsx
+  - [View in documentation](./filter-popover.tsx_docs.md)
+
+### O
+
+- **onOpenChangeFun**: Found in filter-popover.tsx
+  - [View in documentation](./filter-popover.tsx_docs.md)
+- **onReset**: Found in filter-popover.tsx
+  - [View in documentation](./filter-popover.tsx_docs.md)
+- **onSubmit**: Found in filter-popover.tsx
+  - [View in documentation](./filter-popover.tsx_docs.md)
+
+### R
+
+- **react**: Found in filter-popover.tsx
+  - [View in documentation](./filter-popover.tsx_docs.md)
+- **react-hook-form**: Found in filter-popover.tsx
+  - [View in documentation](./filter-popover.tsx_docs.md)
+
+### Z
+
+- **zod**: Found in filter-popover.tsx
+  - [View in documentation](./filter-popover.tsx_docs.md)
+
+## Keyword Summary
+
+This file contains 40 unique keywords extracted from the source code,
+including identifiers, function names, class names, and technical terms.
+
+---
+*Generated by RAGFlow Repository Documentation Generator*

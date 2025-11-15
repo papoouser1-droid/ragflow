@@ -1,0 +1,188 @@
+# File Documentation: web/src/pages/dataset/dataset/parsing-card.tsx
+
+## File Metadata
+
+- **Path**: `web/src/pages/dataset/dataset/parsing-card.tsx`
+- **Extension**: `.tsx`
+- **Lines**: 96
+- **Characters**: 2,465
+- **Size**: 2,465 bytes
+- **Purpose**: JavaScript/TypeScript - Frontend or backend JavaScript code
+
+## Original Source
+
+```tsx
+import { Button } from '@/components/ui/button';
+import { IDocumentInfo } from '@/interfaces/database/document';
+import { useTranslation } from 'react-i18next';
+import reactStringReplace from 'react-string-replace';
+import { RunningStatus, RunningStatusMap } from './constant';
+
+interface IProps {
+  record: IDocumentInfo;
+  handleShowLog?: (record: IDocumentInfo) => void;
+}
+
+function Dot({ run }: { run: RunningStatus }) {
+  const runningStatus = RunningStatusMap[run];
+  return (
+    <span
+      className={'size-1 inline-block rounded'}
+      style={{ backgroundColor: runningStatus.color }}
+    ></span>
+  );
+}
+
+export const PopoverContent = ({ record }: IProps) => {
+  const { t } = useTranslation();
+  const label = t(`knowledgeDetails.runningStatus${record.run}`);
+
+  const replaceText = (text: string) => {
+    // Remove duplicate \n
+    const nextText = text.replace(/(\n)\1+/g, '$1');
+
+    const replacedText = reactStringReplace(
+      nextText,
+      /(\[ERROR\].+\s)/g,
+      (match, i) => {
+        return (
+          <span key={i} className={'text-red-600'}>
+            {match}
+          </span>
+        );
+      },
+    );
+
+    return replacedText;
+  };
+
+  const items = [
+    {
+      key: 'process_begin_at',
+      label: t('knowledgeDetails.processBeginAt'),
+      children: record.process_begin_at,
+    },
+    {
+      key: 'knowledgeDetails.process_duration',
+      label: t('processDuration'),
+      children: `${record.process_duration.toFixed(2)} s`,
+    },
+    {
+      key: 'progress_msg',
+      label: t('knowledgeDetails.progressMsg'),
+      children: replaceText(record.progress_msg.trim()),
+    },
+  ];
+
+  return (
+    <section>
+      <div className="flex gap-2 items-center pb-2">
+        <Dot run={record.run}></Dot> {label}
+      </div>
+      <div className="flex flex-col max-h-[50vh] overflow-auto">
+        {items.map((x, idx) => {
+          return (
+            <div key={x.key} className={idx < 2 ? 'flex gap-2' : ''}>
+              <b>{x.label}:</b>
+              <div className={'w-full  whitespace-pre-line text-wrap '}>
+                {x.children}
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </section>
+  );
+};
+
+export function ParsingCard({ record, handleShowLog }: IProps) {
+  return (
+    <Button
+      variant={'transparent'}
+      className="border-none"
+      size={'sm'}
+      onClick={() => handleShowLog?.(record)}
+    >
+      <Dot run={record.run}></Dot>
+    </Button>
+  );
+}
+
+```
+
+## High-Level Overview
+
+    // Remove duplicate \n
+
+## Detailed Walkthrough
+
+### Exports (2)
+
+- `PopoverContent`: Exported entity
+- `ParsingCard`: Exported entity
+
+### Functions (5)
+
+- `Dot()`: Function definition
+- `PopoverContent()`: Function definition
+- `replaceText()`: Function definition
+- `replacedText()`: Function definition
+- `ParsingCard()`: Function definition
+
+### Imports (5)
+
+- `import { Button } from '@/components/ui/button';`
+- `import { IDocumentInfo } from '@/interfaces/database/document';`
+- `import { useTranslation } from 'react-i18next';`
+- `import reactStringReplace from 'react-string-replace';`
+- `import { RunningStatus, RunningStatusMap } from './constant';`
+
+## Code Structure Analysis
+
+- Total lines: 96
+- Blank lines: 10 (10.4%)
+- Comment lines: ~1 (1.0%)
+- Code lines: ~85
+
+
+## Dependencies and Imports
+
+- `@/components/ui/button`
+- `@/interfaces/database/document`
+- `react-i18next`
+- `react-string-replace`
+- `./constant`
+
+## Design & Architecture
+
+This file is located in the `web` directory, specifically within `web/src/pages/dataset/dataset`.
+
+This appears to be a UI component or frontend module.
+
+## Performance & Complexity
+
+- No specific performance concerns identified through static analysis
+
+## Security & Safety Considerations
+
+- No immediate security concerns identified through static analysis
+
+## Testing & Usage Notes
+
+To work with this file:
+1. Understand its dependencies (see Dependencies section)
+2. Review the code structure and main components
+3. Check for existing tests in the test directories
+4. Consider edge cases and error handling
+
+## Related Files
+
+- Other files in `web/src/pages/dataset/dataset/` directory
+- Potential test file: `test_parsing-card.tsx`
+
+## Keywords
+
+./constant, @/components/ui/button, @/interfaces/database/document, Button, Dot, ERROR, IDocumentInfo, IProps, ParsingCard, PopoverContent, Remove, RunningStatus, RunningStatusMap, TypeScript, items, label, nextText, react-i18next, react-string-replace, replaceText, replacedText, runningStatus
+
+---
+*Generated by RAGFlow Repository Documentation Generator*

@@ -1,0 +1,186 @@
+# File Documentation: web/src/stories/spin.stories.ts
+
+## File Metadata
+
+- **Path**: `web/src/stories/spin.stories.ts`
+- **Extension**: `.ts`
+- **Lines**: 99
+- **Characters**: 2,488
+- **Size**: 2,488 bytes
+- **Purpose**: JavaScript/TypeScript - Frontend or backend JavaScript code
+
+## Original Source
+
+```typescript
+import type { Meta, StoryObj } from '@storybook/react-webpack5';
+
+import { Spin } from '@/components/ui/spin';
+
+// More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
+const meta = {
+  title: 'Example/Spin',
+  component: Spin,
+  parameters: {
+    // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
+    layout: 'centered',
+    docs: {
+      description: {
+        component: `
+## Spin Component
+
+Spin is a loading spinner component that can be used to indicate loading states. It supports different sizes and can wrap other content to create loading overlays.
+
+### Import Path
+\`\`\`typescript
+import { Spin } from '@/components/ui/spin';
+\`\`\`
+
+### Basic Usage
+\`\`\`tsx
+import { Spin } from '@/components/ui/spin';
+
+function MyComponent() {
+  return (
+    <Spin spinning={true}>
+      <div>Your content here</div>
+    </Spin>
+  );
+}
+\`\`\`
+
+### Features
+- Three different sizes: small, default, and large
+- Can wrap content to create loading overlays
+- Smooth animation with CSS transitions
+- Customizable styling with className prop
+- Built with Tailwind CSS
+        `,
+      },
+    },
+  },
+  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
+  tags: ['autodocs'],
+  // More on argTypes: https://storybook.js.org/docs/api/argtypes
+  argTypes: {
+    spinning: {
+      description: 'Whether the spinner is active',
+      control: { type: 'boolean' },
+    },
+    size: {
+      description: 'Size of the spinner',
+      control: { type: 'select' },
+      options: ['small', 'default', 'large'],
+    },
+    className: {
+      description: 'Additional CSS classes for styling',
+      control: { type: 'text' },
+    },
+    children: {
+      description: 'Content to be wrapped by the spinner',
+      control: false,
+    },
+  },
+  // Use `fn` to spy on any callbacks
+  args: {},
+} satisfies Meta<typeof Spin>;
+
+export default meta;
+type Story = StoryObj<typeof meta>;
+
+// More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
+export const Default: Story = {
+  args: {
+    spinning: true,
+    size: 'default',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: `
+### Default Spinner
+
+Shows the basic spinner with default size and active state.
+
+\`\`\`tsx
+<Spin spinning={true} size="default" />
+\`\`\`
+        `,
+      },
+    },
+  },
+  tags: ['!dev'],
+};
+
+```
+
+## High-Level Overview
+
+// More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
+    // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
+## Spin Component
+
+## Detailed Walkthrough
+
+### Exports (1)
+
+- `Default`: Exported entity
+
+### Functions (1)
+
+- `MyComponent()`: Function definition
+
+### Imports (4)
+
+- `import type { Meta, StoryObj } from '@storybook/react-webpack5';`
+- `import { Spin } from '@/components/ui/spin';`
+- `import { Spin } from '@/components/ui/spin';`
+- `import { Spin } from '@/components/ui/spin';`
+
+## Code Structure Analysis
+
+- Total lines: 99
+- Blank lines: 12 (12.1%)
+- Comment lines: ~11 (11.1%)
+- Code lines: ~76
+
+
+## Dependencies and Imports
+
+- `@storybook/react-webpack5`
+- `@/components/ui/spin`
+- `@/components/ui/spin`
+- `@/components/ui/spin`
+
+## Design & Architecture
+
+This file is located in the `web` directory, specifically within `web/src/stories`.
+
+This appears to be a UI component or frontend module.
+
+## Performance & Complexity
+
+- Contains 1 loop(s) - consider algorithmic complexity
+
+## Security & Safety Considerations
+
+- No immediate security concerns identified through static analysis
+
+## Testing & Usage Notes
+
+To work with this file:
+1. Understand its dependencies (see Dependencies section)
+2. Review the code structure and main components
+3. Check for existing tests in the test directories
+4. Consider edge cases and error handling
+
+## Related Files
+
+- Other files in `web/src/stories/` directory
+- Potential test file: `test_spin.stories.ts`
+
+## Keywords
+
+@/components/ui/spin, @storybook/react-webpack5, Additional, Autodocs, Basic, Built, CSS, Can, Canvas, Component, Content, Customizable, Default, Example, Features, Import, Meta, More, MyComponent, Optional, Path, Shows, Size, Smooth, Spin, Spinner, Story, StoryObj, Tailwind, This, Three, TypeScript, Usage, Use, Whether, Your, meta, storybook
+
+---
+*Generated by RAGFlow Repository Documentation Generator*

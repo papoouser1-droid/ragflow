@@ -1,0 +1,164 @@
+# File Documentation: web/src/stories/confirm-delete-dialog.stories.tsx
+
+## File Metadata
+
+- **Path**: `web/src/stories/confirm-delete-dialog.stories.tsx`
+- **Extension**: `.tsx`
+- **Lines**: 76
+- **Characters**: 2,369
+- **Size**: 2,369 bytes
+- **Purpose**: JavaScript/TypeScript - Frontend or backend JavaScript code
+
+## Original Source
+
+```tsx
+import type { Meta, StoryObj } from '@storybook/react-webpack5';
+
+import { fn } from 'storybook/test';
+
+import { ConfirmDeleteDialog } from '@/components/confirm-delete-dialog';
+import { Button } from '@/components/ui/button';
+
+// More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
+const meta = {
+  title: 'Example/ConfirmDeleteDialog',
+  component: ConfirmDeleteDialog,
+  parameters: {
+    // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
+    layout: 'centered',
+    docs: {
+      description: {
+        component: `
+## Component Description
+
+ConfirmDeleteDialog is a dialog component for confirming delete operations with customizable title and callback functions.        `,
+      },
+    },
+  },
+  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
+  // More on argTypes: https://storybook.js.org/docs/api/argtypes
+  argTypes: {
+    title: { control: 'text' },
+    hidden: { control: 'boolean' },
+    onOk: { action: 'onOk' },
+    onCancel: { action: 'onCancel' },
+  },
+  // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args
+  args: { onOk: fn(), onCancel: fn() },
+  tags: ['autodocs'],
+} satisfies Meta<typeof ConfirmDeleteDialog>;
+
+export default meta;
+type Story = StoryObj<typeof meta>;
+
+// More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
+export const Default: Story = {
+  args: {
+    title: 'Confirm Delete',
+    children: <Button variant="destructive">Delete Item</Button>,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: `
+### Usage Examples
+
+\`\`\`tsx
+import { ConfirmDeleteDialog } from '@/components/confirm-delete-dialog';
+import { Button } from '@/components/ui/button';
+
+<ConfirmDeleteDialog
+  title="Confirm Delete"
+  onOk={() => console.log('Confirmed')}
+  onCancel={() => console.log('Cancelled')}
+>
+  <Button variant="destructive">Delete Item</Button>
+</ConfirmDeleteDialog>
+\`\`\`
+        `,
+      },
+    },
+  },
+};
+
+export const WithCustomTitle: Story = {
+  args: {
+    title: 'Are you sure you want to delete this file?',
+    children: <Button variant="destructive">Delete File</Button>,
+  },
+};
+
+```
+
+## High-Level Overview
+
+// More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
+    // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
+## Component Description
+
+## Detailed Walkthrough
+
+### Exports (2)
+
+- `Default`: Exported entity
+- `WithCustomTitle`: Exported entity
+
+### Imports (6)
+
+- `import type { Meta, StoryObj } from '@storybook/react-webpack5';`
+- `import { fn } from 'storybook/test';`
+- `import { ConfirmDeleteDialog } from '@/components/confirm-delete-dialog';`
+- `import { Button } from '@/components/ui/button';`
+- `import { ConfirmDeleteDialog } from '@/components/confirm-delete-dialog';`
+- `import { Button } from '@/components/ui/button';`
+
+## Code Structure Analysis
+
+- Total lines: 76
+- Blank lines: 10 (13.2%)
+- Comment lines: ~8 (10.5%)
+- Code lines: ~58
+
+
+## Dependencies and Imports
+
+- `@storybook/react-webpack5`
+- `storybook/test`
+- `@/components/confirm-delete-dialog`
+- `@/components/ui/button`
+- `@/components/confirm-delete-dialog`
+- `@/components/ui/button`
+
+## Design & Architecture
+
+This file is located in the `web` directory, specifically within `web/src/stories`.
+
+This appears to be a UI component or frontend module.
+
+## Performance & Complexity
+
+- Contains 1 loop(s) - consider algorithmic complexity
+
+## Security & Safety Considerations
+
+- No immediate security concerns identified through static analysis
+
+## Testing & Usage Notes
+
+To work with this file:
+1. Understand its dependencies (see Dependencies section)
+2. Review the code structure and main components
+3. Check for existing tests in the test directories
+4. Consider edge cases and error handling
+
+## Related Files
+
+- Other files in `web/src/stories/` directory
+- Potential test file: `test_confirm-delete-dialog.stories.tsx`
+
+## Keywords
+
+@/components/confirm-delete-dialog, @/components/ui/button, @storybook/react-webpack5, Are, Autodocs, Button, Cancelled, Canvas, Component, Confirm, ConfirmDeleteDialog, Confirmed, Default, Delete, Description, Example, Examples, File, Item, Meta, More, Optional, Story, StoryObj, This, TypeScript, Usage, Use, WithCustomTitle, meta, storybook, storybook/test
+
+---
+*Generated by RAGFlow Repository Documentation Generator*

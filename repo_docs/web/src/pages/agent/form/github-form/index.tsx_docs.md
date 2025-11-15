@@ -1,0 +1,160 @@
+# File Documentation: web/src/pages/agent/form/github-form/index.tsx
+
+## File Metadata
+
+- **Path**: `web/src/pages/agent/form/github-form/index.tsx`
+- **Extension**: `.tsx`
+- **Lines**: 53
+- **Characters**: 1,629
+- **Size**: 1,629 bytes
+- **Purpose**: JavaScript/TypeScript - Frontend or backend JavaScript code
+
+## Original Source
+
+```tsx
+import { FormContainer } from '@/components/form-container';
+import { TopNFormField } from '@/components/top-n-item';
+import { Form } from '@/components/ui/form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { memo } from 'react';
+import { useForm } from 'react-hook-form';
+import { z } from 'zod';
+import { initialGithubValues } from '../../constant';
+import { useFormValues } from '../../hooks/use-form-values';
+import { useWatchFormChange } from '../../hooks/use-watch-form-change';
+import { INextOperatorForm } from '../../interface';
+import { buildOutputList } from '../../utils/build-output-list';
+import { FormWrapper } from '../components/form-wrapper';
+import { Output } from '../components/output';
+import { QueryVariable } from '../components/query-variable';
+
+export const FormSchema = z.object({
+  query: z.string(),
+  top_n: z.number(),
+});
+
+const outputList = buildOutputList(initialGithubValues.outputs);
+
+function GithubForm({ node }: INextOperatorForm) {
+  const defaultValues = useFormValues(initialGithubValues, node);
+
+  const form = useForm<z.infer<typeof FormSchema>>({
+    defaultValues,
+    resolver: zodResolver(FormSchema),
+    mode: 'onChange',
+  });
+
+  useWatchFormChange(node?.id, form);
+
+  return (
+    <Form {...form}>
+      <FormWrapper>
+        <FormContainer>
+          <QueryVariable></QueryVariable>
+        </FormContainer>
+        <FormContainer>
+          <TopNFormField></TopNFormField>
+        </FormContainer>
+      </FormWrapper>
+      <div className="p-5">
+        <Output list={outputList}></Output>
+      </div>
+    </Form>
+  );
+}
+
+export default memo(GithubForm);
+
+```
+
+## High-Level Overview
+
+This file is part of the RAGFlow repository located at `web/src/pages/agent/form/github-form/index.tsx`.
+
+Based on the file structure and naming, it appears to be a javascript/typescript - frontend or backend javascript code.
+
+The file contains approximately 53 lines of code and defines various components
+that contribute to the overall functionality of the RAGFlow system.
+
+## Detailed Walkthrough
+
+### Exports (1)
+
+- `FormSchema`: Exported entity
+
+### Functions (1)
+
+- `GithubForm()`: Function definition
+
+### Imports (15)
+
+- `import { FormContainer } from '@/components/form-container';`
+- `import { TopNFormField } from '@/components/top-n-item';`
+- `import { Form } from '@/components/ui/form';`
+- `import { zodResolver } from '@hookform/resolvers/zod';`
+- `import { memo } from 'react';`
+- `import { useForm } from 'react-hook-form';`
+- `import { z } from 'zod';`
+- `import { initialGithubValues } from '../../constant';`
+- `import { useFormValues } from '../../hooks/use-form-values';`
+- `import { useWatchFormChange } from '../../hooks/use-watch-form-change';`
+
+## Code Structure Analysis
+
+- Total lines: 53
+- Blank lines: 8 (15.1%)
+- Comment lines: ~0 (0.0%)
+- Code lines: ~45
+
+
+## Dependencies and Imports
+
+- `@/components/form-container`
+- `@/components/top-n-item`
+- `@/components/ui/form`
+- `@hookform/resolvers/zod`
+- `react`
+- `react-hook-form`
+- `zod`
+- `../../constant`
+- `../../hooks/use-form-values`
+- `../../hooks/use-watch-form-change`
+- `../../interface`
+- `../../utils/build-output-list`
+- `../components/form-wrapper`
+- `../components/output`
+- `../components/query-variable`
+
+## Design & Architecture
+
+This file is located in the `web` directory, specifically within `web/src/pages/agent/form/github-form`.
+
+This appears to be a UI component or frontend module.
+
+## Performance & Complexity
+
+- Contains database queries - ensure proper indexing and query optimization
+
+## Security & Safety Considerations
+
+- No immediate security concerns identified through static analysis
+
+## Testing & Usage Notes
+
+To work with this file:
+1. Understand its dependencies (see Dependencies section)
+2. Review the code structure and main components
+3. Check for existing tests in the test directories
+4. Consider edge cases and error handling
+
+## Related Files
+
+- Other files in `web/src/pages/agent/form/github-form/` directory
+- Potential test file: `test_index.tsx`
+
+## Keywords
+
+../../constant, ../../hooks/use-form-values, ../../hooks/use-watch-form-change, ../../interface, ../../utils/build-output-list, ../components/form-wrapper, ../components/output, ../components/query-variable, @/components/form-container, @/components/top-n-item, @/components/ui/form, @hookform/resolvers/zod, Form, FormContainer, FormSchema, FormWrapper, GithubForm, INextOperatorForm, Output, QueryVariable, TopNFormField, TypeScript, defaultValues, form, hookform, outputList, react, react-hook-form, zod
+
+---
+*Generated by RAGFlow Repository Documentation Generator*

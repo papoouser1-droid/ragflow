@@ -1,0 +1,166 @@
+# Keyword Map: web/src/interfaces/database/flow.ts
+
+## File Path and Links
+
+- **Original File**: [web/src/interfaces/database/flow.ts](../../../../../web/src/interfaces/database/flow.ts)
+- **Documentation**: [flow.ts_docs.md](./flow.ts_docs.md)
+- **Repository Root**: [../../../../../](../../../../../)
+
+## Keywords (53 total)
+
+
+### .
+
+- **./chat**: Found in flow.ts
+  - [View in documentation](./flow.ts_docs.md)
+
+### @
+
+- **@xyflow/react**: Found in flow.ts
+  - [View in documentation](./flow.ts_docs.md)
+
+### A
+
+- **Array**: Found in flow.ts
+  - [View in documentation](./flow.ts_docs.md)
+
+### B
+
+- **BaseNode**: Found in flow.ts
+  - [View in documentation](./flow.ts_docs.md)
+- **BaseNodeData**: Found in flow.ts
+  - [View in documentation](./flow.ts_docs.md)
+
+### D
+
+- **DSL**: Found in flow.ts
+  - [View in documentation](./flow.ts_docs.md)
+- **DSLComponents**: Found in flow.ts
+  - [View in documentation](./flow.ts_docs.md)
+
+### E
+
+- **Edge**: Found in flow.ts
+  - [View in documentation](./flow.ts_docs.md)
+
+### I
+
+- **IAgentNode**: Found in flow.ts
+  - [View in documentation](./flow.ts_docs.md)
+- **IBeginForm**: Found in flow.ts
+  - [View in documentation](./flow.ts_docs.md)
+- **IBeginNode**: Found in flow.ts
+  - [View in documentation](./flow.ts_docs.md)
+- **ICategorizeForm**: Found in flow.ts
+  - [View in documentation](./flow.ts_docs.md)
+- **ICategorizeItem**: Found in flow.ts
+  - [View in documentation](./flow.ts_docs.md)
+- **ICategorizeItemResult**: Found in flow.ts
+  - [View in documentation](./flow.ts_docs.md)
+- **ICategorizeNode**: Found in flow.ts
+  - [View in documentation](./flow.ts_docs.md)
+- **ICodeForm**: Found in flow.ts
+  - [View in documentation](./flow.ts_docs.md)
+- **ICodeNode**: Found in flow.ts
+  - [View in documentation](./flow.ts_docs.md)
+- **IEmailNode**: Found in flow.ts
+  - [View in documentation](./flow.ts_docs.md)
+- **IFlow**: Found in flow.ts
+  - [View in documentation](./flow.ts_docs.md)
+- **IFlowTemplate**: Found in flow.ts
+  - [View in documentation](./flow.ts_docs.md)
+- **IGenerateForm**: Found in flow.ts
+  - [View in documentation](./flow.ts_docs.md)
+- **IGenerateNode**: Found in flow.ts
+  - [View in documentation](./flow.ts_docs.md)
+- **IGraph**: Found in flow.ts
+  - [View in documentation](./flow.ts_docs.md)
+- **IInvokeNode**: Found in flow.ts
+  - [View in documentation](./flow.ts_docs.md)
+- **IIterationNode**: Found in flow.ts
+  - [View in documentation](./flow.ts_docs.md)
+- **IIterationStartNode**: Found in flow.ts
+  - [View in documentation](./flow.ts_docs.md)
+- **IKeywordNode**: Found in flow.ts
+  - [View in documentation](./flow.ts_docs.md)
+- **ILogicNode**: Found in flow.ts
+  - [View in documentation](./flow.ts_docs.md)
+- **IMessageNode**: Found in flow.ts
+  - [View in documentation](./flow.ts_docs.md)
+- **INoteNode**: Found in flow.ts
+  - [View in documentation](./flow.ts_docs.md)
+- **IOperator**: Found in flow.ts
+  - [View in documentation](./flow.ts_docs.md)
+- **IOperatorNode**: Found in flow.ts
+  - [View in documentation](./flow.ts_docs.md)
+- **IRagNode**: Found in flow.ts
+  - [View in documentation](./flow.ts_docs.md)
+- **IReference**: Found in flow.ts
+  - [View in documentation](./flow.ts_docs.md)
+- **IRelevantForm**: Found in flow.ts
+  - [View in documentation](./flow.ts_docs.md)
+- **IRelevantNode**: Found in flow.ts
+  - [View in documentation](./flow.ts_docs.md)
+- **IRetrievalForm**: Found in flow.ts
+  - [View in documentation](./flow.ts_docs.md)
+- **IRetrievalNode**: Found in flow.ts
+  - [View in documentation](./flow.ts_docs.md)
+- **IRewriteNode**: Found in flow.ts
+  - [View in documentation](./flow.ts_docs.md)
+- **ISwitchCondition**: Found in flow.ts
+  - [View in documentation](./flow.ts_docs.md)
+- **ISwitchForm**: Found in flow.ts
+  - [View in documentation](./flow.ts_docs.md)
+- **ISwitchItem**: Found in flow.ts
+  - [View in documentation](./flow.ts_docs.md)
+- **ISwitchNode**: Found in flow.ts
+  - [View in documentation](./flow.ts_docs.md)
+- **ITemplateNode**: Found in flow.ts
+  - [View in documentation](./flow.ts_docs.md)
+
+### M
+
+- **Message**: Found in flow.ts
+  - [View in documentation](./flow.ts_docs.md)
+
+### N
+
+- **Node**: Found in flow.ts
+  - [View in documentation](./flow.ts_docs.md)
+
+### O
+
+- **Omit**: Found in flow.ts
+  - [View in documentation](./flow.ts_docs.md)
+
+### R
+
+- **RAGFlowNodeType**: Found in flow.ts
+  - [View in documentation](./flow.ts_docs.md)
+- **Record**: Found in flow.ts
+  - [View in documentation](./flow.ts_docs.md)
+
+### T
+
+- **TForm**: Found in flow.ts
+  - [View in documentation](./flow.ts_docs.md)
+- **TypeScript**: Found in flow.ts
+  - [View in documentation](./flow.ts_docs.md)
+
+### N
+
+- **name**: Found in flow.ts
+  - [View in documentation](./flow.ts_docs.md)
+
+### X
+
+- **xyflow**: Found in flow.ts
+  - [View in documentation](./flow.ts_docs.md)
+
+## Keyword Summary
+
+This file contains 53 unique keywords extracted from the source code,
+including identifiers, function names, class names, and technical terms.
+
+---
+*Generated by RAGFlow Repository Documentation Generator*

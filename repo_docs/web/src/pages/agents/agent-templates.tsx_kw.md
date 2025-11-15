@@ -1,0 +1,151 @@
+# Keyword Map: web/src/pages/agents/agent-templates.tsx
+
+## File Path and Links
+
+- **Original File**: [web/src/pages/agents/agent-templates.tsx](../../../../../web/src/pages/agents/agent-templates.tsx)
+- **Documentation**: [agent-templates.tsx_docs.md](./agent-templates.tsx_docs.md)
+- **Repository Root**: [../../../../../](../../../../../)
+
+## Keywords (38 total)
+
+
+### .
+
+- **./create-agent-dialog**: Found in agent-templates.tsx
+  - [View in documentation](./agent-templates.tsx_docs.md)
+- **./template-card**: Found in agent-templates.tsx
+  - [View in documentation](./agent-templates.tsx_docs.md)
+- **./template-sidebar**: Found in agent-templates.tsx
+  - [View in documentation](./agent-templates.tsx_docs.md)
+
+### @
+
+- **@/components/card-container**: Found in agent-templates.tsx
+  - [View in documentation](./agent-templates.tsx_docs.md)
+- **@/components/page-header**: Found in agent-templates.tsx
+  - [View in documentation](./agent-templates.tsx_docs.md)
+- **@/constants/agent**: Found in agent-templates.tsx
+  - [View in documentation](./agent-templates.tsx_docs.md)
+- **@/hooks/common-hooks**: Found in agent-templates.tsx
+  - [View in documentation](./agent-templates.tsx_docs.md)
+- **@/hooks/logic-hooks/navigate-hooks**: Found in agent-templates.tsx
+  - [View in documentation](./agent-templates.tsx_docs.md)
+- **@/hooks/use-agent-request**: Found in agent-templates.tsx
+  - [View in documentation](./agent-templates.tsx_docs.md)
+- **@/interfaces/database/agent**: Found in agent-templates.tsx
+  - [View in documentation](./agent-templates.tsx_docs.md)
+
+### A
+
+- **AgentCategory**: Found in agent-templates.tsx
+  - [View in documentation](./agent-templates.tsx_docs.md)
+- **AgentTemplates**: Found in agent-templates.tsx
+  - [View in documentation](./agent-templates.tsx_docs.md)
+
+### B
+
+- **Breadcrumb**: Found in agent-templates.tsx
+  - [View in documentation](./agent-templates.tsx_docs.md)
+- **BreadcrumbItem**: Found in agent-templates.tsx
+  - [View in documentation](./agent-templates.tsx_docs.md)
+- **BreadcrumbLink**: Found in agent-templates.tsx
+  - [View in documentation](./agent-templates.tsx_docs.md)
+- **BreadcrumbList**: Found in agent-templates.tsx
+  - [View in documentation](./agent-templates.tsx_docs.md)
+- **BreadcrumbPage**: Found in agent-templates.tsx
+  - [View in documentation](./agent-templates.tsx_docs.md)
+- **BreadcrumbSeparator**: Found in agent-templates.tsx
+  - [View in documentation](./agent-templates.tsx_docs.md)
+
+### C
+
+- **CardContainer**: Found in agent-templates.tsx
+  - [View in documentation](./agent-templates.tsx_docs.md)
+- **CreateAgentDialog**: Found in agent-templates.tsx
+  - [View in documentation](./agent-templates.tsx_docs.md)
+
+### D
+
+- **DataflowCanvas**: Found in agent-templates.tsx
+  - [View in documentation](./agent-templates.tsx_docs.md)
+
+### I
+
+- **IFlowTemplate**: Found in agent-templates.tsx
+  - [View in documentation](./agent-templates.tsx_docs.md)
+
+### M
+
+- **MenuItemKey**: Found in agent-templates.tsx
+  - [View in documentation](./agent-templates.tsx_docs.md)
+
+### P
+
+- **PageHeader**: Found in agent-templates.tsx
+  - [View in documentation](./agent-templates.tsx_docs.md)
+
+### R
+
+- **Recommended**: Found in agent-templates.tsx
+  - [View in documentation](./agent-templates.tsx_docs.md)
+
+### S
+
+- **SideBar**: Found in agent-templates.tsx
+  - [View in documentation](./agent-templates.tsx_docs.md)
+
+### T
+
+- **TemplateCard**: Found in agent-templates.tsx
+  - [View in documentation](./agent-templates.tsx_docs.md)
+- **TypeScript**: Found in agent-templates.tsx
+  - [View in documentation](./agent-templates.tsx_docs.md)
+
+### C
+
+- **canvasCategory**: Found in agent-templates.tsx
+  - [View in documentation](./agent-templates.tsx_docs.md)
+
+### D
+
+- **dsl**: Found in agent-templates.tsx
+  - [View in documentation](./agent-templates.tsx_docs.md)
+
+### H
+
+- **handleOk**: Found in agent-templates.tsx
+  - [View in documentation](./agent-templates.tsx_docs.md)
+- **handleSiderBarChange**: Found in agent-templates.tsx
+  - [View in documentation](./agent-templates.tsx_docs.md)
+
+### L
+
+- **list**: Found in agent-templates.tsx
+  - [View in documentation](./agent-templates.tsx_docs.md)
+
+### R
+
+- **react**: Found in agent-templates.tsx
+  - [View in documentation](./agent-templates.tsx_docs.md)
+- **react-i18next**: Found in agent-templates.tsx
+  - [View in documentation](./agent-templates.tsx_docs.md)
+- **ret**: Found in agent-templates.tsx
+  - [View in documentation](./agent-templates.tsx_docs.md)
+
+### S
+
+- **showModal**: Found in agent-templates.tsx
+  - [View in documentation](./agent-templates.tsx_docs.md)
+
+### T
+
+- **tempListFilter**: Found in agent-templates.tsx
+  - [View in documentation](./agent-templates.tsx_docs.md)
+
+## Keyword Summary
+
+This file contains 38 unique keywords extracted from the source code,
+including identifiers, function names, class names, and technical terms.
+
+---
+*Generated by RAGFlow Repository Documentation Generator*

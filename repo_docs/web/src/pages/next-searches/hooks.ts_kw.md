@@ -1,0 +1,177 @@
+# Keyword Map: web/src/pages/next-searches/hooks.ts
+
+## File Path and Links
+
+- **Original File**: [web/src/pages/next-searches/hooks.ts](../../../../../web/src/pages/next-searches/hooks.ts)
+- **Documentation**: [hooks.ts_docs.md](./hooks.ts_docs.md)
+- **Repository Root**: [../../../../../](../../../../../)
+
+## Keywords (48 total)
+
+
+### @
+
+- **@/components/ui/message**: Found in hooks.ts
+  - [View in documentation](./hooks.ts_docs.md)
+- **@/hooks/common-hooks**: Found in hooks.ts
+  - [View in documentation](./hooks.ts_docs.md)
+- **@/hooks/logic-hooks/navigate-hooks**: Found in hooks.ts
+  - [View in documentation](./hooks.ts_docs.md)
+- **@/services/search-service**: Found in hooks.ts
+  - [View in documentation](./hooks.ts_docs.md)
+- **@tanstack/react-query**: Found in hooks.ts
+  - [View in documentation](./hooks.ts_docs.md)
+
+### A
+
+- **Array**: Found in hooks.ts
+  - [View in documentation](./hooks.ts_docs.md)
+
+### C
+
+- **CreateSearchProps**: Found in hooks.ts
+  - [View in documentation](./hooks.ts_docs.md)
+- **CreateSearchResponse**: Found in hooks.ts
+  - [View in documentation](./hooks.ts_docs.md)
+
+### D
+
+- **DeleteSearchProps**: Found in hooks.ts
+  - [View in documentation](./hooks.ts_docs.md)
+- **DeleteSearchResponse**: Found in hooks.ts
+  - [View in documentation](./hooks.ts_docs.md)
+
+### E
+
+- **Error**: Found in hooks.ts
+  - [View in documentation](./hooks.ts_docs.md)
+
+### F
+
+- **Failed**: Found in hooks.ts
+  - [View in documentation](./hooks.ts_docs.md)
+
+### I
+
+- **ISearchAppDetailProps**: Found in hooks.ts
+  - [View in documentation](./hooks.ts_docs.md)
+- **ISearchAppProps**: Found in hooks.ts
+  - [View in documentation](./hooks.ts_docs.md)
+- **IUpdateSearchProps**: Found in hooks.ts
+  - [View in documentation](./hooks.ts_docs.md)
+- **IllmSettingEnableProps**: Found in hooks.ts
+  - [View in documentation](./hooks.ts_docs.md)
+- **IllmSettingProps**: Found in hooks.ts
+  - [View in documentation](./hooks.ts_docs.md)
+
+### O
+
+- **Omit**: Found in hooks.ts
+  - [View in documentation](./hooks.ts_docs.md)
+
+### S
+
+- **SearchDetailResponse**: Found in hooks.ts
+  - [View in documentation](./hooks.ts_docs.md)
+- **SearchListParams**: Found in hooks.ts
+  - [View in documentation](./hooks.ts_docs.md)
+- **SearchListResponse**: Found in hooks.ts
+  - [View in documentation](./hooks.ts_docs.md)
+
+### T
+
+- **TypeScript**: Found in hooks.ts
+  - [View in documentation](./hooks.ts_docs.md)
+
+### C
+
+- **createSearch**: Found in hooks.ts
+  - [View in documentation](./hooks.ts_docs.md)
+
+### D
+
+- **deleteSearch**: Found in hooks.ts
+  - [View in documentation](./hooks.ts_docs.md)
+- **detail**: Found in hooks.ts
+  - [View in documentation](./hooks.ts_docs.md)
+
+### F
+
+- **fetchSearchDetailFunc**: Found in hooks.ts
+  - [View in documentation](./hooks.ts_docs.md)
+
+### H
+
+- **handleHideModal**: Found in hooks.ts
+  - [View in documentation](./hooks.ts_docs.md)
+- **handleShowChatRenameModal**: Found in hooks.ts
+  - [View in documentation](./hooks.ts_docs.md)
+
+### O
+
+- **onSearchRenameOk**: Found in hooks.ts
+  - [View in documentation](./hooks.ts_docs.md)
+
+### P
+
+- **param**: Found in hooks.ts
+  - [View in documentation](./hooks.ts_docs.md)
+
+### Q
+
+- **queryClient**: Found in hooks.ts
+  - [View in documentation](./hooks.ts_docs.md)
+
+### R
+
+- **react**: Found in hooks.ts
+  - [View in documentation](./hooks.ts_docs.md)
+- **react-i18next**: Found in hooks.ts
+  - [View in documentation](./hooks.ts_docs.md)
+- **reponse**: Found in hooks.ts
+  - [View in documentation](./hooks.ts_docs.md)
+- **res**: Found in hooks.ts
+  - [View in documentation](./hooks.ts_docs.md)
+
+### S
+
+- **searchId**: Found in hooks.ts
+  - [View in documentation](./hooks.ts_docs.md)
+- **setSearchListParams**: Found in hooks.ts
+  - [View in documentation](./hooks.ts_docs.md)
+- **shared_id**: Found in hooks.ts
+  - [View in documentation](./hooks.ts_docs.md)
+
+### T
+
+- **tanstack**: Found in hooks.ts
+  - [View in documentation](./hooks.ts_docs.md)
+- **typescript**: Found in hooks.ts
+  - [View in documentation](./hooks.ts_docs.md)
+
+### U
+
+- **umi**: Found in hooks.ts
+  - [View in documentation](./hooks.ts_docs.md)
+- **updateSearch**: Found in hooks.ts
+  - [View in documentation](./hooks.ts_docs.md)
+- **useCreateSearch**: Found in hooks.ts
+  - [View in documentation](./hooks.ts_docs.md)
+- **useDeleteSearch**: Found in hooks.ts
+  - [View in documentation](./hooks.ts_docs.md)
+- **useFetchSearchDetail**: Found in hooks.ts
+  - [View in documentation](./hooks.ts_docs.md)
+- **useFetchSearchList**: Found in hooks.ts
+  - [View in documentation](./hooks.ts_docs.md)
+- **useRenameSearch**: Found in hooks.ts
+  - [View in documentation](./hooks.ts_docs.md)
+- **useUpdateSearch**: Found in hooks.ts
+  - [View in documentation](./hooks.ts_docs.md)
+
+## Keyword Summary
+
+This file contains 48 unique keywords extracted from the source code,
+including identifiers, function names, class names, and technical terms.
+
+---
+*Generated by RAGFlow Repository Documentation Generator*

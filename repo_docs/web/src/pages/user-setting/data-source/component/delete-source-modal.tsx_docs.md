@@ -1,0 +1,173 @@
+# File Documentation: web/src/pages/user-setting/data-source/component/delete-source-modal.tsx
+
+## File Metadata
+
+- **Path**: `web/src/pages/user-setting/data-source/component/delete-source-modal.tsx`
+- **Extension**: `.tsx`
+- **Lines**: 81
+- **Characters**: 2,363
+- **Size**: 2,363 bytes
+- **Purpose**: JavaScript/TypeScript - Frontend or backend JavaScript code
+
+## Original Source
+
+```tsx
+import { Button } from '@/components/ui/button';
+import { Modal, ModalType } from '@/components/ui/modal/modal';
+import { t } from 'i18next';
+import { DataSourceInfo } from '../contant';
+import { IDataSourceBase } from '../interface';
+
+export type IDelSourceModalProps<T> = Partial<ModalType> & {
+  data?: T;
+  type?: 'delete' | 'unlink';
+  onOk?: (data?: T) => void;
+};
+
+export const delSourceModal = <T extends IDataSourceBase>(
+  props: IDelSourceModalProps<T>,
+) => {
+  const { data, onOk, type = 'delete', ...otherProps } = props;
+  console.log('data', data);
+  const config = {
+    title:
+      type === 'delete'
+        ? t('setting.deleteSourceModalTitle')
+        : t('dataflowParser.unlinkSourceModalTitle'),
+    content: (
+      <div className="px-2 py-6">
+        <div className="flex items-center gap-1 p-2 border border-border-button rounded-md mb-3">
+          <div className="w-6 h-6 flex-shrink-0">
+            {data?.source ? DataSourceInfo[data?.source].icon : ''}
+          </div>
+          <div>{data?.name}</div>
+        </div>
+        {type === 'delete' ? (
+          <div
+            className="text-sm text-text-secondary"
+            dangerouslySetInnerHTML={{
+              __html: t('setting.deleteSourceModalContent'),
+            }}
+          ></div>
+        ) : (
+          <div
+            className="text-sm text-text-secondary"
+            dangerouslySetInnerHTML={{
+              __html: t('dataflowParser.unlinkSourceModalContent'),
+            }}
+          />
+        )}
+      </div>
+    ),
+    confirmText:
+      type === 'delete'
+        ? t('setting.deleteSourceModalConfirmText')
+        : t('dataflowParser.unlinkSourceModalConfirmText'),
+  };
+  Modal.show({
+    visible: true,
+    className: '!w-[560px]',
+    ...otherProps,
+    title: config.title,
+    children: config.content,
+    onVisibleChange: () => {
+      Modal.hide();
+    },
+    footer: (
+      <div className="flex justify-end gap-2">
+        <Button variant={'outline'} onClick={() => Modal.hide()}>
+          {t('dataflowParser.changeStepModalCancelText')}
+        </Button>
+        <Button
+          variant={'secondary'}
+          className="!bg-state-error text-text-base"
+          onClick={() => {
+            onOk?.(data);
+            Modal.hide();
+          }}
+        >
+          {config.confirmText}
+        </Button>
+      </div>
+    ),
+  });
+};
+
+```
+
+## High-Level Overview
+
+This file is part of the RAGFlow repository located at `web/src/pages/user-setting/data-source/component/delete-source-modal.tsx`.
+
+Based on the file structure and naming, it appears to be a javascript/typescript - frontend or backend javascript code.
+
+The file contains approximately 81 lines of code and defines various components
+that contribute to the overall functionality of the RAGFlow system.
+
+## Detailed Walkthrough
+
+### Exports (1)
+
+- `delSourceModal`: Exported entity
+
+### Functions (1)
+
+- `delSourceModal()`: Function definition
+
+### Imports (5)
+
+- `import { Button } from '@/components/ui/button';`
+- `import { Modal, ModalType } from '@/components/ui/modal/modal';`
+- `import { t } from 'i18next';`
+- `import { DataSourceInfo } from '../contant';`
+- `import { IDataSourceBase } from '../interface';`
+
+## Code Structure Analysis
+
+- Total lines: 81
+- Blank lines: 3 (3.7%)
+- Comment lines: ~0 (0.0%)
+- Code lines: ~78
+
+
+## Dependencies and Imports
+
+- `@/components/ui/button`
+- `@/components/ui/modal/modal`
+- `i18next`
+- `../contant`
+- `../interface`
+
+## Design & Architecture
+
+This file is located in the `web` directory, specifically within `web/src/pages/user-setting/data-source/component`.
+
+This appears to be a UI component or frontend module.
+
+## Performance & Complexity
+
+- No specific performance concerns identified through static analysis
+
+## Security & Safety Considerations
+
+- No immediate security concerns identified through static analysis
+
+## Testing & Usage Notes
+
+To work with this file:
+1. Understand its dependencies (see Dependencies section)
+2. Review the code structure and main components
+3. Check for existing tests in the test directories
+4. Consider edge cases and error handling
+
+## Related Files
+
+- Other files in `web/src/pages/user-setting/data-source/component/` directory
+- Potential test file: `test_delete-source-modal.tsx`
+
+## Keywords
+
+../contant, ../interface, @/components/ui/button, @/components/ui/modal/modal, Button, DataSourceInfo, IDataSourceBase, IDelSourceModalProps, Modal, ModalType, Partial, TypeScript, config, delSourceModal, i18next
+
+---
+*Generated by RAGFlow Repository Documentation Generator*

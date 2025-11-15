@@ -1,0 +1,161 @@
+# File Documentation: web/src/pages/home/datasets.tsx
+
+## File Metadata
+
+- **Path**: `web/src/pages/home/datasets.tsx`
+- **Extension**: `.tsx`
+- **Lines**: 64
+- **Characters**: 2,156
+- **Size**: 2,156 bytes
+- **Purpose**: JavaScript/TypeScript - Frontend or backend JavaScript code
+
+## Original Source
+
+```tsx
+import { CardSineLineContainer } from '@/components/card-singleline-container';
+import { RenameDialog } from '@/components/rename-dialog';
+import { HomeIcon } from '@/components/svg-icon';
+import { CardSkeleton } from '@/components/ui/skeleton';
+import { useNavigatePage } from '@/hooks/logic-hooks/navigate-hooks';
+import { useFetchNextKnowledgeListByPage } from '@/hooks/use-knowledge-request';
+import { useTranslation } from 'react-i18next';
+import { DatasetCard } from '../datasets/dataset-card';
+import { useRenameDataset } from '../datasets/use-rename-dataset';
+import { SeeAllAppCard } from './application-card';
+
+export function Datasets() {
+  const { t } = useTranslation();
+  const { kbs, loading } = useFetchNextKnowledgeListByPage();
+  const {
+    datasetRenameLoading,
+    initialDatasetName,
+    onDatasetRenameOk,
+    datasetRenameVisible,
+    hideDatasetRenameModal,
+    showDatasetRenameModal,
+  } = useRenameDataset();
+  const { navigateToDatasetList } = useNavigatePage();
+
+  return (
+    <section>
+      <h2 className="text-2xl font-semibold mb-6 flex gap-2.5 items-center">
+        {/* <IconFont name="data" className="size-8"></IconFont> */}
+        <HomeIcon name="datasets" width={'32'} />
+        {t('header.dataset')}
+      </h2>
+      <div className="">
+        {loading ? (
+          <div className="flex-1">
+            <CardSkeleton />
+          </div>
+        ) : (
+          <CardSineLineContainer>
+            {kbs
+              ?.slice(0, 6)
+              .map((dataset) => (
+                <DatasetCard
+                  key={dataset.id}
+                  dataset={dataset}
+                  showDatasetRenameModal={showDatasetRenameModal}
+                ></DatasetCard>
+              ))}
+            {<SeeAllAppCard click={navigateToDatasetList}></SeeAllAppCard>}
+          </CardSineLineContainer>
+          // </div>
+        )}
+      </div>
+      {datasetRenameVisible && (
+        <RenameDialog
+          hideModal={hideDatasetRenameModal}
+          onOk={onDatasetRenameOk}
+          initialName={initialDatasetName}
+          loading={datasetRenameLoading}
+        ></RenameDialog>
+      )}
+    </section>
+  );
+}
+
+```
+
+## High-Level Overview
+
+          // </div>
+
+## Detailed Walkthrough
+
+### Exports (1)
+
+- `Datasets`: Exported entity
+
+### Functions (1)
+
+- `Datasets()`: Function definition
+
+### Imports (10)
+
+- `import { CardSineLineContainer } from '@/components/card-singleline-container';`
+- `import { RenameDialog } from '@/components/rename-dialog';`
+- `import { HomeIcon } from '@/components/svg-icon';`
+- `import { CardSkeleton } from '@/components/ui/skeleton';`
+- `import { useNavigatePage } from '@/hooks/logic-hooks/navigate-hooks';`
+- `import { useFetchNextKnowledgeListByPage } from '@/hooks/use-knowledge-request';`
+- `import { useTranslation } from 'react-i18next';`
+- `import { DatasetCard } from '../datasets/dataset-card';`
+- `import { useRenameDataset } from '../datasets/use-rename-dataset';`
+- `import { SeeAllAppCard } from './application-card';`
+
+## Code Structure Analysis
+
+- Total lines: 64
+- Blank lines: 3 (4.7%)
+- Comment lines: ~1 (1.6%)
+- Code lines: ~60
+
+
+## Dependencies and Imports
+
+- `@/components/card-singleline-container`
+- `@/components/rename-dialog`
+- `@/components/svg-icon`
+- `@/components/ui/skeleton`
+- `@/hooks/logic-hooks/navigate-hooks`
+- `@/hooks/use-knowledge-request`
+- `react-i18next`
+- `../datasets/dataset-card`
+- `../datasets/use-rename-dataset`
+- `./application-card`
+
+## Design & Architecture
+
+This file is located in the `web` directory, specifically within `web/src/pages/home`.
+
+This appears to be a UI component or frontend module.
+
+## Performance & Complexity
+
+- No specific performance concerns identified through static analysis
+
+## Security & Safety Considerations
+
+- **User Input**: Validate and sanitize all user input
+
+## Testing & Usage Notes
+
+To work with this file:
+1. Understand its dependencies (see Dependencies section)
+2. Review the code structure and main components
+3. Check for existing tests in the test directories
+4. Consider edge cases and error handling
+
+## Related Files
+
+- Other files in `web/src/pages/home/` directory
+- Potential test file: `test_datasets.tsx`
+
+## Keywords
+
+../datasets/dataset-card, ../datasets/use-rename-dataset, ./application-card, @/components/card-singleline-container, @/components/rename-dialog, @/components/svg-icon, @/components/ui/skeleton, @/hooks/logic-hooks/navigate-hooks, @/hooks/use-knowledge-request, CardSineLineContainer, CardSkeleton, DatasetCard, Datasets, HomeIcon, IconFont, RenameDialog, SeeAllAppCard, TypeScript, react-i18next
+
+---
+*Generated by RAGFlow Repository Documentation Generator*

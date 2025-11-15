@@ -1,0 +1,149 @@
+# Keyword Map: web/src/pages/next-chats/chat/app-settings/chat-settings.tsx
+
+## File Path and Links
+
+- **Original File**: [web/src/pages/next-chats/chat/app-settings/chat-settings.tsx](../../../../../../../web/src/pages/next-chats/chat/app-settings/chat-settings.tsx)
+- **Documentation**: [chat-settings.tsx_docs.md](./chat-settings.tsx_docs.md)
+- **Repository Root**: [../../../../../../../](../../../../../../../)
+
+## Keywords (40 total)
+
+
+### .
+
+- **./chat-basic-settings**: Found in chat-settings.tsx
+  - [View in documentation](./chat-settings.tsx_docs.md)
+- **./chat-model-settings**: Found in chat-settings.tsx
+  - [View in documentation](./chat-settings.tsx_docs.md)
+- **./chat-prompt-engine**: Found in chat-settings.tsx
+  - [View in documentation](./chat-settings.tsx_docs.md)
+- **./saving-button**: Found in chat-settings.tsx
+  - [View in documentation](./chat-settings.tsx_docs.md)
+- **./use-chat-setting-schema**: Found in chat-settings.tsx
+  - [View in documentation](./chat-settings.tsx_docs.md)
+
+### @
+
+- **@/components/ui/button**: Found in chat-settings.tsx
+  - [View in documentation](./chat-settings.tsx_docs.md)
+- **@/components/ui/form**: Found in chat-settings.tsx
+  - [View in documentation](./chat-settings.tsx_docs.md)
+- **@/components/ui/separator**: Found in chat-settings.tsx
+  - [View in documentation](./chat-settings.tsx_docs.md)
+- **@/constants/chat**: Found in chat-settings.tsx
+  - [View in documentation](./chat-settings.tsx_docs.md)
+- **@/hooks/use-chat-request**: Found in chat-settings.tsx
+  - [View in documentation](./chat-settings.tsx_docs.md)
+- **@hookform/resolvers/zod**: Found in chat-settings.tsx
+  - [View in documentation](./chat-settings.tsx_docs.md)
+
+### B
+
+- **Button**: Found in chat-settings.tsx
+  - [View in documentation](./chat-settings.tsx_docs.md)
+
+### C
+
+- **ChatBasicSetting**: Found in chat-settings.tsx
+  - [View in documentation](./chat-settings.tsx_docs.md)
+- **ChatModelSettings**: Found in chat-settings.tsx
+  - [View in documentation](./chat-settings.tsx_docs.md)
+- **ChatPromptEngine**: Found in chat-settings.tsx
+  - [View in documentation](./chat-settings.tsx_docs.md)
+- **ChatSettings**: Found in chat-settings.tsx
+  - [View in documentation](./chat-settings.tsx_docs.md)
+- **ChatSettingsProps**: Found in chat-settings.tsx
+  - [View in documentation](./chat-settings.tsx_docs.md)
+
+### D
+
+- **DatasetMetadata**: Found in chat-settings.tsx
+  - [View in documentation](./chat-settings.tsx_docs.md)
+- **Disabled**: Found in chat-settings.tsx
+  - [View in documentation](./chat-settings.tsx_docs.md)
+
+### F
+
+- **Form**: Found in chat-settings.tsx
+  - [View in documentation](./chat-settings.tsx_docs.md)
+- **FormSchemaType**: Found in chat-settings.tsx
+  - [View in documentation](./chat-settings.tsx_docs.md)
+
+### R
+
+- **Record**: Found in chat-settings.tsx
+  - [View in documentation](./chat-settings.tsx_docs.md)
+
+### S
+
+- **SavingButton**: Found in chat-settings.tsx
+  - [View in documentation](./chat-settings.tsx_docs.md)
+- **Separator**: Found in chat-settings.tsx
+  - [View in documentation](./chat-settings.tsx_docs.md)
+
+### T
+
+- **TypeScript**: Found in chat-settings.tsx
+  - [View in documentation](./chat-settings.tsx_docs.md)
+
+### F
+
+- **form**: Found in chat-settings.tsx
+  - [View in documentation](./chat-settings.tsx_docs.md)
+- **formSchema**: Found in chat-settings.tsx
+  - [View in documentation](./chat-settings.tsx_docs.md)
+
+### H
+
+- **hookform**: Found in chat-settings.tsx
+  - [View in documentation](./chat-settings.tsx_docs.md)
+
+### L
+
+- **llmSettingEnabledValues**: Found in chat-settings.tsx
+  - [View in documentation](./chat-settings.tsx_docs.md)
+- **lodash**: Found in chat-settings.tsx
+  - [View in documentation](./chat-settings.tsx_docs.md)
+- **lucide-react**: Found in chat-settings.tsx
+  - [View in documentation](./chat-settings.tsx_docs.md)
+
+### N
+
+- **nextData**: Found in chat-settings.tsx
+  - [View in documentation](./chat-settings.tsx_docs.md)
+- **nextValues**: Found in chat-settings.tsx
+  - [View in documentation](./chat-settings.tsx_docs.md)
+
+### O
+
+- **onInvalid**: Found in chat-settings.tsx
+  - [View in documentation](./chat-settings.tsx_docs.md)
+- **onSubmit**: Found in chat-settings.tsx
+  - [View in documentation](./chat-settings.tsx_docs.md)
+
+### R
+
+- **react**: Found in chat-settings.tsx
+  - [View in documentation](./chat-settings.tsx_docs.md)
+- **react-hook-form**: Found in chat-settings.tsx
+  - [View in documentation](./chat-settings.tsx_docs.md)
+- **react-i18next**: Found in chat-settings.tsx
+  - [View in documentation](./chat-settings.tsx_docs.md)
+
+### U
+
+- **umi**: Found in chat-settings.tsx
+  - [View in documentation](./chat-settings.tsx_docs.md)
+
+### Z
+
+- **zod**: Found in chat-settings.tsx
+  - [View in documentation](./chat-settings.tsx_docs.md)
+
+## Keyword Summary
+
+This file contains 40 unique keywords extracted from the source code,
+including identifiers, function names, class names, and technical terms.
+
+---
+*Generated by RAGFlow Repository Documentation Generator*

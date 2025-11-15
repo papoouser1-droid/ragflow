@@ -1,0 +1,175 @@
+# Keyword Map: Dockerfile
+
+## File Path and Links
+
+- **Original File**: [Dockerfile](../Dockerfile)
+- **Documentation**: [Dockerfile_docs.md](./Dockerfile_docs.md)
+- **Repository Root**: [../](../)
+
+## Keywords (50 total)
+
+
+### A
+
+- **ACCEPT_EULA**: Found in Dockerfile
+  - [View in documentation](./Dockerfile_docs.md)
+- **APT**: Found in Dockerfile
+  - [View in documentation](./Dockerfile_docs.md)
+- **ARG**: Found in Dockerfile
+  - [View in documentation](./Dockerfile_docs.md)
+- **ARM64**: Found in Dockerfile
+  - [View in documentation](./Dockerfile_docs.md)
+- **Add**: Found in Dockerfile
+  - [View in documentation](./Dockerfile_docs.md)
+- **Apache**: Found in Dockerfile
+  - [View in documentation](./Dockerfile_docs.md)
+- **Apple**: Found in Dockerfile
+  - [View in documentation](./Dockerfile_docs.md)
+
+### B
+
+- **Binary**: Found in Dockerfile
+  - [View in documentation](./Dockerfile_docs.md)
+- **Building**: Found in Dockerfile
+  - [View in documentation](./Dockerfile_docs.md)
+
+### C
+
+- **COPY**: Found in Dockerfile
+  - [View in documentation](./Dockerfile_docs.md)
+- **Copy**: Found in Dockerfile
+  - [View in documentation](./Dockerfile_docs.md)
+
+### D
+
+- **DEBIAN_FRONTEND**: Found in Dockerfile
+  - [View in documentation](./Dockerfile_docs.md)
+- **DOTNET_SYSTEM_GLOBALIZATION_INVARIANT**: Found in Dockerfile
+  - [View in documentation](./Dockerfile_docs.md)
+- **Downloaded**: Found in Dockerfile
+  - [View in documentation](./Dockerfile_docs.md)
+
+### E
+
+- **ENTRYPOINT**: Found in Dockerfile
+  - [View in documentation](./Dockerfile_docs.md)
+- **ENV**: Found in Dockerfile
+  - [View in documentation](./Dockerfile_docs.md)
+
+### F
+
+- **FROM**: Found in Dockerfile
+  - [View in documentation](./Dockerfile_docs.md)
+- **Failed**: Found in Dockerfile
+  - [View in documentation](./Dockerfile_docs.md)
+- **Force**: Found in Dockerfile
+  - [View in documentation](./Dockerfile_docs.md)
+
+### H
+
+- **HTTP**: Found in Dockerfile
+  - [View in documentation](./Dockerfile_docs.md)
+
+### I
+
+- **InfiniFlow**: Found in Dockerfile
+  - [View in documentation](./Dockerfile_docs.md)
+
+### K
+
+- **Keep**: Found in Dockerfile
+  - [View in documentation](./Dockerfile_docs.md)
+
+### L
+
+- **Linux**: Found in Dockerfile
+  - [View in documentation](./Dockerfile_docs.md)
+
+### N
+
+- **NEED_MIRROR**: Found in Dockerfile
+  - [View in documentation](./Dockerfile_docs.md)
+
+### O
+
+- **ODBC**: Found in Dockerfile
+  - [View in documentation](./Dockerfile_docs.md)
+
+### P
+
+- **PATH**: Found in Dockerfile
+  - [View in documentation](./Dockerfile_docs.md)
+- **PYTHONDONTWRITEBYTECODE**: Found in Dockerfile
+  - [View in documentation](./Dockerfile_docs.md)
+- **PYTHONPATH**: Found in Dockerfile
+  - [View in documentation](./Dockerfile_docs.md)
+- **Packages**: Found in Dockerfile
+  - [View in documentation](./Dockerfile_docs.md)
+- **Python**: Found in Dockerfile
+  - [View in documentation](./Dockerfile_docs.md)
+
+### R
+
+- **RAGFlow**: Found in Dockerfile
+  - [View in documentation](./Dockerfile_docs.md)
+- **RUN**: Found in Dockerfile
+  - [View in documentation](./Dockerfile_docs.md)
+- **RUSTUP_DIST_SERVER**: Found in Dockerfile
+  - [View in documentation](./Dockerfile_docs.md)
+- **RUSTUP_UPDATE_ROOT**: Found in Dockerfile
+  - [View in documentation](./Dockerfile_docs.md)
+- **Rust**: Found in Dockerfile
+  - [View in documentation](./Dockerfile_docs.md)
+- **Rustup**: Found in Dockerfile
+  - [View in documentation](./Dockerfile_docs.md)
+
+### S
+
+- **SHELL**: Found in Dockerfile
+  - [View in documentation](./Dockerfile_docs.md)
+- **Setup**: Found in Dockerfile
+  - [View in documentation](./Dockerfile_docs.md)
+- **Silicon**: Found in Dockerfile
+  - [View in documentation](./Dockerfile_docs.md)
+
+### T
+
+- **TIKA_SERVER_JAR**: Found in Dockerfile
+  - [View in documentation](./Dockerfile_docs.md)
+- **TUNA**: Found in Dockerfile
+  - [View in documentation](./Dockerfile_docs.md)
+- **This**: Found in Dockerfile
+  - [View in documentation](./Dockerfile_docs.md)
+
+### U
+
+- **USER**: Found in Dockerfile
+  - [View in documentation](./Dockerfile_docs.md)
+- **Ubuntu**: Found in Dockerfile
+  - [View in documentation](./Dockerfile_docs.md)
+- **Use**: Found in Dockerfile
+  - [View in documentation](./Dockerfile_docs.md)
+- **Using**: Found in Dockerfile
+  - [View in documentation](./Dockerfile_docs.md)
+
+### V
+
+- **VERSION**: Found in Dockerfile
+  - [View in documentation](./Dockerfile_docs.md)
+- **VIRTUAL_ENV**: Found in Dockerfile
+  - [View in documentation](./Dockerfile_docs.md)
+
+### W
+
+- **WORKDIR**: Found in Dockerfile
+  - [View in documentation](./Dockerfile_docs.md)
+- **Without**: Found in Dockerfile
+  - [View in documentation](./Dockerfile_docs.md)
+
+## Keyword Summary
+
+This file contains 50 unique keywords extracted from the source code,
+including identifiers, function names, class names, and technical terms.
+
+---
+*Generated by RAGFlow Repository Documentation Generator*

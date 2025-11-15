@@ -1,0 +1,189 @@
+# Keyword Map: web/src/layouts/components/right-toolbar/index.tsx
+
+## File Path and Links
+
+- **Original File**: [web/src/layouts/components/right-toolbar/index.tsx](../../../../../../web/src/layouts/components/right-toolbar/index.tsx)
+- **Documentation**: [index.tsx_docs.md](./index.tsx_docs.md)
+- **Repository Root**: [../../../../../../](../../../../../../)
+
+## Keywords (48 total)
+
+
+### .
+
+- **../user**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+- **./index.less**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+
+### @
+
+- **@/components/theme-provider**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+- **@/constants/common**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+- **@/hooks/common-hooks**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+- **@/hooks/logic-hooks**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+- **@/hooks/user-setting-hooks**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+- **@/pages/user-setting/constants**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+- **@ant-design/icons**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+
+### B
+
+- **BellRing**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+
+### C
+
+- **Circle**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+- **CircleHelp**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+
+### D
+
+- **Dark**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+- **DownOutlined**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+- **Dropdown**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+
+### E
+
+- **English**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+
+### G
+
+- **GithubOutlined**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+
+### I
+
+- **Invite**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+
+### L
+
+- **LanguageList**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+- **LanguageMap**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+- **Light**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+
+### M
+
+- **MenuProps**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+- **MoonIcon**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+
+### P
+
+- **PropsWithChildren**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+
+### R
+
+- **React**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+- **RightToolBar**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+
+### S
+
+- **Space**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+- **SunIcon**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+
+### T
+
+- **TenantRole**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+- **ThemeEnum**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+- **TypeScript**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+
+### U
+
+- **User**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+
+### A
+
+- **ant**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+- **antd**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+
+### C
+
+- **changeLanguage**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+
+### H
+
+- **handleBellClick**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+- **handleDocHelpCLick**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+- **handleGithubCLick**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+- **handleItemClick**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+
+### I
+
+- **items**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+
+### L
+
+- **lodash/camelCase**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+- **lucide-react**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+
+### N
+
+- **navigate**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+
+### O
+
+- **onMoonClick**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+- **onSunClick**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+
+### R
+
+- **react**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+
+### S
+
+- **showBell**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+
+### U
+
+- **umi**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+
+## Keyword Summary
+
+This file contains 48 unique keywords extracted from the source code,
+including identifiers, function names, class names, and technical terms.
+
+---
+*Generated by RAGFlow Repository Documentation Generator*

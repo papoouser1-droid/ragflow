@@ -1,0 +1,179 @@
+# File Documentation: web/src/pages/profile-setting/plan/pricing-card.tsx
+
+## File Metadata
+
+- **Path**: `web/src/pages/profile-setting/plan/pricing-card.tsx`
+- **Extension**: `.tsx`
+- **Lines**: 87
+- **Characters**: 2,473
+- **Size**: 2,473 bytes
+- **Purpose**: JavaScript/TypeScript - Frontend or backend JavaScript code
+
+## Original Source
+
+```tsx
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader } from '@/components/ui/card';
+import { cn } from '@/lib/utils';
+import { Mail, Zap } from 'lucide-react';
+
+interface PricingFeature {
+  name: string;
+  value: string;
+  tooltip?: string;
+}
+
+interface PricingCardProps {
+  title: string;
+  price: string;
+  description: string;
+  features: PricingFeature[];
+  buttonText: string;
+  buttonVariant?: 'default' | 'outline' | 'secondary';
+  badge?: string;
+  isPro?: boolean;
+  isEnterprise?: boolean;
+}
+
+export function PricingCard({
+  title,
+  price,
+  description,
+  features,
+  buttonText,
+  isPro,
+  isEnterprise,
+}: PricingCardProps) {
+  const isFree = title === 'Free';
+
+  return (
+    <Card className="flex flex-col bg-colors-background-neutral-weak divide-y divide-colors-outline-neutral-strong p-4">
+      <CardHeader className=" justify-between p-0 pb-3 h-52">
+        <section>
+          <div className="flex items-center justify-between mb-2">
+            <Badge className="text-xs">
+              {isPro && <Zap className="mr-2 h-4 w-4" />}
+              {isEnterprise && <Mail className="mr-2 h-4 w-4" />}
+              {title}
+            </Badge>
+          </div>
+          <p className="text-sm text-colors-text-neutral-standard">
+            {description}
+          </p>
+        </section>
+        <section>
+          <div className="flex items-baseline text-3xl font-bold pb-3">
+            {price}
+            {price !== 'Customed' && (
+              <span className="text-sm font-normal">/mo</span>
+            )}
+          </div>
+          <Button
+            className={cn('w-full', {
+              'bg-colors-text-core-standard': !isFree,
+            })}
+            size={'sm'}
+          >
+            {isPro && <Zap className="mr-2 h-4 w-4" />}
+            {isEnterprise && <Mail />}
+            {buttonText}
+          </Button>
+        </section>
+      </CardHeader>
+      <CardContent className=" p-0 pt-3">
+        <ul className="space-y-2">
+          {features.map((feature, index) => (
+            <li key={index} className="">
+              <div className="text-colors-text-core-standard">
+                {feature.name}
+              </div>
+              <span className="text-sm">
+                <span className="font-medium">{feature.value}</span>
+              </span>
+            </li>
+          ))}
+        </ul>
+      </CardContent>
+    </Card>
+  );
+}
+
+```
+
+## High-Level Overview
+
+This file is part of the RAGFlow repository located at `web/src/pages/profile-setting/plan/pricing-card.tsx`.
+
+Based on the file structure and naming, it appears to be a javascript/typescript - frontend or backend javascript code.
+
+The file contains approximately 87 lines of code and defines various components
+that contribute to the overall functionality of the RAGFlow system.
+
+## Detailed Walkthrough
+
+### Exports (1)
+
+- `PricingCard`: Exported entity
+
+### Functions (1)
+
+- `PricingCard()`: Function definition
+
+### Imports (5)
+
+- `import { Badge } from '@/components/ui/badge';`
+- `import { Button } from '@/components/ui/button';`
+- `import { Card, CardContent, CardHeader } from '@/components/ui/card';`
+- `import { cn } from '@/lib/utils';`
+- `import { Mail, Zap } from 'lucide-react';`
+
+## Code Structure Analysis
+
+- Total lines: 87
+- Blank lines: 5 (5.7%)
+- Comment lines: ~0 (0.0%)
+- Code lines: ~82
+
+
+## Dependencies and Imports
+
+- `@/components/ui/badge`
+- `@/components/ui/button`
+- `@/components/ui/card`
+- `@/lib/utils`
+- `lucide-react`
+
+## Design & Architecture
+
+This file is located in the `web` directory, specifically within `web/src/pages/profile-setting/plan`.
+
+This appears to be a UI component or frontend module.
+
+## Performance & Complexity
+
+- No specific performance concerns identified through static analysis
+
+## Security & Safety Considerations
+
+- No immediate security concerns identified through static analysis
+
+## Testing & Usage Notes
+
+To work with this file:
+1. Understand its dependencies (see Dependencies section)
+2. Review the code structure and main components
+3. Check for existing tests in the test directories
+4. Consider edge cases and error handling
+
+## Related Files
+
+- Other files in `web/src/pages/profile-setting/plan/` directory
+- Potential test file: `test_pricing-card.tsx`
+
+## Keywords
+
+@/components/ui/badge, @/components/ui/button, @/components/ui/card, @/lib/utils, Badge, Button, Card, CardContent, CardHeader, Customed, Free, Mail, PricingCard, PricingCardProps, PricingFeature, TypeScript, Zap, isFree, lucide-react
+
+---
+*Generated by RAGFlow Repository Documentation Generator*

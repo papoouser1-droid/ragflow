@@ -1,0 +1,186 @@
+# Keyword Map: deepdoc/parser/html_parser.py
+
+## File Path and Links
+
+- **Original File**: [deepdoc/parser/html_parser.py](../../../deepdoc/parser/html_parser.py)
+- **Documentation**: [html_parser.py_docs.md](./html_parser.py_docs.md)
+- **Repository Root**: [../../../](../../../)
+
+## Keywords (45 total)
+
+
+### A
+
+- **ANY**: Found in html_parser.py
+  - [View in documentation](./html_parser.py_docs.md)
+- **All**: Found in html_parser.py
+  - [View in documentation](./html_parser.py_docs.md)
+- **Apache**: Found in html_parser.py
+  - [View in documentation](./html_parser.py_docs.md)
+- **Authors**: Found in html_parser.py
+  - [View in documentation](./html_parser.py_docs.md)
+
+### B
+
+- **BASIS**: Found in html_parser.py
+  - [View in documentation](./html_parser.py_docs.md)
+- **BLOCK_TAGS**: Found in html_parser.py
+  - [View in documentation](./html_parser.py_docs.md)
+- **BeautifulSoup**: Found in html_parser.py
+  - [View in documentation](./html_parser.py_docs.md)
+
+### C
+
+- **CONDITIONS**: Found in html_parser.py
+  - [View in documentation](./html_parser.py_docs.md)
+- **Comment**: Found in html_parser.py
+  - [View in documentation](./html_parser.py_docs.md)
+- **Copyright**: Found in html_parser.py
+  - [View in documentation](./html_parser.py_docs.md)
+
+### E
+
+- **Exception**: Found in html_parser.py
+  - [View in documentation](./html_parser.py_docs.md)
+
+### F
+
+- **False**: Found in html_parser.py
+  - [View in documentation](./html_parser.py_docs.md)
+
+### H
+
+- **HTML**: Found in html_parser.py
+  - [View in documentation](./html_parser.py_docs.md)
+
+### I
+
+- **InfiniFlow**: Found in html_parser.py
+  - [View in documentation](./html_parser.py_docs.md)
+
+### K
+
+- **KIND**: Found in html_parser.py
+  - [View in documentation](./html_parser.py_docs.md)
+
+### L
+
+- **LICENSE**: Found in html_parser.py
+  - [View in documentation](./html_parser.py_docs.md)
+- **License**: Found in html_parser.py
+  - [View in documentation](./html_parser.py_docs.md)
+- **Licensed**: Found in html_parser.py
+  - [View in documentation](./html_parser.py_docs.md)
+
+### N
+
+- **NavigableString**: Found in html_parser.py
+  - [View in documentation](./html_parser.py_docs.md)
+- **None**: Found in html_parser.py
+  - [View in documentation](./html_parser.py_docs.md)
+
+### P
+
+- **Python**: Found in html_parser.py
+  - [View in documentation](./html_parser.py_docs.md)
+
+### R
+
+- **RAGFlowHtmlParser**: Found in html_parser.py
+  - [View in documentation](./html_parser.py_docs.md)
+- **Reserved**: Found in html_parser.py
+  - [View in documentation](./html_parser.py_docs.md)
+- **Rights**: Found in html_parser.py
+  - [View in documentation](./html_parser.py_docs.md)
+
+### S
+
+- **See**: Found in html_parser.py
+  - [View in documentation](./html_parser.py_docs.md)
+
+### T
+
+- **TITLE_TAGS**: Found in html_parser.py
+  - [View in documentation](./html_parser.py_docs.md)
+- **Tag**: Found in html_parser.py
+  - [View in documentation](./html_parser.py_docs.md)
+- **The**: Found in html_parser.py
+  - [View in documentation](./html_parser.py_docs.md)
+- **True**: Found in html_parser.py
+  - [View in documentation](./html_parser.py_docs.md)
+- **TypeError**: Found in html_parser.py
+  - [View in documentation](./html_parser.py_docs.md)
+
+### U
+
+- **Unless**: Found in html_parser.py
+  - [View in documentation](./html_parser.py_docs.md)
+
+### V
+
+- **Version**: Found in html_parser.py
+  - [View in documentation](./html_parser.py_docs.md)
+
+### W
+
+- **WARRANTIES**: Found in html_parser.py
+  - [View in documentation](./html_parser.py_docs.md)
+- **WITHOUT**: Found in html_parser.py
+  - [View in documentation](./html_parser.py_docs.md)
+
+### Y
+
+- **You**: Found in html_parser.py
+  - [View in documentation](./html_parser.py_docs.md)
+
+### _
+
+- **__call__**: Found in html_parser.py
+  - [View in documentation](./html_parser.py_docs.md)
+
+### C
+
+- **chunk_block**: Found in html_parser.py
+  - [View in documentation](./html_parser.py_docs.md)
+- **classmethod**: Found in html_parser.py
+  - [View in documentation](./html_parser.py_docs.md)
+
+### G
+
+- **get_encoding**: Found in html_parser.py
+  - [View in documentation](./html_parser.py_docs.md)
+
+### I
+
+- **is_valid_html**: Found in html_parser.py
+  - [View in documentation](./html_parser.py_docs.md)
+
+### M
+
+- **merge_block_text**: Found in html_parser.py
+  - [View in documentation](./html_parser.py_docs.md)
+
+### P
+
+- **parser_txt**: Found in html_parser.py
+  - [View in documentation](./html_parser.py_docs.md)
+
+### R
+
+- **read_text_recursively**: Found in html_parser.py
+  - [View in documentation](./html_parser.py_docs.md)
+
+### S
+
+- **should**: Found in html_parser.py
+  - [View in documentation](./html_parser.py_docs.md)
+- **split_table**: Found in html_parser.py
+  - [View in documentation](./html_parser.py_docs.md)
+
+## Keyword Summary
+
+This file contains 45 unique keywords extracted from the source code,
+including identifiers, function names, class names, and technical terms.
+
+---
+*Generated by RAGFlow Repository Documentation Generator*

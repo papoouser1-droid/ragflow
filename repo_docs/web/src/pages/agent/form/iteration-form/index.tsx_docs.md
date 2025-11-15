@@ -1,0 +1,163 @@
+# File Documentation: web/src/pages/agent/form/iteration-form/index.tsx
+
+## File Metadata
+
+- **Path**: `web/src/pages/agent/form/iteration-form/index.tsx`
+- **Extension**: `.tsx`
+- **Lines**: 58
+- **Characters**: 1,758
+- **Size**: 1,758 bytes
+- **Purpose**: JavaScript/TypeScript - Frontend or backend JavaScript code
+
+## Original Source
+
+```tsx
+import { FormContainer } from '@/components/form-container';
+import { Form } from '@/components/ui/form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { memo, useMemo } from 'react';
+import { useForm, useWatch } from 'react-hook-form';
+import { z } from 'zod';
+import { JsonSchemaDataType } from '../../constant';
+import { INextOperatorForm } from '../../interface';
+import { FormWrapper } from '../components/form-wrapper';
+import { Output } from '../components/output';
+import { QueryVariable } from '../components/query-variable';
+import { DynamicOutput } from './dynamic-output';
+import { OutputArray } from './interface';
+import { useValues } from './use-values';
+import { useWatchFormChange } from './use-watch-form-change';
+
+const FormSchema = z.object({
+  query: z.string().optional(),
+  outputs: z.array(z.object({ name: z.string(), value: z.any() })).optional(),
+});
+
+function IterationForm({ node }: INextOperatorForm) {
+  const defaultValues = useValues(node);
+
+  const form = useForm({
+    defaultValues: defaultValues,
+    resolver: zodResolver(FormSchema),
+  });
+
+  const outputs: OutputArray = useWatch({
+    control: form?.control,
+    name: 'outputs',
+  });
+
+  const outputList = useMemo(() => {
+    return outputs.map((x) => ({ title: x.name, type: x?.type }));
+  }, [outputs]);
+
+  useWatchFormChange(node?.id, form);
+
+  return (
+    <Form {...form}>
+      <FormWrapper>
+        <FormContainer>
+          <QueryVariable
+            name="items_ref"
+            types={[JsonSchemaDataType.Array]}
+          ></QueryVariable>
+        </FormContainer>
+        <DynamicOutput node={node}></DynamicOutput>
+        <Output list={outputList}></Output>
+      </FormWrapper>
+    </Form>
+  );
+}
+
+export default memo(IterationForm);
+
+```
+
+## High-Level Overview
+
+This file is part of the RAGFlow repository located at `web/src/pages/agent/form/iteration-form/index.tsx`.
+
+Based on the file structure and naming, it appears to be a javascript/typescript - frontend or backend javascript code.
+
+The file contains approximately 58 lines of code and defines various components
+that contribute to the overall functionality of the RAGFlow system.
+
+## Detailed Walkthrough
+
+
+### Functions (2)
+
+- `IterationForm()`: Function definition
+- `outputList()`: Function definition
+
+### Imports (15)
+
+- `import { FormContainer } from '@/components/form-container';`
+- `import { Form } from '@/components/ui/form';`
+- `import { zodResolver } from '@hookform/resolvers/zod';`
+- `import { memo, useMemo } from 'react';`
+- `import { useForm, useWatch } from 'react-hook-form';`
+- `import { z } from 'zod';`
+- `import { JsonSchemaDataType } from '../../constant';`
+- `import { INextOperatorForm } from '../../interface';`
+- `import { FormWrapper } from '../components/form-wrapper';`
+- `import { Output } from '../components/output';`
+
+## Code Structure Analysis
+
+- Total lines: 58
+- Blank lines: 9 (15.5%)
+- Comment lines: ~0 (0.0%)
+- Code lines: ~49
+
+
+## Dependencies and Imports
+
+- `@/components/form-container`
+- `@/components/ui/form`
+- `@hookform/resolvers/zod`
+- `react`
+- `react-hook-form`
+- `zod`
+- `../../constant`
+- `../../interface`
+- `../components/form-wrapper`
+- `../components/output`
+- `../components/query-variable`
+- `./dynamic-output`
+- `./interface`
+- `./use-values`
+- `./use-watch-form-change`
+
+## Design & Architecture
+
+This file is located in the `web` directory, specifically within `web/src/pages/agent/form/iteration-form`.
+
+This appears to be a UI component or frontend module.
+
+## Performance & Complexity
+
+- Contains database queries - ensure proper indexing and query optimization
+
+## Security & Safety Considerations
+
+- No immediate security concerns identified through static analysis
+
+## Testing & Usage Notes
+
+To work with this file:
+1. Understand its dependencies (see Dependencies section)
+2. Review the code structure and main components
+3. Check for existing tests in the test directories
+4. Consider edge cases and error handling
+
+## Related Files
+
+- Other files in `web/src/pages/agent/form/iteration-form/` directory
+- Potential test file: `test_index.tsx`
+
+## Keywords
+
+../../constant, ../../interface, ../components/form-wrapper, ../components/output, ../components/query-variable, ./dynamic-output, ./interface, ./use-values, ./use-watch-form-change, @/components/form-container, @/components/ui/form, @hookform/resolvers/zod, Array, DynamicOutput, Form, FormContainer, FormSchema, FormWrapper, INextOperatorForm, IterationForm, JsonSchemaDataType, Output, OutputArray, QueryVariable, TypeScript, defaultValues, form, hookform, outputList, outputs, react, react-hook-form, zod
+
+---
+*Generated by RAGFlow Repository Documentation Generator*

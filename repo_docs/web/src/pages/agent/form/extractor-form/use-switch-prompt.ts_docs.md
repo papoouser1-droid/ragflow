@@ -1,0 +1,169 @@
+# File Documentation: web/src/pages/agent/form/extractor-form/use-switch-prompt.ts
+
+## File Metadata
+
+- **Path**: `web/src/pages/agent/form/extractor-form/use-switch-prompt.ts`
+- **Extension**: `.ts`
+- **Lines**: 70
+- **Characters**: 1,936
+- **Size**: 1,936 bytes
+- **Purpose**: JavaScript/TypeScript - Frontend or backend JavaScript code
+
+## Original Source
+
+```typescript
+import { LlmSettingSchema } from '@/components/llm-setting-items/next';
+import { useSetModalState } from '@/hooks/common-hooks';
+import { useCallback, useRef } from 'react';
+import { UseFormReturn } from 'react-hook-form';
+import { useTranslation } from 'react-i18next';
+import { z } from 'zod';
+
+export const FormSchema = z.object({
+  field_name: z.string(),
+  sys_prompt: z.string(),
+  prompts: z.string().optional(),
+  ...LlmSettingSchema,
+});
+
+export type ExtractorFormSchemaType = z.infer<typeof FormSchema>;
+
+export function useSwitchPrompt(form: UseFormReturn<ExtractorFormSchemaType>) {
+  const { visible, showModal, hideModal } = useSetModalState();
+  const { t } = useTranslation();
+  const previousFieldNames = useRef<string[]>([form.getValues('field_name')]);
+
+  const setPromptValue = useCallback(
+    (field: keyof ExtractorFormSchemaType, key: string, value: string) => {
+      form.setValue(field, t(`flow.prompts.${key}.${value}`), {
+        shouldDirty: true,
+        shouldValidate: true,
+      });
+    },
+    [form, t],
+  );
+
+  const handleFieldNameChange = useCallback(
+    (value: string) => {
+      if (value) {
+        const names = previousFieldNames.current;
+        if (names.length > 1) {
+          names.shift();
+        }
+        names.push(value);
+        showModal();
+      }
+    },
+    [showModal],
+  );
+
+  const confirmSwitch = useCallback(() => {
+    const value = form.getValues('field_name');
+    setPromptValue('sys_prompt', 'system', value);
+    setPromptValue('prompts', 'user', value);
+  }, [form, setPromptValue]);
+
+  const cancelSwitch = useCallback(() => {
+    const previousValue = previousFieldNames.current.at(-2);
+    if (previousValue) {
+      form.setValue('field_name', previousValue, {
+        shouldDirty: true,
+        shouldValidate: true,
+      });
+    }
+  }, [form]);
+
+  return {
+    handleFieldNameChange,
+    confirmSwitch,
+    hideModal,
+    visible,
+    cancelSwitch,
+  };
+}
+
+```
+
+## High-Level Overview
+
+This file is part of the RAGFlow repository located at `web/src/pages/agent/form/extractor-form/use-switch-prompt.ts`.
+
+Based on the file structure and naming, it appears to be a javascript/typescript - frontend or backend javascript code.
+
+The file contains approximately 70 lines of code and defines various components
+that contribute to the overall functionality of the RAGFlow system.
+
+## Detailed Walkthrough
+
+### Exports (2)
+
+- `FormSchema`: Exported entity
+- `useSwitchPrompt`: Exported entity
+
+### Functions (5)
+
+- `useSwitchPrompt()`: Function definition
+- `setPromptValue()`: Function definition
+- `handleFieldNameChange()`: Function definition
+- `confirmSwitch()`: Function definition
+- `cancelSwitch()`: Function definition
+
+### Imports (6)
+
+- `import { LlmSettingSchema } from '@/components/llm-setting-items/next';`
+- `import { useSetModalState } from '@/hooks/common-hooks';`
+- `import { useCallback, useRef } from 'react';`
+- `import { UseFormReturn } from 'react-hook-form';`
+- `import { useTranslation } from 'react-i18next';`
+- `import { z } from 'zod';`
+
+## Code Structure Analysis
+
+- Total lines: 70
+- Blank lines: 9 (12.9%)
+- Comment lines: ~0 (0.0%)
+- Code lines: ~61
+
+
+## Dependencies and Imports
+
+- `@/components/llm-setting-items/next`
+- `@/hooks/common-hooks`
+- `react`
+- `react-hook-form`
+- `react-i18next`
+- `zod`
+
+## Design & Architecture
+
+This file is located in the `web` directory, specifically within `web/src/pages/agent/form/extractor-form`.
+
+This appears to be a UI component or frontend module.
+
+## Performance & Complexity
+
+- No specific performance concerns identified through static analysis
+
+## Security & Safety Considerations
+
+- No immediate security concerns identified through static analysis
+
+## Testing & Usage Notes
+
+To work with this file:
+1. Understand its dependencies (see Dependencies section)
+2. Review the code structure and main components
+3. Check for existing tests in the test directories
+4. Consider edge cases and error handling
+
+## Related Files
+
+- Other files in `web/src/pages/agent/form/extractor-form/` directory
+- Potential test file: `test_use-switch-prompt.ts`
+
+## Keywords
+
+@/components/llm-setting-items/next, @/hooks/common-hooks, ExtractorFormSchemaType, FormSchema, LlmSettingSchema, TypeScript, UseFormReturn, cancelSwitch, confirmSwitch, handleFieldNameChange, names, previousFieldNames, previousValue, react, react-hook-form, react-i18next, setPromptValue, useSwitchPrompt, value, zod
+
+---
+*Generated by RAGFlow Repository Documentation Generator*

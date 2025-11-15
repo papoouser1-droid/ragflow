@@ -1,0 +1,169 @@
+# Keyword Map: web/src/pages/agent/gobal-variable-sheet/index.tsx
+
+## File Path and Links
+
+- **Original File**: [web/src/pages/agent/gobal-variable-sheet/index.tsx](../../../../../../web/src/pages/agent/gobal-variable-sheet/index.tsx)
+- **Documentation**: [index.tsx_docs.md](./index.tsx_docs.md)
+- **Repository Root**: [../../../../../../](../../../../../../)
+
+## Keywords (47 total)
+
+
+### .
+
+- **../hooks/use-save-graph**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+- **./component/add-variable-modal**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+- **./hooks/use-object-fields**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+
+### @
+
+- **@/components/confirm-delete-dialog**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+- **@/components/dynamic-form**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+- **@/components/ui/button**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+- **@/hooks/common-hooks**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+- **@/hooks/use-agent-request**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+- **@/interfaces/database/agent**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+- **@/lib/utils**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+
+### A
+
+- **AddVariableModal**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+- **ArrayBoolean**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+- **ArrayNumber**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+- **ArrayObject**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+- **ArrayString**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+
+### B
+
+- **BlockButton**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+- **Button**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+
+### C
+
+- **ConfirmDeleteDialog**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+
+### F
+
+- **FieldValues**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+- **FormFieldConfig**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+
+### G
+
+- **GlobalFormFields**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+- **GlobalParamSheet**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+- **GlobalVariableFormDefaultValues**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+- **GlobalVariableType**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+
+### I
+
+- **IGlobalParamModalProps**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+
+### O
+
+- **Object**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+
+### R
+
+- **Record**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+
+### S
+
+- **Sheet**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+- **SheetContent**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+- **SheetHeader**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+- **SheetTitle**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+
+### T
+
+- **Trash2**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+- **TypeMaps**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+- **TypeScript**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+- **TypesWithArray**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+
+### A
+
+- **as**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+
+### H
+
+- **handleDeleteGlobalVariable**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+- **handleEditGlobalVariable**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+
+### I
+
+- **i18next**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+- **item**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+
+### L
+
+- **lucide-react**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+
+### N
+
+- **newField**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+- **newFields**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+
+### P
+
+- **param**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+
+### R
+
+- **react**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+- **react-hook-form**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+- **res**: Found in index.tsx
+  - [View in documentation](./index.tsx_docs.md)
+
+## Keyword Summary
+
+This file contains 47 unique keywords extracted from the source code,
+including identifiers, function names, class names, and technical terms.
+
+---
+*Generated by RAGFlow Repository Documentation Generator*

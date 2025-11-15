@@ -1,0 +1,155 @@
+# Keyword Map: graphrag/general/graph_extractor.py
+
+## File Path and Links
+
+- **Original File**: [graphrag/general/graph_extractor.py](../../../graphrag/general/graph_extractor.py)
+- **Documentation**: [graph_extractor.py_docs.md](./graph_extractor.py_docs.md)
+- **Repository Root**: [../../../](../../../)
+
+## Keywords (40 total)
+
+
+### A
+
+- **Any**: Found in graph_extractor.py
+  - [View in documentation](./graph_extractor.py_docs.md)
+
+### B
+
+- **Base**: Found in graph_extractor.py
+  - [View in documentation](./graph_extractor.py_docs.md)
+
+### C
+
+- **COMPLETE**: Found in graph_extractor.py
+  - [View in documentation](./graph_extractor.py_docs.md)
+- **CONTINUE_PROMPT**: Found in graph_extractor.py
+  - [View in documentation](./graph_extractor.py_docs.md)
+- **CompletionLLM**: Found in graph_extractor.py
+  - [View in documentation](./graph_extractor.py_docs.md)
+- **Construct**: Found in graph_extractor.py
+  - [View in documentation](./graph_extractor.py_docs.md)
+- **Copyright**: Found in graph_extractor.py
+  - [View in documentation](./graph_extractor.py_docs.md)
+- **Corporation**: Found in graph_extractor.py
+  - [View in documentation](./graph_extractor.py_docs.md)
+
+### D
+
+- **DEFAULT_COMPLETION_DELIMITER**: Found in graph_extractor.py
+  - [View in documentation](./graph_extractor.py_docs.md)
+- **DEFAULT_RECORD_DELIMITER**: Found in graph_extractor.py
+  - [View in documentation](./graph_extractor.py_docs.md)
+- **DEFAULT_TUPLE_DELIMITER**: Found in graph_extractor.py
+  - [View in documentation](./graph_extractor.py_docs.md)
+
+### E
+
+- **ENTITY_EXTRACTION_MAX_GLEANINGS**: Found in graph_extractor.py
+  - [View in documentation](./graph_extractor.py_docs.md)
+- **English**: Found in graph_extractor.py
+  - [View in documentation](./graph_extractor.py_docs.md)
+- **Entities**: Found in graph_extractor.py
+  - [View in documentation](./graph_extractor.py_docs.md)
+- **ErrorHandlerFn**: Found in graph_extractor.py
+  - [View in documentation](./graph_extractor.py_docs.md)
+- **Extractor**: Found in graph_extractor.py
+  - [View in documentation](./graph_extractor.py_docs.md)
+
+### G
+
+- **GRAPH_EXTRACTION_PROMPT**: Found in graph_extractor.py
+  - [View in documentation](./graph_extractor.py_docs.md)
+- **Graph**: Found in graph_extractor.py
+  - [View in documentation](./graph_extractor.py_docs.md)
+- **GraphExtractionResult**: Found in graph_extractor.py
+  - [View in documentation](./graph_extractor.py_docs.md)
+- **GraphExtractor**: Found in graph_extractor.py
+  - [View in documentation](./graph_extractor.py_docs.md)
+
+### I
+
+- **Init**: Found in graph_extractor.py
+  - [View in documentation](./graph_extractor.py_docs.md)
+
+### L
+
+- **LOOP_PROMPT**: Found in graph_extractor.py
+  - [View in documentation](./graph_extractor.py_docs.md)
+- **License**: Found in graph_extractor.py
+  - [View in documentation](./graph_extractor.py_docs.md)
+- **Licensed**: Found in graph_extractor.py
+  - [View in documentation](./graph_extractor.py_docs.md)
+
+### M
+
+- **MIT**: Found in graph_extractor.py
+  - [View in documentation](./graph_extractor.py_docs.md)
+- **Microsoft**: Found in graph_extractor.py
+  - [View in documentation](./graph_extractor.py_docs.md)
+
+### N
+
+- **None**: Found in graph_extractor.py
+  - [View in documentation](./graph_extractor.py_docs.md)
+
+### O
+
+- **Output**: Found in graph_extractor.py
+  - [View in documentation](./graph_extractor.py_docs.md)
+
+### P
+
+- **Python**: Found in graph_extractor.py
+  - [View in documentation](./graph_extractor.py_docs.md)
+
+### R
+
+- **Reference**: Found in graph_extractor.py
+  - [View in documentation](./graph_extractor.py_docs.md)
+- **Repeat**: Found in graph_extractor.py
+  - [View in documentation](./graph_extractor.py_docs.md)
+
+### T
+
+- **TODO**: Found in graph_extractor.py
+  - [View in documentation](./graph_extractor.py_docs.md)
+- **True**: Found in graph_extractor.py
+  - [View in documentation](./graph_extractor.py_docs.md)
+
+### U
+
+- **Unipartite**: Found in graph_extractor.py
+  - [View in documentation](./graph_extractor.py_docs.md)
+
+### W
+
+- **Wire**: Found in graph_extractor.py
+  - [View in documentation](./graph_extractor.py_docs.md)
+
+### Y
+
+- **YES**: Found in graph_extractor.py
+  - [View in documentation](./graph_extractor.py_docs.md)
+
+### _
+
+- **__init__**: Found in graph_extractor.py
+  - [View in documentation](./graph_extractor.py_docs.md)
+- **_process_single_content**: Found in graph_extractor.py
+  - [View in documentation](./graph_extractor.py_docs.md)
+
+### D
+
+- **dataclass**: Found in graph_extractor.py
+  - [View in documentation](./graph_extractor.py_docs.md)
+- **definition**: Found in graph_extractor.py
+  - [View in documentation](./graph_extractor.py_docs.md)
+
+## Keyword Summary
+
+This file contains 40 unique keywords extracted from the source code,
+including identifiers, function names, class names, and technical terms.
+
+---
+*Generated by RAGFlow Repository Documentation Generator*

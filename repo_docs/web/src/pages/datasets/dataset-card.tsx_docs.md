@@ -1,0 +1,160 @@
+# File Documentation: web/src/pages/datasets/dataset-card.tsx
+
+## File Metadata
+
+- **Path**: `web/src/pages/datasets/dataset-card.tsx`
+- **Extension**: `.tsx`
+- **Lines**: 56
+- **Characters**: 1,712
+- **Size**: 1,712 bytes
+- **Purpose**: JavaScript/TypeScript - Frontend or backend JavaScript code
+
+## Original Source
+
+```tsx
+import { HomeCard } from '@/components/home-card';
+import { MoreButton } from '@/components/more-button';
+import { SharedBadge } from '@/components/shared-badge';
+import { Card, CardContent } from '@/components/ui/card';
+import { useNavigatePage } from '@/hooks/logic-hooks/navigate-hooks';
+import { IKnowledge } from '@/interfaces/database/knowledge';
+import { t } from 'i18next';
+import { ChevronRight } from 'lucide-react';
+import { DatasetDropdown } from './dataset-dropdown';
+import { useRenameDataset } from './use-rename-dataset';
+
+export type DatasetCardProps = {
+  dataset: IKnowledge;
+} & Pick<ReturnType<typeof useRenameDataset>, 'showDatasetRenameModal'>;
+
+export function DatasetCard({
+  dataset,
+  showDatasetRenameModal,
+}: DatasetCardProps) {
+  const { navigateToDataset } = useNavigatePage();
+
+  return (
+    <HomeCard
+      data={{
+        ...dataset,
+        description: `${dataset.doc_num} ${t('knowledgeDetails.files')}`,
+      }}
+      moreDropdown={
+        <DatasetDropdown
+          showDatasetRenameModal={showDatasetRenameModal}
+          dataset={dataset}
+        >
+          <MoreButton></MoreButton>
+        </DatasetDropdown>
+      }
+      sharedBadge={<SharedBadge>{dataset.nickname}</SharedBadge>}
+      onClick={navigateToDataset(dataset.id)}
+    />
+  );
+}
+
+export function SeeAllCard() {
+  const { navigateToDatasetList } = useNavigatePage();
+
+  return (
+    <Card
+      className="w-full flex-none h-full cursor-pointer"
+      onClick={navigateToDatasetList}
+    >
+      <CardContent className="p-2.5 pt-1 w-full h-full flex items-center justify-center gap-1.5 text-text-secondary">
+        See All <ChevronRight className="size-4" />
+      </CardContent>
+    </Card>
+  );
+}
+
+```
+
+## High-Level Overview
+
+This file is part of the RAGFlow repository located at `web/src/pages/datasets/dataset-card.tsx`.
+
+Based on the file structure and naming, it appears to be a javascript/typescript - frontend or backend javascript code.
+
+The file contains approximately 56 lines of code and defines various components
+that contribute to the overall functionality of the RAGFlow system.
+
+## Detailed Walkthrough
+
+### Exports (2)
+
+- `DatasetCard`: Exported entity
+- `SeeAllCard`: Exported entity
+
+### Functions (2)
+
+- `DatasetCard()`: Function definition
+- `SeeAllCard()`: Function definition
+
+### Imports (10)
+
+- `import { HomeCard } from '@/components/home-card';`
+- `import { MoreButton } from '@/components/more-button';`
+- `import { SharedBadge } from '@/components/shared-badge';`
+- `import { Card, CardContent } from '@/components/ui/card';`
+- `import { useNavigatePage } from '@/hooks/logic-hooks/navigate-hooks';`
+- `import { IKnowledge } from '@/interfaces/database/knowledge';`
+- `import { t } from 'i18next';`
+- `import { ChevronRight } from 'lucide-react';`
+- `import { DatasetDropdown } from './dataset-dropdown';`
+- `import { useRenameDataset } from './use-rename-dataset';`
+
+## Code Structure Analysis
+
+- Total lines: 56
+- Blank lines: 6 (10.7%)
+- Comment lines: ~0 (0.0%)
+- Code lines: ~50
+
+
+## Dependencies and Imports
+
+- `@/components/home-card`
+- `@/components/more-button`
+- `@/components/shared-badge`
+- `@/components/ui/card`
+- `@/hooks/logic-hooks/navigate-hooks`
+- `@/interfaces/database/knowledge`
+- `i18next`
+- `lucide-react`
+- `./dataset-dropdown`
+- `./use-rename-dataset`
+
+## Design & Architecture
+
+This file is located in the `web` directory, specifically within `web/src/pages/datasets`.
+
+This appears to be a UI component or frontend module.
+
+## Performance & Complexity
+
+- No specific performance concerns identified through static analysis
+
+## Security & Safety Considerations
+
+- No immediate security concerns identified through static analysis
+
+## Testing & Usage Notes
+
+To work with this file:
+1. Understand its dependencies (see Dependencies section)
+2. Review the code structure and main components
+3. Check for existing tests in the test directories
+4. Consider edge cases and error handling
+
+## Related Files
+
+- Other files in `web/src/pages/datasets/` directory
+- Potential test file: `test_dataset-card.tsx`
+
+## Keywords
+
+./dataset-dropdown, ./use-rename-dataset, @/components/home-card, @/components/more-button, @/components/shared-badge, @/components/ui/card, @/hooks/logic-hooks/navigate-hooks, @/interfaces/database/knowledge, All, Card, CardContent, ChevronRight, DatasetCard, DatasetCardProps, DatasetDropdown, HomeCard, IKnowledge, MoreButton, Pick, ReturnType, See, SeeAllCard, SharedBadge, TypeScript, i18next, lucide-react
+
+---
+*Generated by RAGFlow Repository Documentation Generator*

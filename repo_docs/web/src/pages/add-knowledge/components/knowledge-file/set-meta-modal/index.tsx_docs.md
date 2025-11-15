@@ -1,0 +1,180 @@
+# File Documentation: web/src/pages/add-knowledge/components/knowledge-file/set-meta-modal/index.tsx
+
+## File Metadata
+
+- **Path**: `web/src/pages/add-knowledge/components/knowledge-file/set-meta-modal/index.tsx`
+- **Extension**: `.tsx`
+- **Lines**: 82
+- **Characters**: 2,138
+- **Size**: 2,138 bytes
+- **Purpose**: JavaScript/TypeScript - Frontend or backend JavaScript code
+
+## Original Source
+
+```tsx
+import { IModalProps } from '@/interfaces/common';
+import { IDocumentInfo } from '@/interfaces/database/document';
+import Editor, { loader } from '@monaco-editor/react';
+
+import { Form, Modal } from 'antd';
+import DOMPurify from 'dompurify';
+import { useCallback, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
+
+loader.config({ paths: { vs: '/vs' } });
+
+type FieldType = {
+  meta?: string;
+};
+
+export function SetMetaModal({
+  visible,
+  hideModal,
+  onOk,
+  initialMetaData,
+}: IModalProps<any> & { initialMetaData?: IDocumentInfo['meta_fields'] }) {
+  const { t } = useTranslation();
+  const [form] = Form.useForm();
+
+  const handleOk = useCallback(async () => {
+    const values = await form.validateFields();
+    onOk?.(values.meta);
+  }, [form, onOk]);
+
+  useEffect(() => {
+    form.setFieldValue('meta', JSON.stringify(initialMetaData, null, 4));
+  }, [form, initialMetaData]);
+
+  return (
+    <Modal
+      title={t('knowledgeDetails.setMetaData')}
+      open={visible}
+      onOk={handleOk}
+      onCancel={hideModal}
+    >
+      <Form
+        name="basic"
+        initialValues={{ remember: true }}
+        autoComplete="off"
+        layout={'vertical'}
+        form={form}
+      >
+        <Form.Item<FieldType>
+          label={t('knowledgeDetails.metaData')}
+          name="meta"
+          rules={[
+            {
+              required: true,
+              validator(rule, value) {
+                try {
+                  JSON.parse(value);
+                  return Promise.resolve();
+                } catch (error) {
+                  return Promise.reject(
+                    new Error(t('knowledgeDetails.pleaseInputJson')),
+                  );
+                }
+              },
+            },
+          ]}
+          tooltip={
+            <div
+              dangerouslySetInnerHTML={{
+                __html: DOMPurify.sanitize(
+                  t('knowledgeDetails.documentMetaTips'),
+                ),
+              }}
+            ></div>
+          }
+        >
+          <Editor height={200} defaultLanguage="json" theme="vs-dark" />
+        </Form.Item>
+      </Form>
+    </Modal>
+  );
+}
+
+```
+
+## High-Level Overview
+
+This file is part of the RAGFlow repository located at `web/src/pages/add-knowledge/components/knowledge-file/set-meta-modal/index.tsx`.
+
+Based on the file structure and naming, it appears to be a javascript/typescript - frontend or backend javascript code.
+
+The file contains approximately 82 lines of code and defines various components
+that contribute to the overall functionality of the RAGFlow system.
+
+## Detailed Walkthrough
+
+### Exports (1)
+
+- `SetMetaModal`: Exported entity
+
+### Functions (3)
+
+- `SetMetaModal()`: Function definition
+- `handleOk()`: Function definition
+- `values()`: Function definition
+
+### Imports (7)
+
+- `import { IModalProps } from '@/interfaces/common';`
+- `import { IDocumentInfo } from '@/interfaces/database/document';`
+- `import Editor, { loader } from '@monaco-editor/react';`
+- `import { Form, Modal } from 'antd';`
+- `import DOMPurify from 'dompurify';`
+- `import { useCallback, useEffect } from 'react';`
+- `import { useTranslation } from 'react-i18next';`
+
+## Code Structure Analysis
+
+- Total lines: 82
+- Blank lines: 8 (9.8%)
+- Comment lines: ~0 (0.0%)
+- Code lines: ~74
+
+
+## Dependencies and Imports
+
+- `@/interfaces/common`
+- `@/interfaces/database/document`
+- `@monaco-editor/react`
+- `antd`
+- `dompurify`
+- `react`
+- `react-i18next`
+
+## Design & Architecture
+
+This file is located in the `web` directory, specifically within `web/src/pages/add-knowledge/components/knowledge-file/set-meta-modal`.
+
+This appears to be a UI component or frontend module.
+
+## Performance & Complexity
+
+- Uses asynchronous patterns for better performance
+
+## Security & Safety Considerations
+
+- **User Input**: Validate and sanitize all user input
+
+## Testing & Usage Notes
+
+To work with this file:
+1. Understand its dependencies (see Dependencies section)
+2. Review the code structure and main components
+3. Check for existing tests in the test directories
+4. Consider edge cases and error handling
+
+## Related Files
+
+- Other files in `web/src/pages/add-knowledge/components/knowledge-file/set-meta-modal/` directory
+- Potential test file: `test_index.tsx`
+
+## Keywords
+
+@/interfaces/common, @/interfaces/database/document, @monaco-editor/react, DOMPurify, Editor, Error, FieldType, Form, IDocumentInfo, IModalProps, Item, JSON, Modal, Promise, SetMetaModal, TypeScript, antd, dompurify, handleOk, monaco, react, react-i18next, values
+
+---
+*Generated by RAGFlow Repository Documentation Generator*

@@ -1,0 +1,162 @@
+# File Documentation: web/src/pages/datasets/dataset-dropdown.tsx
+
+## File Metadata
+
+- **Path**: `web/src/pages/datasets/dataset-dropdown.tsx`
+- **Extension**: `.tsx`
+- **Lines**: 65
+- **Characters**: 2,020
+- **Size**: 2,020 bytes
+- **Purpose**: JavaScript/TypeScript - Frontend or backend JavaScript code
+
+## Original Source
+
+```tsx
+import { ConfirmDeleteDialog } from '@/components/confirm-delete-dialog';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
+import { useDeleteKnowledge } from '@/hooks/use-knowledge-request';
+import { IKnowledge } from '@/interfaces/database/knowledge';
+import { PenLine, Trash2 } from 'lucide-react';
+import { MouseEventHandler, PropsWithChildren, useCallback } from 'react';
+import { useTranslation } from 'react-i18next';
+import { useRenameDataset } from './use-rename-dataset';
+
+export function DatasetDropdown({
+  children,
+  showDatasetRenameModal,
+  dataset,
+}: PropsWithChildren &
+  Pick<ReturnType<typeof useRenameDataset>, 'showDatasetRenameModal'> & {
+    dataset: IKnowledge;
+  }) {
+  const { t } = useTranslation();
+  const { deleteKnowledge } = useDeleteKnowledge();
+
+  const handleShowDatasetRenameModal: MouseEventHandler<HTMLDivElement> =
+    useCallback(
+      (e) => {
+        e.stopPropagation();
+        showDatasetRenameModal(dataset);
+      },
+      [dataset, showDatasetRenameModal],
+    );
+
+  const handleDelete: MouseEventHandler<HTMLDivElement> = useCallback(() => {
+    deleteKnowledge(dataset.id);
+  }, [dataset.id, deleteKnowledge]);
+
+  return (
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>{children}</DropdownMenuTrigger>
+      <DropdownMenuContent>
+        <DropdownMenuItem onClick={handleShowDatasetRenameModal}>
+          {t('common.rename')} <PenLine />
+        </DropdownMenuItem>
+        <DropdownMenuSeparator />
+        <ConfirmDeleteDialog onOk={handleDelete}>
+          <DropdownMenuItem
+            className="text-state-error"
+            onSelect={(e) => {
+              e.preventDefault();
+            }}
+            onClick={(e) => {
+              e.stopPropagation();
+            }}
+          >
+            {t('common.delete')} <Trash2 />
+          </DropdownMenuItem>
+        </ConfirmDeleteDialog>
+      </DropdownMenuContent>
+    </DropdownMenu>
+  );
+}
+
+```
+
+## High-Level Overview
+
+This file is part of the RAGFlow repository located at `web/src/pages/datasets/dataset-dropdown.tsx`.
+
+Based on the file structure and naming, it appears to be a javascript/typescript - frontend or backend javascript code.
+
+The file contains approximately 65 lines of code and defines various components
+that contribute to the overall functionality of the RAGFlow system.
+
+## Detailed Walkthrough
+
+### Exports (1)
+
+- `DatasetDropdown`: Exported entity
+
+### Functions (1)
+
+- `DatasetDropdown()`: Function definition
+
+### Imports (8)
+
+- `import { ConfirmDeleteDialog } from '@/components/confirm-delete-dialog';`
+- `import {`
+- `import { useDeleteKnowledge } from '@/hooks/use-knowledge-request';`
+- `import { IKnowledge } from '@/interfaces/database/knowledge';`
+- `import { PenLine, Trash2 } from 'lucide-react';`
+- `import { MouseEventHandler, PropsWithChildren, useCallback } from 'react';`
+- `import { useTranslation } from 'react-i18next';`
+- `import { useRenameDataset } from './use-rename-dataset';`
+
+## Code Structure Analysis
+
+- Total lines: 65
+- Blank lines: 5 (7.7%)
+- Comment lines: ~0 (0.0%)
+- Code lines: ~60
+
+
+## Dependencies and Imports
+
+- `@/components/confirm-delete-dialog`
+- `@/hooks/use-knowledge-request`
+- `@/interfaces/database/knowledge`
+- `lucide-react`
+- `react`
+- `react-i18next`
+- `./use-rename-dataset`
+
+## Design & Architecture
+
+This file is located in the `web` directory, specifically within `web/src/pages/datasets`.
+
+This appears to be a UI component or frontend module.
+
+## Performance & Complexity
+
+- No specific performance concerns identified through static analysis
+
+## Security & Safety Considerations
+
+- **User Input**: Validate and sanitize all user input
+
+## Testing & Usage Notes
+
+To work with this file:
+1. Understand its dependencies (see Dependencies section)
+2. Review the code structure and main components
+3. Check for existing tests in the test directories
+4. Consider edge cases and error handling
+
+## Related Files
+
+- Other files in `web/src/pages/datasets/` directory
+- Potential test file: `test_dataset-dropdown.tsx`
+
+## Keywords
+
+./use-rename-dataset, @/components/confirm-delete-dialog, @/hooks/use-knowledge-request, @/interfaces/database/knowledge, ConfirmDeleteDialog, DatasetDropdown, DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger, HTMLDivElement, IKnowledge, MouseEventHandler, PenLine, Pick, PropsWithChildren, ReturnType, Trash2, TypeScript, handleDelete, handleShowDatasetRenameModal, lucide-react, react, react-i18next
+
+---
+*Generated by RAGFlow Repository Documentation Generator*

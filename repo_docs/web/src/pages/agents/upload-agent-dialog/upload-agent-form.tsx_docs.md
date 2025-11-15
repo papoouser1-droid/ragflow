@@ -1,0 +1,172 @@
+# File Documentation: web/src/pages/agents/upload-agent-dialog/upload-agent-form.tsx
+
+## File Metadata
+
+- **Path**: `web/src/pages/agents/upload-agent-dialog/upload-agent-form.tsx`
+- **Extension**: `.tsx`
+- **Lines**: 71
+- **Characters**: 1,943
+- **Size**: 1,943 bytes
+- **Purpose**: JavaScript/TypeScript - Frontend or backend JavaScript code
+
+## Original Source
+
+```tsx
+'use client';
+
+import { zodResolver } from '@hookform/resolvers/zod';
+import { useForm } from 'react-hook-form';
+import { z } from 'zod';
+
+import { FileUploader } from '@/components/file-uploader';
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from '@/components/ui/form';
+import { FileMimeType } from '@/constants/common';
+import { IModalProps } from '@/interfaces/common';
+import { TagRenameId } from '@/pages/add-knowledge/constant';
+import { NameFormField, NameFormSchema } from '../name-form-field';
+
+export const FormSchema = z.object({
+  fileList: z.array(z.instanceof(File)),
+  ...NameFormSchema,
+});
+
+export type FormSchemaType = z.infer<typeof FormSchema>;
+export function UploadAgentForm({ hideModal, onOk }: IModalProps<any>) {
+  const form = useForm<z.infer<typeof FormSchema>>({
+    resolver: zodResolver(FormSchema),
+    defaultValues: { name: '' },
+  });
+
+  async function onSubmit(data: FormSchemaType) {
+    const ret = await onOk?.(data);
+    if (ret) {
+      hideModal?.();
+    }
+  }
+
+  return (
+    <Form {...form}>
+      <form
+        onSubmit={form.handleSubmit(onSubmit)}
+        className="space-y-6 w-full text-ellipsis overflow-hidden"
+        id={TagRenameId}
+      >
+        <NameFormField></NameFormField>
+        <FormField
+          control={form.control}
+          name="fileList"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel required>DSL</FormLabel>
+              <FormControl>
+                <FileUploader
+                  className="w-[calc(100%-40px)] text-ellipsis overflow-hidden"
+                  value={field.value}
+                  onValueChange={field.onChange}
+                  maxFileCount={1}
+                  accept={{ '*.json': [FileMimeType.Json] }}
+                />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+      </form>
+    </Form>
+  );
+}
+
+```
+
+## High-Level Overview
+
+This file is part of the RAGFlow repository located at `web/src/pages/agents/upload-agent-dialog/upload-agent-form.tsx`.
+
+Based on the file structure and naming, it appears to be a javascript/typescript - frontend or backend javascript code.
+
+The file contains approximately 71 lines of code and defines various components
+that contribute to the overall functionality of the RAGFlow system.
+
+## Detailed Walkthrough
+
+### Exports (2)
+
+- `FormSchema`: Exported entity
+- `UploadAgentForm`: Exported entity
+
+### Functions (2)
+
+- `UploadAgentForm()`: Function definition
+- `onSubmit()`: Function definition
+
+### Imports (9)
+
+- `import { zodResolver } from '@hookform/resolvers/zod';`
+- `import { useForm } from 'react-hook-form';`
+- `import { z } from 'zod';`
+- `import { FileUploader } from '@/components/file-uploader';`
+- `import {`
+- `import { FileMimeType } from '@/constants/common';`
+- `import { IModalProps } from '@/interfaces/common';`
+- `import { TagRenameId } from '@/pages/add-knowledge/constant';`
+- `import { NameFormField, NameFormSchema } from '../name-form-field';`
+
+## Code Structure Analysis
+
+- Total lines: 71
+- Blank lines: 7 (9.9%)
+- Comment lines: ~0 (0.0%)
+- Code lines: ~64
+
+
+## Dependencies and Imports
+
+- `@hookform/resolvers/zod`
+- `react-hook-form`
+- `zod`
+- `@/components/file-uploader`
+- `@/constants/common`
+- `@/interfaces/common`
+- `@/pages/add-knowledge/constant`
+- `../name-form-field`
+
+## Design & Architecture
+
+This file is located in the `web` directory, specifically within `web/src/pages/agents/upload-agent-dialog`.
+
+This appears to be a UI component or frontend module.
+
+## Performance & Complexity
+
+- Uses asynchronous patterns for better performance
+
+## Security & Safety Considerations
+
+- No immediate security concerns identified through static analysis
+
+## Testing & Usage Notes
+
+To work with this file:
+1. Understand its dependencies (see Dependencies section)
+2. Review the code structure and main components
+3. Check for existing tests in the test directories
+4. Consider edge cases and error handling
+
+## Related Files
+
+- Other files in `web/src/pages/agents/upload-agent-dialog/` directory
+- Potential test file: `test_upload-agent-form.tsx`
+
+## Keywords
+
+../name-form-field, @/components/file-uploader, @/constants/common, @/interfaces/common, @/pages/add-knowledge/constant, @hookform/resolvers/zod, DSL, File, FileMimeType, FileUploader, Form, FormControl, FormField, FormItem, FormLabel, FormMessage, FormSchema, FormSchemaType, IModalProps, Json, NameFormField, NameFormSchema, TagRenameId, TypeScript, UploadAgentForm, form, hookform, onSubmit, react-hook-form, ret, zod
+
+---
+*Generated by RAGFlow Repository Documentation Generator*

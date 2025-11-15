@@ -1,0 +1,187 @@
+# Subtree Keyword Index: web/src/components/retrieval-documents
+
+## Scope
+
+This keyword index covers all files in `web/src/components/retrieval-documents/` and its subdirectories.
+Total keywords: 37
+
+## Keywords A-Z
+
+
+### .
+
+**./index.less** (1 file(s)):
+  - [web/src/components/retrieval-documents/index.tsx](index.tsx_docs.md)
+
+**./select-files** (1 file(s)):
+  - [web/src/components/retrieval-documents/index.tsx](index.tsx_docs.md)
+
+
+### @
+
+**@/assets/svg/selected-files-collapse.svg** (1 file(s)):
+  - [web/src/components/retrieval-documents/index.tsx](index.tsx_docs.md)
+
+**@/components/new-document-link** (1 file(s)):
+  - [web/src/components/retrieval-documents/select-files.tsx](select-files.tsx_docs.md)
+
+**@/hooks/common-hooks** (1 file(s)):
+  - [web/src/components/retrieval-documents/select-files.tsx](select-files.tsx_docs.md)
+
+**@/interfaces/database/knowledge** (1 file(s)):
+  - [web/src/components/retrieval-documents/select-files.tsx](select-files.tsx_docs.md)
+
+**@ant-design/icons** (1 file(s)):
+  - [web/src/components/retrieval-documents/select-files.tsx](select-files.tsx_docs.md)
+
+
+### B
+
+**Button** (1 file(s)):
+  - [web/src/components/retrieval-documents/select-files.tsx](select-files.tsx_docs.md)
+
+
+### C
+
+**Collapse** (1 file(s)):
+  - [web/src/components/retrieval-documents/index.tsx](index.tsx_docs.md)
+
+**Column** (1 file(s)):
+  - [web/src/components/retrieval-documents/select-files.tsx](select-files.tsx_docs.md)
+
+
+### D
+
+**Disabled** (1 file(s)):
+  - [web/src/components/retrieval-documents/select-files.tsx](select-files.tsx_docs.md)
+
+
+### E
+
+**EyeOutlined** (1 file(s)):
+  - [web/src/components/retrieval-documents/select-files.tsx](select-files.tsx_docs.md)
+
+
+### F
+
+**Flex** (1 file(s)):
+  - [web/src/components/retrieval-documents/index.tsx](index.tsx_docs.md)
+
+
+### H
+
+**Hits** (1 file(s)):
+  - [web/src/components/retrieval-documents/select-files.tsx](select-files.tsx_docs.md)
+
+
+### I
+
+**IProps** (2 file(s)):
+  - [web/src/components/retrieval-documents/index.tsx](index.tsx_docs.md)
+  - [web/src/components/retrieval-documents/select-files.tsx](select-files.tsx_docs.md)
+
+**ITestingDocument** (1 file(s)):
+  - [web/src/components/retrieval-documents/select-files.tsx](select-files.tsx_docs.md)
+
+
+### K
+
+**Key** (1 file(s)):
+  - [web/src/components/retrieval-documents/select-files.tsx](select-files.tsx_docs.md)
+
+
+### N
+
+**Name** (1 file(s)):
+  - [web/src/components/retrieval-documents/select-files.tsx](select-files.tsx_docs.md)
+
+**NewDocumentLink** (1 file(s)):
+  - [web/src/components/retrieval-documents/select-files.tsx](select-files.tsx_docs.md)
+
+
+### R
+
+**React** (1 file(s)):
+  - [web/src/components/retrieval-documents/select-files.tsx](select-files.tsx_docs.md)
+
+**ReactComponent** (1 file(s)):
+  - [web/src/components/retrieval-documents/index.tsx](index.tsx_docs.md)
+
+**RetrievalDocuments** (1 file(s)):
+  - [web/src/components/retrieval-documents/index.tsx](index.tsx_docs.md)
+
+
+### S
+
+**SelectFiles** (2 file(s)):
+  - [web/src/components/retrieval-documents/index.tsx](index.tsx_docs.md)
+  - [web/src/components/retrieval-documents/select-files.tsx](select-files.tsx_docs.md)
+
+**SelectedFilesCollapseIcon** (1 file(s)):
+  - [web/src/components/retrieval-documents/index.tsx](index.tsx_docs.md)
+
+**Space** (1 file(s)):
+  - [web/src/components/retrieval-documents/index.tsx](index.tsx_docs.md)
+
+
+### T
+
+**Table** (1 file(s)):
+  - [web/src/components/retrieval-documents/select-files.tsx](select-files.tsx_docs.md)
+
+**TableProps** (1 file(s)):
+  - [web/src/components/retrieval-documents/select-files.tsx](select-files.tsx_docs.md)
+
+**Tooltip** (1 file(s)):
+  - [web/src/components/retrieval-documents/select-files.tsx](select-files.tsx_docs.md)
+
+**TypeScript** (2 file(s)):
+  - [web/src/components/retrieval-documents/index.tsx](index.tsx_docs.md)
+  - [web/src/components/retrieval-documents/select-files.tsx](select-files.tsx_docs.md)
+
+
+### U
+
+**User** (1 file(s)):
+  - [web/src/components/retrieval-documents/select-files.tsx](select-files.tsx_docs.md)
+
+
+### V
+
+**View** (1 file(s)):
+  - [web/src/components/retrieval-documents/select-files.tsx](select-files.tsx_docs.md)
+
+
+### A
+
+**ant** (1 file(s)):
+  - [web/src/components/retrieval-documents/select-files.tsx](select-files.tsx_docs.md)
+
+**antd** (2 file(s)):
+  - [web/src/components/retrieval-documents/index.tsx](index.tsx_docs.md)
+  - [web/src/components/retrieval-documents/select-files.tsx](select-files.tsx_docs.md)
+
+
+### C
+
+**columns** (1 file(s)):
+  - [web/src/components/retrieval-documents/select-files.tsx](select-files.tsx_docs.md)
+
+
+### R
+
+**react-i18next** (1 file(s)):
+  - [web/src/components/retrieval-documents/index.tsx](index.tsx_docs.md)
+
+**rowSelection** (1 file(s)):
+  - [web/src/components/retrieval-documents/select-files.tsx](select-files.tsx_docs.md)
+
+
+### U
+
+**useDocuments** (1 file(s)):
+  - [web/src/components/retrieval-documents/select-files.tsx](select-files.tsx_docs.md)
+
+
+---
+*Generated by RAGFlow Repository Documentation Generator*

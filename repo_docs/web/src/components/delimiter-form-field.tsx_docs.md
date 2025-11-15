@@ -1,0 +1,182 @@
+# File Documentation: web/src/components/delimiter-form-field.tsx
+
+## File Metadata
+
+- **Path**: `web/src/components/delimiter-form-field.tsx`
+- **Extension**: `.tsx`
+- **Lines**: 86
+- **Characters**: 2,430
+- **Size**: 2,430 bytes
+- **Purpose**: JavaScript/TypeScript - Frontend or backend JavaScript code
+
+## Original Source
+
+```tsx
+import { cn } from '@/lib/utils';
+import { forwardRef } from 'react';
+import { useFormContext } from 'react-hook-form';
+import { useTranslation } from 'react-i18next';
+import {
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from './ui/form';
+import { Input, InputProps } from './ui/input';
+
+interface IProps {
+  value?: string | undefined;
+  onChange?: (val: string | undefined) => void;
+}
+
+export const DelimiterInput = forwardRef<HTMLInputElement, InputProps & IProps>(
+  ({ value, onChange, maxLength, defaultValue, ...props }, ref) => {
+    const nextValue = value
+      ?.replaceAll('\n', '\\n')
+      .replaceAll('\t', '\\t')
+      .replaceAll('\r', '\\r');
+    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+      const val = e.target.value;
+      const nextValue = val
+        .replaceAll('\\n', '\n')
+        .replaceAll('\\t', '\t')
+        .replaceAll('\\r', '\r');
+      onChange?.(nextValue);
+    };
+    return (
+      <Input
+        value={nextValue}
+        onChange={handleInputChange}
+        maxLength={maxLength}
+        defaultValue={defaultValue}
+        ref={ref}
+        className={cn('bg-bg-base', props.className)}
+        {...props}
+      ></Input>
+    );
+  },
+);
+
+export function DelimiterFormField() {
+  const { t } = useTranslation();
+  const form = useFormContext();
+
+  return (
+    <FormField
+      control={form.control}
+      name={'parser_config.delimiter'}
+      render={({ field }) => {
+        if (typeof field.value === 'undefined') {
+          // default value set
+          form.setValue('parser_config.delimiter', '\n');
+        }
+        return (
+          <FormItem className=" items-center space-y-0 ">
+            <div className="flex items-center gap-1">
+              <FormLabel
+                required
+                tooltip={t('knowledgeDetails.delimiterTip')}
+                className="text-sm text-text-secondary whitespace-break-spaces w-1/4"
+              >
+                {t('knowledgeDetails.delimiter')}
+              </FormLabel>
+              <div className="w-3/4">
+                <FormControl>
+                  <DelimiterInput {...field}></DelimiterInput>
+                </FormControl>
+              </div>
+            </div>
+            <div className="flex pt-1">
+              <div className="w-1/4"></div>
+              <FormMessage />
+            </div>
+          </FormItem>
+        );
+      }}
+    />
+  );
+}
+
+```
+
+## High-Level Overview
+
+This file is part of the RAGFlow repository located at `web/src/components/delimiter-form-field.tsx`.
+
+Based on the file structure and naming, it appears to be a javascript/typescript - frontend or backend javascript code.
+
+The file contains approximately 86 lines of code and defines various components
+that contribute to the overall functionality of the RAGFlow system.
+
+## Detailed Walkthrough
+
+### Exports (2)
+
+- `DelimiterInput`: Exported entity
+- `DelimiterFormField`: Exported entity
+
+### Functions (3)
+
+- `DelimiterInput()`: Function definition
+- `handleInputChange()`: Function definition
+- `DelimiterFormField()`: Function definition
+
+### Imports (6)
+
+- `import { cn } from '@/lib/utils';`
+- `import { forwardRef } from 'react';`
+- `import { useFormContext } from 'react-hook-form';`
+- `import { useTranslation } from 'react-i18next';`
+- `import {`
+- `import { Input, InputProps } from './ui/input';`
+
+## Code Structure Analysis
+
+- Total lines: 86
+- Blank lines: 5 (5.8%)
+- Comment lines: ~1 (1.2%)
+- Code lines: ~80
+
+
+## Dependencies and Imports
+
+- `@/lib/utils`
+- `react`
+- `react-hook-form`
+- `react-i18next`
+- `./ui/input`
+
+## Design & Architecture
+
+This file is located in the `web` directory, specifically within `web/src/components`.
+
+This appears to be a UI component or frontend module.
+
+## Performance & Complexity
+
+- No specific performance concerns identified through static analysis
+
+## Security & Safety Considerations
+
+- **User Input**: Validate and sanitize all user input
+
+## Testing & Usage Notes
+
+To work with this file:
+1. Understand its dependencies (see Dependencies section)
+2. Review the code structure and main components
+3. Check for existing tests in the test directories
+4. Consider edge cases and error handling
+
+## Related Files
+
+- Other files in `web/src/components/` directory
+- Potential test file: `test_delimiter-form-field.tsx`
+
+## Keywords
+
+./ui/input, @/lib/utils, ChangeEvent, DelimiterFormField, DelimiterInput, FormControl, FormField, FormItem, FormLabel, FormMessage, HTMLInputElement, IProps, Input, InputProps, React, TypeScript, form, handleInputChange, nextValue, react, react-hook-form, react-i18next, val
+
+---
+*Generated by RAGFlow Repository Documentation Generator*

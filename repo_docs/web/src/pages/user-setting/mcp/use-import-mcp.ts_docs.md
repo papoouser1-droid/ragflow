@@ -1,0 +1,174 @@
+# File Documentation: web/src/pages/user-setting/mcp/use-import-mcp.ts
+
+## File Metadata
+
+- **Path**: `web/src/pages/user-setting/mcp/use-import-mcp.ts`
+- **Extension**: `.ts`
+- **Lines**: 74
+- **Characters**: 2,052
+- **Size**: 2,052 bytes
+- **Purpose**: JavaScript/TypeScript - Frontend or backend JavaScript code
+
+## Original Source
+
+```typescript
+import message from '@/components/ui/message';
+import { FileMimeType } from '@/constants/common';
+import { useSetModalState } from '@/hooks/common-hooks';
+import { useImportMcpServer } from '@/hooks/use-mcp-request';
+import { isEmpty } from 'lodash';
+import { useCallback } from 'react';
+import { useTranslation } from 'react-i18next';
+import { z } from 'zod';
+
+const ServerEntrySchema = z.object({
+  authorization_token: z.string().optional(),
+  name: z.string().optional(),
+  tool_configuration: z.object({}).passthrough().optional(),
+  type: z.string(),
+  url: z.string().url(),
+});
+
+const McpConfigSchema = z.object({
+  mcpServers: z.record(ServerEntrySchema),
+});
+
+export const useImportMcp = () => {
+  const {
+    visible: importVisible,
+    hideModal: hideImportModal,
+    showModal: showImportModal,
+  } = useSetModalState();
+  const { t } = useTranslation();
+  const { importMcpServer, loading } = useImportMcpServer();
+
+  const onImportOk = useCallback(
+    async ({ fileList }: { fileList: File[] }) => {
+      if (fileList.length > 0) {
+        const file = fileList[0];
+        if (file.type !== FileMimeType.Json) {
+          message.error(t('flow.jsonUploadTypeErrorMessage'));
+          return;
+        }
+
+        const mcpStr = await file.text();
+        const errorMessage = t('flow.jsonUploadContentErrorMessage');
+        try {
+          const mcp = JSON.parse(mcpStr);
+          try {
+            McpConfigSchema.parse(mcp);
+          } catch (error) {
+            message.error('Incorrect data format');
+            return;
+          }
+          if (mcpStr && !isEmpty(mcp)) {
+            const ret = await importMcpServer(mcp);
+            if (ret.code === 0) {
+              hideImportModal();
+            }
+          } else {
+            message.error(errorMessage);
+          }
+        } catch (error) {
+          message.error(errorMessage);
+        }
+      }
+    },
+    [hideImportModal, importMcpServer, t],
+  );
+
+  return {
+    importVisible,
+    showImportModal,
+    hideImportModal,
+    onImportOk,
+    loading,
+  };
+};
+
+```
+
+## High-Level Overview
+
+This file is part of the RAGFlow repository located at `web/src/pages/user-setting/mcp/use-import-mcp.ts`.
+
+Based on the file structure and naming, it appears to be a javascript/typescript - frontend or backend javascript code.
+
+The file contains approximately 74 lines of code and defines various components
+that contribute to the overall functionality of the RAGFlow system.
+
+## Detailed Walkthrough
+
+### Exports (1)
+
+- `useImportMcp`: Exported entity
+
+### Functions (2)
+
+- `useImportMcp()`: Function definition
+- `onImportOk()`: Function definition
+
+### Imports (8)
+
+- `import message from '@/components/ui/message';`
+- `import { FileMimeType } from '@/constants/common';`
+- `import { useSetModalState } from '@/hooks/common-hooks';`
+- `import { useImportMcpServer } from '@/hooks/use-mcp-request';`
+- `import { isEmpty } from 'lodash';`
+- `import { useCallback } from 'react';`
+- `import { useTranslation } from 'react-i18next';`
+- `import { z } from 'zod';`
+
+## Code Structure Analysis
+
+- Total lines: 74
+- Blank lines: 7 (9.5%)
+- Comment lines: ~0 (0.0%)
+- Code lines: ~67
+
+
+## Dependencies and Imports
+
+- `@/components/ui/message`
+- `@/constants/common`
+- `@/hooks/common-hooks`
+- `@/hooks/use-mcp-request`
+- `lodash`
+- `react`
+- `react-i18next`
+- `zod`
+
+## Design & Architecture
+
+This file is located in the `web` directory, specifically within `web/src/pages/user-setting/mcp`.
+
+This appears to be a UI component or frontend module.
+
+## Performance & Complexity
+
+- Uses asynchronous patterns for better performance
+
+## Security & Safety Considerations
+
+- **User Input**: Validate and sanitize all user input
+- **Authentication**: Ensure secure password handling and authentication
+
+## Testing & Usage Notes
+
+To work with this file:
+1. Understand its dependencies (see Dependencies section)
+2. Review the code structure and main components
+3. Check for existing tests in the test directories
+4. Consider edge cases and error handling
+
+## Related Files
+
+- Other files in `web/src/pages/user-setting/mcp/` directory
+- Potential test file: `test_use-import-mcp.ts`
+
+## Keywords
+
+@/components/ui/message, @/constants/common, @/hooks/common-hooks, @/hooks/use-mcp-request, File, FileMimeType, Incorrect, JSON, Json, McpConfigSchema, ServerEntrySchema, TypeScript, errorMessage, file, lodash, mcp, mcpStr, onImportOk, react, react-i18next, ret, useImportMcp, zod
+
+---
+*Generated by RAGFlow Repository Documentation Generator*

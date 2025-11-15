@@ -1,0 +1,191 @@
+# File Documentation: web/src/pages/dataflow-result/components/parse-editer/object-parser.tsx
+
+## File Metadata
+
+- **Path**: `web/src/pages/dataflow-result/components/parse-editer/object-parser.tsx`
+- **Extension**: `.tsx`
+- **Lines**: 97
+- **Characters**: 2,570
+- **Size**: 2,570 bytes
+- **Purpose**: JavaScript/TypeScript - Frontend or backend JavaScript code
+
+## Original Source
+
+```tsx
+import { cn } from '@/lib/utils';
+import { useCallback, useEffect } from 'react';
+import { ChunkTextMode } from '../../constant';
+import styles from '../../index.less';
+import { IChunk } from '../../interface';
+import { useParserInit } from './hook';
+import { IObjContainerProps } from './interface';
+export const ObjectContainer = (props: IObjContainerProps) => {
+  const {
+    initialValue,
+    isChunck,
+    onSave,
+    className,
+    textMode,
+    clickChunk,
+    isReadonly,
+  } = props;
+
+  const {
+    content,
+    // setContent,
+    activeEditIndex,
+    setActiveEditIndex,
+    editDivRef,
+  } = useParserInit({ initialValue });
+
+  const handleEdit = useCallback(() => {
+    // setContent((pre) => ({
+    //   ...pre,
+    //   value: escapeNewlines(e.target.innerText),
+    // }));
+    setActiveEditIndex(1);
+  }, [setActiveEditIndex]);
+
+  const handleSave = useCallback(
+    (e: any) => {
+      const saveData = {
+        ...content,
+        value: e.target.textContent,
+      };
+      onSave(saveData);
+      setActiveEditIndex(undefined);
+    },
+    [content, onSave, setActiveEditIndex],
+  );
+
+  useEffect(() => {
+    if (activeEditIndex !== undefined && editDivRef.current) {
+      editDivRef.current.focus();
+      editDivRef.current.textContent = content.value as string;
+      editDivRef.current.style.whiteSpace = 'pre-wrap';
+    }
+  }, [activeEditIndex, content, editDivRef]);
+
+  return (
+    <>
+      <section
+        className={
+          isChunck
+            ? 'bg-bg-card my-2 p-2 rounded-lg flex gap-1 items-start'
+            : ''
+        }
+      >
+        {activeEditIndex && (
+          <div
+            ref={editDivRef}
+            contentEditable={!isReadonly}
+            onBlur={handleSave}
+            className={cn(
+              'w-full bg-transparent text-text-secondary border-none focus-visible:border-none focus-visible:ring-0 focus-visible:ring-offset-0 focus-visible:outline-none p-0',
+              className,
+            )}
+          />
+        )}
+        {!activeEditIndex && (
+          <div
+            className={cn(
+              'text-text-secondary overflow-auto scrollbar-auto whitespace-pre-wrap w-full',
+              {
+                [styles.contentEllipsis]: textMode === ChunkTextMode.Ellipse,
+              },
+            )}
+            onClick={() => {
+              clickChunk(content as unknown as IChunk);
+              if (!isReadonly) {
+                handleEdit();
+              }
+            }}
+          >
+            {content.value as string}
+          </div>
+        )}
+      </section>
+    </>
+  );
+};
+
+```
+
+## High-Level Overview
+
+    // setContent,
+
+## Detailed Walkthrough
+
+### Exports (1)
+
+- `ObjectContainer`: Exported entity
+
+### Functions (4)
+
+- `ObjectContainer()`: Function definition
+- `handleEdit()`: Function definition
+- `handleSave()`: Function definition
+- `saveData()`: Function definition
+
+### Imports (7)
+
+- `import { cn } from '@/lib/utils';`
+- `import { useCallback, useEffect } from 'react';`
+- `import { ChunkTextMode } from '../../constant';`
+- `import styles from '../../index.less';`
+- `import { IChunk } from '../../interface';`
+- `import { useParserInit } from './hook';`
+- `import { IObjContainerProps } from './interface';`
+
+## Code Structure Analysis
+
+- Total lines: 97
+- Blank lines: 6 (6.2%)
+- Comment lines: ~5 (5.2%)
+- Code lines: ~86
+
+
+## Dependencies and Imports
+
+- `@/lib/utils`
+- `react`
+- `../../constant`
+- `../../index.less`
+- `../../interface`
+- `./hook`
+- `./interface`
+
+## Design & Architecture
+
+This file is located in the `web` directory, specifically within `web/src/pages/dataflow-result/components/parse-editer`.
+
+This appears to be a UI component or frontend module.
+
+## Performance & Complexity
+
+- No specific performance concerns identified through static analysis
+
+## Security & Safety Considerations
+
+- No immediate security concerns identified through static analysis
+
+## Testing & Usage Notes
+
+To work with this file:
+1. Understand its dependencies (see Dependencies section)
+2. Review the code structure and main components
+3. Check for existing tests in the test directories
+4. Consider edge cases and error handling
+
+## Related Files
+
+- Other files in `web/src/pages/dataflow-result/components/parse-editer/` directory
+- Potential test file: `test_object-parser.tsx`
+
+## Keywords
+
+../../constant, ../../index.less, ../../interface, ./hook, ./interface, @/lib/utils, ChunkTextMode, Ellipse, IChunk, IObjContainerProps, ObjectContainer, TypeScript, handleEdit, handleSave, react, saveData
+
+---
+*Generated by RAGFlow Repository Documentation Generator*

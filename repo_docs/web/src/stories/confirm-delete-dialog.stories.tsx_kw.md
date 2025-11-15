@@ -1,0 +1,130 @@
+# Keyword Map: web/src/stories/confirm-delete-dialog.stories.tsx
+
+## File Path and Links
+
+- **Original File**: [web/src/stories/confirm-delete-dialog.stories.tsx](../../../../web/src/stories/confirm-delete-dialog.stories.tsx)
+- **Documentation**: [confirm-delete-dialog.stories.tsx_docs.md](./confirm-delete-dialog.stories.tsx_docs.md)
+- **Repository Root**: [../../../../](../../../../)
+
+## Keywords (32 total)
+
+
+### @
+
+- **@/components/confirm-delete-dialog**: Found in confirm-delete-dialog.stories.tsx
+  - [View in documentation](./confirm-delete-dialog.stories.tsx_docs.md)
+- **@/components/ui/button**: Found in confirm-delete-dialog.stories.tsx
+  - [View in documentation](./confirm-delete-dialog.stories.tsx_docs.md)
+- **@storybook/react-webpack5**: Found in confirm-delete-dialog.stories.tsx
+  - [View in documentation](./confirm-delete-dialog.stories.tsx_docs.md)
+
+### A
+
+- **Are**: Found in confirm-delete-dialog.stories.tsx
+  - [View in documentation](./confirm-delete-dialog.stories.tsx_docs.md)
+- **Autodocs**: Found in confirm-delete-dialog.stories.tsx
+  - [View in documentation](./confirm-delete-dialog.stories.tsx_docs.md)
+
+### B
+
+- **Button**: Found in confirm-delete-dialog.stories.tsx
+  - [View in documentation](./confirm-delete-dialog.stories.tsx_docs.md)
+
+### C
+
+- **Cancelled**: Found in confirm-delete-dialog.stories.tsx
+  - [View in documentation](./confirm-delete-dialog.stories.tsx_docs.md)
+- **Canvas**: Found in confirm-delete-dialog.stories.tsx
+  - [View in documentation](./confirm-delete-dialog.stories.tsx_docs.md)
+- **Component**: Found in confirm-delete-dialog.stories.tsx
+  - [View in documentation](./confirm-delete-dialog.stories.tsx_docs.md)
+- **Confirm**: Found in confirm-delete-dialog.stories.tsx
+  - [View in documentation](./confirm-delete-dialog.stories.tsx_docs.md)
+- **ConfirmDeleteDialog**: Found in confirm-delete-dialog.stories.tsx
+  - [View in documentation](./confirm-delete-dialog.stories.tsx_docs.md)
+- **Confirmed**: Found in confirm-delete-dialog.stories.tsx
+  - [View in documentation](./confirm-delete-dialog.stories.tsx_docs.md)
+
+### D
+
+- **Default**: Found in confirm-delete-dialog.stories.tsx
+  - [View in documentation](./confirm-delete-dialog.stories.tsx_docs.md)
+- **Delete**: Found in confirm-delete-dialog.stories.tsx
+  - [View in documentation](./confirm-delete-dialog.stories.tsx_docs.md)
+- **Description**: Found in confirm-delete-dialog.stories.tsx
+  - [View in documentation](./confirm-delete-dialog.stories.tsx_docs.md)
+
+### E
+
+- **Example**: Found in confirm-delete-dialog.stories.tsx
+  - [View in documentation](./confirm-delete-dialog.stories.tsx_docs.md)
+- **Examples**: Found in confirm-delete-dialog.stories.tsx
+  - [View in documentation](./confirm-delete-dialog.stories.tsx_docs.md)
+
+### F
+
+- **File**: Found in confirm-delete-dialog.stories.tsx
+  - [View in documentation](./confirm-delete-dialog.stories.tsx_docs.md)
+
+### I
+
+- **Item**: Found in confirm-delete-dialog.stories.tsx
+  - [View in documentation](./confirm-delete-dialog.stories.tsx_docs.md)
+
+### M
+
+- **Meta**: Found in confirm-delete-dialog.stories.tsx
+  - [View in documentation](./confirm-delete-dialog.stories.tsx_docs.md)
+- **More**: Found in confirm-delete-dialog.stories.tsx
+  - [View in documentation](./confirm-delete-dialog.stories.tsx_docs.md)
+
+### O
+
+- **Optional**: Found in confirm-delete-dialog.stories.tsx
+  - [View in documentation](./confirm-delete-dialog.stories.tsx_docs.md)
+
+### S
+
+- **Story**: Found in confirm-delete-dialog.stories.tsx
+  - [View in documentation](./confirm-delete-dialog.stories.tsx_docs.md)
+- **StoryObj**: Found in confirm-delete-dialog.stories.tsx
+  - [View in documentation](./confirm-delete-dialog.stories.tsx_docs.md)
+
+### T
+
+- **This**: Found in confirm-delete-dialog.stories.tsx
+  - [View in documentation](./confirm-delete-dialog.stories.tsx_docs.md)
+- **TypeScript**: Found in confirm-delete-dialog.stories.tsx
+  - [View in documentation](./confirm-delete-dialog.stories.tsx_docs.md)
+
+### U
+
+- **Usage**: Found in confirm-delete-dialog.stories.tsx
+  - [View in documentation](./confirm-delete-dialog.stories.tsx_docs.md)
+- **Use**: Found in confirm-delete-dialog.stories.tsx
+  - [View in documentation](./confirm-delete-dialog.stories.tsx_docs.md)
+
+### W
+
+- **WithCustomTitle**: Found in confirm-delete-dialog.stories.tsx
+  - [View in documentation](./confirm-delete-dialog.stories.tsx_docs.md)
+
+### M
+
+- **meta**: Found in confirm-delete-dialog.stories.tsx
+  - [View in documentation](./confirm-delete-dialog.stories.tsx_docs.md)
+
+### S
+
+- **storybook**: Found in confirm-delete-dialog.stories.tsx
+  - [View in documentation](./confirm-delete-dialog.stories.tsx_docs.md)
+- **storybook/test**: Found in confirm-delete-dialog.stories.tsx
+  - [View in documentation](./confirm-delete-dialog.stories.tsx_docs.md)
+
+## Keyword Summary
+
+This file contains 32 unique keywords extracted from the source code,
+including identifiers, function names, class names, and technical terms.
+
+---
+*Generated by RAGFlow Repository Documentation Generator*

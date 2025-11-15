@@ -1,0 +1,181 @@
+# Keyword Map: deepdoc/parser/excel_parser.py
+
+## File Path and Links
+
+- **Original File**: [deepdoc/parser/excel_parser.py](../../../deepdoc/parser/excel_parser.py)
+- **Documentation**: [excel_parser.py_docs.md](./excel_parser.py_docs.md)
+- **Repository Root**: [../../../](../../../)
+
+## Keywords (44 total)
+
+
+### A
+
+- **ANY**: Found in excel_parser.py
+  - [View in documentation](./excel_parser.py_docs.md)
+- **Apache**: Found in excel_parser.py
+  - [View in documentation](./excel_parser.py_docs.md)
+
+### B
+
+- **BASIS**: Found in excel_parser.py
+  - [View in documentation](./excel_parser.py_docs.md)
+- **BytesIO**: Found in excel_parser.py
+  - [View in documentation](./excel_parser.py_docs.md)
+
+### C
+
+- **CONDITIONS**: Found in excel_parser.py
+  - [View in documentation](./excel_parser.py_docs.md)
+- **CSV**: Found in excel_parser.py
+  - [View in documentation](./excel_parser.py_docs.md)
+
+### D
+
+- **Data**: Found in excel_parser.py
+  - [View in documentation](./excel_parser.py_docs.md)
+- **DataFrame**: Found in excel_parser.py
+  - [View in documentation](./excel_parser.py_docs.md)
+
+### E
+
+- **Excel**: Found in excel_parser.py
+  - [View in documentation](./excel_parser.py_docs.md)
+- **Exception**: Found in excel_parser.py
+  - [View in documentation](./excel_parser.py_docs.md)
+
+### F
+
+- **Failed**: Found in excel_parser.py
+  - [View in documentation](./excel_parser.py_docs.md)
+- **False**: Found in excel_parser.py
+  - [View in documentation](./excel_parser.py_docs.md)
+
+### I
+
+- **ILLEGAL_CHARACTERS_RE**: Found in excel_parser.py
+  - [View in documentation](./excel_parser.py_docs.md)
+
+### K
+
+- **KIND**: Found in excel_parser.py
+  - [View in documentation](./excel_parser.py_docs.md)
+
+### L
+
+- **LICENSE**: Found in excel_parser.py
+  - [View in documentation](./excel_parser.py_docs.md)
+- **License**: Found in excel_parser.py
+  - [View in documentation](./excel_parser.py_docs.md)
+- **Licensed**: Found in excel_parser.py
+  - [View in documentation](./excel_parser.py_docs.md)
+
+### N
+
+- **None**: Found in excel_parser.py
+  - [View in documentation](./excel_parser.py_docs.md)
+- **Not**: Found in excel_parser.py
+  - [View in documentation](./excel_parser.py_docs.md)
+
+### P
+
+- **Parse**: Found in excel_parser.py
+  - [View in documentation](./excel_parser.py_docs.md)
+- **Python**: Found in excel_parser.py
+  - [View in documentation](./excel_parser.py_docs.md)
+
+### R
+
+- **RAGFlowExcelParser**: Found in excel_parser.py
+  - [View in documentation](./excel_parser.py_docs.md)
+- **Read**: Found in excel_parser.py
+  - [View in documentation](./excel_parser.py_docs.md)
+
+### S
+
+- **See**: Found in excel_parser.py
+  - [View in documentation](./excel_parser.py_docs.md)
+- **Skip**: Found in excel_parser.py
+  - [View in documentation](./excel_parser.py_docs.md)
+
+### T
+
+- **True**: Found in excel_parser.py
+  - [View in documentation](./excel_parser.py_docs.md)
+
+### U
+
+- **Unless**: Found in excel_parser.py
+  - [View in documentation](./excel_parser.py_docs.md)
+
+### V
+
+- **Version**: Found in excel_parser.py
+  - [View in documentation](./excel_parser.py_docs.md)
+
+### W
+
+- **WARRANTIES**: Found in excel_parser.py
+  - [View in documentation](./excel_parser.py_docs.md)
+- **WITHOUT**: Found in excel_parser.py
+  - [View in documentation](./excel_parser.py_docs.md)
+- **Workbook**: Found in excel_parser.py
+  - [View in documentation](./excel_parser.py_docs.md)
+
+### Y
+
+- **You**: Found in excel_parser.py
+  - [View in documentation](./excel_parser.py_docs.md)
+
+### _
+
+- **__call__**: Found in excel_parser.py
+  - [View in documentation](./excel_parser.py_docs.md)
+- **_clean_dataframe**: Found in excel_parser.py
+  - [View in documentation](./excel_parser.py_docs.md)
+- **_dataframe_to_workbook**: Found in excel_parser.py
+  - [View in documentation](./excel_parser.py_docs.md)
+- **_dataframes_to_workbook**: Found in excel_parser.py
+  - [View in documentation](./excel_parser.py_docs.md)
+- **_fmt**: Found in excel_parser.py
+  - [View in documentation](./excel_parser.py_docs.md)
+- **_load_excel_to_workbook**: Found in excel_parser.py
+  - [View in documentation](./excel_parser.py_docs.md)
+
+### C
+
+- **clean_string**: Found in excel_parser.py
+  - [View in documentation](./excel_parser.py_docs.md)
+
+### F
+
+- **file_like_object**: Found in excel_parser.py
+  - [View in documentation](./excel_parser.py_docs.md)
+
+### H
+
+- **html**: Found in excel_parser.py
+  - [View in documentation](./excel_parser.py_docs.md)
+
+### M
+
+- **markdown**: Found in excel_parser.py
+  - [View in documentation](./excel_parser.py_docs.md)
+
+### R
+
+- **row_number**: Found in excel_parser.py
+  - [View in documentation](./excel_parser.py_docs.md)
+
+### S
+
+- **staticmethod**: Found in excel_parser.py
+  - [View in documentation](./excel_parser.py_docs.md)
+
+## Keyword Summary
+
+This file contains 44 unique keywords extracted from the source code,
+including identifiers, function names, class names, and technical terms.
+
+---
+*Generated by RAGFlow Repository Documentation Generator*
